@@ -11,7 +11,7 @@ const { Header, Footer, Sider, Content } = Layout;
 const { Title } = Typography;
 const { Text } = Typography;
 
-class roundButton extends Component {
+class RoundButton extends Component {
     state = {
         size: 'large',
     };
@@ -21,11 +21,18 @@ class roundButton extends Component {
         this.setState({ size: e.target.value });
     };
 
-    render(){
+    render() {
         const { size } = this.state;
+        const { buttonText, onClick } = this.props;
+
         return(
-            <Button  type="primary" shape="round" class="ant-btn ant-btn-primary" >
-                Download
+            <Button
+                className='RoundButton'
+                type="primary"
+                shape="round"
+                onClick={onClick}
+            >
+                {buttonText}
             </Button>
         )
     }
@@ -35,10 +42,11 @@ class roundButton extends Component {
 
 
 class SimpleHolder extends Component{
-    render(){
-        return(
+    render() {
+
+        return (
             <div>
-                <Row clasName = "simpleHolder" >
+                <Row className='simpleHolder'>
                     <Form/>
 
                 </Row>
@@ -57,7 +65,10 @@ class Form extends Component{
                 <Col span={8}>
                     <Title level={2}>Stay tuned!</Title>
                     <Text >Suscribe to be up to date of our new courses</Text>
-                    <roundButton/>
+                    <RoundButton
+                        buttonText='Submit'
+                        onClick={() => console.log('Submit button clicked')}
+                    />
                 </Col>
             </Row>
             <Row className = "body" id = "form">

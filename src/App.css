@@ -26,9 +26,8 @@
     padding: 20px;
 }
 
-.filledBtn{
-    width: 300px;
-    height: 300px;
+.RoundButton {
+    margin-top: 6px;
 }
 
 #form{
