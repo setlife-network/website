@@ -87,8 +87,7 @@ class App extends Component {
                 </Content>
                 <Footer>Footer</Footer>
             </Layout>
-
-      </div>
+        </div>
     );
   }
 }
