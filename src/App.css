@@ -1,3 +1,42 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
+}
+
+
+.ant-layout-header{
+    background: rgb(0,194,212);
+}
+
+.ant-layout-content{
+    background: rgb(255,255,255);
+}
+
+
+.simpleHolder{
+    height: 500px;
+}
+
+.head{
+    text-align: left;
+}
+
+.body{
+    padding: 20px;
+}
+
+.filledBtn{
+    width: 300px;
+    height: 300px;
+}
+
+#form{
+    margin-top: 24px;
+    margin-left: 180px;
+    margin-right: 100px;
+
+
+
+    background-color: rgb(255,255,255);
 }
