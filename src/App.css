@@ -18,24 +18,20 @@
     height: 500px;
 }
 
-.head{
-    text-align: left;
-}
-
 .body{
     padding: 20px;
 }
 
-.RoundButton {
-    margin-top: 6px;
+.filledBtn{
+    width: 300px;
+    height: 300px;
 }
 
 #form{
     margin-top: 24px;
     margin-left: 180px;
     margin-right: 100px;
-
-
-
+    text-align: left;
+    padding: 50px;
     background-color: rgb(255,255,255);
 }

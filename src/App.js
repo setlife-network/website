@@ -21,19 +21,18 @@ class RoundButton extends Component {
         this.setState({ size: e.target.value });
     };
 
-    render() {
-        const { size } = this.state;
+    render(){
         const { buttonText, onClick } = this.props;
-
+        const { size } = this.state;
         return(
             <Button
-                className='RoundButton'
-                type="primary"
-                shape="round"
-                onClick={onClick}
-            >
-                {buttonText}
-            </Button>
+	                className='RoundButton'
+	                type='primary'
+	                shape='round'
+	                onClick={onClick}
+	            >
+	                {buttonText}
+	            </Button>
         )
     }
  }
@@ -42,11 +41,10 @@ class RoundButton extends Component {
 
 
 class SimpleHolder extends Component{
-    render() {
-
-        return (
+    render(){
+        return(
             <div>
-                <Row className='simpleHolder'>
+                <Row clasName = 'simpleHolder' >
                     <Form/>
 
                 </Row>
@@ -60,26 +58,38 @@ class Form extends Component{
 
     render(){
         return(
-            <div>
-            <Row className = "head" id = "form">
-                <Col span={8}>
-                    <Title level={2}>Stay tuned!</Title>
-                    <Text >Suscribe to be up to date of our new courses</Text>
-                    <RoundButton
-                        buttonText='Submit'
-                        onClick={() => console.log('Submit button clicked')}
-                    />
-                </Col>
-            </Row>
-            <Row className = "body" id = "form">
-                <Col span={24}>
-                    <AutoComplete
-                    style={{ width: 200 }}
-                    placeholder="Email"
-                    />
-
-                </Col>
-            </Row>
+            <div style = {{margin: 50}}>
+                <Row>
+                    <Col xs={3} sm={3} md={2} lg={1} />
+                    <Col xs={20} sm={10} md={8} lg={7} >
+                        <Title  level={2} >Stay tuned!</Title>
+                    </Col>
+                     <Col xs={20} sm={16} md={12} lg={8} xl={4}/>
+                </Row>
+                <Row>
+                    <Col xs={3} sm={3} md={2} lg={3} />
+                    <Col xs={20} sm={10} md={8} lg={8}>
+                        <Text style = {{ float: 'left'}}>Suscribe to be up to date of our new courses</Text>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={3} sm={3} md={2} lg={1} />
+                    <Col xs={20} sm={10} md={8} lg={6} style = {{ padding: 20}}>
+                        <RoundButton
+                            buttonText = 'Submit'
+                            onClick={() => console.log('Submit button clicked')}
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={3} sm={3} md={2} lg={3} />
+                    <Col xs={20} sm={10} md={8} lg={1}>
+                        <AutoComplete
+                            style={{ width: 200}}
+                            placeholder='Email'
+                        />
+                    </Col>
+                </Row>
             </div>
         )
     }
@@ -89,7 +99,7 @@ class Form extends Component{
 class App extends Component {
   render() {
     return (
-        <div className="App">
+        <div className='App'>
             <Layout>
                 <Header>Header</Header>
                 <Content>
@@ -98,7 +108,8 @@ class App extends Component {
                 </Content>
                 <Footer>Footer</Footer>
             </Layout>
-        </div>
+
+      </div>
     );
   }
 }
