@@ -32,63 +32,45 @@ class RoundButton extends Component {
 	                onClick={onClick}
 	            >
 	                {buttonText}
-	            </Button>
+	        </Button>
         )
     }
  }
 
-
-
-
-class SimpleHolder extends Component{
-    render(){
-        return(
-            <div>
-                <Row clasName = 'simpleHolder' >
-                    <Form/>
-
-                </Row>
-            </div>
-
-        )
-    }
-}
 
 class Form extends Component{
 
     render(){
         return(
             <div style = {{margin: 50}}>
-                <Row>
-                    <Col xs={3} sm={3} md={2} lg={1} />
-                    <Col xs={20} sm={10} md={8} lg={7} >
-                        <Title  level={2} >Stay tuned!</Title>
-                    </Col>
-                     <Col xs={20} sm={16} md={12} lg={8} xl={4}/>
-                </Row>
-                <Row>
-                    <Col xs={3} sm={3} md={2} lg={3} />
-                    <Col xs={20} sm={10} md={8} lg={8}>
-                        <Text style = {{ float: 'left'}}>Suscribe to be up to date of our new courses</Text>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col xs={3} sm={3} md={2} lg={1} />
-                    <Col xs={20} sm={10} md={8} lg={6} style = {{ padding: 20}}>
-                        <RoundButton
-                            buttonText = 'Submit'
-                            onClick={() => console.log('Submit button clicked')}
-                        />
-                    </Col>
-                </Row>
-                <Row>
-                    <Col xs={3} sm={3} md={2} lg={3} />
-                    <Col xs={20} sm={10} md={8} lg={1}>
-                        <AutoComplete
-                            style={{ width: 200}}
-                            placeholder='Email'
-                        />
-                    </Col>
+                <Row span = {24}>
+                    <Row>
+                        <Col span = {24} md = {9}>
+                            <Title  level={2} >Stay tuned!</Title>
+                        </Col>
+
+                    </Row>
+                    <Row>
+                        <Col span = {24} md = {12} >
+                            <Text >Suscribe to be up to date of our new courses</Text>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col span = {24} md={8} style={{ marginBottom: 20, marginTop:20 }}>
+                            <RoundButton
+                                buttonText = 'Submit'
+                                onClick={() => console.log('Submit button clicked')}
+                            />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col span = {24}  md={10} >
+                            <AutoComplete
+                                style={{ width: 200}}
+                                placeholder='Email'
+                            />
+                        </Col>
+                    </Row>
                 </Row>
             </div>
         )
@@ -103,8 +85,7 @@ class App extends Component {
             <Layout>
                 <Header>Header</Header>
                 <Content>
-                    <SimpleHolder/>
-
+                    <Form/>
                 </Content>
                 <Footer>Footer</Footer>
             </Layout>
