@@ -13,29 +13,19 @@
     background: rgb(255,255,255);
 }
 
-
-.simpleHolder{
-    height: 500px;
+.ant-btn{
+    background: rgb(0,194,212);
+    border: rgb(0,194,212);
 }
 
-.head{
-    text-align: left;
+.ant-btn:hover{
+    background: rgb(0,194,212);
+    border: rgb(0,194,212);
 }
 
-.body{
-    padding: 20px;
-}
-
-.RoundButton {
-    margin-top: 6px;
-}
-
-#form{
-    margin-top: 24px;
-    margin-left: 180px;
-    margin-right: 100px;
 
 
-
-    background-color: rgb(255,255,255);
+.filledBtn{
+    width: 300px;
+    height: 300px;
 }
