@@ -1,0 +1,31 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+}
+
+
+.ant-layout-header{
+    background: rgb(0,194,212);
+}
+
+.ant-layout-content{
+    background: rgb(255,255,255);
+}
+
+.ant-btn{
+    background: rgb(0,194,212);
+    border: rgb(0,194,212);
+}
+
+.ant-btn:hover{
+    background: rgb(0,194,212);
+    border: rgb(0,194,212);
+}
+
+
+
+.filledBtn{
+    width: 300px;
+    height: 300px;
+}
