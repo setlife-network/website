@@ -24,9 +24,9 @@ const TeaserTile = (props) => {
                     </Title>
                 </Col>
             </Row>
-            <Row style = {{height: 180}}>
+            <Row style = {{height: 160}}>
                 <Col span={24}>
-                    <Text strong style = {{display: 'block', textAlign: 'justify', fontSize: 16, fontFamily:'Arial'}}>
+                    <Text type="secondary" style = {{display: 'block', textAlign: 'justify', fontSize: 16, fontFamily:'Arial'}}>
                         {props.intro}
                     </Text>
                 </Col>

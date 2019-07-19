@@ -26,7 +26,7 @@ const ProgramCard = (props) => {
                             <img src={'./assets/SDFundamentals.png'} alt="Software development Fundamentals" />
                         </Col>
                         <Col span = {16} style = {{padding: 20, height:140}} >
-                            <Text strong style = {{fontSize: 16, fontFamily:'Arial'}}>
+                            <Text type="secondary" style = {{display: 'block', textAlign: 'justify', fontSize: 16, fontFamily:'Arial'}}>
                                 {props.description}
                             </Text>
                         </Col>

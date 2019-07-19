@@ -8,6 +8,7 @@ import TeaserTile from './TeaserTile.js';
 import LinkButton from './LinkButton.js'
 import ProgramCard from './ProgramCard.js'
 import ValueTile from './ValueTile.js'
+import TestimonyTile from './TestimonyTile.js'
 import './App.css';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -38,7 +39,6 @@ class RoundButton extends Component {
         )
     }
 }
-
 
 class Hero extends Component{
     render(){
@@ -173,7 +173,52 @@ class CoreValues extends Component{
             </div>
         )
     }
+}
 
+class Blog extends Component{
+    render(){
+        return(
+            <div style = {{marginTop: 50}}>
+                <Row>
+                    <Col span = {1} md = {3}>
+                    </Col>
+                    <Col span = {22} md = {18}>
+                        <Row type="flex" justify="space-around">
+                            <Col span={22} md={6} style = {{marginTop: 15}}>
+                                <TestimonyTile
+                                    date = '20 april 2022'
+                                    headline = 'Some blog headline lorem ipsum'
+                                    description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
+                                    buttonText = 'Link'
+                                    link = 'url'
+                                />
+                            </Col>
+                            <Col span={22} md={6} style = {{marginTop: 15}}>
+                                <TestimonyTile
+                                    date = '20 april 2022'
+                                    headline = 'Some blog headline lorem ipsum'
+                                    description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
+                                    buttonText = 'Link'
+                                    link = 'url'
+                                />
+                            </Col>
+                            <Col span={22} md={6} style = {{marginTop: 15}}>
+                                <TestimonyTile
+                                    date = '20 april 2022'
+                                    headline = 'Some blog headline lorem ipsum'
+                                    description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
+                                    buttonText = 'Link'
+                                    link = 'url'
+                                />
+                            </Col>
+                        </Row>
+                    </Col>
+                    <Col span = {1} md = {3}>
+                    </Col>
+                </Row>
+            </div>
+        )
+    }
 }
 
 
@@ -236,6 +281,7 @@ class App extends Component {
                         <Hero/>
                         <Programs/>
                         <CoreValues/>
+                        <Blog/>
 
 
 

@@ -19,7 +19,7 @@ const ValueTile = (props) =>{
                         </Title>
                     </Col>
                     <Col span={24}>
-                        <Text strong style = {{fontSize: 16, fontFamily:'Arial'}}> 
+                        <Text type="secondary" style = {{display: 'block', textAlign: 'justify', fontSize: 16, fontFamily:'Arial'}}> 
                             {props.description}
                         </Text>
                     </Col>
