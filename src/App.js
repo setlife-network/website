@@ -3,8 +3,6 @@ import { withRouter, Route } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
 
-import './styles/App.css';
-
 class App extends React.Component {
     render() {
         return (
