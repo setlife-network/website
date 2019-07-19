@@ -97,7 +97,7 @@ class Programs extends Component{
                                         link = 'url'
                                     />
                                 </Row>
-                                <Row style = {{marginTop:20, marginBottom: 20}}>
+                                <Row style = {{marginTop:50, marginBottom: 50}}>
                                     <ProgramCard
                                         headline = 'Online Education Courses'
                                         description = 'Check out the materials in our core curriculum to learn what technologies are out there for you to explore'
@@ -115,7 +115,7 @@ class Programs extends Component{
                                         link = 'url'
                                     />
                                 </Row>
-                                <Row style = {{marginTop:20}}>
+                                <Row style = {{marginTop:50}}>
                                     <ProgramCard
                                         headline = 'Mentorship'
                                         description = 'Join our mission and help us teach how to teach and learn how to learn'

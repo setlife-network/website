@@ -8,7 +8,7 @@ const { Title, Paragraph, Text } = Typography;
 const ProgramCard = (props) => {
     return(
         <Row type="flex" justify="space-around">
-            <Col span={24} md={20} style = {{background:'white'}}>
+            <Col span={24} md={22} style = {{background:'white'}}>
                 <Row>
                     <Col span={2} style={{background:'#EEEEEE',height:2, marginTop:15}}>
                     </Col>
