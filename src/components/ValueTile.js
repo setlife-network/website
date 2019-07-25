@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'antd';
-import { Typography } from 'antd';
-import LinkButton from './LinkButton.js'
+import { Row, Col, Typography } from 'antd';
+
+import LinkButton from './LinkButton'
 
 const { Title, Paragraph, Text } = Typography;
 
-const ValueTile = (props) =>{
-    return(
-        <Row type="flex" justify="space-around">
+const ValueTile = ({
+    headline,
+    description
+}) => {
+    return (
+        <Row type='flex' justify='space-around'>
             <Col span={6}>
-                <img src={'./assets/blueArrow.png'} alt="Blue Arrow" />
+                <img src='./assets/blueArrow.png' alt='Blue Arrow' />
             </Col>
             <Col span={16}>
                 <Row>
                     <Col span={24}>
                         <Title level={4}>
-                            {props.headline}
+                            {headline}
                         </Title>
                     </Col>
                     <Col span={24}>
-                        <Text type="secondary" style = {{display: 'block', textAlign: 'justify', fontSize: 16, fontFamily:'Arial'}}> 
-                            {props.description}
+                        <Text
+                            type='secondary'
+                            style={{
+                                display: 'block',
+                                textAlign: 'justify',
+                                fontSize: 16,
+                                fontFamily: 'Arial'
+                            }}
+                        >
+                            {description}
                         </Text>
                     </Col>
                 </Row>
