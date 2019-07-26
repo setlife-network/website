@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {
     Row, Col, Typography, Layout, AutoComplete, Button, Radio, Icon
@@ -11,10 +10,11 @@ import ProgramCard from '../components/ProgramCard'
 import ValueTile from '../components/ValueTile'
 import TestimonyTile from '../components/TestimonyTile'
 import RoundButton from '../components/RoundButton'
+import Header from '../components/Header'
 
 
 const {
-    Header, Footer, Sider, Content
+    Footer, Sider, Content
 } = Layout;
 const { Title } = Typography;
 const { Text } = Typography;
@@ -270,16 +270,14 @@ class HomePage extends Component {
     render() {
         return (
             <Layout>
-                <Header>Header</Header>
+                <Header />
                 <Content>
                     <Row type='flex'>
-
 
                         <Hero />
                         <Programs />
                         <CoreValues />
                         <Blog />
-
 
                     </Row>
                     <SubscribeForUpdates />
