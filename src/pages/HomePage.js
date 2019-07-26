@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {
     Row, Col, Typography, Layout, AutoComplete, Button, Radio, Icon
@@ -10,39 +9,15 @@ import LinkButton from '../components/LinkButton'
 import ProgramCard from '../components/ProgramCard'
 import ValueTile from '../components/ValueTile'
 import TestimonyTile from '../components/TestimonyTile'
+import RoundButton from '../components/RoundButton'
+import Header from '../components/Header'
 
 
 const {
-    Header, Footer, Sider, Content
+    Footer, Sider, Content
 } = Layout;
 const { Title } = Typography;
 const { Text } = Typography;
-
-class RoundButton extends Component {
-    state = {
-        size: 'large',
-    };
-
-
-    handleSizeChange = e => {
-        this.setState({ size: e.target.value });
-    };
-
-    render() {
-        const { buttonText, onClick } = this.props;
-        const { size } = this.state;
-        return (
-            <Button
-                className='RoundButton'
-                type='primary'
-                shape='round'
-                onClick={onClick}
-            >
-                {buttonText}
-            </Button>
-        )
-    }
-}
 
 class Hero extends Component {
     render() {
@@ -246,7 +221,7 @@ class Blog extends Component {
 }
 
 
-class Form extends Component {
+class SubscribeForUpdates extends Component {
 
     render() {
         return (
@@ -295,19 +270,17 @@ class HomePage extends Component {
     render() {
         return (
             <Layout>
-                <Header>Header</Header>
+                <Header />
                 <Content>
                     <Row type='flex'>
-
 
                         <Hero />
                         <Programs />
                         <CoreValues />
                         <Blog />
 
-
                     </Row>
-                    <Form />
+                    <SubscribeForUpdates />
                 </Content>
                 <Footer>Footer</Footer>
             </Layout>
