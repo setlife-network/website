@@ -27,6 +27,7 @@ class Hero extends Component {
                 </Col>
                 <Col span={22} md={18} style={{ marginTop: 50, marginBottom: 50 }}>
                     <Row type='flex' justify='space-around'>
+                        <Col md = {8}>
                         <TeaserTile
                             headline='Tech Education'
                             intro='We’ll teach you the core concepts you need to understand technology and anticipate the impact of its exponential growth on your daily life'
@@ -34,18 +35,29 @@ class Hero extends Component {
                             link='url'
 
                         />
+                        </Col>
+                        <Col md = {8}>
                         <TeaserTile
                             headline='Project-based Learning'
                             intro='We’ll help you apply new knowledge directly to existing community projects (or help you start your own!) so that you can train your skills and gain valuable work experience'
                             buttonText='Explore projects'
                             link='url'
+
                         />
+                        </Col>
+                        <Col md = {8}>
                         <TeaserTile
-                            headline='Open-source development tools'
-                            intro='We are committed to leveraging cutting-edge technology to promoting open-source tools that make development as simple as possible'
                             buttonText='Documentation'
                             link='url'
+
                         />
+                        </Col>
+
+
+
+
+
+
 
 
                     </Row>

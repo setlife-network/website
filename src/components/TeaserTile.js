@@ -1,13 +1,38 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
 import {
-    Row, Col, Typography, Layout, AutoComplete, Button, Radio, Icon
-} from 'antd';
+    Container, Image, Row, Col
+} from 'react-bootstrap';
 
 
 import LinkButton from './LinkButton'
+import theme from '../styles/theme';
 
+const Title = styled.p`
+    fontSize: ${theme.sizes.large};
+    fontFamily: Arial;
+    textAlign: left
+    font-weight: bold;
+    padding-top: 10px;
+`
 
-const { Title, Paragraph, Text } = Typography;
+const Text = styled.p`
+    fontSize: ${theme.sizes.medium}
+    fontFamily: 'Arial';
+    display: 'block';
+    textAlign: 'left';
+    font-weight: normal;
+`
+
+const RectangleDiv = styled.div`
+    height: 2px;
+    background: ${theme.colors.primary};
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 0;
+`
+
 
 const TeaserTile = ({
     headline,
@@ -17,62 +42,31 @@ const TeaserTile = ({
 }) => {
 
     return (
-        <Col
-            span={24}
-            md={6}
-            style={{
-                marginTop: 50
-            }}
-        >
-            <Row>
-                <Col
-                    span={6}
-                    style={{
-                        height: 2,
-                        background: 'rgb(0,194,212)'
-                    }}
-                >
-                </Col>
-            </Row>
-            <Row style={{
-                marginTop: 10,
-                height: 50
-            }}
-            >
-                <Col span={18}>
-                    <Title level={4}>
-                        {headline}
-                    </Title>
-                </Col>
-            </Row>
-            <Row style={{ height: 160 }}>
-                <Col span={24}>
-                    <Text
-                        type='secondary'
-                        style={{
-                            display: 'block',
-                            textAlign: 'justify',
-                            fontSize: 16,
-                            fontFamily: 'Arial'
-                        }}
-                    >
-                        {intro}
-                    </Text>
-                </Col>
-            </Row>
-            <Row>
-                <Col style={{
-                    margin: 5
-                }}
-                >
-                    <LinkButton
-                        description={buttonText}
-                        url={link}
-                        color='black'
-                    />
-                </Col>
-            </Row>
-        </Col>
+
+        <Container>
+        <Row>
+            <Col md= {3}>
+                <RectangleDiv/>
+            </Col>
+            <Col md={10}>
+                <Title>
+                    {headline}
+                </Title>
+            </Col>
+            <Col md={20}>
+                <Text>
+                    {intro}
+                </Text>
+            </Col>
+            <Col>
+                <LinkButton
+                    description={buttonText}
+                    url={link}
+                    color='black'
+                />
+            </Col>
+        </Row>
+        </Container>
 
     )
 }
