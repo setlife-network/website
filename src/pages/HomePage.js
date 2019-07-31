@@ -5,13 +5,14 @@ import {
 
 
 
-import ProgramCard from '../components/ProgramCard'
+
 import ValueTile from '../components/ValueTile'
 import TestimonyTile from '../components/TestimonyTile'
 import RoundButton from '../components/RoundButton'
 import Header from '../components/Header'
 
 import Hero from '../sections/Hero'
+import Programs from '../sections/Programs'
 
 const {
     Footer, Sider, Content
@@ -21,80 +22,7 @@ const { Text } = Typography;
 
 
 
-class Programs extends Component {
-    render() {
-        return (
-            <div style={{ background: '#EEEEEE' }}>
-                <Row>
-                    <Col span={1} md={3}>
-                    </Col>
-                    <Col
-                        span={22}
-                        md={18}
-                        style={{
-                            marginTop: 50,
-                            marginBottom: 50
-                        }}
-                    >
-                        <Row style={{
-                            marginTop: 20
-                        }}
-                        >
-                            <Col span={24} md={12}>
-                                <Row style={{
-                                    marginTop: 50
-                                }}
-                                >
-                                    <ProgramCard
-                                        headline='International Learning & Development'
-                                        description='Train & refine your technical skills and experience modern international work culture in Barcelona, Spain'
-                                        buttonText='Trial 1 Overview'
-                                        link='url'
-                                    />
-                                </Row>
-                                <Row style={{
-                                    marginTop: 50,
-                                    marginBottom: 50
-                                }}
-                                >
-                                    <ProgramCard
-                                        headline='Online Education Courses'
-                                        description='Check out the materials in our core curriculum to learn what technologies are out there for you to explore'
-                                        buttonText='Core Curriculum'
-                                        link='url'
-                                    />
-                                </Row>
-                            </Col>
-                            <Col span={24} md={12}>
-                                <Row>
-                                    <ProgramCard
-                                        headline='Employee Technical Training'
-                                        description='Invest in your own employees and provide them with the latest tools to contribute to company growth'
-                                        buttonText='Free Consultation'
-                                        link='url'
-                                    />
-                                </Row>
-                                <Row style={{
-                                    marginTop: 50
-                                }}
-                                >
-                                    <ProgramCard
-                                        headline='Mentorship'
-                                        description='Join our mission and help us teach how to teach and learn how to learn'
-                                        buttonText='Join Slack Channel'
-                                        link='url'
-                                    />
-                                </Row>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col span={1} md={3}>
-                    </Col>
-                </Row>
-            </div>
-        )
-    }
-}
+
 
 class CoreValues extends Component {
     render() {
