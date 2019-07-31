@@ -4,14 +4,14 @@ import {
 } from 'antd';
 
 
-import TeaserTile from '../components/TeaserTile';
-import LinkButton from '../components/LinkButton'
+
 import ProgramCard from '../components/ProgramCard'
 import ValueTile from '../components/ValueTile'
 import TestimonyTile from '../components/TestimonyTile'
 import RoundButton from '../components/RoundButton'
 import Header from '../components/Header'
 
+import Hero from '../sections/Hero'
 
 const {
     Footer, Sider, Content
@@ -19,58 +19,7 @@ const {
 const { Title } = Typography;
 const { Text } = Typography;
 
-class Hero extends Component {
-    render() {
-        return (
-            <div>
-                <Col span={1} md={3}>
-                </Col>
-                <Col span={22} md={18} style={{ marginTop: 50, marginBottom: 50 }}>
-                    <Row type='flex' justify='space-around'>
-                        <Col md = {8}>
-                        <TeaserTile
-                            headline='Tech Education'
-                            intro='We’ll teach you the core concepts you need to understand technology and anticipate the impact of its exponential growth on your daily life'
-                            buttonText='Core curriculum'
-                            link='url'
 
-                        />
-                        </Col>
-                        <Col md = {8}>
-                        <TeaserTile
-                            headline='Project-based Learning'
-                            intro='We’ll help you apply new knowledge directly to existing community projects (or help you start your own!) so that you can train your skills and gain valuable work experience'
-                            buttonText='Explore projects'
-                            link='url'
-
-                        />
-                        </Col>
-                        <Col md = {8}>
-                        <TeaserTile
-                            headline='Tech Education'
-                            intro='We are committed to leveraging cutting-edge technology to your every advantage by creating tools that make development as simple as possible'
-                            buttonText='Documentation'
-                            link='url'
-
-                        />
-                        </Col>
-
-
-
-
-
-
-
-
-                    </Row>
-                </Col>
-                <Col span={1} md={3}>
-                </Col>
-
-            </div>
-        )
-    }
-}
 
 class Programs extends Component {
     render() {
@@ -176,8 +125,13 @@ class CoreValues extends Component {
                                     headline='Open-source software "libre"'
                                     description='To promote true "freedom", users must be able to run software such that it can be studied, changed, adapted, and distributed in any variation'
                                 />
+                                <Row style={{ height: 40 }}>
+                                </Row>
+                                <ValueTile
+                                    headline='Open-source software "libre"'
+                                    description='To promote true "freedom", users must be able to run software such that it can be studied, changed, adapted, and distributed in any variation'
+                                />
                             </Col>
-
                         </Row>
                     </Col>
                     <Col span={1} md={3}>
