@@ -1,6 +1,6 @@
 export default {
     small: '1rem',
-    medium: '16px',
-    large: '28px',
+    medium: '12px',
+    large: '18px',
     xlarge: '4rem'
 }

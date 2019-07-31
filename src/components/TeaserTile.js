@@ -8,20 +8,23 @@ import {
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
 
+
 const Title = styled.p`
-    fontSize: ${theme.sizes.large};
-    fontFamily: Arial;
-    textAlign: left
-    font-weight: bold;
+    font-size: ${theme.sizes.large};
+    font-family: Arial;
+    text-align: left
     padding-top: 10px;
+    color: ${theme.colors.black};
 `
 
 const Text = styled.p`
-    fontSize: ${theme.sizes.medium}
-    fontFamily: 'Arial';
+    font-size: ${theme.sizes.medium}
+    font-family: 'Arial';
     display: 'block';
-    textAlign: 'left';
+    text-align: 'left';
     font-weight: normal;
+    color: ${theme.colors.black};
+
 `
 
 const RectangleDiv = styled.div`

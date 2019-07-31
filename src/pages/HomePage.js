@@ -47,6 +47,8 @@ class Hero extends Component {
                         </Col>
                         <Col md = {8}>
                         <TeaserTile
+                            headline='Tech Education'
+                            intro='We are committed to leveraging cutting-edge technology to your every advantage by creating tools that make development as simple as possible'
                             buttonText='Documentation'
                             link='url'
 

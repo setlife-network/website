@@ -1,9 +1,51 @@
 import React, { Component } from 'react';
-import { Row, Col, Typography } from 'antd';
-
+import styled from 'styled-components'
+import {
+    Container, Image, Row, Col
+} from 'react-bootstrap';
 import LinkButton from './LinkButton'
+import theme from '../styles/theme';
 
-const { Title, Paragraph, Text } = Typography;
+import SDFundamentals from '../assets/images/SDFundamentals.png'
+
+const Title = styled.p`
+    font-size: ${theme.sizes.large};
+    fontFamily: Arial;
+    text-align: left
+    padding: 10px;
+    color: ${theme.colors.black};
+`
+
+const Text = styled.p`
+    font-size: ${theme.sizes.medium}
+    font-family: 'Arial';
+    display: 'block';
+    text-align: 'left';
+    font-weight: normal;
+    color: ${theme.colors.black};
+`
+
+const WrapperCard = styled.div`
+    background: ${ props => props.filled ? 'white' : '#EFF3F2' };
+
+`
+
+const RectangleDiv = styled(WrapperCard)`
+    height:2px;
+    margin-top: 15px
+`
+
+const ContentDiv = styled(WrapperCard)`
+    height:80px;
+`
+
+const ImageContainer = styled(Image)`
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+`
+
 
 const ProgramCard = ({
     headline,
@@ -12,66 +54,48 @@ const ProgramCard = ({
     link
 }) => {
     return (
-        <Row type='flex' justify='space-around'>
-            <Col
-                span={24}
-                md={22}
-                style={{
-                    background: 'white'
-                }}
-            >
-                <Row>
-                    <Col
-                        span={2}
-                        style={{
-                            background: '#EEEEEE',
-                            height: 2,
-                            marginTop: 15
-                        }}
-                    >
-                    </Col>
-                </Row>
-                <Row style={{
-                    padding: 20
-                }}
-                >
+            <Row>
+                <Col md={10}>
+                <WrapperCard filled>
                     <Row>
-                        <Col span={24}>
-                            <Title level={4}>
-                                {headline}
-                            </Title>
+                        <Col md={2}>
+                            <RectangleDiv/>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col span={8}>
-                            <img src='./assets/SDFundamentals.png' alt='Software development Fundamentals' />
-                        </Col>
-                        <Col span={16} style={{ padding: 20, height: 140 }}>
-                            <Text
-                                type='secondary'
-                                style={{
-                                    display: 'block',
-                                    textAlign: 'justify',
-                                    fontSize: 16,
-                                    fontFamily: 'Arial'
-                                }}
-                            >
-                                {description}
-                            </Text>
-                        </Col>
-                        <Col span={16} offset={9}>
-                            <LinkButton
-                                description={buttonText}
-                                url={link}
-                                color='rgb(0,194,212)'
-                            />
-                        </Col>
-                    </Row>
+                    <WrapperCard filled>
+                        <Row>
+                            <Col md={12}>
+                                <Title>
+                                    {headline}
+                                </Title>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col md={4}>
+                                <ImageContainer src= {SDFundamentals} alt='Software development Fundamentals' />
+                            </Col>
+                            <Col md={7} >
+                                <Row>
+                                    <ContentDiv filled md={12} >
+                                        <Text>
+                                            {description}
+                                        </Text>
+                                    </ContentDiv>
+                                    <Col md = {12}>
+                                        <LinkButton
+                                            description={buttonText}
+                                            url={link}
+                                            color = 'black'
+                                        />
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
+                    </WrapperCard >
 
-                </Row>
-
-            </Col>
-        </Row>
+                </WrapperCard>
+                </Col>
+            </Row>
     )
 
 }
