@@ -5,28 +5,14 @@ import {
 } from 'react-bootstrap';
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
+import Title from '../typography/Title';
+import Text from '../typography/Text';
 
 import SDFundamentals from '../assets/images/SDFundamentals.png'
 
-const Title = styled.p`
-    font-size: ${theme.sizes.large};
-    fontFamily: Arial;
-    text-align: left
-    padding: 10px;
-    color: ${theme.colors.black};
-`
-
-const Text = styled.p`
-    font-size: ${theme.sizes.medium}
-    font-family: 'Arial';
-    display: 'block';
-    text-align: 'left';
-    font-weight: normal;
-    color: ${theme.colors.black};
-`
 
 const WrapperCard = styled.div`
-    background: ${ props => props.filled ? 'white' : '#EFF3F2' };
+    background: ${props => props.filled ? 'white' : '#EFF3F2'};
 
 `
 
@@ -54,12 +40,12 @@ const ProgramCard = ({
     link
 }) => {
     return (
-            <Row>
-                <Col md={10}>
+        <Row>
+            <Col md={11}>
                 <WrapperCard filled>
                     <Row>
                         <Col md={2}>
-                            <RectangleDiv/>
+                            <RectangleDiv />
                         </Col>
                     </Row>
                     <WrapperCard filled>
@@ -72,30 +58,30 @@ const ProgramCard = ({
                         </Row>
                         <Row>
                             <Col md={4}>
-                                <ImageContainer src= {SDFundamentals} alt='Software development Fundamentals' />
+                                <ImageContainer src={SDFundamentals} alt='Software development Fundamentals' />
                             </Col>
-                            <Col md={7} >
+                            <Col md={7}>
                                 <Row>
-                                    <ContentDiv filled md={12} >
+                                    <ContentDiv filled md={12}>
                                         <Text>
                                             {description}
                                         </Text>
                                     </ContentDiv>
-                                    <Col md = {12}>
+                                    <Col md={12}>
                                         <LinkButton
                                             description={buttonText}
                                             url={link}
-                                            color = 'black'
+                                            color='black'
                                         />
                                     </Col>
                                 </Row>
                             </Col>
                         </Row>
-                    </WrapperCard >
+                    </WrapperCard>
 
                 </WrapperCard>
-                </Col>
-            </Row>
+            </Col>
+        </Row>
     )
 
 }

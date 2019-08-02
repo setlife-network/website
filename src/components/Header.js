@@ -20,8 +20,7 @@ const HeaderImage = styled(Image)`
 const Header = () => (
     <HeaderContainer>
         <Row>
-            <HeaderImage src={logo} />
-            
+            <HeaderImage src={logo} />        
         </Row>
     </HeaderContainer>
 )

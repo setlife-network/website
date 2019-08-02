@@ -7,25 +7,9 @@ import {
 
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
+import Title from '../typography/Title';
+import Text from '../typography/Text';
 
-
-const Title = styled.p`
-    font-size: ${theme.sizes.large};
-    font-family: Arial;
-    text-align: left
-    padding-top: 10px;
-    color: ${theme.colors.black};
-`
-
-const Text = styled.p`
-    font-size: ${theme.sizes.medium}
-    font-family: 'Arial';
-    display: 'block';
-    text-align: 'left';
-    font-weight: normal;
-    color: ${theme.colors.black};
-
-`
 
 const RectangleDiv = styled.div`
     height: 2px;
@@ -47,28 +31,28 @@ const TeaserTile = ({
     return (
 
         <Container>
-        <Row>
-            <Col md= {3}>
-                <RectangleDiv/>
-            </Col>
-            <Col md={10}>
-                <Title>
-                    {headline}
-                </Title>
-            </Col>
-            <Col md={20}>
-                <Text>
-                    {intro}
-                </Text>
-            </Col>
-            <Col>
-                <LinkButton
-                    description={buttonText}
-                    url={link}
-                    color='black'
-                />
-            </Col>
-        </Row>
+            <Row>
+                <Col md={3}>
+                    <RectangleDiv />
+                </Col>
+                <Col md={10}>
+                    <Title>
+                        {headline}
+                    </Title>
+                </Col>
+                <Col md={20}>
+                    <Text>
+                        {intro}
+                    </Text>
+                </Col>
+                <Col>
+                    <LinkButton
+                        description={buttonText}
+                        url={link}
+                        color='black'
+                    />
+                </Col>
+            </Row>
         </Container>
 
     )

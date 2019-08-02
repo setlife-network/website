@@ -7,24 +7,9 @@ import {
 
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
+import Title from '../typography/Title';
+import Text from '../typography/Text';
 
-const Title = styled.p`
-    font-size: ${theme.sizes.large};
-    font-family: Arial;
-    text-align: left
-    padding-top: 10px;
-    color: ${ props => props.blue ? '#00C2D4' : 'black' };
-`
-
-const Text = styled.p`
-    font-size: ${theme.sizes.medium}
-    font-family: 'Arial';
-    display: 'block';
-    text-align: 'left';
-    font-weight: ${ props => props.bold ? 'bold' : 'normal' };
-    color: ${theme.colors.black};
-    text-transform: ${ props => props.uppercase ? 'uppercase' : 'lowercase'}
-`
 
 const ContentDiv = styled.div`
     height:50px;

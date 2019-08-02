@@ -8,23 +8,9 @@ import {
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
 import BlueArrow from '../assets/images/blueArrow.png'
+import Title from '../typography/Title';
+import Text from '../typography/Text';
 
-const Title = styled.p`
-    font-size: ${theme.sizes.large};
-    font-family: Arial;
-    text-align: left
-    padding-top: 10px;
-    color: ${theme.colors.black};
-`
-
-const Text = styled.p`
-    font-size: ${theme.sizes.medium}
-    font-family: 'Arial';
-    display: 'block';
-    text-align: 'left';
-    font-weight: normal;
-    color: ${theme.colors.black};
-`
 
 const ContentDiv = styled.div`
     height:80px;

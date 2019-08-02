@@ -23,51 +23,51 @@ class Programs extends Component {
                 <Row>
                     <Col md={2}>
                     </Col>
-                    <Col md={10}>
-                            <Row>
-                                <Col md={6}>
-                                    <Row>
-                                        <RowDiv>
-                                            <ProgramCard
-                                                headline='International Learning & Development'
-                                                description='Train & refine your technical skills and experience modern international work culture in Barcelona, Spain'
-                                                buttonText='Trial 1 Overview'
-                                                link='url'
-                                            />
-                                        </RowDiv>
-                                    </Row>
-                                    <Row>
-                                        <RowDiv>
-                                            <ProgramCard
-                                                headline='Online Education Courses'
-                                                description='Check out the materials in our core curriculum to learn what technologies are out there for you to explore'
-                                                buttonText='Core Curriculum'
-                                                link='url'
-                                            />
-                                        </RowDiv>
-                                    </Row>
-                                </Col>
-                                <Col md={6}>
-                                    <Row>
+                    <Col md={8}>
+                        <Row>
+                            <Col md={6}>
+                                <Row>
+                                    <RowDiv>
                                         <ProgramCard
-                                            headline='Employee Technical Training'
-                                            description='Invest in your own employees and provide them with the latest tools to contribute to company growth'
-                                            buttonText='Free Consultation'
+                                            headline='International Learning & Development'
+                                            description='Train & refine your technical skills and experience modern international work culture in Barcelona, Spain'
+                                            buttonText='Trial 1 Overview'
                                             link='url'
                                         />
-                                    </Row>
-                                    <Row>
-                                        <RowDiv>
-                                            <ProgramCard
-                                                headline='Mentorship'
-                                                description='Join our mission and help us teach how to teach and learn how to learn'
-                                                buttonText='Join Slack Channel'
-                                                link='url'
-                                            />
-                                        </RowDiv>
-                                    </Row>
-                                </Col>
-                            </Row>
+                                    </RowDiv>
+                                </Row>
+                                <Row>
+                                    <RowDiv>
+                                        <ProgramCard
+                                            headline='Online Education Courses'
+                                            description='Check out the materials in our core curriculum to learn what technologies are out there for you to explore'
+                                            buttonText='Core Curriculum'
+                                            link='url'
+                                        />
+                                    </RowDiv>
+                                </Row>
+                            </Col>
+                            <Col md={6}>
+                                <Row>
+                                    <ProgramCard
+                                        headline='Employee Technical Training'
+                                        description='Invest in your own employees and provide them with the latest tools to contribute to company growth'
+                                        buttonText='Free Consultation'
+                                        link='url'
+                                    />
+                                </Row>
+                                <Row>
+                                    <RowDiv>
+                                        <ProgramCard
+                                            headline='Mentorship'
+                                            description='Join our mission and help us teach how to teach and learn how to learn'
+                                            buttonText='Join Slack Channel'
+                                            link='url'
+                                        />
+                                    </RowDiv>
+                                </Row>
+                            </Col>
+                        </Row>
                     </Col>
                     <Col md={2}>
                     </Col>
