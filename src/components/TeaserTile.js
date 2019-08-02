@@ -6,19 +6,10 @@ import {
 
 
 import LinkButton from './LinkButton'
+import DividerLine from './DividerLine'
 import theme from '../styles/theme';
 import Title from '../typography/Title';
 import Text from '../typography/Text';
-
-
-const RectangleDiv = styled.div`
-    height: 2px;
-    background: ${theme.colors.primary};
-    position: absolute;
-    width: 100%;
-    right: 0;
-    top: 0;
-`
 
 
 const TeaserTile = ({
@@ -33,7 +24,9 @@ const TeaserTile = ({
         <Container>
             <Row>
                 <Col md={3}>
-                    <RectangleDiv />
+                    <DividerLine
+                        color={theme.colors.primary}
+                    />
                 </Col>
                 <Col md={10}>
                     <Title>
@@ -49,7 +42,7 @@ const TeaserTile = ({
                     <LinkButton
                         description={buttonText}
                         url={link}
-                        color='black'
+                        color={theme.colors.black}
                     />
                 </Col>
             </Row>

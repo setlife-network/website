@@ -71,7 +71,7 @@ const ProgramCard = ({
                                         <LinkButton
                                             description={buttonText}
                                             url={link}
-                                            color='black'
+                                            color={theme.colors.primary}
                                         />
                                     </Col>
                                 </Row>

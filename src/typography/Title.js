@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 import theme from '../styles/theme';
 
+/*
+properties:
+    primary/black
+    bold/normal
+*/
+
 const Title = styled.p`
     font-size: ${theme.sizes.large};
     fontFamily: Arial;

@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { Row, Col, Typography } from 'antd';
+import styled from 'styled-components'
+import {
+    Container, Image, Row, Col
+} from 'react-bootstrap';
+import theme from '../styles/theme';
+import Title from '../typography/Title';
+import Text from '../typography/Text';
 
-
-const { Title, Paragraph, Text } = Typography;
 
 const LinkButton = ({
     color,
@@ -13,18 +17,11 @@ const LinkButton = ({
         <Row>
             <Col span={18}>
                 <a
-                    style={{
-                        display: 'block',
-                        textAlign: 'left',
-                        color: color,
-                        textTransform: 'uppercase',
-                        fontFamily: 'Arial',
-                        letterSpacing: 2,
-                        fontSize: 13
-                    }}
                     href={url}
                 >
-                    {description}
+                    <Text uppercase>
+                        {description}
+                    </Text>
                 </a>
             </Col>
         </Row>
