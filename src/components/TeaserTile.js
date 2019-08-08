@@ -8,8 +8,12 @@ import {
 import LinkButton from './LinkButton'
 import DividerLine from './DividerLine'
 import theme from '../styles/theme';
-import Title from '../typography/Title';
-import Text from '../typography/Text';
+import Title3 from './Title3';
+import Text from './Text';
+
+const Wrapper = styled(Col)`
+    height:140px
+`
 
 
 const TeaserTile = ({
@@ -23,21 +27,21 @@ const TeaserTile = ({
 
         <Container>
             <Row>
-                <Col md={3}>
+                <Col md={2}>
                     <DividerLine
                         color={theme.colors.primary}
                     />
                 </Col>
-                <Col md={10}>
-                    <Title>
+                <Col md={11}>
+                    <Title3>
                         {headline}
-                    </Title>
+                    </Title3>
                 </Col>
-                <Col md={20}>
+                <Wrapper md={12}>
                     <Text>
                         {intro}
                     </Text>
-                </Col>
+                </Wrapper>
                 <Col>
                     <LinkButton
                         description={buttonText}

@@ -8,8 +8,8 @@ import {
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
 import BlueArrow from '../assets/images/blueArrow.png'
-import Title from '../typography/Title';
-import Text from '../typography/Text';
+import Title3 from './Title3';
+import Text from './Text';
 
 
 const ContentDiv = styled.div`
@@ -28,9 +28,9 @@ const ValueTile = ({
             <Col md={10}>
                 <Row>
                     <Col md={12}>
-                        <Title>
+                        <Title3>
                             {headline}
-                        </Title>
+                        </Title3>
                     </Col>
                     <Col md={12}>
                         <ContentDiv>

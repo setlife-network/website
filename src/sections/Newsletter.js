@@ -6,8 +6,8 @@ import {
 
 import RoundButton from '../components/RoundButton'
 import theme from '../styles/theme';
-import Title from '../typography/Title';
-import Text from '../typography/Text';
+import Title3 from '../components/Title3';
+import Text from '../components/Text';
 
 
 const FormSection = styled.div`
@@ -35,9 +35,9 @@ class Newsletter extends Component {
 
                                 <Col md={12}>
                                     <ContentDiv>
-                                        <Title bold>
+                                        <Title3 bold>
                                             Not a Setlife member?
-                                        </Title>
+                                        </Title3>
                                         <Text bold>
                                             Join our newsletter packed with free resources on how to learn to code with ease.
                                         </Text>

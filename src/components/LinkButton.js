@@ -4,9 +4,7 @@ import {
     Container, Image, Row, Col
 } from 'react-bootstrap';
 import theme from '../styles/theme';
-import Title from '../typography/Title';
-import Text from '../typography/Text';
-
+import Text from './Text';
 
 const LinkButton = ({
     color,
@@ -19,13 +17,34 @@ const LinkButton = ({
                 <a
                     href={url}
                 >
-                    <Text uppercase>
-                        {description}
-                    </Text>
+
+                    {color == theme.colors.primary
+                    && (
+                        <Text uppercase blue>
+                            {description}
+                        </Text>
+                    )
+                    }
+
+                    {color == theme.colors.black
+                    && (
+                        <Text uppercase>
+                            {description}
+                        </Text>
+                    )
+                    }
+
+
                 </a>
             </Col>
         </Row>
     )
 }
+
+
+LinkButton.defaultProps = {
+    color: theme.colors.primary
+}
+
 
 export default LinkButton

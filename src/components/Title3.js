@@ -7,13 +7,18 @@ properties:
     bold/normal
 */
 
-const Title = styled.p`
+const Title3 = styled.p`
     font-size: ${theme.sizes.large};
     fontFamily: Arial;
     text-align: left
     padding: 10px;
-    color: ${props => props.blue ? '#00C2D4' : 'black'};
+    color: ${props => props.blue ? theme.colors.primary : theme.colors.black};
     font-weight: ${props => props.bold ? 'bold' : 'normal'};
 `
 
-export default Title;
+Title3.defaultProps = {
+    blue: false,
+    bold: false,
+}
+
+export default Title3

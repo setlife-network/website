@@ -5,7 +5,6 @@ import {
 } from 'react-bootstrap';
 
 import logo from '../assets/images/setlifelogo.png'
-
 import theme from '../styles/theme';
 
 const HeaderContainer = styled(Container)`
@@ -20,7 +19,7 @@ const HeaderImage = styled(Image)`
 const Header = () => (
     <HeaderContainer>
         <Row>
-            <HeaderImage src={logo} />        
+            <HeaderImage src={logo} />
         </Row>
     </HeaderContainer>
 )
