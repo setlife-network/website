@@ -12,13 +12,14 @@ const Title3 = styled.p`
     fontFamily: Arial;
     text-align: left
     padding: 10px;
-    color: ${props => props.blue ? theme.colors.primary : theme.colors.black};
+    color: ${props => props.color};
     font-weight: ${props => props.bold ? 'bold' : 'normal'};
 `
 
 Title3.defaultProps = {
     blue: false,
     bold: false,
+    color: theme.colors.black,
 }
 
 export default Title3

@@ -32,6 +32,7 @@ const ImageContainer = styled(Image)`
 const ProgramCard = ({
     headline,
     description,
+    color,
     buttonText,
     link
 }) => {
@@ -51,13 +52,13 @@ const ProgramCard = ({
                 <ImageContainer src={SDFundamentals} alt='Software development Fundamentals' />
             </Col>
             <Col md={7} styled={{ background: 'red' }}>
-                <Text>
+                <Text >
                     {description}
                 </Text>
                 <LinkButton
                     description={buttonText}
                     url={link}
-                    color={theme.colors.primary}
+                    color={color}
                 >
                     {buttonText}
                 </LinkButton>

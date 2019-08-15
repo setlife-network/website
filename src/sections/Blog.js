@@ -5,8 +5,9 @@ import {
 } from 'react-bootstrap';
 
 import TestimonyTile from '../components/TestimonyTile'
-import RoundButton from '../components/RoundButton'
-import Quote from '../components/Quote'
+import FilledButton from '../components/FilledButton'
+import Headline2 from '../components/Headline2'
+import theme from '../styles/theme';
 
 const Section = styled.div`
     padding-top: 80px;
@@ -16,6 +17,12 @@ const Section = styled.div`
 
 const TestimonyDiv = styled(Col)`
     margin-bottom:50px
+`
+const ButtonDiv = styled(Col)`
+    margin: auto;
+    margin-bottom:50px
+
+
 `
 
 class Blog extends Component {
@@ -27,6 +34,15 @@ class Blog extends Component {
                     </Col>
                     <Col md={10}>
                         <Row>
+                            <Col md={12}>
+                                <Headline2
+                                    headline='Lorem ipsum dolor sit amet sadipscing elitr.'
+                                    color={theme.colors.black}
+                                    weight='bold'
+                                    alignment='left'
+                                />
+                            </Col>
+
                             <TestimonyDiv md={4}>
                                 <TestimonyTile
                                     date='20 april 2022'
@@ -84,11 +100,13 @@ class Blog extends Component {
                                     link='url'
                                 />
                             </TestimonyDiv>
-                            <Quote
-                                headline='Setlife helps you discover computer programming, learn about jobs available to programmers and get started building programming skills.'
-                                author='Marin Basic'
-                                company='CEO at branding.studio'
-                            />
+                            <ButtonDiv md={2}>
+                                <FilledButton
+                                    url='url'
+                                    description='Button'
+                                />
+                            </ButtonDiv>
+
 
                         </Row>
                     </Col>

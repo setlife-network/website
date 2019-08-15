@@ -7,6 +7,7 @@ import {
 
 import ProgramCard from '../components/ProgramCard'
 import Headline from '../components/Headline'
+import theme from '../styles/theme';
 
 const Section = styled(Row)`
     padding-top: 80px;
@@ -30,7 +31,9 @@ class Programs extends Component {
                         <Col md={12}>
                             <Headline
                                 headline='Set Life Programs'
+                                color={theme.colors.black}
                                 description='SetLife is continuously developing a variety of programs to help promote the advancement of collaborative learning and the engineering of solutions for social prosperity'
+                                alignment='center'
                             />
                         </Col>
 
@@ -41,6 +44,7 @@ class Programs extends Component {
                                     headline='International Learning & Development'
                                     description='Train & refine your technical skills and experience modern international work culture in Barcelona, Spain'
                                     buttonText='Trial 1 Overview'
+                                    color={theme.colors.primary}
                                     link='url'
                                 />
                             </CardDiv>

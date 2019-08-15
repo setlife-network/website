@@ -7,6 +7,12 @@ import theme from '../styles/theme';
 import DividerLine from './DividerLine'
 import Title1 from './Title1'
 import Text from './Text';
+import FilledButton from './FilledButton'
+
+const Wrapper = styled(Col)`
+    margin-top:30px;
+
+`
 
 const PrincipalMessage = ({
     headline1,
@@ -28,13 +34,18 @@ const PrincipalMessage = ({
                     {headline2}
                 </Title1>
             </Col>
-            <Col md={8}>
+            <Wrapper md={10}>
                 <Text>
                     {description}
                 </Text>
-            </Col>
-            <Col md={5}>
-            </Col>
+            </Wrapper>
+            <Wrapper md={4}>
+                <FilledButton
+                    url='url'
+                    description='Start Learning'
+                />
+
+            </Wrapper>
         </Row>
     )
 }

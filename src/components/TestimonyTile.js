@@ -50,7 +50,7 @@ const TestimonyTile = ({
                 </Text>
             </Col>
             <Col md={12}>
-                <Title3 blue bold>
+                <Title3 bold color={theme.colors.primary}>
                     {headline}
                 </Title3>
             </Col>

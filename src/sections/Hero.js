@@ -50,7 +50,7 @@ class Hero extends Component {
                             <ImageContainer src={HeroGraphic} alt='Hero Graphic' />
                         </Col>
                     </Section>
-                    
+
                     <Row>
                         <Col md={4}>
                             <TeaserTile

@@ -17,24 +17,9 @@ const LinkButton = ({
                 <a
                     href={url}
                 >
-
-                    {color == theme.colors.primary
-                    && (
-                        <Text uppercase blue>
-                            {description}
-                        </Text>
-                    )
-                    }
-
-                    {color == theme.colors.black
-                    && (
-                        <Text uppercase>
-                            {description}
-                        </Text>
-                    )
-                    }
-
-
+                <Text uppercase color={color}>
+                    {description}
+                </Text>
                 </a>
             </Col>
         </Row>

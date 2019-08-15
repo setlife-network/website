@@ -5,11 +5,15 @@ import theme from '../styles/theme';
 const Title2 = styled.p`
     font-size: ${theme.sizes.xlarge};
     fontFamily: Arial;
-    text-align: ${props => props.left ? 'left' : 'center'};
+    text-align: ${props => props.alignment};
     padding: 10px;
-    color: ${props => props.blue ? theme.colors.primary : theme.colors.black};
-    font-weight: ${props => props.bold ? 'bold' : 'normal'};
+    color: ${props => props.color};
+    font-weight: ${props => props.weight};
 `
-
+Title2.defaultProps = {
+    color: theme.colors.primary,
+    weight: 'normal',
+    textAlign: 'center'
+}
 
 export default Title2

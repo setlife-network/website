@@ -6,6 +6,7 @@ import {
 
 import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'
+import theme from '../styles/theme';
 
 const Section = styled.div`
     padding-top: 80px;
@@ -26,7 +27,7 @@ class CoreValues extends Component {
                             <Col md={12}>
                                 <Headline
                                     headline='Core Values'
-
+                                    color={theme.colors.black}
                                 />
                             </Col>
                             <Col md={6}>
@@ -50,6 +51,9 @@ class CoreValues extends Component {
                                     description='To promote true "freedom", users must be able to run software such that it can be studied, changed, adapted, and distributed in any variation'
                                 />
                             </Col>
+
+
+
                         </Row>
                     </Col>
                     <Col md={1}>
