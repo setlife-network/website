@@ -9,7 +9,6 @@ properties:
 
 export const Text = styled.p`
     font-size: ${theme.sizes.medium}
-    font-family: 'Arial';
     display: 'block';
     text-align: 'left';
     color: ${props => props.blue ? theme.colors.primary : theme.colors.black};

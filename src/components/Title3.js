@@ -9,7 +9,6 @@ properties:
 
 const Title3 = styled.p`
     font-size: ${theme.sizes.large};
-    fontFamily: Arial;
     text-align: left
     padding: 10px;
     color: ${props => props.blue ? theme.colors.primary : theme.colors.black};

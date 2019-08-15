@@ -1,14 +1,13 @@
-@import '~antd/dist/antd.css';
-
 @import './App.scss';
 
 @font-face {
     font-family: 'Eina';
-    src: local('Eina'), url(../assets/fonts/Eina-01-Regular.otf) format('otf');
+    src: local('Eina'), url(../assets/fonts/Eina-01-Regular.otf) format('opentype');
 }
+
 body {
     margin: 0;
-    font-family: 'Eina', 'Roboto', sans-serif;
+    font-family: Eina;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
