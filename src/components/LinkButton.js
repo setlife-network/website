@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Row, Col, Typography } from 'antd';
-
-
-const { Title, Paragraph, Text } = Typography;
+import styled from 'styled-components'
+import {
+    Container, Image, Row, Col
+} from 'react-bootstrap';
+import theme from '../styles/theme';
+import Text from './Text';
 
 const LinkButton = ({
     color,
@@ -13,22 +15,36 @@ const LinkButton = ({
         <Row>
             <Col span={18}>
                 <a
-                    style={{
-                        display: 'block',
-                        textAlign: 'left',
-                        color: color,
-                        textTransform: 'uppercase',
-                        fontFamily: 'Arial',
-                        letterSpacing: 2,
-                        fontSize: 13
-                    }}
                     href={url}
                 >
-                    {description}
+
+                    {color == theme.colors.primary
+                    && (
+                        <Text uppercase blue>
+                            {description}
+                        </Text>
+                    )
+                    }
+
+                    {color == theme.colors.black
+                    && (
+                        <Text uppercase>
+                            {description}
+                        </Text>
+                    )
+                    }
+
+
                 </a>
             </Col>
         </Row>
     )
 }
+
+
+LinkButton.defaultProps = {
+    color: theme.colors.primary
+}
+
 
 export default LinkButton

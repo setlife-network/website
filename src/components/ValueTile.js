@@ -1,38 +1,43 @@
 import React, { Component } from 'react';
-import { Row, Col, Typography } from 'antd';
+import styled from 'styled-components'
+import {
+    Container, Image, Row, Col
+} from 'react-bootstrap';
+
 
 import LinkButton from './LinkButton'
+import theme from '../styles/theme';
+import BlueArrow from '../assets/images/blueArrow.png'
+import Title3 from './Title3';
+import Text from './Text';
 
-const { Title, Paragraph, Text } = Typography;
+
+const ContentDiv = styled.div`
+    height:80px;
+`
 
 const ValueTile = ({
     headline,
     description
 }) => {
     return (
-        <Row type='flex' justify='space-around'>
-            <Col span={6}>
-                <img src='./assets/blueArrow.png' alt='Blue Arrow' />
+        <Row>
+            <Col md={2}>
+                <img src={BlueArrow} alt='Blue Arrow' />
             </Col>
-            <Col span={16}>
+            <Col md={10}>
                 <Row>
-                    <Col span={24}>
-                        <Title level={4}>
+                    <Col md={12}>
+                        <Title3>
                             {headline}
-                        </Title>
+                        </Title3>
                     </Col>
-                    <Col span={24}>
-                        <Text
-                            type='secondary'
-                            style={{
-                                display: 'block',
-                                textAlign: 'justify',
-                                fontSize: 16,
-                                fontFamily: 'Arial'
-                            }}
-                        >
-                            {description}
-                        </Text>
+                    <Col md={12}>
+                        <ContentDiv>
+                            <Text>
+                                {description}
+                            </Text>
+                        </ContentDiv>
                     </Col>
                 </Row>
             </Col>

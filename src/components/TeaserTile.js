@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
 import {
-    Row, Col, Typography, Layout, AutoComplete, Button, Radio, Icon
-} from 'antd';
+    Container, Image, Row, Col
+} from 'react-bootstrap';
 
 
 import LinkButton from './LinkButton'
+import DividerLine from './DividerLine'
+import theme from '../styles/theme';
+import Title3 from './Title3';
+import Text from './Text';
 
+const Wrapper = styled(Col)`
+    height:140px
+`
 
-const { Title, Paragraph, Text } = Typography;
 
 const TeaserTile = ({
     headline,
@@ -17,62 +24,33 @@ const TeaserTile = ({
 }) => {
 
     return (
-        <Col
-            span={24}
-            md={6}
-            style={{
-                marginTop: 50
-            }}
-        >
+
+        <Container>
             <Row>
-                <Col
-                    span={6}
-                    style={{
-                        height: 2,
-                        background: 'rgb(0,194,212)'
-                    }}
-                >
+                <Col md={2}>
+                    <DividerLine
+                        color={theme.colors.primary}
+                    />
                 </Col>
-            </Row>
-            <Row style={{
-                marginTop: 10,
-                height: 50
-            }}
-            >
-                <Col span={18}>
-                    <Title level={4}>
+                <Col md={11}>
+                    <Title3>
                         {headline}
-                    </Title>
+                    </Title3>
                 </Col>
-            </Row>
-            <Row style={{ height: 160 }}>
-                <Col span={24}>
-                    <Text
-                        type='secondary'
-                        style={{
-                            display: 'block',
-                            textAlign: 'justify',
-                            fontSize: 16,
-                            fontFamily: 'Arial'
-                        }}
-                    >
+                <Wrapper md={12}>
+                    <Text>
                         {intro}
                     </Text>
-                </Col>
-            </Row>
-            <Row>
-                <Col style={{
-                    margin: 5
-                }}
-                >
+                </Wrapper>
+                <Col>
                     <LinkButton
                         description={buttonText}
                         url={link}
-                        color='black'
+                        color={theme.colors.black}
                     />
                 </Col>
             </Row>
-        </Col>
+        </Container>
 
     )
 }

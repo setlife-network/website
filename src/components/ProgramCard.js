@@ -1,9 +1,33 @@
 import React, { Component } from 'react';
-import { Row, Col, Typography } from 'antd';
-
+import styled from 'styled-components'
+import {
+    Container, Image, Row, Col
+} from 'react-bootstrap';
 import LinkButton from './LinkButton'
+import theme from '../styles/theme';
+import Title3 from './Title3';
+import Text from './Text';
+import DividerLine from './DividerLine'
 
-const { Title, Paragraph, Text } = Typography;
+import SDFundamentals from '../assets/images/SDFundamentals.png'
+
+
+const WrapperCard = styled(Row)`
+    background: ${theme.colors.white};
+    padding-top:10px
+    padding-bottom:10px;
+
+`
+
+
+const ImageContainer = styled(Image)`
+    height: 70%;
+    width70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+`
+
 
 const ProgramCard = ({
     headline,
@@ -12,66 +36,36 @@ const ProgramCard = ({
     link
 }) => {
     return (
-        <Row type='flex' justify='space-around'>
-            <Col
-                span={24}
-                md={22}
-                style={{
-                    background: 'white'
-                }}
-            >
-                <Row>
-                    <Col
-                        span={2}
-                        style={{
-                            background: '#EEEEEE',
-                            height: 2,
-                            marginTop: 15
-                        }}
-                    >
-                    </Col>
-                </Row>
-                <Row style={{
-                    padding: 20
-                }}
-                >
-                    <Row>
-                        <Col span={24}>
-                            <Title level={4}>
-                                {headline}
-                            </Title>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col span={8}>
-                            <img src='./assets/SDFundamentals.png' alt='Software development Fundamentals' />
-                        </Col>
-                        <Col span={16} style={{ padding: 20, height: 140 }}>
-                            <Text
-                                type='secondary'
-                                style={{
-                                    display: 'block',
-                                    textAlign: 'justify',
-                                    fontSize: 16,
-                                    fontFamily: 'Arial'
-                                }}
-                            >
-                                {description}
-                            </Text>
-                        </Col>
-                        <Col span={16} offset={9}>
-                            <LinkButton
-                                description={buttonText}
-                                url={link}
-                                color='rgb(0,194,212)'
-                            />
-                        </Col>
-                    </Row>
 
-                </Row>
 
+        <WrapperCard>
+            <Col md={2}>
+                <DividerLine color={theme.colors.grey} />
             </Col>
-        </Row>
+            <Col md={12} styled={{ background: 'green' }}>
+                <Title3>
+                    {headline}
+                </Title3>
+            </Col>
+            <Col md={4} styled={{ background: 'red' }}>
+                <ImageContainer src={SDFundamentals} alt='Software development Fundamentals' />
+            </Col>
+            <Col md={7} styled={{ background: 'red' }}>
+                <Text>
+                    {description}
+                </Text>
+                <LinkButton
+                    description={buttonText}
+                    url={link}
+                    color={theme.colors.primary}
+                >
+                    {buttonText}
+                </LinkButton>
+            </Col>
+
+        </WrapperCard>
+
+
     )
 
 }
