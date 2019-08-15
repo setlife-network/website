@@ -4,7 +4,6 @@ import theme from '../styles/theme';
 
 const Title2 = styled.p`
     font-size: ${theme.sizes.xlarge};
-    fontFamily: Arial;
     text-align: ${props => props.alignment};
     padding: 10px;
     color: ${props => props.color};

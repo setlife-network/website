@@ -9,7 +9,6 @@ properties:
 
 export const Text = styled.p`
     font-size: ${theme.sizes.medium}
-    font-family: 'Arial';
     text-align: ${props => props.alignment};
     color: ${props => props.color};
     font-weight: ${props => props.bold ? 'bold' : 'normal'};
