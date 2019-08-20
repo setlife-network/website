@@ -8,7 +8,7 @@ import {
 import LinkButton from './LinkButton'
 import DividerLine from './DividerLine'
 import theme from '../styles/theme';
-import Title3 from './Title3';
+import Title from './Title';
 import Text from './Text';
 
 const Wrapper = styled(Col)`
@@ -33,12 +33,16 @@ const TeaserTile = ({
                     />
                 </Col>
                 <Col md={11}>
-                    <Title3>
+                    <Title
+                        size={theme.sizes.medium}
+                    >
                         {headline}
-                    </Title3>
+                    </Title>
                 </Col>
                 <Wrapper md={12}>
-                    <Text>
+                    <Text
+                        size={theme.sizes.small} 
+                    >
                         {intro}
                     </Text>
                 </Wrapper>

@@ -8,10 +8,10 @@ properties:
 */
 
 export const Text = styled.p`
-    font-size: ${theme.sizes.medium}
+    font-size: ${props => props.size};
     text-align: ${props => props.alignment};
     color: ${props => props.color};
-    font-weight: ${props => props.bold ? 'bold' : 'normal'};
+    font-weight: ${props => props.weight};
     text-transform: ${props => props.uppercase ? 'uppercase' : 'normal'}
     padding: 5px;
 
@@ -22,7 +22,10 @@ Text.defaultProps = {
     bold: false,
     uppercase: false,
     color: theme.colors.black,
-    alignment: 'left'
+    alignment: 'left',
+    fontSize: theme.sizes.small
+
+
 }
 
 export default Text

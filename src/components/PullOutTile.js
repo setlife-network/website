@@ -8,7 +8,7 @@ import {
 import LinkButton from './LinkButton'
 import DividerLine from './DividerLine'
 import theme from '../styles/theme';
-import Title3 from './Title3';
+import Title from './Title';
 import Text from './Text';
 
 
@@ -23,19 +23,24 @@ const PullOutTile = ({
 
         <Container>
             <Row>
-
                 <Col md={2}>
                     <DividerLine
                         color={theme.colors.primary}
                     />
                 </Col>
                 <Col md={11}>
-                    <Title3 bold color={color}>
+                    <Title
+                        size={theme.sizes.medium}
+                        bold
+                        color={color}
+                    >
                         {headline}
-                    </Title3>
+                    </Title>
                 </Col>
                 <Col md={12}>
-                    <Text color={color}>
+                    <Text
+                        color={color}
+                    >
                         {intro}
                     </Text>
                 </Col>

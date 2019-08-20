@@ -51,9 +51,6 @@ class CoreValues extends Component {
                                     description='To promote true "freedom", users must be able to run software such that it can be studied, changed, adapted, and distributed in any variation'
                                 />
                             </Col>
-
-
-
                         </Row>
                     </Col>
                     <Col md={1}>

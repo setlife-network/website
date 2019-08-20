@@ -2,18 +2,19 @@ import styled from 'styled-components';
 import theme from '../styles/theme';
 
 
-const Title1 = styled.p`
-    font-size: 40px;
+const Title = styled.p`
+    font-size: ${props => props.size};
     text-align: ${props => props.alignment};
-    height:10px;
     color: ${props => props.color};
-    font-weight: bold;
+    font-weight: ${props => props.bold ? 'bold' : 'normal'};
 `
 
-Title1.defaultProps = {
+Title.defaultProps = {
     color: theme.colors.black,
     weight: 'normal',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontWeight: 'normal'
+
 }
 
-export default Title1
+export default Title

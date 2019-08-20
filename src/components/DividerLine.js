@@ -9,6 +9,7 @@ import theme from '../styles/theme';
 const DividerLine = styled.div`
     height: 1px;
     background: ${props => props.color};
+    
 `
 
 DividerLine.defaultProps = {

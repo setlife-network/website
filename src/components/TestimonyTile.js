@@ -7,15 +7,15 @@ import {
 
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
-import Title3 from './Title3';
+import Title from './Title';
 import Text from './Text';
 
 import Portrait from '../assets/images/portrait.png'
 
 
 const ContentDiv = styled(Col)`
-    height:50px;
-    margin-bottom:10px
+    height:100px;
+
 `
 
 const ImageContainer = styled(Image)`
@@ -45,14 +45,21 @@ const TestimonyTile = ({
                 )
             }
             <Col md={6}>
-                <Text bold uppercase>
+                <Text
+                    weight='bold'
+                    uppercase
+                >
                     {date}
                 </Text>
             </Col>
             <Col md={12}>
-                <Title3 bold color={theme.colors.primary}>
+                <Title
+                    bold
+                    color={theme.colors.primary}
+                    size={theme.sizes.medium}
+                >
                     {headline}
-                </Title3>
+                </Title>
             </Col>
             <ContentDiv md={12}>
                 <Text>
@@ -64,6 +71,7 @@ const TestimonyTile = ({
                     description={buttonText}
                     url={link}
                     color={theme.colors.black}
+                    weight='bold'
                 />
             </Col>
         </Row>

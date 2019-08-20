@@ -7,14 +7,11 @@ import Navbar from 'react-bootstrap/Navbar'
 
 import logo from '../assets/images/logoPositive.png'
 import theme from '../styles/theme';
-import Title2 from './Title2'
 import Text from './Text'
 import FilledButton from './FilledButton'
 
 const ButtonContainer = styled(Row)`
-
     margin:10px
-
 `
 
 const HeaderImage = styled(Image)`
@@ -39,17 +36,17 @@ const Header = () => (
                 <Navbar.Collapse className='justify-content-end'>
 
                     <Nav.Link href='#home'>
-                        <Text>
+                        <Text size={theme.sizes.button}>
                         Mision
                         </Text>
                     </Nav.Link>
                     <Nav.Link href='#home'>
-                        <Text>
+                        <Text size={theme.sizes.button}>
                         Curriculum
                         </Text>
                     </Nav.Link>
                     <Nav.Link href='#home'>
-                        <Text>
+                        <Text size={theme.sizes.button}>
                         Programs
                         </Text>
                     </Nav.Link>

@@ -9,7 +9,8 @@ import Text from './Text';
 const LinkButton = ({
     color,
     url,
-    description
+    description,
+    weight
 }) => {
     return (
         <Row>
@@ -17,9 +18,15 @@ const LinkButton = ({
                 <a
                     href={url}
                 >
-                <Text uppercase color={color}>
-                    {description}
-                </Text>
+                    <Text
+                        weight={weight}
+                        uppercase
+                        color={color}
+                        size={theme.sizes.link}
+
+                    >
+                        {description}
+                    </Text>
                 </a>
             </Col>
         </Row>

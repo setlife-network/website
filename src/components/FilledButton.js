@@ -25,6 +25,7 @@ const FilledButton = ({
             >
                 <Text
                     color={theme.colors.white}
+                    size={theme.sizes.button}
                     alignment='center'
                 >
                     {description}

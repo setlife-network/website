@@ -8,7 +8,7 @@ import {
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
 import BlueArrow from '../assets/images/blueArrow.png'
-import Title3 from './Title3';
+import Title from './Title';
 import Text from './Text';
 
 
@@ -28,9 +28,11 @@ const ValueTile = ({
             <Col md={10}>
                 <Row>
                     <Col md={12}>
-                        <Title3>
+                        <Title
+                            size={theme.sizes.medium}
+                        >
                             {headline}
-                        </Title3>
+                        </Title>
                     </Col>
                     <Col md={12}>
                         <ContentDiv>

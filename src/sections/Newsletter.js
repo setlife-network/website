@@ -8,9 +8,7 @@ import NewsletterPhoto from '../assets/images/newsletterPhoto.png'
 
 import BlankButton from '../components/BlankButton'
 import theme from '../styles/theme';
-import Title3 from '../components/Title3';
-import Title2 from '../components/Title2';
-import Title1 from '../components/Title1';
+import Title from '../components/Title';
 import Text from '../components/Text';
 import DividerLine from '../components/DividerLine';
 
@@ -29,7 +27,7 @@ const ContentDiv = styled(Row)`
 
 const Wrapper = styled(Col)`
 
-    padding-bottom:20px
+    padding-bottom:30px
 
 `
 
@@ -54,25 +52,33 @@ class Newsletter extends Component {
 
                             <ContentDiv>
                                 <Wrapper md={12}>
-                                    <Title1 bold>
-                                                Not a Setlife member?
-                                    </Title1>
+                                    <Title
+                                        bold
+                                        size={theme.sizes.large}
+                                    >
+                                        Not a Setlife member?
+                                    </Title>
                                 </Wrapper>
                                 <Wrapper md={2}>
                                     <DividerLine />
                                 </Wrapper>
                                 <Wrapper md={12}>
-                                    <Text bold>
+                                    <Text
+                                        weight='bold'
+                                        size={theme.sizes.regular}
+                                    >
                                             Join our newsletter packed with free resources on how to learn to code with ease.
                                     </Text>
                                 </Wrapper>
                             </ContentDiv>
 
-
                             <Row>
-
                                 <Wrapper md={12}>
-                                    <Text bold color={theme.colors.white}>
+                                    <Text
+                                        weight='bold'
+                                        color={theme.colors.white}
+                                        size={theme.sizes.regular}
+                                    >
                                         Newsletter signup
                                     </Text>
                                 </Wrapper>

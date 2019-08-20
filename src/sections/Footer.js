@@ -7,7 +7,6 @@ import Navbar from 'react-bootstrap/Navbar'
 
 import logo from '../assets/images/logoNegative.png'
 import theme from '../styles/theme';
-import Title2 from '../components/Title2'
 import Text from '../components/Text'
 import FilledButton from '../components/FilledButton'
 

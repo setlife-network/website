@@ -5,7 +5,7 @@ import {
 } from 'react-bootstrap';
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
-import Title3 from './Title3';
+import Title from './Title';
 import Text from './Text';
 import DividerLine from './DividerLine'
 
@@ -41,18 +41,24 @@ const ProgramCard = ({
 
         <WrapperCard>
             <Col md={2}>
-                <DividerLine color={theme.colors.grey} />
+                <DividerLine
+                    color={theme.colors.grey}
+                />
             </Col>
-            <Col md={12} styled={{ background: 'green' }}>
-                <Title3>
+            <Col md={12}>
+                <Title
+                    size={theme.sizes.medium}
+                >
                     {headline}
-                </Title3>
+                </Title>
             </Col>
-            <Col md={4} styled={{ background: 'red' }}>
+            <Col md={4}>
                 <ImageContainer src={SDFundamentals} alt='Software development Fundamentals' />
             </Col>
-            <Col md={7} styled={{ background: 'red' }}>
-                <Text >
+            <Col md={7}>
+                <Text
+                    size={theme.sizes.small}
+                >
                     {description}
                 </Text>
                 <LinkButton

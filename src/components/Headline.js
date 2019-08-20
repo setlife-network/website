@@ -4,7 +4,8 @@ import {
     Row, Col
 } from 'react-bootstrap';
 
-import Title2 from './Title2'
+import theme from '../styles/theme';
+import Title from './Title'
 import DividerLine from './DividerLine'
 import Text from './Text'
 
@@ -36,12 +37,21 @@ const Headline = ({
             <Col md={5}>
             </Col>
             <Holder md={12}>
-                <Title2 color={color} weight={weight} alignment={alignment}>
+                <Title
+                    color={color}
+                    weight={weight}
+                    alignment={alignment}
+                    size={theme.sizes.large}
+                >
                     {headline}
-                </Title2>
+                </Title>
             </Holder>
             <Holder md={12}>
-                <Text color={color} alignment={alignment}>
+                <Text
+                    color={color}
+                    alignment={alignment}
+                    size={theme.sizes.regular}
+                >
                     {description}
                 </Text>
             </Holder>

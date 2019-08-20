@@ -4,9 +4,10 @@ import {
     Row, Col
 } from 'react-bootstrap';
 
-import Title1 from './Title1'
+import theme from '../styles/theme';
 import DividerLine from './DividerLine'
 import Text from './Text'
+import Title from './Title'
 
 const Wrapper = styled(Row)`
     margin-bottom: 150px
@@ -33,9 +34,14 @@ const Headline2 = ({
             <Col md={10}>
             </Col>
             <Holder md={8}>
-                <Title1 color={color} weight={weight} alignment={alignment}>
+                <Title
+                    color={color}
+                    weight={weight}
+                    alignment={alignment}
+                    size={theme.sizes.large}
+                >
                     {headline}
-                </Title1>
+                </Title>
             </Holder>
             <Holder md={{ span: 6, offset: 3 }}>
                 <Text color={color}>
