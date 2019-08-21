@@ -37,43 +37,63 @@ const TestimonyTile = ({
     return (
         <Row>
             {
-                portrait != null
+                portrait
                 && (
                     <Col md={12}>
                         <ImageContainer src={Portrait} alt='Portrait' />
                     </Col>
                 )
             }
-            <Col md={6}>
-                <Text
-                    weight='bold'
-                    uppercase
-                >
-                    {date}
-                </Text>
-            </Col>
-            <Col md={12}>
-                <Title
-                    bold
-                    color={theme.colors.primary}
-                    size={theme.sizes.medium}
-                >
-                    {headline}
-                </Title>
-            </Col>
-            <ContentDiv md={12}>
-                <Text>
-                    {description}
-                </Text>
-            </ContentDiv>
-            <Col md={3}>
-                <LinkButton
-                    description={buttonText}
-                    url={link}
-                    color={theme.colors.black}
-                    weight='bold'
-                />
-            </Col>
+            {
+                date
+                && (
+                    <Col md={6}>
+                        <Text
+                            weight='bold'
+                            uppercase
+                        >
+                            {date}
+                        </Text>
+                    </Col>
+                )
+            }
+            {
+                headline
+                && (
+                    <Col md={12}>
+                        <Title
+                            bold
+                            color={theme.colors.primary}
+                            size={theme.sizes.medium}
+                        >
+                            {headline}
+                        </Title>
+                    </Col>
+                )
+            }
+            {
+                description
+                && (
+                    <ContentDiv md={12}>
+                        <Text>
+                            {description}
+                        </Text>
+                    </ContentDiv>
+                )
+            }
+            {
+                link
+                && (
+                    <Col md={3}>
+                        <LinkButton
+                            description={buttonText}
+                            url={link}
+                            color={theme.colors.black}
+                            weight='bold'
+                        />
+                    </Col>
+                )
+            }
         </Row>
 
     )

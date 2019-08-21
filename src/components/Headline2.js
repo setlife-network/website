@@ -36,7 +36,7 @@ const Headline2 = ({
             <Holder md={8}>
                 <Title
                     color={color}
-                    weight={weight}
+                    bold
                     alignment={alignment}
                     size={theme.sizes.large}
                 >
