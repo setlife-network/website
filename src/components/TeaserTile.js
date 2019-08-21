@@ -11,8 +11,12 @@ import theme from '../styles/theme';
 import Title from './Title';
 import Text from './Text';
 
-const Wrapper = styled(Col)`
+const TextWrapper = styled(Col)`
     height:140px
+`
+
+const TitleWrapper = styled(Col)`
+    height:100px
 `
 
 
@@ -32,20 +36,22 @@ const TeaserTile = ({
                         color={theme.colors.primary}
                     />
                 </Col>
-                <Col md={11}>
+                <Col md={12}>
+                </Col>
+                <TitleWrapper md={9}>
                     <Title
                         size={theme.sizes.medium}
                     >
                         {headline}
                     </Title>
-                </Col>
-                <Wrapper md={12}>
+                </TitleWrapper>
+                <TextWrapper md={12}>
                     <Text
-                        size={theme.sizes.small} 
+                        size={theme.sizes.small}
                     >
                         {intro}
                     </Text>
-                </Wrapper>
+                </TextWrapper>
                 <Col>
                     <LinkButton
                         description={buttonText}

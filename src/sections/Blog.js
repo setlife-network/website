@@ -29,6 +29,7 @@ const ButtonDiv = styled(Col)`
 `
 
 class Blog extends Component {
+    
     renderTestimonials = () => {
         return TESTIMONIALS.map(t => {
             return (
