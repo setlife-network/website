@@ -9,6 +9,9 @@ import FilledButton from '../components/FilledButton'
 import Headline2 from '../components/Headline2'
 import theme from '../styles/theme';
 
+
+import constants, { TESTIMONIALS } from '../constants'
+
 const Section = styled.div`
     padding-top: 80px;
     padding-bottom:80px;
@@ -26,6 +29,21 @@ const ButtonDiv = styled(Col)`
 `
 
 class Blog extends Component {
+    renderTestimonials = () => {
+        return TESTIMONIALS.map(t => {
+            return (
+                <TestimonyDiv md={4}>
+                    <TestimonyTile
+                        date={t.date}
+                        headline={t.name}
+                        description={t.quote}
+
+                    />
+                </TestimonyDiv>
+            )
+        })
+    }
+
     render() {
         return (
             <Section>
@@ -43,63 +61,8 @@ class Blog extends Component {
                                 />
                             </Col>
 
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
-                                />
-                            </TestimonyDiv>
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
-                                />
-                            </TestimonyDiv>
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
-                                />
-                            </TestimonyDiv>
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    portrait='hello'
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
-                                />
-                            </TestimonyDiv>
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    portrait='hello'
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
-                                />
-                            </TestimonyDiv>
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    portrait='hello'
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
-                                />
-                            </TestimonyDiv>
+                            {this.renderTestimonials()}
+
                             <ButtonDiv md={2}>
                                 <FilledButton
                                     url='url'
