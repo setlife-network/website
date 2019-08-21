@@ -32,10 +32,17 @@ const Wrapper = styled(Col)`
 `
 
 const ImageContainer = styled(Image)`
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+
+width:700px
+
+`
+
+const OutContainer = styled(Col)`
+
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateY(-50%) translateX(-50%);
 `
 
 class Newsletter extends Component {
@@ -49,7 +56,6 @@ class Newsletter extends Component {
                 <Col md={10}>
                     <Row>
                         <Col md={6}>
-
                             <ContentDiv>
                                 <Wrapper md={12}>
                                     <Title
@@ -95,7 +101,9 @@ class Newsletter extends Component {
                             </Row>
                         </Col>
                         <Col md={6}>
-                            <ImageContainer src={NewsletterPhoto} alt='Photo' />
+
+                                <ImageContainer src={NewsletterPhoto} />
+
                         </Col>
                     </Row>
                 </Col>

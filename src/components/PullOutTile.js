@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Row, Col
 } from 'react-bootstrap';
 
 
@@ -21,7 +21,6 @@ const PullOutTile = ({
 
     return (
 
-        <Container>
             <Row>
                 <Col md={2}>
                     <DividerLine
@@ -45,7 +44,6 @@ const PullOutTile = ({
                     </Text>
                 </Col>
             </Row>
-        </Container>
 
     )
 }

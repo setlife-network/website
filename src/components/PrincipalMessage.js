@@ -11,7 +11,6 @@ import FilledButton from './FilledButton'
 
 const Wrapper = styled(Col)`
     margin-top:30px;
-
 `
 
 const PrincipalMessage = ({

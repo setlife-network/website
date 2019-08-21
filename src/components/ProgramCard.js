@@ -19,7 +19,6 @@ const WrapperCard = styled(Row)`
 
 `
 
-
 const ImageContainer = styled(Image)`
     height: 70%;
     width70%;
@@ -40,10 +39,11 @@ const ProgramCard = ({
 
 
         <WrapperCard>
-            <Col md={2}>
+            <Col md={1}>
                 <DividerLine
                     color={theme.colors.grey}
                 />
+
             </Col>
             <Col md={12}>
                 <Title

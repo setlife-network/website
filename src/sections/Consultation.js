@@ -30,7 +30,9 @@ const ImageContainer = styled(Image)`
     top: 0;
     height: 360px;
     width: 100%;
+    opacity: 0.8;
     transform: skew(15deg,0deg);
+
 `
 
 const OutContainer = styled(Col)`
@@ -40,6 +42,7 @@ const OutContainer = styled(Col)`
    min-height: 360px;
    overflow: hidden;
    transform: skew(-15deg,0deg);
+   background: ${theme.colors.primary}
 `
 
 const ColDiv = styled(Col)`

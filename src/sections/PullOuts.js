@@ -4,6 +4,8 @@ import {
     Container, Image, Row, Col
 } from 'react-bootstrap';
 
+import PullOutImage from '../assets/images/pullOutImage.png'
+
 import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'
 import theme from '../styles/theme'
@@ -18,11 +20,19 @@ const Section = styled(Row)`
 
 const WrapperFilled = styled(Row)`
     background:${theme.colors.primary};
-    padding:50px
+    padding:50px;
+    background-image: url(${PullOutImage});
+    background-size: cover;
+    opacity: 0.4
+
+`
+
+const Wrapper = styled(Row)`
+    background: ${theme.colors.primary}
 `
 
 const WrapperBlank = styled(Row)`
-background: ${theme.colors.grey}
+    background: ${theme.colors.grey}
     padding:50px
 `
 
@@ -30,11 +40,10 @@ background: ${theme.colors.grey}
 class PullOuts extends Component {
     render() {
         return (
-            <Section>
-
+            <Section >
                 <Col md={12}>
-                    <Row>
-                        <Col md={6}>
+                    <Wrapper>
+                        <Col>
                             <WrapperBlank>
                                 <PullOutTile
                                     headline='Lorem ipsum dolor'
@@ -66,7 +75,7 @@ class PullOuts extends Component {
                                 />
                             </WrapperBlank>
                         </Col>
-                    </Row>
+                    </Wrapper>
                 </Col>
 
 

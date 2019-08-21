@@ -6,6 +6,8 @@ import {
 import theme from '../styles/theme';
 import Text from './Text';
 
+
+
 const LinkButton = ({
     color,
     url,
@@ -17,6 +19,7 @@ const LinkButton = ({
             <Col span={18}>
                 <a
                     href={url}
+                    style={{textDecoration:'none'}}
                 >
                     <Text
                         weight={weight}
