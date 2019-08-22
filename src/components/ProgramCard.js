@@ -5,7 +5,7 @@ import {
 } from 'react-bootstrap';
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
-import Title3 from './Title3';
+import Title from './Title';
 import Text from './Text';
 import DividerLine from './DividerLine'
 
@@ -19,7 +19,6 @@ const WrapperCard = styled(Row)`
 
 `
 
-
 const ImageContainer = styled(Image)`
     height: 70%;
     width70%;
@@ -28,10 +27,21 @@ const ImageContainer = styled(Image)`
     display: block;
 `
 
+const TitleWrapper = styled(Col)`
+    height:100px
+
+`
+
+const DividerWrapper = styled(Col)`
+    margin-left: -15px
+
+`
+
 
 const ProgramCard = ({
     headline,
     description,
+    color,
     buttonText,
     link
 }) => {
@@ -39,25 +49,31 @@ const ProgramCard = ({
 
 
         <WrapperCard>
-            <Col md={2}>
-                <DividerLine color={theme.colors.grey} />
-            </Col>
-            <Col md={12} styled={{ background: 'green' }}>
-                <Title3>
+            <DividerWrapper md={2}>
+                <DividerLine
+                    color={theme.colors.grey}
+                />
+            </DividerWrapper>
+            <TitleWrapper md={12}>
+                <Title
+                    size={theme.sizes.medium}
+                >
                     {headline}
-                </Title3>
-            </Col>
-            <Col md={4} styled={{ background: 'red' }}>
+                </Title>
+            </TitleWrapper>
+            <Col md={4}>
                 <ImageContainer src={SDFundamentals} alt='Software development Fundamentals' />
             </Col>
-            <Col md={7} styled={{ background: 'red' }}>
-                <Text>
+            <Col md={7}>
+                <Text
+                    size={theme.sizes.small}
+                >
                     {description}
                 </Text>
                 <LinkButton
                     description={buttonText}
                     url={link}
-                    color={theme.colors.primary}
+                    color={color}
                 >
                     {buttonText}
                 </LinkButton>

@@ -4,20 +4,45 @@ import {
     Container, Image, Row, Col, Form
 } from 'react-bootstrap';
 
-import RoundButton from '../components/RoundButton'
+import NewsletterPhoto from '../assets/images/newsletterPhoto.png'
+
+import BlankButton from '../components/BlankButton'
 import theme from '../styles/theme';
-import Title3 from '../components/Title3';
+import Title from '../components/Title';
 import Text from '../components/Text';
+import DividerLine from '../components/DividerLine';
 
 
-const FormSection = styled.div`
+const Section = styled(Row)`
     padding-top: 80px;
     padding-bottom:80px;
     background: linear-gradient(to bottom, ${theme.colors.white} 50%,${theme.colors.primary} 50%);
 `
 
-const ContentDiv = styled.div`
-    padding-bottom:50px;
+const ContentDiv = styled(Row)`
+
+    padding-bottom:10px;
+
+`
+
+const Wrapper = styled(Col)`
+
+    padding-bottom:30px
+
+`
+
+const ImageContainer = styled(Image)`
+
+width:700px
+
+`
+
+const OutContainer = styled(Col)`
+
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateY(-50%) translateX(-50%);
 `
 
 class Newsletter extends Component {
@@ -25,49 +50,67 @@ class Newsletter extends Component {
     render() {
         return (
 
-            <FormSection>
-                <Row>
-                    <Col md={1}>
-                    </Col>
-                    <Col md={10}>
+            <Section>
+                <Col md={1}>
+                </Col>
+                <Col md={10}>
+                    <Row>
                         <Col md={6}>
-                            <Row>
-
-                                <Col md={12}>
-                                    <ContentDiv>
-                                        <Title3 bold>
-                                            Not a Setlife member?
-                                        </Title3>
-                                        <Text bold>
+                            <ContentDiv>
+                                <Wrapper md={12}>
+                                    <Title
+                                        bold
+                                        size={theme.sizes.large}
+                                    >
+                                        Not a Setlife member?
+                                    </Title>
+                                </Wrapper>
+                                <Wrapper md={2}>
+                                    <DividerLine />
+                                </Wrapper>
+                                <Wrapper md={12}>
+                                    <Text
+                                        weight='bold'
+                                        size={theme.sizes.regular}
+                                    >
                                             Join our newsletter packed with free resources on how to learn to code with ease.
-                                        </Text>
-                                    </ContentDiv>
-                                </Col>
+                                    </Text>
+                                </Wrapper>
+                            </ContentDiv>
 
-                            </Row>
                             <Row>
-                                <Col md={12}>
-
-                                    <Text bold white>
+                                <Wrapper md={12}>
+                                    <Text
+                                        weight='bold'
+                                        color={theme.colors.white}
+                                        size={theme.sizes.regular}
+                                    >
                                         Newsletter signup
                                     </Text>
-                                    <Col md={6}>
-                                        <Form.Control size='sm' type='text' placeholder='Enter email' />
-                                        <RoundButton
-                                            buttonText='Signup'
-                                            onClick='url'
-                                        />
-                                    </Col>
-                                </Col>
+                                </Wrapper>
+                                <Wrapper md={7}>
+                                    <Form.Control size='sm' type='text' placeholder='Enter email' />
+                                </Wrapper>
+                                <Wrapper md={6}>
+                                    <BlankButton
+                                        description='Signup'
+                                        onClick='url'
+                                    />
+                                </Wrapper>
+
                             </Row>
                         </Col>
-                        <Col md={6} style={{ background: 'yellow' }}>
+                        <Col md={6}>
+
+                            <ImageContainer src={NewsletterPhoto} />
+
                         </Col>
-                    </Col>
-                    <Col md={1}>
-                    </Col>
-                </Row>
-            </FormSection>
+                    </Row>
+                </Col>
+                <Col md={1}>
+                </Col>
+
+            </Section>
 
         )
     }

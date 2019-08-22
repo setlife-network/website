@@ -6,9 +6,11 @@ import {
 import theme from '../styles/theme';
 
 
-const DividerLine = styled.div`
+const DividerLine = styled(Row)`
     height: 1px;
     background: ${props => props.color};
+    margin-left: 0px
+
 `
 
 DividerLine.defaultProps = {

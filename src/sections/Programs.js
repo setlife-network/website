@@ -4,9 +4,11 @@ import {
     Container, Image, Row, Col
 } from 'react-bootstrap';
 
+import constants, { PROGRAMSLEFT, PROGRAMSRIGHT } from '../constants'
 
 import ProgramCard from '../components/ProgramCard'
 import Headline from '../components/Headline'
+import theme from '../styles/theme';
 
 const Section = styled(Row)`
     padding-top: 80px;
@@ -19,6 +21,38 @@ const CardDiv = styled(Col)`
 `
 
 class Programs extends Component {
+
+    renderProgramsLeft = () => {
+        return PROGRAMSLEFT.map(t => {
+            return (
+                <CardDiv left>
+                    <ProgramCard
+                        headline={t.headline}
+                        description={t.description}
+                        buttonText={t.LinkButton}
+                        link={t.url}
+                    />
+                </CardDiv>
+            )
+        })
+    }
+
+    renderProgramsRight = () => {
+        return PROGRAMSRIGHT.map(t => {
+            return (
+                <CardDiv right>
+                    <ProgramCard
+                        headline={t.headline}
+                        description={t.description}
+                        buttonText={t.LinkButton}
+                        link={t.url}
+                    />
+                </CardDiv>
+            )
+        })
+    }
+
+
     render() {
         return (
 
@@ -30,46 +64,20 @@ class Programs extends Component {
                         <Col md={12}>
                             <Headline
                                 headline='Set Life Programs'
+                                color={theme.colors.black}
                                 description='SetLife is continuously developing a variety of programs to help promote the advancement of collaborative learning and the engineering of solutions for social prosperity'
+                                alignment='center'
                             />
                         </Col>
-
-
                         <Col md={6}>
-                            <CardDiv left>
-                                <ProgramCard
-                                    headline='International Learning & Development'
-                                    description='Train & refine your technical skills and experience modern international work culture in Barcelona, Spain'
-                                    buttonText='Trial 1 Overview'
-                                    link='url'
-                                />
-                            </CardDiv>
-                            <CardDiv left>
-                                <ProgramCard
-                                    headline='Online Education Courses'
-                                    description='Check out the materials in our core curriculum to learn what technologies are out there for you to explore'
-                                    buttonText='Core Curriculum'
-                                    link='url'
-                                />
-                            </CardDiv>
+
+                            {this.renderProgramsLeft()}
+
                         </Col>
                         <Col md={6}>
-                            <CardDiv right>
-                                <ProgramCard
-                                    headline='International Learning & Development'
-                                    description='Train & refine your technical skills and experience modern international work culture in Barcelona, Spain'
-                                    buttonText='Trial 1 Overview'
-                                    link='url'
-                                />
-                            </CardDiv>
-                            <CardDiv right>
-                                <ProgramCard
-                                    headline='Online Education Courses'
-                                    description='Check out the materials in our core curriculum to learn what technologies are out there for you to explore'
-                                    buttonText='Core Curriculum'
-                                    link='url'
-                                />
-                            </CardDiv>
+
+                            {this.renderProgramsRight()}
+
                         </Col>
                     </Row>
                 </Col>
@@ -77,62 +85,6 @@ class Programs extends Component {
                 </Col>
             </Section>
 
-            /*
-            <Section grey>
-                <Row>
-                    <Col md={2}>
-                    </Col>
-                    <Col md={8}>
-                        <Row>
-                            <Col md={6}>
-                                <Row>
-                                    <RowDiv>
-                                        <ProgramCard
-                                            headline='International Learning & Development'
-                                            description='Train & refine your technical skills and experience modern international work culture in Barcelona, Spain'
-                                            buttonText='Trial 1 Overview'
-                                            link='url'
-                                        />
-                                    </RowDiv>
-                                </Row>
-                                <Row>
-                                    <RowDiv>
-                                        <ProgramCard
-                                            headline='Online Education Courses'
-                                            description='Check out the materials in our core curriculum to learn what technologies are out there for you to explore'
-                                            buttonText='Core Curriculum'
-                                            link='url'
-                                        />
-                                    </RowDiv>
-                                </Row>
-                            </Col>
-                            <Col md={6}>
-                                <Row>
-                                    <ProgramCard
-                                        headline='Employee Technical Training'
-                                        description='Invest in your own employees and provide them with the latest tools to contribute to company growth'
-                                        buttonText='Free Consultation'
-                                        link='url'
-                                    />
-                                </Row>
-                                <Row>
-                                    <RowDiv>
-                                        <ProgramCard
-                                            headline='Mentorship'
-                                            description='Join our mission and help us teach how to teach and learn how to learn'
-                                            buttonText='Join Slack Channel'
-                                            link='url'
-                                        />
-                                    </RowDiv>
-                                </Row>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col md={2}>
-                    </Col>
-                </Row>
-            </Section>
-            */
 
         )
     }

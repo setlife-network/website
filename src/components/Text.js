@@ -8,19 +8,24 @@ properties:
 */
 
 export const Text = styled.p`
-    font-size: ${theme.sizes.medium}
-    display: 'block';
-    text-align: 'left';
-    color: ${props => props.blue ? theme.colors.primary : theme.colors.black};
-    font-weight: ${props => props.bold ? 'bold' : 'normal'};
-    text-transform: ${props => props.uppercase ? 'uppercase' : 'lowercase'}
-    margin-top:25px;
+    font-size: ${props => props.size};
+    text-align: ${props => props.alignment};
+    color: ${props => props.color};
+    font-weight: ${props => props.weight};
+    text-transform: ${props => props.uppercase ? 'uppercase' : 'normal'}
+    padding: 5px;
+
 `
 
 Text.defaultProps = {
     blue: false,
     bold: false,
-    uppercase: false
+    uppercase: false,
+    color: theme.colors.black,
+    alignment: 'left',
+    fontSize: theme.sizes.small
+
+
 }
 
 export default Text
