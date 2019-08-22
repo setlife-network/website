@@ -67,9 +67,26 @@ const PROGRAMSRIGHT = [
     },
 ]
 
+const COREVALUES = [
+    {
+        headline: 'Intellectual Freedom',
+        description: 'It is the right of every individual to both seek and receive information from all points of view without restriction',
+    },
+    {
+        headline: 'Learn by Teaching',
+        description: 'The deepest understanding of a topic comes when you can teach anyone willing to learn by adapting ideas to their specific educational context',
+    },
+    {
+        headline: 'Open-source software "libre"',
+        description: 'To promote true "freedom", users must be able to run software such that it can be studied, changed, adapted, and distributed in any variation',
+    },
+
+]
+
 export {
     TESTIMONIALS,
     TEASERS,
     PROGRAMSLEFT,
-    PROGRAMSRIGHT
+    PROGRAMSRIGHT,
+    COREVALUES
 }

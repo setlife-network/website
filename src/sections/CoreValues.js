@@ -4,6 +4,8 @@ import {
     Container, Image, Row, Col
 } from 'react-bootstrap';
 
+import constants, { COREVALUES } from '../constants'
+
 import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'
 import theme from '../styles/theme';
@@ -16,6 +18,21 @@ const Section = styled.div`
 
 
 class CoreValues extends Component {
+
+    renderValues = () => {
+        return COREVALUES.map(t => {
+            return (
+                <Col md={6}>
+                    <ValueTile
+                        headline={t.headline}
+                        description={t.description}
+                    />
+
+                </Col>
+            )
+        })
+    }
+
     render() {
         return (
             <Section>
@@ -30,24 +47,7 @@ class CoreValues extends Component {
                                     color={theme.colors.black}
                                 />
                             </Col>
-                            <Col md={6}>
-                                <ValueTile
-                                    headline='Intellectual Freedom'
-                                    description='It is the right of every individual to both seek and receive information from all points of view without restriction'
-                                />
-                                <ValueTile
-                                    headline='Learn by Teaching'
-                                    description='The deepest understanding of a topic comes when you can teach anyone willing to learn by adapting ideas to their specific educational context'
-                                />
-                            </Col>
-
-                            <Col md={6}>
-                                <ValueTile
-                                    headline='Open-source software "libre"'
-                                    description='To promote true "freedom", users must be able to run software such that it can be studied, changed, adapted, and distributed in any variation'
-                                />
-                                
-                            </Col>
+                            {this.renderValues()}
                         </Row>
                     </Col>
                     <Col md={2}>
