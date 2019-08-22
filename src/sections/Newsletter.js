@@ -21,7 +21,7 @@ const Section = styled(Row)`
 
 const ContentDiv = styled(Row)`
 
-    padding-bottom:50px;
+    padding-bottom:10px;
 
 `
 
