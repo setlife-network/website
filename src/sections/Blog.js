@@ -5,8 +5,12 @@ import {
 } from 'react-bootstrap';
 
 import TestimonyTile from '../components/TestimonyTile'
-import RoundButton from '../components/RoundButton'
-import Quote from '../components/Quote'
+import FilledButton from '../components/FilledButton'
+import Headline2 from '../components/Headline2'
+import theme from '../styles/theme';
+
+
+import constants, { TESTIMONIALS } from '../constants'
 
 const Section = styled.div`
     padding-top: 80px;
@@ -17,8 +21,30 @@ const Section = styled.div`
 const TestimonyDiv = styled(Col)`
     margin-bottom:50px
 `
+const ButtonDiv = styled(Col)`
+    margin: auto;
+    margin-bottom:50px
+
+
+`
 
 class Blog extends Component {
+    
+    renderTestimonials = () => {
+        return TESTIMONIALS.map(t => {
+            return (
+                <TestimonyDiv md={4}>
+                    <TestimonyTile
+                        date={t.date}
+                        headline={t.name}
+                        description={t.quote}
+
+                    />
+                </TestimonyDiv>
+            )
+        })
+    }
+
     render() {
         return (
             <Section>
@@ -27,68 +53,24 @@ class Blog extends Component {
                     </Col>
                     <Col md={10}>
                         <Row>
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
+                            <Col md={12}>
+                                <Headline2
+                                    headline='Lorem ipsum dolor sit amet sadipscing elitr.'
+                                    color={theme.colors.black}
+                                    weight='bold'
+                                    alignment='left'
                                 />
-                            </TestimonyDiv>
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
+                            </Col>
+
+                            {this.renderTestimonials()}
+
+                            <ButtonDiv md={2}>
+                                <FilledButton
+                                    url='url'
+                                    description='Button'
                                 />
-                            </TestimonyDiv>
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
-                                />
-                            </TestimonyDiv>
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    portrait='hello'
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
-                                />
-                            </TestimonyDiv>
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    portrait='hello'
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
-                                />
-                            </TestimonyDiv>
-                            <TestimonyDiv md={4}>
-                                <TestimonyTile
-                                    portrait='hello'
-                                    date='20 april 2022'
-                                    headline='Some blog headline lorem ipsum'
-                                    description='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt'
-                                    buttonText='Link'
-                                    link='url'
-                                />
-                            </TestimonyDiv>
-                            <Quote
-                                headline='Setlife helps you discover computer programming, learn about jobs available to programmers and get started building programming skills.'
-                                author='Marin Basic'
-                                company='CEO at branding.studio'
-                            />
+                            </ButtonDiv>
+
 
                         </Row>
                     </Col>

@@ -6,35 +6,30 @@ import {
 import theme from '../styles/theme';
 import Text from './Text';
 
+
+
 const LinkButton = ({
     color,
     url,
-    description
+    description,
+    weight
 }) => {
     return (
         <Row>
             <Col span={18}>
                 <a
                     href={url}
+                    style={{textDecoration:'none'}}
                 >
+                    <Text
+                        weight={weight}
+                        uppercase
+                        color={color}
+                        size={theme.sizes.link}
 
-                    {color == theme.colors.primary
-                    && (
-                        <Text uppercase blue>
-                            {description}
-                        </Text>
-                    )
-                    }
-
-                    {color == theme.colors.black
-                    && (
-                        <Text uppercase>
-                            {description}
-                        </Text>
-                    )
-                    }
-
-
+                    >
+                        {description}
+                    </Text>
                 </a>
             </Col>
         </Row>

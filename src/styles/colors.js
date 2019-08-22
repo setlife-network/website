@@ -4,5 +4,6 @@ export default {
     white: '#FFFFFF',
     black: '#000000',
     transparentBlack: 'rgba(0, 0, 0, 0.5)',
-    transparent: 'rgba(0, 0, 0, 0)'
+    transparent: 'rgba(0, 0, 0, 0)',
+    deepBlack: '#15141E'
 }

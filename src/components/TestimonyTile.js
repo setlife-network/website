@@ -7,15 +7,15 @@ import {
 
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
-import Title3 from './Title3';
+import Title from './Title';
 import Text from './Text';
 
 import Portrait from '../assets/images/portrait.png'
 
 
 const ContentDiv = styled(Col)`
-    height:50px;
-    margin-bottom:10px
+    height:100px;
+
 `
 
 const ImageContainer = styled(Image)`
@@ -37,35 +37,63 @@ const TestimonyTile = ({
     return (
         <Row>
             {
-                portrait != null
+                portrait
                 && (
                     <Col md={12}>
                         <ImageContainer src={Portrait} alt='Portrait' />
                     </Col>
                 )
             }
-            <Col md={6}>
-                <Text bold uppercase>
-                    {date}
-                </Text>
-            </Col>
-            <Col md={12}>
-                <Title3 blue bold>
-                    {headline}
-                </Title3>
-            </Col>
-            <ContentDiv md={12}>
-                <Text>
-                    {description}
-                </Text>
-            </ContentDiv>
-            <Col md={3}>
-                <LinkButton
-                    description={buttonText}
-                    url={link}
-                    color={theme.colors.black}
-                />
-            </Col>
+            {
+                date
+                && (
+                    <Col md={6}>
+                        <Text
+                            weight='bold'
+                            uppercase
+                        >
+                            {date}
+                        </Text>
+                    </Col>
+                )
+            }
+            {
+                headline
+                && (
+                    <Col md={12}>
+                        <Title
+                            bold
+                            color={theme.colors.primary}
+                            size={theme.sizes.medium}
+                        >
+                            {headline}
+                        </Title>
+                    </Col>
+                )
+            }
+            {
+                description
+                && (
+                    <ContentDiv md={12}>
+                        <Text>
+                            {description}
+                        </Text>
+                    </ContentDiv>
+                )
+            }
+            {
+                link
+                && (
+                    <Col md={3}>
+                        <LinkButton
+                            description={buttonText}
+                            url={link}
+                            color={theme.colors.black}
+                            weight='bold'
+                        />
+                    </Col>
+                )
+            }
         </Row>
 
     )
