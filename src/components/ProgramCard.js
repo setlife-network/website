@@ -27,6 +27,11 @@ const ImageContainer = styled(Image)`
     display: block;
 `
 
+const TitleWrapper = styled(Col)`
+    height:100px
+
+`
+
 
 const ProgramCard = ({
     headline,
@@ -45,13 +50,13 @@ const ProgramCard = ({
                 />
 
             </Col>
-            <Col md={12}>
+            <TitleWrapper md={12}>
                 <Title
                     size={theme.sizes.medium}
                 >
                     {headline}
                 </Title>
-            </Col>
+            </TitleWrapper>
             <Col md={4}>
                 <ImageContainer src={SDFundamentals} alt='Software development Fundamentals' />
             </Col>

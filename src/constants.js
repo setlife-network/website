@@ -37,7 +37,39 @@ const TEASERS = [
     }
 ]
 
+const PROGRAMSLEFT = [
+    {
+        headline: 'International Learning & Development',
+        description: 'Train & refine your technical skills and experience modern international work culture in Barcelona, Spain',
+        buttonText: 'Trial 1 Overview',
+        link: 'url'
+    },
+    {
+        headline: 'Online Education Courses',
+        description: 'Check out the materials in our core curriculum to learn what technologies are out there for you to explore',
+        buttonText: 'Core Curriculum',
+        link: 'url'
+    }
+]
+
+const PROGRAMSRIGHT = [
+    {
+        headline: 'Employee Technical Training',
+        description: 'Invest in your own employees and provide them with the latest tools to contribute to company growth',
+        buttonText: 'Free Consultation',
+        link: 'url'
+    },
+    {
+        headline: 'Mentorship',
+        description: 'Join our mission and help us teach how to teach and learn how to learn',
+        buttonText: 'Join Slack Channel',
+        link: 'url'
+    },
+]
+
 export {
     TESTIMONIALS,
-    TEASERS
+    TEASERS,
+    PROGRAMSLEFT,
+    PROGRAMSRIGHT
 }

@@ -12,8 +12,16 @@ import Title from './Title';
 import Text from './Text';
 
 
-const ContentDiv = styled.div`
-    height:80px;
+const ContentWrapper = styled(Col)`
+    height:100px;
+`
+
+const TitleWrapper = styled(Col)`
+    height:100px;
+`
+
+const Wrapper = styled(Row)`
+    height:250px;
 `
 
 const ValueTile = ({
@@ -21,29 +29,29 @@ const ValueTile = ({
     description
 }) => {
     return (
-        <Row>
+        <Wrapper>
             <Col md={2}>
                 <img src={BlueArrow} alt='Blue Arrow' />
             </Col>
             <Col md={10}>
                 <Row>
-                    <Col md={12}>
+                    <TitleWrapper md={12}>
                         <Title
                             size={theme.sizes.medium}
                         >
                             {headline}
                         </Title>
-                    </Col>
-                    <Col md={12}>
-                        <ContentDiv>
-                            <Text>
-                                {description}
-                            </Text>
-                        </ContentDiv>
-                    </Col>
+                    </TitleWrapper>
+
+                    <ContentWrapper md={12}>
+                        <Text>
+                            {description}
+                        </Text>
+                    </ContentWrapper>
+
                 </Row>
             </Col>
-        </Row>
+        </Wrapper>
     )
 }
 

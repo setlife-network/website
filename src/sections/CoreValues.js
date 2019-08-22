@@ -20,9 +20,9 @@ class CoreValues extends Component {
         return (
             <Section>
                 <Row>
-                    <Col md={1}>
+                    <Col md={2}>
                     </Col>
-                    <Col md={10}>
+                    <Col md={8}>
                         <Row>
                             <Col md={12}>
                                 <Headline
@@ -46,14 +46,11 @@ class CoreValues extends Component {
                                     headline='Open-source software "libre"'
                                     description='To promote true "freedom", users must be able to run software such that it can be studied, changed, adapted, and distributed in any variation'
                                 />
-                                <ValueTile
-                                    headline='Open-source software "libre"'
-                                    description='To promote true "freedom", users must be able to run software such that it can be studied, changed, adapted, and distributed in any variation'
-                                />
+                                
                             </Col>
                         </Row>
                     </Col>
-                    <Col md={1}>
+                    <Col md={2}>
                     </Col>
                 </Row>
             </Section>
