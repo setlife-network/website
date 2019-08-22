@@ -32,6 +32,11 @@ const TitleWrapper = styled(Col)`
 
 `
 
+const DividerWrapper = styled(Col)`
+    margin-left: -15px
+
+`
+
 
 const ProgramCard = ({
     headline,
@@ -44,12 +49,11 @@ const ProgramCard = ({
 
 
         <WrapperCard>
-            <Col md={1}>
+            <DividerWrapper md={2}>
                 <DividerLine
                     color={theme.colors.grey}
                 />
-
-            </Col>
+            </DividerWrapper>
             <TitleWrapper md={12}>
                 <Title
                     size={theme.sizes.medium}
