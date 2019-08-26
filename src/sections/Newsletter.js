@@ -100,7 +100,7 @@ class Newsletter extends Component {
 
                             </Row>
                         </Col>
-                        <Col md={6}>
+                        <Col md={6} xs={0}>
 
                             <ImageContainer src={NewsletterPhoto} />
 
