@@ -17,6 +17,7 @@ const TextWrapper = styled(Col)`
 
 const TitleWrapper = styled(Col)`
     height:100px
+    margin-top: 10px;
 `
 
 
@@ -29,38 +30,38 @@ const TeaserTile = ({
 
     return (
 
-        <Container>
-            <Row>
-                <Col md={2}>
-                    <DividerLine
-                        color={theme.colors.primary}
-                    />
-                </Col>
-                <Col md={12}>
-                </Col>
-                <TitleWrapper md={9}>
-                    <Title
-                        size={theme.sizes.medium}
-                    >
-                        {headline}
-                    </Title>
-                </TitleWrapper>
-                <TextWrapper md={12}>
-                    <Text
-                        size={theme.sizes.small}
-                    >
-                        {intro}
-                    </Text>
-                </TextWrapper>
-                <Col>
-                    <LinkButton
-                        description={buttonText}
-                        url={link}
-                        color={theme.colors.black}
-                    />
-                </Col>
-            </Row>
-        </Container>
+        <Row>
+            <Col md={2}>
+                <DividerLine
+                    color={theme.colors.primary}
+
+                />
+            </Col>
+            <Col md={12}>
+            </Col>
+            <TitleWrapper md={9}>
+                <Title
+                    bold
+                    size={theme.sizes.medium}
+                >
+                    {headline}
+                </Title>
+            </TitleWrapper>
+            <TextWrapper md={12}>
+                <Text
+                    size={theme.sizes.small}
+                >
+                    {intro}
+                </Text>
+            </TextWrapper>
+            <Col>
+                <LinkButton
+                    description={buttonText}
+                    url={link}
+                    color={theme.colors.black}
+                />
+            </Col>
+        </Row>
 
     )
 }
