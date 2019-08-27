@@ -41,9 +41,46 @@ class PullOuts extends Component {
     render() {
         return (
             <Section>
-                <Col md={12}>
+
+                <Col md={6}>
+                    <WrapperBlank>
+                        <PullOutTile
+                            headline='Lorem ipsum dolor'
+                            intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+
+                        />
+                    </WrapperBlank>
+                </Col>
+                <Col md={6}>
+                    <WrapperFilled>
+                        <PullOutTile
+                            headline='Lorem ipsum dolor'
+                            intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+                            color={theme.colors.white}
+                        />
+                    </WrapperFilled>
+                </Col>
+                <Col md={6} xs={{ span: 12, order: 12 }}>
+                    <WrapperFilled>
+                        <PullOutTile
+                            headline='Lorem ipsum dolor'
+                            intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+                            color={theme.colors.white}
+                        />
+                    </WrapperFilled>
+                </Col>
+                <Col md={6} xs={{ order: 1 }}>
+                    <WrapperBlank>
+                        <PullOutTile
+                            headline='Lorem ipsum dolor'
+                            intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+
+                        />
+                    </WrapperBlank>
+                </Col>
+                {/*
                     <Wrapper>
-                        <Col>
+                        <Col md={6} xs={12}>
                             <WrapperBlank>
                                 <PullOutTile
                                     headline='Lorem ipsum dolor'
@@ -59,7 +96,7 @@ class PullOuts extends Component {
                                 />
                             </WrapperFilled>
                         </Col>
-                        <Col md={6}>
+                        <Col md={6} xs={12}>
                             <WrapperFilled>
                                 <PullOutTile
                                     headline='Lorem ipsum dolor'
@@ -76,7 +113,7 @@ class PullOuts extends Component {
                             </WrapperBlank>
                         </Col>
                     </Wrapper>
-                </Col>
+                    */}
 
 
             </Section>

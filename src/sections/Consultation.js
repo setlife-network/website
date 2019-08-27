@@ -15,11 +15,14 @@ const Section = styled(Row)`
 
     background: ${theme.colors.primary};
     height:360px
+
 `
 
 const Wrapper = styled(Col)`
 
-    float: right
+    float: right;
+    height:280px
+
 `
 
 const ImageContainer = styled(Image)`
@@ -47,7 +50,7 @@ const OutContainer = styled(Col)`
 
 const ColDiv = styled(Col)`
 
-    padding:50px
+    padding:20px
 `
 
 class Consultation extends Component {
@@ -58,29 +61,29 @@ class Consultation extends Component {
                 <Col md={11}>
                     <Row>
                         <Col md={6}>
-                            <OutContainer>
+                            <OutContainer xs={0}>
                                 <ImageContainer src={ConsultationPhoto} alt='Photo' />
                             </OutContainer>
                         </Col>
                         <ColDiv md={6}>
                             <Row>
-                                <Col md={12}>
+                                <Wrapper md={12}>
                                     <Headline
                                         headline='Make software your superpower'
                                         color={theme.colors.white}
                                         description='Because learning to code might be the smartest investment to make.'
                                         alignment='right'
                                     />
-                                </Col>
+                                </Wrapper>
                             </Row>
 
-                            <Wrapper md={5}>
+                            <Col md={5} xs={6}>
                                 <BlankButton
                                     url='url'
                                     description='Get free consultation'
                                 />
 
-                            </Wrapper>
+                            </Col>
                         </ColDiv>
                     </Row>
                 </Col>

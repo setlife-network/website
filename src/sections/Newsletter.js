@@ -17,7 +17,6 @@ const Section = styled(Row)`
     padding-top: 80px;
     padding-bottom:80px;
     background: linear-gradient(to bottom, ${theme.colors.white} 50%,${theme.colors.primary} 50%);
-    font-size-adjust: 0.58;
 `
 
 const ContentDiv = styled(Row)`
@@ -55,11 +54,11 @@ class Newsletter extends Component {
 
             <Section>
 
-                <Col md={10} className='mx-auto'>
+                <Col xs={10} className='mx-auto'>
                     <Row>
-                        <Col md={6} xs={12}>
+                        <Col md={6}>
                             <ContentDiv>
-                                <Wrapper md={12} xs={6} className='mx-auto'>
+                                <Wrapper xs={12} className='mx-auto'>
                                     <Title
                                         bold
                                         size={theme.sizes.large}
@@ -67,7 +66,7 @@ class Newsletter extends Component {
                                         Not a Setlife member?
                                     </Title>
                                 </Wrapper>
-                                <Wrapper md={2}>
+                                <Wrapper md={2} xs={6}>
                                     <DividerLine />
                                 </Wrapper>
                                 <Wrapper md={12}>

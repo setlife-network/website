@@ -22,10 +22,10 @@ const PrincipalMessage = ({
 }) => {
     return (
         <Row>
-            <Col md={2}>
+            <Col xs={2}>
                 <DividerLine />
             </Col>
-            <Col md={12}>
+            <Col xs={12}>
                 <Title
                     size={theme.sizes.xlarge}
                     bold
@@ -40,14 +40,14 @@ const PrincipalMessage = ({
                     {headline2}
                 </Title>
             </Col>
-            <Wrapper md={10}>
+            <Wrapper xs={10}>
                 <Text
                     size={theme.sizes.regular}
                 >
                     {description}
                 </Text>
             </Wrapper>
-            <Wrapper md={4}>
+            <Wrapper xs={4}>
                 <FilledButton
                     url='url'
                     description='Start Learning'

@@ -38,9 +38,9 @@ class CoreValues extends Component {
             <Section>
 
 
-                <Col md={8} className='mx-auto'>
+                <Col xs={8} className='mx-auto'>
                     <Row>
-                        <Col md={12}>
+                        <Col xs={12}>
                             <Headline
                                 headline='Core Values'
                                 color={theme.colors.black}
@@ -50,7 +50,7 @@ class CoreValues extends Component {
                     </Row>
                 </Col>
 
-                
+
             </Section>
         )
     }

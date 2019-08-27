@@ -50,7 +50,7 @@ class Blog extends Component {
             <Section>
                 <Row>
 
-                    <Col md={10} className='mx-auto'>
+                    <Col xs={10} className='mx-auto'>
                         <Row>
                             <Col md={12}>
                                 <Headline2
@@ -63,7 +63,7 @@ class Blog extends Component {
 
                             {this.renderTestimonials()}
 
-                            <ButtonDiv md={2}>
+                            <ButtonDiv xs={6} md={2}>
                                 <FilledButton
                                     url='url'
                                     description='Button'

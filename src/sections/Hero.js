@@ -50,9 +50,9 @@ class Hero extends Component {
         return (
             <Section>
 
-                <Col md={10} className='mx-auto'>
+                <Col xs={10} className='mx-auto'>
                     <Section>
-                        <Col md={6}>
+                        <Col md={{ order: 1 }} xs={{ order: 2 }}>
                             <PrincipalMessage
                                 headline1='Make software'
                                 headline2='your superpower'
@@ -60,7 +60,7 @@ class Hero extends Component {
                             />
 
                         </Col>
-                        <Col md={6}>
+                        <Col md={{ order: 2 }} xs={{ order: 1 }}>
                             <ImageContainer src={HeroGraphic} alt='Hero Graphic' />
                         </Col>
                     </Section>

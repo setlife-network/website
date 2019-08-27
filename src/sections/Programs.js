@@ -16,8 +16,9 @@ const Section = styled(Row)`
     background: ${props => props.grey ? '#EEEEEE' : 'white'}
 `
 const CardDiv = styled(Col)`
-    margin-top: ${props => props.left ? '30px' : '0px'}
-    margin-bottom: ${props => props.right ? '30px' : '0px'}
+
+    margin-top: ${props => props.left ? '60px' : '0px'};
+    margin-bottom: ${props => props.right ? '60px' : '0px'};
 `
 
 class Programs extends Component {
@@ -57,7 +58,7 @@ class Programs extends Component {
         return (
 
             <Section grey>
-                <Col md={8} className='mx-auto'>
+                <Col xs={10} md={8} className='mx-auto'>
                     <Row>
                         <Col md={12}>
                             <Headline
