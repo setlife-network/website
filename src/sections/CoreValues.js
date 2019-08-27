@@ -10,7 +10,7 @@ import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'
 import theme from '../styles/theme';
 
-const Section = styled.div`
+const Section = styled(Row)`
     padding-top: 80px;
     padding-bottom:80px;
     background: ${props => props.grey ? '#EEEEEE' : 'white'}
@@ -36,23 +36,21 @@ class CoreValues extends Component {
     render() {
         return (
             <Section>
-                <Row>
-                    <Col md={2}>
-                    </Col>
-                    <Col md={8}>
-                        <Row>
-                            <Col md={12}>
-                                <Headline
-                                    headline='Core Values'
-                                    color={theme.colors.black}
-                                />
-                            </Col>
-                            {this.renderValues()}
-                        </Row>
-                    </Col>
-                    <Col md={2}>
-                    </Col>
-                </Row>
+
+
+                <Col md={8} className='mx-auto'>
+                    <Row>
+                        <Col md={12}>
+                            <Headline
+                                headline='Core Values'
+                                color={theme.colors.black}
+                            />
+                        </Col>
+                        {this.renderValues()}
+                    </Row>
+                </Col>
+
+                
             </Section>
         )
     }

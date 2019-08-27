@@ -17,6 +17,7 @@ const Section = styled(Row)`
     padding-top: 80px;
     padding-bottom:80px;
     background: linear-gradient(to bottom, ${theme.colors.white} 50%,${theme.colors.primary} 50%);
+    font-size-adjust: 0.58;
 `
 
 const ContentDiv = styled(Row)`
@@ -33,7 +34,9 @@ const Wrapper = styled(Col)`
 
 const ImageContainer = styled(Image)`
 
-width:700px
+    width:100%;
+    height: auto
+
 
 `
 
@@ -51,13 +54,12 @@ class Newsletter extends Component {
         return (
 
             <Section>
-                <Col md={1}>
-                </Col>
-                <Col md={10}>
+
+                <Col md={10} className='mx-auto'>
                     <Row>
-                        <Col md={6}>
+                        <Col md={6} xs={12}>
                             <ContentDiv>
-                                <Wrapper md={12}>
+                                <Wrapper md={12} xs={6} className='mx-auto'>
                                     <Title
                                         bold
                                         size={theme.sizes.large}
@@ -100,15 +102,14 @@ class Newsletter extends Component {
 
                             </Row>
                         </Col>
-                        <Col md={6} xs={0}>
+                        <Col md={6} xs={1}>
 
                             <ImageContainer src={NewsletterPhoto} />
 
                         </Col>
                     </Row>
                 </Col>
-                <Col md={1}>
-                </Col>
+
 
             </Section>
 

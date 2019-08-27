@@ -50,13 +50,9 @@ class Hero extends Component {
         return (
             <Section>
 
-                <Col md={1}>
-                </Col>
-                <Col md={10}>
-
+                <Col md={10} className='mx-auto'>
                     <Section>
                         <Col md={6}>
-
                             <PrincipalMessage
                                 headline1='Make software'
                                 headline2='your superpower'
@@ -70,12 +66,8 @@ class Hero extends Component {
                     </Section>
 
                     <Row>
-
                         {this.renderTeaser()}
-
                     </Row>
-                </Col>
-                <Col md={1}>
                 </Col>
 
             </Section>

@@ -25,9 +25,8 @@ const Section = styled(Row)`
 
 const Header = () => (
     <Section>
-        <Col md={1}>
-        </Col>
-        <Col md={10}>
+
+        <Col md={10} className='mx-auto'>
 
             <Navbar>
                 <HeaderImage src={logo} />
@@ -40,8 +39,7 @@ const Header = () => (
 
 
         </Col>
-        <Col md={1}>
-        </Col>
+
 
     </Section>
 )

@@ -57,9 +57,7 @@ class Programs extends Component {
         return (
 
             <Section grey>
-                <Col md={2}>
-                </Col>
-                <Col md={8}>
+                <Col md={8} className='mx-auto'>
                     <Row>
                         <Col md={12}>
                             <Headline
@@ -80,8 +78,6 @@ class Programs extends Component {
 
                         </Col>
                     </Row>
-                </Col>
-                <Col md={2}>
                 </Col>
             </Section>
 

@@ -32,9 +32,7 @@ const Quote = ({
 }) => {
     return (
         <Section>
-            <Col md={1}>
-            </Col>
-            <Col md={10}>
+            <Col md={10} className='mx-auto'>
                 <Row>
                     <Col md={6}>
                         <ImageContainer src={QuoteIcon} alt='quote' />
@@ -64,8 +62,6 @@ const Quote = ({
                         </Row>
                     </Col>
                 </Row>
-            </Col>
-            <Col md={1}>
             </Col>
         </Section>
     )

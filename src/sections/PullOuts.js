@@ -40,7 +40,7 @@ const WrapperBlank = styled(Row)`
 class PullOuts extends Component {
     render() {
         return (
-            <Section >
+            <Section>
                 <Col md={12}>
                     <Wrapper>
                         <Col>

@@ -29,7 +29,7 @@ const ButtonDiv = styled(Col)`
 `
 
 class Blog extends Component {
-    
+
     renderTestimonials = () => {
         return TESTIMONIALS.map(t => {
             return (
@@ -49,9 +49,8 @@ class Blog extends Component {
         return (
             <Section>
                 <Row>
-                    <Col md={1}>
-                    </Col>
-                    <Col md={10}>
+
+                    <Col md={10} className='mx-auto'>
                         <Row>
                             <Col md={12}>
                                 <Headline2
@@ -74,8 +73,7 @@ class Blog extends Component {
 
                         </Row>
                     </Col>
-                    <Col md={1}>
-                    </Col>
+
                 </Row>
             </Section>
         )
