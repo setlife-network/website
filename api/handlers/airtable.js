@@ -1,5 +1,4 @@
 const Airtable= require('airtable');
-//const Airtable = require('../handlers/airtable')
 const {
     AIRTABLE
 } = require('../../config/credentials')
@@ -22,7 +21,8 @@ const airtable = module.exports = (function () {
                 } else {
                     resolve(record)
                 }
-            });
+            })
+            
         });
     };
     return {
