@@ -60,7 +60,7 @@ class PullOuts extends Component {
                         />
                     </WrapperFilled>
                 </Col>
-                <Col md={6} xs={{ span: 12, order: 12 }}>
+                <Col md={{ span: 6, order: 1 }} xs={{ span: 12, order: 12 }}>
                     <WrapperFilled>
                         <PullOutTile
                             headline='Lorem ipsum dolor'
@@ -69,7 +69,7 @@ class PullOuts extends Component {
                         />
                     </WrapperFilled>
                 </Col>
-                <Col md={6} xs={{ order: 1 }}>
+                <Col md={{ span: 6, order: 2 }} xs={{ order: 1 }}>
                     <WrapperBlank>
                         <PullOutTile
                             headline='Lorem ipsum dolor'

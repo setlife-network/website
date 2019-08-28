@@ -25,6 +25,12 @@ const Wrapper = styled(Col)`
 
 `
 
+const ButtonWrapper = styled(Col)`
+
+    float: right;
+
+`
+
 const ImageContainer = styled(Image)`
 
 
@@ -60,8 +66,8 @@ class Consultation extends Component {
 
                 <Col md={11}>
                     <Row>
-                        <Col md={6}>
-                            <OutContainer xs={0}>
+                        <Col xs={0} md={6}>
+                            <OutContainer md={12} xs={0}>
                                 <ImageContainer src={ConsultationPhoto} alt='Photo' />
                             </OutContainer>
                         </Col>
@@ -77,13 +83,13 @@ class Consultation extends Component {
                                 </Wrapper>
                             </Row>
 
-                            <Col md={5} xs={6}>
+                            <ButtonWrapper md={5} xs={6}>
                                 <BlankButton
                                     url='url'
                                     description='Get free consultation'
                                 />
 
-                            </Col>
+                            </ButtonWrapper>
                         </ColDiv>
                     </Row>
                 </Col>

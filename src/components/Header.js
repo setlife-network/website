@@ -25,14 +25,18 @@ const Header = () => (
         </Col>
         <Col md={10}>
 
-            <Navbar>
+            <Navbar expand='lg'>
+
+                <Navbar.Toggle />
+
                 <HeaderImage src={logo} />
 
 
                 <Text>
                 Learn to code. Change things
                 </Text>
-                <Navbar.Toggle />
+
+
                 <Navbar.Collapse className='justify-content-end'>
 
                     <Nav.Link href='#home'>
