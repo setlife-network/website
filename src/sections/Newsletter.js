@@ -61,7 +61,7 @@ class Newsletter extends Component {
                             <ContentDiv>
                                 <Wrapper xs={12} className='mx-auto'>
                                     <Title
-                                        bold
+                                        weight='bold'
                                         size={theme.sizes.large}
                                     >
                                         Not a Setlife member?

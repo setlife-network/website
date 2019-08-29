@@ -6,7 +6,7 @@ import {
 
 import TestimonyTile from '../components/TestimonyTile'
 import FilledButton from '../components/FilledButton'
-import Headline2 from '../components/Headline2'
+import Headline from '../components/Headline'
 import theme from '../styles/theme';
 
 
@@ -34,7 +34,7 @@ class Blog extends Component {
         return BLOGHEADLINE.map(t => {
             return (
                 <Col md={12}>
-                    <Headline2
+                    <Headline
                         headline={t.headline}
                         color={theme.colors.black}
                         weight='bold'

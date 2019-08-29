@@ -31,14 +31,14 @@ const PrincipalMessage = ({
             <Col xs={12}>
                 <TitleWrapper
                     size={theme.sizes.xlarge}
-                    bold
+                    weight='bold'
                 >
                     {headline1}
                 </TitleWrapper>
                 <Title
                     size={theme.sizes.xlarge}
                     color={theme.colors.primary}
-                    bold
+                    weight='bold'
                 >
                     {headline2}
                 </Title>

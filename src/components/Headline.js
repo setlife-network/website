@@ -29,13 +29,17 @@ const Headline = ({
 }) => {
     return (
         <Wrapper>
-            <Col md={5}>
-            </Col>
-            <Col md={2}>
-                <DividerLine />
-            </Col>
-            <Col md={5}>
-            </Col>
+
+            {alignment == 'left' ? (
+                <Col md={2} className='mr-auto'>
+                    <DividerLine />
+                </Col>
+            ) : (
+                <Col md={2} className='mx-auto'>
+                    <DividerLine />
+                </Col>
+            )}
+
             <Holder md={12}>
                 <Title
                     color={color}
