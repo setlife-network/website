@@ -67,7 +67,7 @@ class Consultation extends Component {
                 <Col md={11}>
                     <Row>
                         <Col xs={0} md={6}>
-                            <OutContainer md={12} xs={0}>
+                            <OutContainer xs={0}>
                                 <ImageContainer src={ConsultationPhoto} alt='Photo' />
                             </OutContainer>
                         </Col>

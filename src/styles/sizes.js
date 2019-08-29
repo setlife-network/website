@@ -6,5 +6,5 @@ export default {
     regular: '22px', //'2vw', //22px
     medium: '28px', //'3vw', //28px
     large: '54px', //'4vw', 54px
-    xlarge: '64px' //'5vw' 64px
+    xlarge: '60px' //'5vw' 64px
 }

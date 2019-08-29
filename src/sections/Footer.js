@@ -13,7 +13,9 @@ import FilledButton from '../components/FilledButton'
 
 const HeaderImage = styled(Image)`
     height: 40px;
-     vertical-align: middle;
+    vertical-align: middle;
+    margin-bottom:15px;
+    margin-right:10px
 `
 const Section = styled(Row)`
     padding-top:18px;
@@ -30,7 +32,6 @@ const Header = () => (
 
             <Navbar>
                 <HeaderImage src={logo} />
-                <Navbar.Toggle />
                 <Text color={theme.colors.white}>
                     © Setlife 2019
                 </Text>

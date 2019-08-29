@@ -16,6 +16,8 @@ const ButtonContainer = styled(Row)`
 
 const HeaderImage = styled(Image)`
 height: 40px;
+margin-bottom:15px;
+margin-right:10px
 `
 
 
@@ -27,7 +29,7 @@ const Header = () => (
 
             <Navbar expand='lg'>
 
-                <Navbar.Toggle />
+                <Navbar.Toggle style={{ margin: 0 }} />
 
                 <HeaderImage src={logo} />
 
@@ -35,7 +37,6 @@ const Header = () => (
                 <Text>
                 Learn to code. Change things
                 </Text>
-
 
                 <Navbar.Collapse className='justify-content-end'>
 

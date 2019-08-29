@@ -30,7 +30,7 @@ class Programs extends Component {
                     <ProgramCard
                         headline={t.headline}
                         description={t.description}
-                        buttonText={t.LinkButton}
+                        buttonText={t.buttonText}
                         link={t.url}
                     />
                 </CardDiv>
@@ -45,7 +45,7 @@ class Programs extends Component {
                     <ProgramCard
                         headline={t.headline}
                         description={t.description}
-                        buttonText={t.LinkButton}
+                        buttonText={t.buttonText}
                         link={t.url}
                     />
                 </CardDiv>

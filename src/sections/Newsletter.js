@@ -23,6 +23,7 @@ const ContentDiv = styled(Row)`
 
     padding-bottom:10px;
 
+
 `
 
 const Wrapper = styled(Col)`
@@ -41,10 +42,10 @@ const ImageContainer = styled(Image)`
 
 const OutContainer = styled(Col)`
 
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 `
 
 class Newsletter extends Component {

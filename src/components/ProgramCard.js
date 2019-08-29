@@ -29,12 +29,13 @@ const ImageContainer = styled(Image)`
 `
 
 const TitleWrapper = styled(Col)`
-    height:120px
+    height:120px;
+    margin-top:5px
 
 `
 
 const ConstantWrapper = styled(Col)`
-    height:120px
+    height:160px
 
 `
 
