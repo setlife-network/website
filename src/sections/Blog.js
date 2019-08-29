@@ -53,7 +53,7 @@ class Blog extends Component {
                         date={t.date}
                         headline={t.name}
                         description={t.quote}
-
+                        portrait={t.portrait}
                     />
                 </TestimonyDiv>
             )
@@ -83,8 +83,6 @@ class Blog extends Component {
                             {this.renderHeadline()}
                             {this.renderTestimonials()}
                             {this.renderButton()}
-
-
                         </Row>
                     </Col>
 

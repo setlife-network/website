@@ -16,9 +16,9 @@ const Section = styled(Row)`
     background: ${props => props.grey ? '#EEEEEE' : 'white'}
 `
 const CardDiv = styled(Col)`
-
     margin-top: ${props => props.left ? '60px' : '0px'};
     margin-bottom: ${props => props.right ? '60px' : '0px'};
+
 `
 
 class Programs extends Component {
@@ -47,6 +47,7 @@ class Programs extends Component {
                         description={t.description}
                         buttonText={t.buttonText}
                         link={t.url}
+                        image={t.image}
                     />
                 </CardDiv>
             )
@@ -62,6 +63,7 @@ class Programs extends Component {
                         description={t.description}
                         buttonText={t.buttonText}
                         link={t.url}
+                        image={t.image}
                     />
                 </CardDiv>
             )
@@ -76,7 +78,6 @@ class Programs extends Component {
                 <Col xs={10} md={8} className='mx-auto'>
                     <Row>
                         {this.renderHeadline()}
-                        
                         <Col md={6}>
 
                             {this.renderProgramsLeft()}

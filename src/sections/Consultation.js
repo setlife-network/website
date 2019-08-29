@@ -106,11 +106,8 @@ class Consultation extends Component {
                             </OutContainer>
                         </Col>
                         <ColDiv md={6}>
-
                             {this.renderHeadline()}
                             {this.renderButton()}
-
-
                         </ColDiv>
                     </Row>
                 </Col>

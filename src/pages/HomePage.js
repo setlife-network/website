@@ -45,7 +45,6 @@ class HomePage extends Component {
                 <CoreValues />
                 <Consultation />
                 <Blog />
-                <PullOuts />
                 {this.renderQuote()}
                 <Newsletter />
                 <Footer />
