@@ -25,6 +25,7 @@ const RoundButton = ({
     return (
         <RoundedButton
             onClick={onClick}
+            size={theme.sizes.button}
         >
             {buttonText}
         </RoundedButton>

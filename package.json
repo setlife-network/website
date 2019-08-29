@@ -2,6 +2,10 @@
   "name": "setlifereact",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "5.7.1",
+    "node": "9.5.0"
+  },
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
     "airtable": "^0.7.1",
@@ -20,7 +24,6 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "sendgrid": "^5.2.3",
     "styled-components": "^4.3.2"
   },
   "scripts": {
