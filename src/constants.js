@@ -1,3 +1,13 @@
+const PRINCIPALMESSAGE = [
+    {
+        headline1: 'Make software',
+        headline2: 'your superpower',
+        description: 'Learn valuable technical skills to help you upgrade your career – online, on your schedule.',
+        buttonText: 'Start learning',
+        url: 'url'
+    }
+]
+
 const TEASERS = [
     {
         headline: 'Tech education',
@@ -19,22 +29,11 @@ const TEASERS = [
     }
 ]
 
-const TESTIMONIALS = [
+const PROGRAMSHEADLINE = [
     {
-        name: 'Oscar Lafarga',
-        quote: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt',
-        date: '20 april 2028'
-    },
-    {
-        name: 'Viki Lafarga',
-        quote: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt',
-        date: '20 april 2022'
-    },
-    {
-        name: 'Sofia Rodriguez',
-        quote: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt',
-        date: '20 april 2022'
-    },
+        headline: 'SetLife Programs',
+        description: 'SetLife is continuously developing a variety of programs to help promote the advancement of collaborative learning and the engineering of solutions for social prosperity'
+    }
 ]
 
 const PROGRAMSLEFT = [
@@ -67,6 +66,12 @@ const PROGRAMSRIGHT = [
     },
 ]
 
+const COREVALUESHEADLINE = [
+    {
+        headline: 'Core Values',
+    }
+]
+
 const COREVALUES = [
     {
         headline: 'Intellectual Freedom',
@@ -83,10 +88,76 @@ const COREVALUES = [
 
 ]
 
+const CONSULTATIONHEADLINE = [
+    {
+        headline: 'Make software your superpower',
+        description: 'Because learning to code might be the smartest investment to make.'
+
+    }
+
+]
+
+const CONSULTATIONBUTTON = [
+    {
+        url: 'url',
+        description: 'Get free consultation'
+
+    }
+
+]
+
+const BLOGHEADLINE = [
+    {
+        headline: 'Lorem ipsum dolor sit amet sadipscing elitr.',
+    }
+]
+
+const TESTIMONIALS = [
+    {
+        name: 'Oscar Lafarga',
+        quote: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt',
+        date: '20 april 2028'
+    },
+    {
+        name: 'Viki Lafarga',
+        quote: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt',
+        date: '20 april 2022'
+    },
+    {
+        name: 'Sofia Rodriguez',
+        quote: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt',
+        date: '20 april 2022'
+    },
+]
+
+const BLOGBUTTON = [
+    {
+        url: 'url',
+        description: 'Button'
+    }
+]
+
+const QUOTE = [
+    {
+        headline: 'Setlife helps you discover computer programming, learn about jobs available to programmers and get started building programming skills.',
+        author: 'Marin Basic',
+        company: 'CEO at branding.studio'
+    }
+]
+
+
 export {
-    TESTIMONIALS,
+    PRINCIPALMESSAGE,
     TEASERS,
+    PROGRAMSHEADLINE,
+    COREVALUESHEADLINE,
+    CONSULTATIONHEADLINE,
+    CONSULTATIONBUTTON,
+    BLOGHEADLINE,
+    TESTIMONIALS,
+    BLOGBUTTON,
     PROGRAMSLEFT,
     PROGRAMSRIGHT,
-    COREVALUES
+    COREVALUES,
+    QUOTE
 }

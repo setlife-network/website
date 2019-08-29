@@ -4,7 +4,7 @@ import {
     Container, Image, Row, Col
 } from 'react-bootstrap';
 
-import constants, { COREVALUES } from '../constants'
+import constants, { COREVALUES, COREVALUESHEADLINE } from '../constants'
 
 import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'
@@ -18,6 +18,19 @@ const Section = styled(Row)`
 
 
 class CoreValues extends Component {
+
+    renderHeadline = () => {
+        return COREVALUESHEADLINE.map(t => {
+            return (
+                <Col xs={12}>
+                    <Headline
+                        headline={t.headline}
+                        color={theme.colors.black}
+                    />
+                </Col>
+            )
+        })
+    }
 
     renderValues = () => {
         return COREVALUES.map(t => {
@@ -40,12 +53,7 @@ class CoreValues extends Component {
 
                 <Col xs={8} className='mx-auto'>
                     <Row>
-                        <Col xs={12}>
-                            <Headline
-                                headline='Core Values'
-                                color={theme.colors.black}
-                            />
-                        </Col>
+                        {this.renderHeadline()}
                         {this.renderValues()}
                     </Row>
                 </Col>

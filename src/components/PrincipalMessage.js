@@ -52,8 +52,8 @@ const PrincipalMessage = ({
             </Wrapper>
             <Wrapper xs={8} md={4}>
                 <FilledButton
-                    url='url'
-                    description='Start Learning'
+                    description={buttonText}
+                    url={url}
                 />
 
             </Wrapper>

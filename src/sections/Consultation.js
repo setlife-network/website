@@ -4,6 +4,8 @@ import {
     Container, Image, Row, Col
 } from 'react-bootstrap';
 
+import constants, { CONSULTATIONHEADLINE, CONSULTATIONBUTTON } from '../constants'
+
 import ConsultationPhoto from '../assets/images/consultationPhoto.png'
 
 import ValueTile from '../components/ValueTile'
@@ -47,11 +49,11 @@ const ImageContainer = styled(Image)`
 const OutContainer = styled(Col)`
 
     position: absolute;
-   margin-left: -10%;
-   min-height: 360px;
-   overflow: hidden;
-   transform: skew(-15deg,0deg);
-   background: ${theme.colors.primary}
+    margin-left: -10%;
+    min-height: 360px;
+    overflow: hidden;
+    transform: skew(-15deg,0deg);
+    background: ${theme.colors.primary}
 `
 
 const ColDiv = styled(Col)`
@@ -60,6 +62,38 @@ const ColDiv = styled(Col)`
 `
 
 class Consultation extends Component {
+
+    renderHeadline = () => {
+        return CONSULTATIONHEADLINE.map(t => {
+            return (
+                <Row>
+                    <Wrapper md={12}>
+                        <Headline
+                            headline={t.headline}
+                            color={theme.colors.white}
+                            description={t.description}
+                            alignment='right'
+                        />
+                    </Wrapper>
+                </Row>
+            )
+        })
+    }
+
+    renderButton = () => {
+        return CONSULTATIONBUTTON.map(t => {
+            return (
+                <ButtonWrapper md={5} xs={6}>
+                    <BlankButton
+                        url={t.url}
+                        description={t.description}
+                    />
+
+                </ButtonWrapper>
+            )
+        })
+    }
+
     render() {
         return (
             <Section>
@@ -72,24 +106,11 @@ class Consultation extends Component {
                             </OutContainer>
                         </Col>
                         <ColDiv md={6}>
-                            <Row>
-                                <Wrapper md={12}>
-                                    <Headline
-                                        headline='Make software your superpower'
-                                        color={theme.colors.white}
-                                        description='Because learning to code might be the smartest investment to make.'
-                                        alignment='right'
-                                    />
-                                </Wrapper>
-                            </Row>
 
-                            <ButtonWrapper md={5} xs={6}>
-                                <BlankButton
-                                    url='url'
-                                    description='Get free consultation'
-                                />
+                            {this.renderHeadline()}
+                            {this.renderButton()}
 
-                            </ButtonWrapper>
+
                         </ColDiv>
                     </Row>
                 </Col>

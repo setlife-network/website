@@ -4,12 +4,11 @@ import {
     Container, Image, Row, Col
 } from 'react-bootstrap';
 
-import constants, { TEASERS } from '../constants'
+import constants, { TEASERS, PRINCIPALMESSAGE } from '../constants'
 
 import TeaserTile from '../components/TeaserTile';
 import LinkButton from '../components/LinkButton';
 import PrincipalMessage from '../components/PrincipalMessage'
-
 import HeroGraphic from '../assets/images/heroGraphic.png'
 
 const Section = styled(Row)`
@@ -30,6 +29,23 @@ const ImageContainer = styled(Image)`
 `
 
 class Hero extends Component {
+
+    renderPrincipalMessage = () => {
+        return PRINCIPALMESSAGE.map(t => {
+            return (
+                <Col md={{ order: 1 }} xs={{ order: 2 }}>
+                    <PrincipalMessage
+                        headline1={t.headline1}
+                        headline2={t.headline2}
+                        description={t.description}
+                        buttonText={t.buttonText}
+                        url={t.url}
+                    />
+
+                </Col>
+            )
+        })
+    }
 
     renderTeaser = () => {
         return TEASERS.map(t => {
@@ -52,14 +68,7 @@ class Hero extends Component {
 
                 <Col xs={10} className='mx-auto'>
                     <Section>
-                        <Col md={{ order: 1 }} xs={{ order: 2 }}>
-                            <PrincipalMessage
-                                headline1='Make software'
-                                headline2='your superpower'
-                                description='Learn valuable technical skills to help you upgrade your career – online, on your schedule.'
-                            />
-
-                        </Col>
+                        {this.renderPrincipalMessage()}
                         <Col md={{ order: 2 }} xs={{ order: 1 }}>
                             <ImageContainer src={HeroGraphic} alt='Hero Graphic' />
                         </Col>

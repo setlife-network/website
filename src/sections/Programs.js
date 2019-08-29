@@ -4,7 +4,7 @@ import {
     Container, Image, Row, Col
 } from 'react-bootstrap';
 
-import constants, { PROGRAMSLEFT, PROGRAMSRIGHT } from '../constants'
+import constants, { PROGRAMSHEADLINE, PROGRAMSLEFT, PROGRAMSRIGHT } from '../constants'
 
 import ProgramCard from '../components/ProgramCard'
 import Headline from '../components/Headline'
@@ -22,6 +22,21 @@ const CardDiv = styled(Col)`
 `
 
 class Programs extends Component {
+
+    renderHeadline = () => {
+        return PROGRAMSHEADLINE.map(t => {
+            return (
+                <Col md={12}>
+                    <Headline
+                        headline={t.headline}
+                        color={theme.colors.black}
+                        description={t.description}
+                        alignment='center'
+                    />
+                </Col>
+            )
+        })
+    }
 
     renderProgramsLeft = () => {
         return PROGRAMSLEFT.map(t => {
@@ -60,14 +75,8 @@ class Programs extends Component {
             <Section grey>
                 <Col xs={10} md={8} className='mx-auto'>
                     <Row>
-                        <Col md={12}>
-                            <Headline
-                                headline='Set Life Programs'
-                                color={theme.colors.black}
-                                description='SetLife is continuously developing a variety of programs to help promote the advancement of collaborative learning and the engineering of solutions for social prosperity'
-                                alignment='center'
-                            />
-                        </Col>
+                        {this.renderHeadline()}
+                        
                         <Col md={6}>
 
                             {this.renderProgramsLeft()}
