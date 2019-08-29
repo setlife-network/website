@@ -31,13 +31,12 @@ class HomePage extends Component {
                 <CoreValues />
                 <Consultation />
                 <Blog />
-                <PullOuts />
-                <Quote
-                    headline='Setlife helps you discover computer programming, learn about jobs available to programmers and get started building programming skills.'
-                    author='Marin Basic'
-                    company='CEO at branding.studio'
-                />
                 <Newsletter />
+                <Quote
+                    headline='If you can’t explain something in simple terms, you don’t understand it'
+                    author='Richard Feynman'
+                    company='Theoretical Physicist'
+                />
                 <Footer />
 
             </div>

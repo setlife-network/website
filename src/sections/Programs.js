@@ -16,8 +16,8 @@ const Section = styled(Row)`
     background: ${props => props.grey ? '#EEEEEE' : 'white'}
 `
 const CardDiv = styled(Col)`
-    margin-top: ${props => props.left ? '30px' : '0px'}
-    margin-bottom: ${props => props.right ? '30px' : '0px'}
+    margin-top: ${props => props.left ? '30px' : '0px'};
+    margin-bottom: ${props => props.right ? '30px' : '0px'};
 `
 
 class Programs extends Component {
@@ -31,6 +31,7 @@ class Programs extends Component {
                         description={t.description}
                         buttonText={t.LinkButton}
                         link={t.url}
+                        image={t.image}
                     />
                 </CardDiv>
             )
@@ -46,6 +47,7 @@ class Programs extends Component {
                         description={t.description}
                         buttonText={t.LinkButton}
                         link={t.url}
+                        image={t.image}
                     />
                 </CardDiv>
             )
@@ -63,9 +65,9 @@ class Programs extends Component {
                     <Row>
                         <Col md={12}>
                             <Headline
-                                headline='Set Life Programs'
+                                headline='SetLife Programs'
                                 color={theme.colors.black}
-                                description='SetLife is continuously developing a variety of programs to help promote the advancement of collaborative learning and the engineering of solutions for social prosperity'
+                                description='SetLife is developing a variety of programs to help promote collaborative learning and educational engineering'
                                 alignment='center'
                             />
                         </Col>

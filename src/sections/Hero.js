@@ -60,7 +60,7 @@ class Hero extends Component {
                             <PrincipalMessage
                                 headline1='Make software'
                                 headline2='your superpower'
-                                description='Learn valuable technical skills to help you upgrade your career – online, on your schedule.'
+                                description='Learn valuable technical skills to keep up with technology or even upgrade your career'
                             />
 
                         </Col>

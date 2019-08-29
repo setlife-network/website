@@ -30,7 +30,7 @@ const Header = () => (
 
 
                 <Text>
-                Learn to code. Change things
+                    People over profit
                 </Text>
                 <Navbar.Toggle />
                 <Navbar.Collapse className='justify-content-end'>

@@ -66,9 +66,9 @@ class Consultation extends Component {
                             <Row>
                                 <Col md={12}>
                                     <Headline
-                                        headline='Make software your superpower'
+                                        headline='Tech Careers'
                                         color={theme.colors.white}
-                                        description='Because learning to code might be the smartest investment to make.'
+                                        description='TechPrep by Facebook is one of the many resources available to start exploring how technology can help upgrade your career'
                                         alignment='right'
                                     />
                                 </Col>
@@ -76,8 +76,8 @@ class Consultation extends Component {
 
                             <Wrapper md={5}>
                                 <BlankButton
-                                    url='url'
-                                    description='Get free consultation'
+                                    url='https://techprep.org/'
+                                    description='Learn more'
                                 />
 
                             </Wrapper>

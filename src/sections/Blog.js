@@ -38,7 +38,7 @@ class Blog extends Component {
                         date={t.date}
                         headline={t.name}
                         description={t.quote}
-
+                        portrait={t.portrait}
                     />
                 </TestimonyDiv>
             )
@@ -55,7 +55,7 @@ class Blog extends Component {
                         <Row>
                             <Col md={12}>
                                 <Headline2
-                                    headline='Lorem ipsum dolor sit amet sadipscing elitr.'
+                                    headline='About Us'
                                     color={theme.colors.black}
                                     weight='bold'
                                     alignment='left'
@@ -63,13 +63,6 @@ class Blog extends Component {
                             </Col>
 
                             {this.renderTestimonials()}
-
-                            <ButtonDiv md={2}>
-                                <FilledButton
-                                    url='url'
-                                    description='Button'
-                                />
-                            </ButtonDiv>
 
 
                         </Row>

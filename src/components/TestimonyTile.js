@@ -14,16 +14,16 @@ import Portrait from '../assets/images/portrait.png'
 
 
 const ContentDiv = styled(Col)`
-    height:100px;
+    min-height:100px;
 
 `
 
-const ImageContainer = styled(Image)`
-    height: 100%;
-    width: 100%;
-
-
-
+const ImageContainer = styled(Col)`
+    height: 250px;
+    width: 70%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 `
 
 const TestimonyTile = ({
@@ -40,14 +40,16 @@ const TestimonyTile = ({
                 portrait
                 && (
                     <Col md={12}>
-                        <ImageContainer src={Portrait} alt='Portrait' />
+                        <ImageContainer
+                            style={{ backgroundImage: `url(${portrait})` }}
+                        />
                     </Col>
                 )
             }
             {
                 date
                 && (
-                    <Col md={6}>
+                    <Col md={12}>
                         <Text
                             weight='bold'
                             uppercase
