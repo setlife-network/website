@@ -5,8 +5,13 @@ import {
 } from 'react-bootstrap';
 import theme from '../styles/theme';
 import DividerLine from './DividerLine'
-import Title1 from './Title1'
+import Title from './Title'
 import Text from './Text';
+import FilledButton from './FilledButton'
+
+const Wrapper = styled(Col)`
+    margin-top:30px;
+`
 
 const PrincipalMessage = ({
     headline1,
@@ -21,20 +26,34 @@ const PrincipalMessage = ({
                 <DividerLine />
             </Col>
             <Col md={12}>
-                <Title1>
+                <Title
+                    size={theme.sizes.xlarge}
+                    bold
+                >
                     {headline1}
-                </Title1>
-                <Title1 blue>
+                </Title>
+                <Title
+                    size={theme.sizes.xlarge}
+                    color={theme.colors.primary}
+                    bold
+                >
                     {headline2}
-                </Title1>
+                </Title>
             </Col>
-            <Col md={8}>
-                <Text>
+            <Wrapper md={10}>
+                <Text
+                    size={theme.sizes.regular}
+                >
                     {description}
                 </Text>
-            </Col>
-            <Col md={5}>
-            </Col>
+            </Wrapper>
+            <Wrapper md={4}>
+                <FilledButton
+                    url='url'
+                    description='Start Learning'
+                />
+
+            </Wrapper>
         </Row>
     )
 }

@@ -1,6 +1,10 @@
 export default {
-    small: '1rem',
-    medium: '16px',
-    large: '20px',
-    xlarge: '28px'
+    quote: '44px',
+    link: '13px',
+    button: '17px',
+    small: '16px',
+    regular: '22px',
+    medium: '28px',
+    large: '54px',
+    xlarge: '64px'
 }

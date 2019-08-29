@@ -5,22 +5,20 @@ import {
 } from 'react-bootstrap';
 
 import theme from '../styles/theme';
-import Title from './Title'
 import DividerLine from './DividerLine'
 import Text from './Text'
+import Title from './Title'
 
 const Wrapper = styled(Row)`
-    margin-bottom: 50px
+    margin-bottom: 150px
 `
 
 const Holder = styled(Col)`
-    text-align: center;
-    margin: auto;
-
+    text-align: center
 `
 
 
-const Headline = ({
+const Headline2 = ({
     headline,
     description,
     color,
@@ -29,29 +27,24 @@ const Headline = ({
 }) => {
     return (
         <Wrapper>
-            <Col md={5}>
-            </Col>
+
             <Col md={2}>
                 <DividerLine />
             </Col>
-            <Col md={5}>
+            <Col md={10}>
             </Col>
-            <Holder md={12}>
+            <Holder md={8}>
                 <Title
                     color={color}
-                    weight={weight}
+                    bold
                     alignment={alignment}
                     size={theme.sizes.large}
                 >
                     {headline}
                 </Title>
             </Holder>
-            <Holder md={12}>
-                <Text
-                    color={color}
-                    alignment={alignment}
-                    size={theme.sizes.regular}
-                >
+            <Holder md={{ span: 6, offset: 3 }}>
+                <Text color={color}>
                     {description}
                 </Text>
             </Holder>
@@ -60,4 +53,4 @@ const Headline = ({
     )
 }
 
-export default Headline
+export default Headline2
