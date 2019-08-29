@@ -1,5 +1,8 @@
 var sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const {
+    SENDGRID
+} = require('../../config/credentials')
+sgMail.setApiKey(SENDGRID.API_KEY);
 
 const sendgrid = module.exports = (function () {
 

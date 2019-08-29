@@ -2,7 +2,7 @@ var airtable = require('../handlers/airtable');
 var sendgrid = require('../handlers/sendgrid');
 
 var emailSubscriptions = module.exports = (function () {
-    const subscribreNewUser = (req, res) => {
+    const subscribeNewUser = (req, res) => {
         airtable.createRecord({
             tableName: 'Subscriptions',
             fieldData: {
@@ -34,7 +34,7 @@ var emailSubscriptions = module.exports = (function () {
     }
 
     return {
-        subscribreNewUser,
+        subscribeNewUser,
 
 
     };

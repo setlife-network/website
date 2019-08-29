@@ -46,7 +46,7 @@ app.use(cors(corsOptions));
 
 const apiModules = require('./api/modules/'); 
 //SUBMIT
-app.post('/api/send/', apiModules.emailSubscriptions.subscribreNewUser);
+app.post('/api/send/', apiModules.emailSubscriptions.subscribeNewUser);
 
 
 app.listen(port, function () {
