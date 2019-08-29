@@ -10,7 +10,7 @@ import DividerLine from './DividerLine'
 import Text from './Text'
 
 const Wrapper = styled(Row)`
-    margin-bottom: 50px
+    margin-bottom: 15px
 `
 
 const Holder = styled(Col)`

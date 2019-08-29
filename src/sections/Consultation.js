@@ -16,14 +16,14 @@ import BlankButton from '../components/BlankButton'
 const Section = styled(Row)`
 
     background: ${theme.colors.primary};
-    height:360px
+    height:380px
 
 `
 
 const Wrapper = styled(Col)`
 
     float: right;
-    height:280px
+
 
 `
 
@@ -39,7 +39,7 @@ const ImageContainer = styled(Image)`
     left: 50px;
     position: absolute;
     top: 0;
-    height: 360px;
+    height: 380px;
     width: 100%;
     opacity: 0.8;
     transform: skew(15deg,0deg);
@@ -50,7 +50,7 @@ const OutContainer = styled(Col)`
 
     position: absolute;
     margin-left: -10%;
-    min-height: 360px;
+    min-height: 380px;
     overflow: hidden;
     transform: skew(-15deg,0deg);
     background: ${theme.colors.primary}
@@ -83,7 +83,7 @@ class Consultation extends Component {
     renderButton = () => {
         return CONSULTATIONBUTTON.map(t => {
             return (
-                <ButtonWrapper md={5} xs={6}>
+                <ButtonWrapper md={5} xs={12}>
                     <BlankButton
                         url={t.url}
                         description={t.description}
@@ -100,8 +100,8 @@ class Consultation extends Component {
 
                 <Col md={11}>
                     <Row>
-                        <Col xs={0} md={6}>
-                            <OutContainer xs={0}>
+                        <Col xs={1} md={6}>
+                            <OutContainer md={12}>
                                 <ImageContainer src={ConsultationPhoto} alt='Photo' />
                             </OutContainer>
                         </Col>
