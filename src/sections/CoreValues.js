@@ -4,13 +4,13 @@ import {
     Container, Image, Row, Col
 } from 'react-bootstrap';
 
-import constants, { COREVALUES } from '../constants'
+import constants, { COREVALUES, COREVALUESHEADLINE } from '../constants'
 
 import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'
 import theme from '../styles/theme';
 
-const Section = styled.div`
+const Section = styled(Row)`
     padding-top: 80px;
     padding-bottom:80px;
     background: ${props => props.grey ? '#EEEEEE' : 'white'}
@@ -18,6 +18,19 @@ const Section = styled.div`
 
 
 class CoreValues extends Component {
+
+    renderHeadline = () => {
+        return COREVALUESHEADLINE.map(t => {
+            return (
+                <Col xs={12}>
+                    <Headline
+                        headline={t.headline}
+                        color={theme.colors.black}
+                    />
+                </Col>
+            )
+        })
+    }
 
     renderValues = () => {
         return COREVALUES.map(t => {
@@ -36,23 +49,16 @@ class CoreValues extends Component {
     render() {
         return (
             <Section>
-                <Row>
-                    <Col md={2}>
-                    </Col>
-                    <Col md={8}>
-                        <Row>
-                            <Col md={12}>
-                                <Headline
-                                    headline='Core Values'
-                                    color={theme.colors.black}
-                                />
-                            </Col>
-                            {this.renderValues()}
-                        </Row>
-                    </Col>
-                    <Col md={2}>
-                    </Col>
-                </Row>
+
+
+                <Col xs={8} className='mx-auto'>
+                    <Row>
+                        {this.renderHeadline()}
+                        {this.renderValues()}
+                    </Row>
+                </Col>
+
+
             </Section>
         )
     }

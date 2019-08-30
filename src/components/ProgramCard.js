@@ -9,26 +9,30 @@ import Title from './Title';
 import Text from './Text';
 import DividerLine from './DividerLine'
 
-import SDFundamentals from '../assets/images/SDFundamentals.png'
-
-
 const WrapperCard = styled(Row)`
     background: ${theme.colors.white};
-    padding-top:10px
+    margin-top:30px;
+    padding-top:10px;
     padding-bottom:10px;
-
 `
 
-const ImageContainer = styled(Image)`
-    height: 70%;
-    width70%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+const ImageContainer = styled('div')`
+    height: 120px;
+    width: 100%;
+    border-radius: 1000vw;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 `
 
 const TitleWrapper = styled(Col)`
-    height:100px
+    height:120px;
+    margin-top:5px
+
+`
+
+const ConstantWrapper = styled(Col)`
+    height:160px
 
 `
 
@@ -43,7 +47,8 @@ const ProgramCard = ({
     description,
     color,
     buttonText,
-    link
+    link,
+    image
 }) => {
     return (
 
@@ -56,15 +61,18 @@ const ProgramCard = ({
             </DividerWrapper>
             <TitleWrapper md={12}>
                 <Title
+                    bold
                     size={theme.sizes.medium}
                 >
                     {headline}
                 </Title>
             </TitleWrapper>
             <Col md={4}>
-                <ImageContainer src={SDFundamentals} alt='Software development Fundamentals' />
+                <ImageContainer
+                    style={{ backgroundImage: `url(${image})` }}
+                />
             </Col>
-            <Col md={7}>
+            <ConstantWrapper md={7}>
                 <Text
                     size={theme.sizes.small}
                 >
@@ -77,7 +85,7 @@ const ProgramCard = ({
                 >
                     {buttonText}
                 </LinkButton>
-            </Col>
+            </ConstantWrapper>
 
         </WrapperCard>
 

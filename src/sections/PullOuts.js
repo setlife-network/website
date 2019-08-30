@@ -19,11 +19,12 @@ const Section = styled(Row)`
 `
 
 const WrapperFilled = styled(Row)`
-    background:${theme.colors.primary};
+
     padding:50px;
     background-image: url(${PullOutImage});
     background-size: cover;
-    opacity: 0.4
+    box-shadow:inset 0 0 0 2000px rgba(0,194,212,0.7);
+
 
 `
 
@@ -40,44 +41,44 @@ const WrapperBlank = styled(Row)`
 class PullOuts extends Component {
     render() {
         return (
-            <Section >
-                <Col md={12}>
-                    <Wrapper>
-                        <Col>
-                            <WrapperBlank>
-                                <PullOutTile
-                                    headline='Lorem ipsum dolor'
-                                    intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+            <Section>
 
-                                />
-                            </WrapperBlank>
-                            <WrapperFilled>
-                                <PullOutTile
-                                    headline='Lorem ipsum dolor'
-                                    intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
-                                    color={theme.colors.white}
-                                />
-                            </WrapperFilled>
-                        </Col>
-                        <Col md={6}>
-                            <WrapperFilled>
-                                <PullOutTile
-                                    headline='Lorem ipsum dolor'
-                                    intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
-                                    color={theme.colors.white}
-                                />
-                            </WrapperFilled>
-                            <WrapperBlank>
-                                <PullOutTile
-                                    headline='Lorem ipsum dolor'
-                                    intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+                <Col md={6}>
+                    <WrapperBlank>
+                        <PullOutTile
+                            headline='Lorem ipsum dolor'
+                            intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
 
-                                />
-                            </WrapperBlank>
-                        </Col>
-                    </Wrapper>
+                        />
+                    </WrapperBlank>
                 </Col>
+                <Col md={6}>
+                    <WrapperFilled>
+                        <PullOutTile
+                            headline='Lorem ipsum dolor'
+                            intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+                            color={theme.colors.white}
+                        />
+                    </WrapperFilled>
+                </Col>
+                <Col md={{ span: 6, order: 1 }} xs={{ span: 12, order: 12 }}>
+                    <WrapperFilled>
+                        <PullOutTile
+                            headline='Lorem ipsum dolor'
+                            intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+                            color={theme.colors.white}
+                        />
+                    </WrapperFilled>
+                </Col>
+                <Col md={{ span: 6, order: 2 }} xs={{ order: 1 }}>
+                    <WrapperBlank>
+                        <PullOutTile
+                            headline='Lorem ipsum dolor'
+                            intro='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
 
+                        />
+                    </WrapperBlank>
+                </Col>
 
             </Section>
         )

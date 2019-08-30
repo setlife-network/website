@@ -6,11 +6,11 @@ import {
 
 import TestimonyTile from '../components/TestimonyTile'
 import FilledButton from '../components/FilledButton'
-import Headline2 from '../components/Headline2'
+import Headline from '../components/Headline'
 import theme from '../styles/theme';
 
 
-import constants, { TESTIMONIALS } from '../constants'
+import constants, { TESTIMONIALS, BLOGHEADLINE, BLOGBUTTON } from '../constants'
 
 const Section = styled.div`
     padding-top: 80px;
@@ -29,7 +29,22 @@ const ButtonDiv = styled(Col)`
 `
 
 class Blog extends Component {
-    
+
+    renderHeadline = () => {
+        return BLOGHEADLINE.map(t => {
+            return (
+                <Col md={12}>
+                    <Headline
+                        headline={t.headline}
+                        color={theme.colors.black}
+                        weight='bold'
+                        alignment='left'
+                    />
+                </Col>
+            )
+        })
+    }
+
     renderTestimonials = () => {
         return TESTIMONIALS.map(t => {
             return (
@@ -38,9 +53,22 @@ class Blog extends Component {
                         date={t.date}
                         headline={t.name}
                         description={t.quote}
-
+                        portrait={t.portrait}
                     />
                 </TestimonyDiv>
+            )
+        })
+    }
+
+    renderButton = () => {
+        return BLOGBUTTON.map(t => {
+            return (
+                <ButtonDiv xs={6} md={2}>
+                    <FilledButton
+                        url={t.url}
+                        description={t.description}
+                    />
+                </ButtonDiv>
             )
         })
     }
@@ -49,33 +77,15 @@ class Blog extends Component {
         return (
             <Section>
                 <Row>
-                    <Col md={1}>
-                    </Col>
-                    <Col md={10}>
+
+                    <Col xs={10} className='mx-auto'>
                         <Row>
-                            <Col md={12}>
-                                <Headline2
-                                    headline='Lorem ipsum dolor sit amet sadipscing elitr.'
-                                    color={theme.colors.black}
-                                    weight='bold'
-                                    alignment='left'
-                                />
-                            </Col>
-
+                            {this.renderHeadline()}
                             {this.renderTestimonials()}
-
-                            <ButtonDiv md={2}>
-                                <FilledButton
-                                    url='url'
-                                    description='Button'
-                                />
-                            </ButtonDiv>
-
-
+                            {this.renderButton()}
                         </Row>
                     </Col>
-                    <Col md={1}>
-                    </Col>
+
                 </Row>
             </Section>
         )
