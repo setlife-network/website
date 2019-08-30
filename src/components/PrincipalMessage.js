@@ -13,6 +13,9 @@ const Wrapper = styled(Col)`
     margin-top:30px;
 `
 
+const TitleWrapper = styled(Title)`
+    margin-bottom:-20px;
+`
 const PrincipalMessage = ({
     headline1,
     headline2,
@@ -22,35 +25,35 @@ const PrincipalMessage = ({
 }) => {
     return (
         <Row>
-            <Col md={2}>
+            <Col xs={2}>
                 <DividerLine />
             </Col>
-            <Col md={12}>
-                <Title
+            <Col xs={12}>
+                <TitleWrapper
                     size={theme.sizes.xlarge}
-                    bold
+                    weight='bold'
                 >
                     {headline1}
-                </Title>
+                </TitleWrapper>
                 <Title
                     size={theme.sizes.xlarge}
                     color={theme.colors.primary}
-                    bold
+                    weight='bold'
                 >
                     {headline2}
                 </Title>
             </Col>
-            <Wrapper md={10}>
+            <Wrapper xs={12} md={10}>
                 <Text
                     size={theme.sizes.regular}
                 >
                     {description}
                 </Text>
             </Wrapper>
-            <Wrapper md={4}>
+            <Wrapper xs={8} md={4}>
                 <FilledButton
-                    url='url'
-                    description='Start Learning'
+                    description={buttonText}
+                    url={url}
                 />
 
             </Wrapper>

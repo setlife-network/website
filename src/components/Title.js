@@ -6,7 +6,7 @@ const Title = styled.p`
     font-size: ${props => props.size};
     text-align: ${props => props.alignment};
     color: ${props => props.color};
-    font-weight: ${props => props.bold ? 'bold' : 'normal'};
+    font-weight: ${props => props.weight};
 `
 
 Title.defaultProps = {

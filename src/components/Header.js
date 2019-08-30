@@ -16,23 +16,48 @@ const ButtonContainer = styled(Row)`
 
 const HeaderImage = styled(Image)`
 height: 40px;
+margin-bottom:15px;
+margin-right:10px
 `
 
 
 const Header = () => (
     <Row>
-        <Col md={1}>
-        </Col>
-        <Col md={10}>
 
-            <Navbar>
-                <HeaderImage src={logo} />
+        <Col md={10} className='mx-auto'>
+
+            <Navbar expand='lg'>
+
+                <Row>
+                    <Col xs={2}>
+
+                        <Navbar.Toggle />
 
 
-                <Text>
-                Learn to code. Change things
-                </Text>
-                <Navbar.Toggle />
+                    </Col>
+                    <Col xs={10} md={12}>
+                        <Row>
+                            <Col xs={7} md={6} className='mx-auto'>
+                                <Row>
+                                    <HeaderImage src={logo} />
+                                </Row>
+                            </Col>
+                            <Col xs={7} md={6} className='mx-auto'>
+                                <Row>
+                                    <Text
+                                        alignment='center'
+                                    >
+                        People over profit
+                                    </Text>
+                                </Row>
+                            </Col>
+                        </Row>
+                    </Col>
+
+
+                </Row>
+
+
                 <Navbar.Collapse className='justify-content-end'>
 
                     <Nav.Link href='#home'>
@@ -59,8 +84,6 @@ const Header = () => (
             </Navbar>
 
 
-        </Col>
-        <Col md={1}>
         </Col>
 
 

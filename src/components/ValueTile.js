@@ -13,7 +13,7 @@ import Text from './Text';
 
 
 const ContentWrapper = styled(Col)`
-    height:100px;
+    height:150px;
 `
 
 const TitleWrapper = styled(Col)`
@@ -21,7 +21,7 @@ const TitleWrapper = styled(Col)`
 `
 
 const Wrapper = styled(Row)`
-    height:250px;
+
 `
 
 const ValueTile = ({

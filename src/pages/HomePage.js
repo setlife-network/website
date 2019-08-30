@@ -4,9 +4,10 @@ import {
     Container, Image, Row, Col
 } from 'react-bootstrap';
 
+import constants, { QUOTE } from '../constants'
+
 import RoundButton from '../components/RoundButton'
 import Header from '../components/Header'
-
 
 import Hero from '../sections/Hero'
 import Programs from '../sections/Programs'
@@ -20,6 +21,19 @@ import Footer from '../sections/Footer'
 
 
 class HomePage extends Component {
+
+    renderQuote = () => {
+        return QUOTE.map(t => {
+            return (
+                <Quote
+                    headline={t.headline}
+                    author={t.author}
+                    company={t.company}
+                />
+            )
+        })
+    }
+
     render() {
         return (
 
@@ -31,12 +45,7 @@ class HomePage extends Component {
                 <CoreValues />
                 <Consultation />
                 <Blog />
-                <PullOuts />
-                <Quote
-                    headline='Setlife helps you discover computer programming, learn about jobs available to programmers and get started building programming skills.'
-                    author='Marin Basic'
-                    company='CEO at branding.studio'
-                />
+                {this.renderQuote()}
                 <Newsletter />
                 <Footer />
 
