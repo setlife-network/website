@@ -12,12 +12,30 @@ var emailSubscriptions = module.exports = (function () {
             }
         })
             .then(record => {
-                return record.fields.Email,
-                
-                sendgrid.sendMessage({
-                    recipient: record.fields.Email,
+                return (
+                    sendgrid.sendMessage({
+                        recipient: record.fields.Email,
+                        msg: [
+                            {
+                                to: record.fields.Email,
+                                from: 'contact@setlife.education',
+                                subject: 'Setlife Newsletter',
+                                text: 'Contact form submitted successfully',
+            
+                            },
+                            {
+                                to: 'social@setlife.network',
+                                from: 'contact@setlife.education',
+                                subject: 'New Subscription',
+                                text: 'New users email: ' + record.fields.Email,
+                            },
+                        ]
                     
-                })
+                    })
+                )                
+            })
+            .then(sendgridResponse =>{
+                res.json({message: 'Success'})
             })
             
             
