@@ -11,7 +11,7 @@ var isProduction = process.env.NODE_ENV === 'production';
 var port = isProduction ? process.env.PORT : 4000; 
 
 
-app.use(express.static(__dirname + '/public')); 
+app.use(express.static(__dirname + '/build')); 
 app.use(bodyParser.json());
 
 app.get('*', function (req, res, next) {
@@ -20,7 +20,7 @@ app.get('*', function (req, res, next) {
         return next();
     }
 
-    fs.readFile(__dirname + '/public/index.html', 'utf8', function (err, text) {
+    fs.readFile(__dirname + '/build/index.html', 'utf8', function (err, text) {
         res.send(text);
 
     });
@@ -31,7 +31,8 @@ var cors = require('cors');
 var whitelist = [
     'http://localhost:8080',
     'http://localhost:3000',
-    'https://tech-education.herokuapp.com/'
+    'http://localhost:4000',
+    'https://setlife-website.herokuapp.com/'
 ];
 var corsOptions = {
     origin: function(origin, callback) {
@@ -45,9 +46,8 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 const apiModules = require('./api/modules/'); 
-//SUBMIT
-app.post('/api/send/', apiModules.emailSubscriptions.subscribeNewUser);
 
+app.post('/api/send/', apiModules.emailSubscriptions.subscribeNewUser);
 
 app.listen(port, function () {
     console.log('SetLife-ReactWithApi: Server running on port ' + port);
