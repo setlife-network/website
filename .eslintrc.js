@@ -4,6 +4,13 @@ module.exports = {
     'plugins': [
         'babel'
     ],
+    'parserOptions': {
+        'ecmaFeatures': {
+            'jsx': true
+        },
+        'ecmaVersion': 2018,
+        'sourceType': 'module'
+    },
     'rules': {
         'array-callback-return': ['off'],
         'arrow-body-style': ['off'],
