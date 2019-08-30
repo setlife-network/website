@@ -100,7 +100,7 @@ class Consultation extends Component {
 
                 <Col md={11}>
                     <Row>
-                        <Col xs={1} md={6}>
+                        <Col md={6} className='d-none d-md-flex'>
                             <OutContainer md={12}>
                                 <ImageContainer src={ConsultationPhoto} alt='Photo' />
                             </OutContainer>

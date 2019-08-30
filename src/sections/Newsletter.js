@@ -15,16 +15,11 @@ import DividerLine from '../components/DividerLine';
 
 const Section = styled(Row)`
     padding-top: 80px;
-    padding-bottom:80px;
-    background: linear-gradient(to bottom, ${theme.colors.white} 50%,${theme.colors.primary} 50%);
-`
 
-const ContentDiv = styled(Row)`
-
-    padding-bottom:10px;
 
 
 `
+
 
 const Wrapper = styled(Col)`
 
@@ -34,18 +29,19 @@ const Wrapper = styled(Col)`
 
 const ImageContainer = styled(Image)`
 
-    width:100%;
-    height: auto
-
+    width:50%;
+    height: 450px;
+    z-index:1;
+    position: absolute;
+    right:10px
 
 `
+const Division = styled(Row)`
 
-const OutContainer = styled(Col)`
+    background:${theme.colors.primary};
+    padding-top:30px;
+    padding-bottom:30px
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
 `
 
 class Newsletter extends Component {
@@ -55,59 +51,58 @@ class Newsletter extends Component {
 
             <Section>
 
-                <Col xs={10} className='mx-auto'>
-                    <Row>
-                        <Col md={6}>
-                            <ContentDiv>
-                                <Wrapper xs={12} className='mx-auto'>
-                                    <Title
-                                        weight='bold'
-                                        size={theme.sizes.large}
-                                    >
-                                        Not a Setlife member?
-                                    </Title>
-                                </Wrapper>
-                                <Wrapper md={2} xs={6}>
-                                    <DividerLine />
-                                </Wrapper>
-                                <Wrapper md={12}>
-                                    <Text
-                                        weight='bold'
-                                        size={theme.sizes.regular}
-                                    >
-                                            Join our newsletter packed with free resources on how to learn to code with ease.
-                                    </Text>
-                                </Wrapper>
-                            </ContentDiv>
+                <Col md={12} className='d-none d-md-flex'>
+                    <ImageContainer src={NewsletterPhoto} />
+                </Col>
 
-                            <Row>
-                                <Wrapper md={12}>
-                                    <Text
-                                        weight='bold'
-                                        color={theme.colors.white}
-                                        size={theme.sizes.regular}
-                                    >
-                                        Newsletter signup
-                                    </Text>
-                                </Wrapper>
-                                <Wrapper md={7}>
-                                    <Form.Control size='sm' type='text' placeholder='Enter email' />
-                                </Wrapper>
-                                <Wrapper md={6}>
-                                    <BlankButton
-                                        description='Signup'
-                                        onClick='url'
-                                    />
-                                </Wrapper>
+                <Col xs={11} className='mx-auto '>
 
-                            </Row>
+                    <Title
+                        weight='bold'
+                        size={theme.sizes.large}
+                    >
+                            Not a Setlife member?
+                    </Title>
+
+                    <Wrapper md={2} xs={6}>
+                        <DividerLine />
+                    </Wrapper>
+
+                    <Wrapper md={6}>
+                        <Text
+                            weight='bold'
+                            size={theme.sizes.regular}
+
+                        >
+                            Join our newsletter packed with free resources on how to learn to code with ease.
+                        </Text>
+                    </Wrapper>
+
+                </Col>
+                <Col>
+                    <Division>
+                        <Col xs={11} className='mx-auto'>
+
+                            <Text
+                                weight='bold'
+                                color={theme.colors.white}
+                                size={theme.sizes.regular}
+                            >
+                        Newsletter signup
+                            </Text>
+                            <Wrapper md={4}>
+                                <Form.Control size='sm' type='text' placeholder='Enter email' />
+                            </Wrapper>
+                            <Wrapper md={2}>
+                                <BlankButton
+                                    description='Signup'
+                                    onClick='url'
+                                />
+                            </Wrapper>
+
+
                         </Col>
-                        <Col md={6} xs={1}>
-
-                            <ImageContainer src={NewsletterPhoto} />
-
-                        </Col>
-                    </Row>
+                    </Division>
                 </Col>
 
 

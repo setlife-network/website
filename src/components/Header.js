@@ -23,20 +23,40 @@ margin-right:10px
 
 const Header = () => (
     <Row>
-        <Col md={1}>
-        </Col>
-        <Col md={10}>
+
+        <Col md={10} className='mx-auto'>
 
             <Navbar expand='lg'>
 
-                <Navbar.Toggle style={{ margin: 0 }} />
+                <Row>
+                    <Col xs={2}>
 
-                <HeaderImage src={logo} />
+                        <Navbar.Toggle />
 
 
-                <Text>
-                    People over profit
-                </Text>
+                    </Col>
+                    <Col xs={10} md={12}>
+                        <Row>
+                            <Col xs={7} md={6} className='mx-auto'>
+                                <Row>
+                                    <HeaderImage src={logo} />
+                                </Row>
+                            </Col>
+                            <Col xs={7} md={6} className='mx-auto'>
+                                <Row>
+                                    <Text
+                                        alignment='center'
+                                    >
+                        People over profit
+                                    </Text>
+                                </Row>
+                            </Col>
+                        </Row>
+                    </Col>
+
+
+                </Row>
+
 
                 <Navbar.Collapse className='justify-content-end'>
 
@@ -64,8 +84,6 @@ const Header = () => (
             </Navbar>
 
 
-        </Col>
-        <Col md={1}>
         </Col>
 
 
