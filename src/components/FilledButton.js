@@ -22,6 +22,8 @@ const FilledButton = ({
         <ButtonContainer>
             <a
                 href={url}
+                target='_blank'
+                rel='noopener noreferrer'
             >
                 <Text
                     color={theme.colors.white}

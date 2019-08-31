@@ -7,7 +7,6 @@ import theme from '../styles/theme';
 import Text from './Text';
 
 
-
 const LinkButton = ({
     color,
     url,
@@ -19,7 +18,9 @@ const LinkButton = ({
             <Col span={18}>
                 <a
                     href={url}
-                    style={{textDecoration:'none'}}
+                    style={{ textDecoration: 'none' }}
+                    target='_blank'
+                    rel='noopener noreferrer'
                 >
                     <Text
                         weight={weight}
