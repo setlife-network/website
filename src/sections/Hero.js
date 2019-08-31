@@ -33,13 +33,14 @@ class Hero extends Component {
     renderPrincipalMessage = () => {
         return PRINCIPALMESSAGE.map(t => {
             return (
-                <Col md={{ order: 1 }} xs={{ order: 2 }}>
+                <Col key={t.key} md={{ order: 1 }} xs={{ order: 2 }}>
                     <PrincipalMessage
                         headline1={t.headline1}
                         headline2={t.headline2}
                         description={t.description}
                         buttonText={t.buttonText}
                         url={t.url}
+                        key={t.key}
                     />
 
                 </Col>
@@ -50,7 +51,7 @@ class Hero extends Component {
     renderTeaser = () => {
         return TEASERS.map(t => {
             return (
-                <Col md={4}>
+                <Col md={4} key={t.key}>
                     <TeaserTile
                         headline={t.headline}
                         intro={t.description}

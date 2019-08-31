@@ -29,6 +29,7 @@ class HomePage extends Component {
                     headline={t.headline}
                     author={t.author}
                     company={t.company}
+                    key={t.key}
                 />
             )
         })

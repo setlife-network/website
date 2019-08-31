@@ -66,7 +66,7 @@ class Consultation extends Component {
     renderHeadline = () => {
         return CONSULTATIONHEADLINE.map(t => {
             return (
-                <Row>
+                <Row key={t.key}>
                     <Wrapper md={12}>
                         <Headline
                             headline={t.headline}
@@ -83,7 +83,7 @@ class Consultation extends Component {
     renderButton = () => {
         return CONSULTATIONBUTTON.map(t => {
             return (
-                <ButtonWrapper md={5} xs={12}>
+                <ButtonWrapper md={5} xs={12} key={t.key}>
                     <BlankButton
                         url={t.url}
                         description={t.description}

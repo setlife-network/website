@@ -28,11 +28,12 @@ class Header extends Component {
     renderHeaderLinks = () => {
         return HEADERLINKS.map(t => {
             return (
-                <Nav.Link href={t.href}>
+                <Nav.Link href={t.href} key={t.key}>
                     <Text size={theme.sizes.button}>
                         {t.text}
                     </Text>
                 </Nav.Link>
+
             )
         })
     }
@@ -40,7 +41,7 @@ class Header extends Component {
     renderHeaderButton = () => {
         return HEADERBUTTON.map(t => {
             return (
-                <ButtonContainer>
+                <ButtonContainer key={t.key}>
                     <FilledButton
                         description={t.description}
                         url={t.url}

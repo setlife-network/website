@@ -26,7 +26,7 @@ class Programs extends Component {
     renderHeadline = () => {
         return PROGRAMSHEADLINE.map(t => {
             return (
-                <Col md={12}>
+                <Col md={12} key={t.key}>
                     <Headline
                         headline={t.headline}
                         color={theme.colors.black}
@@ -41,7 +41,7 @@ class Programs extends Component {
     renderProgramsLeft = () => {
         return PROGRAMSLEFT.map(t => {
             return (
-                <CardDiv left>
+                <CardDiv left key={t.key}>
                     <ProgramCard
                         headline={t.headline}
                         description={t.description}
@@ -57,7 +57,7 @@ class Programs extends Component {
     renderProgramsRight = () => {
         return PROGRAMSRIGHT.map(t => {
             return (
-                <CardDiv right>
+                <CardDiv right key={t.key}>
                     <ProgramCard
                         headline={t.headline}
                         description={t.description}
