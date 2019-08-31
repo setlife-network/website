@@ -1,3 +1,25 @@
+const HEADERLINKS = [
+    {
+        text: 'Mission',
+        href: '#home'
+    },
+    {
+        text: 'Curriculum',
+        href: '#home'
+    },
+    {
+        text: 'Programs',
+        href: '#home'
+    },
+]
+
+const HEADERBUTTON = [
+    {
+        description: 'Get a free consultation',
+        url: 'url'
+    }
+]
+
 const PRINCIPALMESSAGE = [
     {
         headline1: 'Make software',
@@ -35,7 +57,7 @@ const PROGRAMSHEADLINE = [
         description: 'SetLife is developing a variety of programs to help promote collaborative learning and educational engineering'
     }
 ]
-    
+
 const TESTIMONIALS = [
     {
         name: 'Oscar Lafarga',
@@ -158,6 +180,8 @@ const QUOTE = [
 
 
 export {
+    HEADERLINKS,
+    HEADERBUTTON,
     PRINCIPALMESSAGE,
     TEASERS,
     PROGRAMSHEADLINE,
