@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Row, Col
 } from 'react-bootstrap';
 
 import TestimonyTile from '../components/TestimonyTile'
@@ -10,7 +10,7 @@ import Headline from '../components/Headline'
 import theme from '../styles/theme';
 
 
-import constants, { TESTIMONIALS, BLOGHEADLINE, BLOGBUTTON } from '../constants'
+import { TESTIMONIALS, BLOGHEADLINE, BLOGBUTTON } from '../constants'
 
 const Section = styled.div`
     padding-top: 80px;

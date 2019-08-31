@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Row, Col
 } from 'react-bootstrap';
 
-import constants, { COREVALUES, COREVALUESHEADLINE } from '../constants'
+import { COREVALUES, COREVALUESHEADLINE } from '../constants'
 
 import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Image, Row, Col
 } from 'react-bootstrap';
 
-import constants, { CONSULTATIONHEADLINE, CONSULTATIONBUTTON } from '../constants'
+import { CONSULTATIONHEADLINE, CONSULTATIONBUTTON } from '../constants'
 
 import ConsultationPhoto from '../assets/images/consultationPhoto.png'
 
-import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'
 import theme from '../styles/theme';
 import BlankButton from '../components/BlankButton'

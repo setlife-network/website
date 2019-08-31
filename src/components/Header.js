@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col, Nav
+    Image, Row, Col, Nav
 } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar'
 
-import constants, { HEADERLINKS, HEADERBUTTON } from '../constants'
+import { HEADERLINKS, HEADERBUTTON } from '../constants'
 
 import logo from '../assets/images/logoPositive.png'
 import theme from '../styles/theme';

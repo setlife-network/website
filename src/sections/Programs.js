@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Row, Col
 } from 'react-bootstrap';
 
-import constants, { PROGRAMSHEADLINE, PROGRAMSLEFT, PROGRAMSRIGHT } from '../constants'
+import { PROGRAMSHEADLINE, PROGRAMSLEFT, PROGRAMSRIGHT } from '../constants'
 
 import ProgramCard from '../components/ProgramCard'
 import Headline from '../components/Headline'
@@ -13,11 +13,11 @@ import theme from '../styles/theme';
 const Section = styled(Row)`
     padding-top: 80px;
     padding-bottom:80px;
-    background: ${props => props.grey ? '#EEEEEE' : 'white'}
+    background: ${props => props.back}
 `
 const CardDiv = styled(Col)`
-    margin-top: ${props => props.left ? '60px' : '0px'};
-    margin-bottom: ${props => props.right ? '60px' : '0px'};
+    margin-top: ${props => props.top};
+    margin-bottom: ${props => props.bottom};
 
 `
 
@@ -41,7 +41,10 @@ class Programs extends Component {
     renderProgramsLeft = () => {
         return PROGRAMSLEFT.map(t => {
             return (
-                <CardDiv left key={t.key}>
+                <CardDiv
+                    top='60px'
+                    key={t.key}
+                >
                     <ProgramCard
                         headline={t.headline}
                         description={t.description}
@@ -57,7 +60,10 @@ class Programs extends Component {
     renderProgramsRight = () => {
         return PROGRAMSRIGHT.map(t => {
             return (
-                <CardDiv right key={t.key}>
+                <CardDiv
+                    bottom='60px'
+                    key={t.key}
+                >
                     <ProgramCard
                         headline={t.headline}
                         description={t.description}
@@ -74,7 +80,9 @@ class Programs extends Component {
     render() {
         return (
 
-            <Section grey>
+            <Section
+                back={theme.colors.grey}
+            >
                 <Col xs={10} md={8} className='mx-auto'>
                     <Row>
                         {this.renderHeadline()}

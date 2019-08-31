@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Row, Col
 } from 'react-bootstrap';
 
 
@@ -9,8 +9,6 @@ import LinkButton from './LinkButton'
 import theme from '../styles/theme';
 import Title from './Title';
 import Text from './Text';
-
-import Portrait from '../assets/images/portrait.png'
 
 
 const ContentDiv = styled(Col)`

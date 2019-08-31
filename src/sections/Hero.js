@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Image, Row, Col
 } from 'react-bootstrap';
 
-import constants, { TEASERS, PRINCIPALMESSAGE } from '../constants'
+import { TEASERS, PRINCIPALMESSAGE } from '../constants'
 
 import TeaserTile from '../components/TeaserTile';
-import LinkButton from '../components/LinkButton';
 import PrincipalMessage from '../components/PrincipalMessage'
 import HeroGraphic from '../assets/images/heroGraphic.png'
 
@@ -15,10 +14,6 @@ const Section = styled(Row)`
     padding-top: 50px;
     padding-bottom:80px;
     background: ${props => props.grey ? '#EEEEEE' : 'white'}
-`
-
-const Wrapper = styled(Col)`
-    height:80px
 `
 
 const ImageContainer = styled(Image)`

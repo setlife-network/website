@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Row, Col
 } from 'react-bootstrap';
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
