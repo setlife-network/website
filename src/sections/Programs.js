@@ -49,7 +49,7 @@ class Programs extends Component {
                         headline={t.headline}
                         description={t.description}
                         buttonText={t.buttonText}
-                        link={t.url}
+                        link={t.link}
                         image={t.image}
                     />
                 </CardDiv>
@@ -68,7 +68,7 @@ class Programs extends Component {
                         headline={t.headline}
                         description={t.description}
                         buttonText={t.buttonText}
-                        link={t.url}
+                        link={t.link}
                         image={t.image}
                     />
                 </CardDiv>

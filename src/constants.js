@@ -67,29 +67,6 @@ const PROGRAMSHEADLINE = [
     }
 ]
 
-const TESTIMONIALS = [
-    {
-        name: 'Oscar Lafarga',
-        quote: 'SetLife has become my long-term commitment to a sustainable future when it comes to technology and its impact on society. In a world where information & communication moves at the speed of light, constraining our education to the classroom leaves us woefully under-equipped to deal with the major global problems we face. My goal is to incentivize teaching as one of the highest-paid and most valued professions, toppling the knowledge-hoarding power structures that sustain a global inequality of wealth',
-        date: 'President & CTO',
-        portrait: 'https://user-images.githubusercontent.com/4914611/63651576-6e1cb200-c756-11e9-88f2-87cb80faa5a1.png',
-        key: 'key-Oscar'
-    },
-    {
-        name: 'Viki Lafarga',
-        quote: 'The SetLife Network’s project-based learning trial was a unique opportunity for me in that I was both learning about and gaining work experience in several areas at once: corporate governance, programming and design, productivity, team management, and more. I am particularly interested in how the different areas that make up an organization interact together and in working at those intersections, so I was grateful for a work environment where I had to sync up with my team every week and learn about what else was going on . And not just what my coworkers were doing but also what obstacles they were coming up against, which I think makes for more solid teamwork. That’s really not something most people get to experience in a society where work is mostly specialized into separate departments.',
-        date: 'Dir. of International Operations',
-        portrait: 'https://media.licdn.com/dms/image/C4D03AQHFpkfc8bQt5g/profile-displayphoto-shrink_800_800/0?e=1572480000&v=beta&t=-J7whAKcGixu0JyYzmVFXJgxPyD667cw5qNq580GmMA',
-        key: 'key-Viki'
-    },
-    {
-        name: 'Quinn Pruitt',
-        quote: 'Project based learning is by far the most effective learning environment for software development. In seven weeks, I learned more about backend development and product management than I would have learned in an entire semester in college. The projects were quite challenging, yet incredibly rewarding. The high level of autonomy and personal responsibility provided a strong sense of ownership for my work, which I found crucial to my growth and success. I would recommend this program to anyone looking to level up their professional skills in a fun an engaging learning environment.',
-        date: 'Dir. of Tech, UX Engineer',
-        portrait: 'https://media.licdn.com/dms/image/C5603AQEtPbVdzw90IQ/profile-displayphoto-shrink_800_800/0?e=1572480000&v=beta&t=FQ4lOzdfOXfou0PvkotYPpP59hdqDXFEJsntss3b7q4',
-        key: 'key-Quinn'
-    },
-]
 
 const PROGRAMSLEFT = [
     {
@@ -184,6 +161,30 @@ const BLOGHEADLINE = [
         headline: 'Lorem ipsum dolor sit amet sadipscing elitr.',
         key: 'key-blogHeadline'
     }
+]
+
+const TESTIMONIALS = [
+    {
+        name: 'Oscar Lafarga',
+        quote: 'SetLife has become my long-term commitment to a sustainable future when it comes to technology and its impact on society. In a world where information & communication moves at the speed of light, constraining our education to the classroom leaves us woefully under-equipped to deal with the major global problems we face. My goal is to incentivize teaching as one of the highest-paid and most valued professions, toppling the knowledge-hoarding power structures that sustain a global inequality of wealth',
+        date: 'President & CTO',
+        portrait: 'https://user-images.githubusercontent.com/4914611/63651576-6e1cb200-c756-11e9-88f2-87cb80faa5a1.png',
+        key: 'key-Oscar'
+    },
+    {
+        name: 'Viki Lafarga',
+        quote: 'The SetLife Network’s project-based learning trial was a unique opportunity for me in that I was both learning about and gaining work experience in several areas at once: corporate governance, programming and design, productivity, team management, and more. I am particularly interested in how the different areas that make up an organization interact together and in working at those intersections, so I was grateful for a work environment where I had to sync up with my team every week and learn about what else was going on . And not just what my coworkers were doing but also what obstacles they were coming up against, which I think makes for more solid teamwork. That’s really not something most people get to experience in a society where work is mostly specialized into separate departments.',
+        date: 'Dir. of International Operations',
+        portrait: 'https://media.licdn.com/dms/image/C4D03AQHFpkfc8bQt5g/profile-displayphoto-shrink_800_800/0?e=1572480000&v=beta&t=-J7whAKcGixu0JyYzmVFXJgxPyD667cw5qNq580GmMA',
+        key: 'key-Viki'
+    },
+    {
+        name: 'Quinn Pruitt',
+        quote: 'Project based learning is by far the most effective learning environment for software development. In seven weeks, I learned more about backend development and product management than I would have learned in an entire semester in college. The projects were quite challenging, yet incredibly rewarding. The high level of autonomy and personal responsibility provided a strong sense of ownership for my work, which I found crucial to my growth and success. I would recommend this program to anyone looking to level up their professional skills in a fun an engaging learning environment.',
+        date: 'Dir. of Tech, UX Engineer',
+        portrait: 'https://media.licdn.com/dms/image/C5603AQEtPbVdzw90IQ/profile-displayphoto-shrink_800_800/0?e=1572480000&v=beta&t=FQ4lOzdfOXfou0PvkotYPpP59hdqDXFEJsntss3b7q4',
+        key: 'key-Quinn'
+    },
 ]
 
 
