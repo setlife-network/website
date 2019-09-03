@@ -1,7 +1,3 @@
-import English from './content/English'
-import Spanish from './content/Spanish'
-
-
 const HEADERLINKS = [
     {
         text: 'Mission',
@@ -28,6 +24,16 @@ const HEADERBUTTON = [
     }
 ]
 
+const PRINCIPALMESSAGE = [
+    {
+        headline1: 'Make Software',
+        headline2: 'your superpower',
+        description: 'Learn valuable technical skills to keep up with technology or even upgrade your career',
+        buttonText: 'Start learning',
+        url: 'url',
+        key: 'key-principalMessage'
+    }
+]
 
 const TEASERS = [
     {
@@ -181,6 +187,7 @@ const TESTIMONIALS = [
     },
 ]
 
+
 const BLOGBUTTON = [
     {
         url: 'url',
@@ -198,22 +205,7 @@ const QUOTE = [
     }
 ]
 
-
-let locale = navigator.language
-
-
-const content = locale === 'en-US' ? English : Spanish
-console.log(locale)
-console.log('English.PRINCIPALMESSAGE')
-console.log(English.PRINCIPALMESSAGE)
-console.log(Spanish.PRINCIPALMESSAGE)
-console.log('location')
-console.log(content.BLOGBUTTON)
-
-const { PRINCIPALMESSAGE } = content
-
-
-export {
+export default {
     HEADERLINKS,
     HEADERBUTTON,
     PRINCIPALMESSAGE,
