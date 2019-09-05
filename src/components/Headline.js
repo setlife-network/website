@@ -30,7 +30,7 @@ const Headline = ({
     return (
         <Wrapper>
 
-            {alignment == 'left' ? (
+            {alignment === 'left' ? (
                 <Col md={2} className='mr-auto'>
                     <DividerLine />
                 </Col>

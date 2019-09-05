@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Row, Col
 } from 'react-bootstrap';
 
 import TestimonyTile from '../components/TestimonyTile'
@@ -10,7 +10,7 @@ import Headline from '../components/Headline'
 import theme from '../styles/theme';
 
 
-import constants, { TESTIMONIALS, BLOGHEADLINE, BLOGBUTTON } from '../constants'
+import { TESTIMONIALS, BLOGHEADLINE, BLOGBUTTON } from '../constants'
 
 const Section = styled.div`
     padding-top: 80px;
@@ -33,7 +33,7 @@ class Blog extends Component {
     renderHeadline = () => {
         return BLOGHEADLINE.map(t => {
             return (
-                <Col md={12}>
+                <Col md={12} key={t.key}>
                     <Headline
                         headline={t.headline}
                         color={theme.colors.black}
@@ -48,12 +48,13 @@ class Blog extends Component {
     renderTestimonials = () => {
         return TESTIMONIALS.map(t => {
             return (
-                <TestimonyDiv md={4}>
+                <TestimonyDiv md={4} key={t.key}>
                     <TestimonyTile
                         date={t.date}
                         headline={t.name}
                         description={t.quote}
                         portrait={t.portrait}
+
                     />
                 </TestimonyDiv>
             )
@@ -63,10 +64,11 @@ class Blog extends Component {
     renderButton = () => {
         return BLOGBUTTON.map(t => {
             return (
-                <ButtonDiv xs={6} md={2}>
+                <ButtonDiv xs={6} md={2} key={t.key}>
                     <FilledButton
                         url={t.url}
                         description={t.description}
+
                     />
                 </ButtonDiv>
             )

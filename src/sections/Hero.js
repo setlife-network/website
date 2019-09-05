@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Image, Row, Col
 } from 'react-bootstrap';
 
-import constants, { TEASERS, PRINCIPALMESSAGE } from '../constants'
+import { TEASERS, PRINCIPALMESSAGE } from '../constants'
 
 import TeaserTile from '../components/TeaserTile';
-import LinkButton from '../components/LinkButton';
 import PrincipalMessage from '../components/PrincipalMessage'
 import HeroGraphic from '../assets/images/heroGraphic.png'
 
@@ -15,10 +14,6 @@ const Section = styled(Row)`
     padding-top: 50px;
     padding-bottom:80px;
     background: ${props => props.grey ? '#EEEEEE' : 'white'}
-`
-
-const Wrapper = styled(Col)`
-    height:80px
 `
 
 const ImageContainer = styled(Image)`
@@ -33,13 +28,14 @@ class Hero extends Component {
     renderPrincipalMessage = () => {
         return PRINCIPALMESSAGE.map(t => {
             return (
-                <Col md={{ order: 1 }} xs={{ order: 2 }}>
+                <Col key={t.key} md={{ order: 1 }} xs={{ order: 2 }}>
                     <PrincipalMessage
                         headline1={t.headline1}
                         headline2={t.headline2}
                         description={t.description}
                         buttonText={t.buttonText}
                         url={t.url}
+                        key={t.key}
                     />
 
                 </Col>
@@ -50,7 +46,7 @@ class Hero extends Component {
     renderTeaser = () => {
         return TEASERS.map(t => {
             return (
-                <Col md={4}>
+                <Col md={4} key={t.key}>
                     <TeaserTile
                         headline={t.headline}
                         intro={t.description}

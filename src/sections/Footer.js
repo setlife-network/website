@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col, Nav
+    Image, Row, Col
 } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar'
 
 import logo from '../assets/images/logoNegative.png'
 import theme from '../styles/theme';
 import Text from '../components/Text'
-import FilledButton from '../components/FilledButton'
 
 
 const HeaderImage = styled(Image)`
@@ -28,7 +27,7 @@ const Section = styled(Row)`
 const Header = () => (
     <Section>
 
-        <Col md={10} className='mx-auto'>
+        <Col md={11} className='mx-auto'>
 
             <Navbar>
                 <HeaderImage src={logo} />

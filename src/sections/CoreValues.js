@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Row, Col
 } from 'react-bootstrap';
 
-import constants, { COREVALUES, COREVALUESHEADLINE } from '../constants'
+import { COREVALUES, COREVALUESHEADLINE } from '../constants'
 
 import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'
@@ -22,7 +22,7 @@ class CoreValues extends Component {
     renderHeadline = () => {
         return COREVALUESHEADLINE.map(t => {
             return (
-                <Col xs={12}>
+                <Col xs={12} key={t.key}>
                     <Headline
                         headline={t.headline}
                         color={theme.colors.black}
@@ -35,7 +35,7 @@ class CoreValues extends Component {
     renderValues = () => {
         return COREVALUES.map(t => {
             return (
-                <Col md={6}>
+                <Col md={6} key={t.key}>
                     <ValueTile
                         headline={t.headline}
                         description={t.description}

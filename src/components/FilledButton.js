@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Col
 } from 'react-bootstrap';
 import theme from '../styles/theme';
 import Text from './Text';
@@ -22,6 +22,8 @@ const FilledButton = ({
         <ButtonContainer>
             <a
                 href={url}
+                target='_blank'
+                rel='noopener noreferrer'
             >
                 <Text
                     color={theme.colors.white}

@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
-import styled from 'styled-components'
+import React from 'react';
 import {
     Row, Col
 } from 'react-bootstrap';
 
-
-import LinkButton from './LinkButton'
 import DividerLine from './DividerLine'
 import theme from '../styles/theme';
 import Title from './Title';

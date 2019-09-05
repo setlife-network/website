@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
-import styled from 'styled-components'
+import React from 'react';
 import {
-    Container, Image, Row, Col
+    Row, Col
 } from 'react-bootstrap';
 import theme from '../styles/theme';
 import Text from './Text';
-
 
 
 const LinkButton = ({
@@ -19,7 +17,9 @@ const LinkButton = ({
             <Col span={18}>
                 <a
                     href={url}
-                    style={{textDecoration:'none'}}
+                    style={{ textDecoration: 'none' }}
+                    target='_blank'
+                    rel='noopener noreferrer'
                 >
                     <Text
                         weight={weight}

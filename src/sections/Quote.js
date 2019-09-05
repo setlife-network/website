@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Image, Row, Col
 } from 'react-bootstrap';
 import theme from '../styles/theme';
 import DividerLine from '../components/DividerLine';
@@ -9,10 +9,6 @@ import Title from '../components/Title';
 import Text from '../components/Text';
 import QuoteIcon from '../assets/images/quote.png'
 
-const Wrapper = styled(Col)`
-    heigh:50%;
-
-`
 
 const ImageContainer = styled(Image)`
     align:center;

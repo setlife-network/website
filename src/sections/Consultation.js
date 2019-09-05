@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col
+    Image, Row, Col
 } from 'react-bootstrap';
 
-import constants, { CONSULTATIONHEADLINE, CONSULTATIONBUTTON } from '../constants'
+import { CONSULTATIONHEADLINE, CONSULTATIONBUTTON } from '../constants'
 
 import ConsultationPhoto from '../assets/images/consultationPhoto.png'
 
-import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'
 import theme from '../styles/theme';
 import BlankButton from '../components/BlankButton'
@@ -66,7 +65,7 @@ class Consultation extends Component {
     renderHeadline = () => {
         return CONSULTATIONHEADLINE.map(t => {
             return (
-                <Row>
+                <Row key={t.key}>
                     <Wrapper md={12}>
                         <Headline
                             headline={t.headline}
@@ -83,7 +82,7 @@ class Consultation extends Component {
     renderButton = () => {
         return CONSULTATIONBUTTON.map(t => {
             return (
-                <ButtonWrapper md={5} xs={12}>
+                <ButtonWrapper md={5} xs={12} key={t.key}>
                     <BlankButton
                         url={t.url}
                         description={t.description}

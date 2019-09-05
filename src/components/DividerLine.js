@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Row, Col
+    Row
 } from 'react-bootstrap';
 import theme from '../styles/theme';
 

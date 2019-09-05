@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Container, Image, Row, Col, Form
+    Image, Row, Col, Form
 } from 'react-bootstrap';
 
 import NewsletterPhoto from '../assets/images/newsletterPhoto.png'
@@ -15,20 +15,13 @@ import DividerLine from '../components/DividerLine';
 
 const Section = styled(Row)`
     padding-top: 80px;
-
-
-
 `
 
-
 const Wrapper = styled(Col)`
-
     padding-bottom:30px
-
 `
 
 const ImageContainer = styled(Image)`
-
     width:50%;
     height: 450px;
     z-index:1;
@@ -37,11 +30,9 @@ const ImageContainer = styled(Image)`
 
 `
 const Division = styled(Row)`
-
     background:${theme.colors.primary};
     padding-top:30px;
     padding-bottom:30px
-
 `
 
 class Newsletter extends Component {
