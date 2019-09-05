@@ -26,9 +26,9 @@ const HEADERBUTTON = [
 
 const PRINCIPALMESSAGE = [
     {
-        headline1: 'Make Software',
+        headline1: 'Make software',
         headline2: 'your superpower',
-        description: 'Learn valuable technical skills to keep up with technology or even upgrade your career',
+        description: 'Learn valuable technical skills to keep up with advancing technology or even upgrade your career',
         buttonText: 'Start learning',
         url: 'url',
         key: 'key-principalMessage'
