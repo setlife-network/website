@@ -82,7 +82,7 @@ class Blog extends Component {
                         <Row>
                             {this.renderHeadline()}
                             {this.renderTestimonials()}
-                            {this.renderButton()}
+                            {/* {this.renderButton()} */}
                         </Row>
                     </Col>
 

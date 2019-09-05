@@ -15,25 +15,22 @@ const ButtonContainer = styled(Row)`
 `
 
 const HeaderImage = styled(Image)`
-height: 40px;
-margin-bottom:15px;
-margin-right:10px
+    height: 40px;
+    margin-bottom:15px;
+    margin-right:10px
 `
 
 
 const Header = () => (
     <Row>
 
-        <Col md={10} className='mx-auto'>
+        <Col md={10} className='mx-auto pt-2'>
 
-            <Navbar expand='lg'>
+            <Navbar expand='lg' className='align-items-center'>
 
                 <Row>
                     <Col xs={2}>
-
                         <Navbar.Toggle />
-
-
                     </Col>
                     <Col xs={10} md={12}>
                         <Row>
@@ -47,13 +44,12 @@ const Header = () => (
                                     <Text
                                         alignment='center'
                                     >
-                        People over profit
+                                        People over profit
                                     </Text>
                                 </Row>
                             </Col>
                         </Row>
                     </Col>
-
 
                 </Row>
 
@@ -62,24 +58,14 @@ const Header = () => (
 
                     <Nav.Link href='#home'>
                         <Text size={theme.sizes.button}>
-                        Mision
+                            Programs
                         </Text>
                     </Nav.Link>
                     <Nav.Link href='#home'>
                         <Text size={theme.sizes.button}>
-                        Curriculum
+                            Curriculum
                         </Text>
                     </Nav.Link>
-                    <Nav.Link href='#home'>
-                        <Text size={theme.sizes.button}>
-                        Programs
-                        </Text>
-                    </Nav.Link>
-                    <ButtonContainer>
-                        <FilledButton
-                            description='Get a free consultations'
-                        />
-                    </ButtonContainer>
                 </Navbar.Collapse>
             </Navbar>
 

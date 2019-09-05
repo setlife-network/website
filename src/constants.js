@@ -2,7 +2,7 @@ const PRINCIPALMESSAGE = [
     {
         headline1: 'Make software',
         headline2: 'your superpower',
-        description: 'Learn valuable technical skills to keep up with technology or even upgrade your career',
+        description: 'Learn valuable technical skills to keep up with advancing technology or even upgrade your career',
         buttonText: 'Start learning',
         url: 'url'
     }
@@ -55,6 +55,24 @@ const TESTIMONIALS = [
         date: 'Dir. of Tech, UX Engineer',
         portrait: 'https://media.licdn.com/dms/image/C5603AQEtPbVdzw90IQ/profile-displayphoto-shrink_800_800/0?e=1572480000&v=beta&t=FQ4lOzdfOXfou0PvkotYPpP59hdqDXFEJsntss3b7q4'
     },
+    {
+        name: 'Sofia Rodriguez',
+        quote: '',
+        date: 'Software Developer',
+        portrait: 'https://user-images.githubusercontent.com/4914611/64039373-c0950e80-cb5a-11e9-96db-3c4e553f8107.png'
+    },
+    {
+        name: 'Rebeca Rubio',
+        quote: '',
+        date: 'Software Developer',
+        portrait: 'https://media.licdn.com/dms/image/C4D03AQFoT9fQvjPGpQ/profile-displayphoto-shrink_200_200/0?e=1572480000&v=beta&t=p-NNuPmF7ryNzLONuZ9YE28YzXTouXJa4A0mP68AVJ8'
+    },
+    {
+        name: 'Marin Basic',
+        quote: '',
+        date: 'Visual Brand Developer',
+        portrait: 'https://media.licdn.com/dms/image/C4E03AQGI2DiXXt3ldw/profile-displayphoto-shrink_200_200/0?e=1572480000&v=beta&t=sK8ZEkVTAxUH5_6oGiDX5d2VGWmjAdHIQqWN5kCveEc'
+    },
 ]
 
 const PROGRAMSLEFT = [
@@ -104,7 +122,7 @@ const COREVALUES = [
     },
     {
         headline: 'Learn by Teaching',
-        description: 'The deepest understanding of a topic comes when you can teach it to anyone willing to learn by adapting ideas to their specific educational context',
+        description: 'The deepest understanding of a topic comes when you can teach it to anyone willing to learn',
     },
     {
         headline: 'Open-source software "libre"',
@@ -112,14 +130,14 @@ const COREVALUES = [
     },
     {
         headline: 'Sustainability',
-        description: 'Rapid technology growth may have dangerous socio-economic effects and must be tempered with secure & sustainable practices in both business & engineering',
+        description: 'Rapid technology growth may have dangerous socio-economic effects and should be tempered with secure & sustainable practices in both business & engineering',
     },
 ]
 
 const CONSULTATIONHEADLINE = [
     {
         headline: 'Tech Careers',
-        description: 'Because learning to code might be the smartest investment to make.'
+        description: 'TechPrep by Facebook is one of the many resources available to start exploring how technology can help upgrade your career'
 
     }
 
@@ -129,14 +147,13 @@ const CONSULTATIONBUTTON = [
     {
         url: 'https://techprep.org/',
         description: 'Learn more'
-
     }
 
 ]
 
 const BLOGHEADLINE = [
     {
-        headline: 'Lorem ipsum dolor sit amet sadipscing elitr.',
+        headline: 'About Us',
     }
 ]
 
