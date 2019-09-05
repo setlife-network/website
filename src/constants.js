@@ -1,5 +1,5 @@
-import English from './content/English'
-import Spanish from './content/Spanish'
+import english from './content/english'
+import spanish from './content/spanish'
 
 
 const HEADERLINKS = [
@@ -60,7 +60,7 @@ const PROGRAMSHEADLINE = [
         key: 'key-programsHeadline'
     }
 ]
-    
+
 const TESTIMONIALS = [
     {
         name: 'Oscar Lafarga',
@@ -214,14 +214,7 @@ const QUOTE = [
 let locale = navigator.language
 
 
-const content = locale === 'en-US' ? English : Spanish
-console.log(locale)
-console.log('English.PRINCIPALMESSAGE')
-console.log(English.PRINCIPALMESSAGE)
-console.log(Spanish.PRINCIPALMESSAGE)
-console.log('location')
-console.log(content.BLOGBUTTON)
-
+const content = locale === 'en-US' ? english : spanish
 const { PRINCIPALMESSAGE } = content
 
 
