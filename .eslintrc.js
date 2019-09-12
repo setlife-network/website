@@ -51,6 +51,7 @@ module.exports = {
         'no-case-declarations': 'off',
         'no-else-return': 'off',
         'no-floating-decimal': 'off',
+        'no-multi-assign': 'off',
         'no-nested-ternary': 'off',
         'no-path-concat': 'off',
         'no-param-reassign': 'off',
