@@ -5,7 +5,7 @@ import {
 } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar'
 
-import { HEADERLINKS, HEADERBUTTON } from '../constants'
+import { HEADERLINKS, HEADERBUTTON } from '../content/constants'
 
 import logo from '../assets/images/logoPositive.png'
 import theme from '../styles/theme';

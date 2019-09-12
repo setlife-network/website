@@ -4,7 +4,7 @@ import {
     Image, Row, Col
 } from 'react-bootstrap';
 
-import { CONSULTATIONHEADLINE, CONSULTATIONBUTTON } from '../constants'
+import { CONSULTATIONHEADLINE, CONSULTATIONBUTTON } from '../content/constants'
 
 import ConsultationPhoto from '../assets/images/consultationPhoto.png'
 

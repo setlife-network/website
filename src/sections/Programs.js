@@ -4,7 +4,7 @@ import {
     Row, Col
 } from 'react-bootstrap';
 
-import { PROGRAMSHEADLINE, PROGRAMSLEFT, PROGRAMSRIGHT } from '../constants'
+import { PROGRAMSHEADLINE, PROGRAMSLEFT, PROGRAMSRIGHT } from '../content/constants'
 
 import ProgramCard from '../components/ProgramCard'
 import Headline from '../components/Headline'

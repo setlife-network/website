@@ -4,7 +4,7 @@ import {
     Image, Row, Col
 } from 'react-bootstrap';
 
-import { TEASERS, PRINCIPALMESSAGE } from '../constants'
+import { TEASERS, PRINCIPALMESSAGE } from '../content/constants'
 
 import TeaserTile from '../components/TeaserTile';
 import PrincipalMessage from '../components/PrincipalMessage'
