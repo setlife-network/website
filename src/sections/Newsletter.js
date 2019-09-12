@@ -13,6 +13,8 @@ import Text from '../components/Text';
 import DividerLine from '../components/DividerLine';
 
 
+
+
 const Section = styled(Row)`
     padding-top: 80px;
 `
@@ -87,7 +89,7 @@ class Newsletter extends Component {
                             <Wrapper md={2}>
                                 <BlankButton
                                     description='Signup'
-                                    onClick='url'
+                                    url='url'
                                 />
                             </Wrapper>
 

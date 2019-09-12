@@ -4,7 +4,7 @@ import {
     Row, Col
 } from 'react-bootstrap';
 
-import { COREVALUES, COREVALUESHEADLINE } from '../constants'
+import { COREVALUES, COREVALUESHEADLINE } from '../content/constants'
 
 import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'

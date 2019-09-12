@@ -5,7 +5,7 @@ import {
 } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar'
 
-import { HEADERLINKS, HEADERBUTTON } from '../constants'
+import { HEADERLINKS, HEADERBUTTON } from '../content/constants'
 
 import logo from '../assets/images/logoPositive.png'
 import theme from '../styles/theme';
@@ -17,11 +17,10 @@ const ButtonContainer = styled(Row)`
 `
 
 const HeaderImage = styled(Image)`
-height: 40px;
-margin-bottom:15px;
-margin-right:10px
+    height: 40px;
+    margin-bottom:15px;
+    margin-right:10px
 `
-
 
 class Header extends Component {
 
@@ -55,8 +54,8 @@ class Header extends Component {
         return (
             <Row>
 
-                <Col md={10} className='mx-auto'>
-                    <Navbar expand='lg'>
+                <Col md={10} className='mx-auto pt-2'>
+                    <Navbar expand='lg' className='align-items-center'>
                         <Row>
                             <Col xs={2}>
                                 <Navbar.Toggle />
@@ -73,24 +72,20 @@ class Header extends Component {
                                             <Text
                                                 alignment='center'
                                             >
-                                People over profit
+                                                People over profit
                                             </Text>
                                         </Row>
                                     </Col>
                                 </Row>
                             </Col>
-
-
                         </Row>
-
 
                         <Navbar.Collapse className='justify-content-end'>
 
                             {this.renderHeaderLinks()}
-                            {this.renderHeaderButton()}
+                            {/* {this.renderHeaderButton()} */}
                         </Navbar.Collapse>
                     </Navbar>
-
 
                 </Col>
 

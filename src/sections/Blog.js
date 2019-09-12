@@ -10,7 +10,7 @@ import Headline from '../components/Headline'
 import theme from '../styles/theme';
 
 
-import { TESTIMONIALS, BLOGHEADLINE, BLOGBUTTON } from '../constants'
+import { TESTIMONIALS, BLOGHEADLINE, BLOGBUTTON } from '../content/constants'
 
 const Section = styled.div`
     padding-top: 80px;
@@ -84,7 +84,7 @@ class Blog extends Component {
                         <Row>
                             {this.renderHeadline()}
                             {this.renderTestimonials()}
-                            {this.renderButton()}
+                            {/* {this.renderButton()} */}
                         </Row>
                     </Col>
 

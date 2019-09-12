@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-import { QUOTE } from '../constants'
+import { QUOTE } from '../content/constants'
 
 import Header from '../components/Header'
 import Hero from '../sections/Hero'
