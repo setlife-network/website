@@ -18,8 +18,8 @@ const WrapperCard = styled(Row)`
 
 const ImageContainer = styled('div')`
     height: 120px;
-    width: 100%;
-    border-radius: 1000vw;
+    width: 120px;
+    border-radius: 60px;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
