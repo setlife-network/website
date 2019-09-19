@@ -71,29 +71,29 @@ const HEADERBUTTON = [
 
 const HEADERLINKS = [
     {
-        text: 'Mission',
-        href: '#home',
-        key: 'key-Mission'
-    },
-    {
         text: 'Curriculum',
-        href: '#home',
+        href: 'https://tech-education.teachable.com',
         key: 'key-Curriculum'
     },
     {
-        text: 'Programs',
-        href: '#home',
-        key: 'key-Programs'
+        text: 'Mission',
+        href: 'https://docs.setlife.network',
+        key: 'key-Mission'
     },
+    // {
+    //     text: 'Programs',
+    //     href: '#home',
+    //     key: 'key-Programs'
+    // },
 ]
 
 const PRINCIPALMESSAGE = [
     {
         headline1: 'Make software',
         headline2: 'your superpower',
-        description: 'Learn valuable technical skills to keep up with advancing technology or even upgrade your career',
+        description: 'Learn valuable technical skills to upgrade your career or simply keep up with advancing technology',
         buttonText: 'Start learning',
-        url: 'url',
+        url: 'https://tech-education.teachable.com',
         key: 'key-principalMessage'
     }
 ]
@@ -111,7 +111,7 @@ const PROGRAMSLEFT = [
         headline: 'International Learning & Development',
         description: 'Train & refine your technical skills and experience modern international work culture in Barcelona, Spain',
         buttonText: 'Trial 1 Overview',
-        link: 'https://setlife.network/Project-Based-Learning-1-Barcelona',
+        link: 'https://docs.setlife.network/Project-Based-Learning-1-Barcelona',
         image: 'https://user-images.githubusercontent.com/4914611/63650620-c51d8980-c74c-11e9-89ff-efca941a7e2e.png',
         key: 'key-program1'
     },
@@ -195,8 +195,15 @@ const TESTIMONIALS = [
     {
         name: 'Quinn Pruitt',
         quote: 'Project based learning is by far the most effective learning environment for software development. In seven weeks, I learned more about backend development and product management than I would have learned in an entire semester in college. The projects were quite challenging, yet incredibly rewarding. The high level of autonomy and personal responsibility provided a strong sense of ownership for my work, which I found crucial to my growth and success. I would recommend this program to anyone looking to level up their professional skills in a fun an engaging learning environment.',
-        date: 'Dir. of Tech, UX Engineer',
+        date: 'Technical Advisor',
         portrait: 'https://media.licdn.com/dms/image/C5603AQEtPbVdzw90IQ/profile-displayphoto-shrink_800_800/0?e=1572480000&v=beta&t=FQ4lOzdfOXfou0PvkotYPpP59hdqDXFEJsntss3b7q4'
+    },
+    {
+        name: 'David Lafarga',
+        quote: '',
+        date: 'Founding Contributor',
+        portrait: 'https://user-images.githubusercontent.com/4914611/65235439-e61c9480-dad6-11e9-9b61-8f705cdd7050.png',
+        // portrait: 'https://user-images.githubusercontent.com/4914611/65234991-01d36b00-dad6-11e9-949e-a1e0709919fa.png'
     },
     {
         name: 'Sofia Rodriguez',
