@@ -54,7 +54,7 @@ class Newsletter extends Component {
                         weight='bold'
                         size={theme.sizes.large}
                     >
-                            Not a Setlife member?
+                        Not a Setlife member?
                     </Title>
 
                     <Wrapper md={2} xs={6}>
@@ -72,9 +72,9 @@ class Newsletter extends Component {
                     </Wrapper>
 
                 </Col>
-                <Col>
+                <Col xl={12}>
                     <Division>
-                        <Col xs={11} className='mx-auto'>
+                        <Col xs={11}  className='mx-auto' >
 
                             <Text
                                 weight='bold'
