@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Image, Row, Col, Nav
+    Image, Row, Col, Nav, Button
 } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar'
 
-import { HEADERLINKS, HEADERBUTTON } from '../content/constants'
+import { HEADERLINKS, HEADERBUTTON, ChangeLanguage } from '../content/constants'
 
 import logo from '../assets/images/logoPositive.png'
 import theme from '../styles/theme';
@@ -74,6 +74,7 @@ class Header extends Component {
                                             >
                                                 People over profit
                                             </Text>
+                                            <Button variant='primary' onClick={ChangeLanguage}>Primary</Button>
                                         </Row>
                                     </Col>
                                 </Row>
