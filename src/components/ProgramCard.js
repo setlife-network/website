@@ -32,7 +32,7 @@ const TitleWrapper = styled(Col)`
 `
 
 const ConstantWrapper = styled(Col)`
-    height:160px
+    min-height:160px
 
 `
 
@@ -67,12 +67,13 @@ const ProgramCard = ({
                     {headline}
                 </Title>
             </TitleWrapper>
-            <Col md={4}>
+            <Col xs={12} xl={4}>
                 <ImageContainer
                     style={{ backgroundImage: `url(${image})` }}
+                    className='mx-auto'
                 />
             </Col>
-            <ConstantWrapper md={7}>
+            <ConstantWrapper xs={12} xl={7} className='pt-3 pt-xl-0'>
                 <Text
                     size={theme.sizes.small}
                 >
