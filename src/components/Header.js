@@ -74,7 +74,7 @@ class Header extends Component {
                                             >
                                                 People over profit
                                             </Text>
-                                            <Button variant='primary' onClick={ChangeLanguage}>Primary</Button>
+                                            
                                         </Row>
                                     </Col>
                                 </Row>

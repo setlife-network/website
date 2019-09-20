@@ -8,18 +8,19 @@ let locale = navigator.language
 var content = locale === 'en-US' ? english : spanish
 
 function ChangeLanguage() {
-    console.log('hey');
-    if (locale === 'en-US') {
-        return content = spanish
+    if ( content === english) {
+        console.log('spanish');
+        content = spanish
+        console.log(content.PRINCIPALMESSAGE);
+        return content
     } else {
-        console.log('here');
+        console.log('english');
         content = english
-        window.location.reload();
-        console.log(content.PRINCIPALMESSAGE.headline1);
-
+        console.log(content.PRINCIPALMESSAGE);
         return content
     }
 }
+
 
 const {
     BLOGBUTTON,

@@ -55,7 +55,6 @@ const PrincipalMessage = ({
                     description={buttonText}
                     url={url}
                 />
-
             </Wrapper>
         </Row>
     )

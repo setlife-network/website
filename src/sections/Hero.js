@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Image, Row, Col
+    Image, Row, Col, Button
 } from 'react-bootstrap';
 
-import { TEASERS, PRINCIPALMESSAGE } from '../content/constants'
+import { TEASERS, PRINCIPALMESSAGE, ChangeLanguage } from '../content/constants'
 
 import TeaserTile from '../components/TeaserTile';
 import PrincipalMessage from '../components/PrincipalMessage'
@@ -24,6 +24,7 @@ const ImageContainer = styled(Image)`
 `
 
 class Hero extends Component {
+
 
     renderPrincipalMessage = () => {
         return PRINCIPALMESSAGE.map(t => {
@@ -60,11 +61,13 @@ class Hero extends Component {
 
     render() {
         return (
-            <Section>
 
+            <Section>
+                {console.log(PRINCIPALMESSAGE)}
                 <Col xs={10} className='mx-auto'>
                     <Section>
                         {this.renderPrincipalMessage()}
+                        <Button variant='primary' onClick={ChangeLanguage}>Primary</Button>
                         <Col md={{ order: 2 }} xs={{ order: 1 }}>
                             <ImageContainer src={HeroGraphic} alt='Hero Graphic' />
                         </Col>
