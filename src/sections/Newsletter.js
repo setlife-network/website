@@ -12,9 +12,6 @@ import Title from '../components/Title';
 import Text from '../components/Text';
 import DividerLine from '../components/DividerLine';
 
-
-
-
 const Section = styled(Row)`
     padding-top: 80px;
 `
@@ -54,7 +51,7 @@ class Newsletter extends Component {
                         weight='bold'
                         size={theme.sizes.large}
                     >
-                        Not a Setlife member?
+                        Interested in SetLife?
                     </Title>
 
                     <Wrapper md={2} xs={6}>
@@ -67,28 +64,28 @@ class Newsletter extends Component {
                             size={theme.sizes.regular}
 
                         >
-                            Join our newsletter packed with free resources on how to learn to code with ease.
+                            Sign up for our mailing list to receive monthly updates about our programs
                         </Text>
                     </Wrapper>
 
                 </Col>
                 <Col xl={12}>
                     <Division>
-                        <Col xs={11}  className='mx-auto' >
+                        <Col xs={11} className='mx-auto'>
 
                             <Text
                                 weight='bold'
                                 color={theme.colors.white}
                                 size={theme.sizes.regular}
                             >
-                        Newsletter signup
+                                We'll never share your email or bother you with spam
                             </Text>
                             <Wrapper md={4}>
-                                <Form.Control size='sm' type='text' placeholder='Enter email' />
+                                <Form.Control size='sm' type='text' placeholder='Enter your email' />
                             </Wrapper>
                             <Wrapper md={2}>
                                 <BlankButton
-                                    description='Signup'
+                                    description='Sign up'
                                     url='url'
                                 />
                             </Wrapper>
