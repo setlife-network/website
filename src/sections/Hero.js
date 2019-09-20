@@ -11,16 +11,12 @@ import PrincipalMessage from '../components/PrincipalMessage'
 import HeroGraphic from '../assets/images/heroGraphic.png'
 
 const Section = styled(Row)`
-    padding-top: 50px;
-    padding-bottom:80px;
     background: ${props => props.grey ? '#EEEEEE' : 'white'}
 `
 
 const ImageContainer = styled(Image)`
     height: 100%;
     width: 100%;
-
-
 `
 
 class Hero extends Component {
@@ -28,7 +24,12 @@ class Hero extends Component {
     renderPrincipalMessage = () => {
         return PRINCIPALMESSAGE.map(t => {
             return (
-                <Col key={t.key} md={{ order: 1 }} xs={{ order: 2 }}>
+                <Col
+                    key={t.key}
+                    className='col-12 col-sm-6'
+                    md={{ order: 1 }}
+                    xs={{ order: 2 }}
+                >
                     <PrincipalMessage
                         headline1={t.headline1}
                         headline2={t.headline2}
@@ -60,12 +61,18 @@ class Hero extends Component {
 
     render() {
         return (
-            <Section>
+            <Section className='pt-0 py-sm-5'>
 
                 <Col xs={10} className='mx-auto'>
-                    <Section>
+                    <Section
+                        className='row pt-0 py-sm-5'
+                    >
                         {this.renderPrincipalMessage()}
-                        <Col md={{ order: 2 }} xs={{ order: 1 }}>
+                        <Col
+                            className='col-12 col-sm-6 pb-5 pb-sm-0'
+                            md={{ order: 2 }}
+                            xs={{ order: 1 }}
+                        >
                             <ImageContainer src={HeroGraphic} alt='Hero Graphic' />
                         </Col>
                     </Section>

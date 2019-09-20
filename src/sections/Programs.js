@@ -82,6 +82,7 @@ class Programs extends Component {
 
             <Section
                 back={theme.colors.grey}
+                className='Programs'
             >
                 <Col xs={10} md={8} className='mx-auto'>
                     <Row>
