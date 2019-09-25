@@ -14,8 +14,8 @@ class App extends React.Component {
         language: locale === 'en-US' ? 'english' : 'spanish'
     }
 
-    changeLanguage = () => {
-        const newLanguage = this.state.language == 'english' ? 'spanish' : 'english'
+
+    changeLanguage = (newLanguage) => {
         this.setState({ language: newLanguage })
     }
 
@@ -25,7 +25,6 @@ class App extends React.Component {
 
         return (
             <div className='App'>
-                {console.log(content)}
                 <Route
                     exact
                     path='/'
@@ -34,6 +33,7 @@ class App extends React.Component {
                             {...props}
                             content={content}
                             changeLanguage={this.changeLanguage}
+                            language={this.state.language}
                         />
                     )}
 

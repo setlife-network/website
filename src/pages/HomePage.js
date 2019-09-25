@@ -30,13 +30,15 @@ class HomePage extends Component {
 
     render() {
 
-        const { content, changeLanguage } = this.props
+        const {
+            content, changeLanguage, changeEnglish, changeSpanish
+        } = this.props
 
 
         return (
             <div>
-                <Header />
-                <Hero content={content} changeLanguage={changeLanguage} />
+                <Header content={content} changeLanguage={changeLanguage} language={this.props.language} />
+                <Hero content={content} />
                 <Programs content={content} />
                 <CoreValues content={content} />
                 <Consultation content={content} />

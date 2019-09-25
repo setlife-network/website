@@ -68,7 +68,6 @@ class Hero extends Component {
                 <Col xs={10} className='mx-auto'>
                     <Section>
                         {this.renderPrincipalMessage()}
-                        <Button variant='primary' onClick={this.props.changeLanguage}>Primary</Button>
                         <Col md={{ order: 2 }} xs={{ order: 1 }}>
                             <ImageContainer src={HeroGraphic} alt='Hero Graphic' />
                         </Col>
