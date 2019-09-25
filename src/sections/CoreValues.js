@@ -4,8 +4,6 @@ import {
     Row, Col
 } from 'react-bootstrap';
 
-import { COREVALUES, COREVALUESHEADLINE } from '../content/constants'
-
 import ValueTile from '../components/ValueTile'
 import Headline from '../components/Headline'
 import theme from '../styles/theme';
@@ -20,6 +18,7 @@ const Section = styled(Row)`
 class CoreValues extends Component {
 
     renderHeadline = () => {
+        const { COREVALUESHEADLINE } = this.props.content
         return COREVALUESHEADLINE.map(t => {
             return (
                 <Col xs={12} key={t.key}>
@@ -33,6 +32,7 @@ class CoreValues extends Component {
     }
 
     renderValues = () => {
+        const { COREVALUES } = this.props.content
         return COREVALUES.map(t => {
             return (
                 <Col md={6} key={t.key}>

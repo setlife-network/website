@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 
-import { QUOTE } from '../content/constants'
-
 import Header from '../components/Header'
 import Hero from '../sections/Hero'
 import Programs from '../sections/Programs'
@@ -17,6 +15,7 @@ import Footer from '../sections/Footer'
 class HomePage extends Component {
 
     renderQuote = () => {
+        const { QUOTE } = this.props.content
         return QUOTE.map(t => {
             return (
                 <Quote
@@ -30,19 +29,21 @@ class HomePage extends Component {
     }
 
     render() {
+
+        const { content, changeLanguage } = this.props
+
+
         return (
-
             <div>
-
                 <Header />
-                <Hero />
-                <Programs />
-                <CoreValues />
-                <Consultation />
-                <Blog />
+                <Hero content={content} changeLanguage={changeLanguage} />
+                <Programs content={content} />
+                <CoreValues content={content} />
+                <Consultation content={content} />
+                <Blog content={content} />
                 {this.renderQuote()}
-                <Newsletter />
-                <Footer />
+                <Newsletter content={content} />
+                <Footer content={content} />
 
             </div>
 

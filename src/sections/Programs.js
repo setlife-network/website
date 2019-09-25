@@ -4,8 +4,6 @@ import {
     Row, Col
 } from 'react-bootstrap';
 
-import { PROGRAMSHEADLINE, PROGRAMSLEFT, PROGRAMSRIGHT } from '../content/constants'
-
 import ProgramCard from '../components/ProgramCard'
 import Headline from '../components/Headline'
 import theme from '../styles/theme';
@@ -24,6 +22,7 @@ const CardDiv = styled(Col)`
 class Programs extends Component {
 
     renderHeadline = () => {
+        const { PROGRAMSHEADLINE } = this.props.content
         return PROGRAMSHEADLINE.map(t => {
             return (
                 <Col md={12} key={t.key}>
@@ -39,6 +38,7 @@ class Programs extends Component {
     }
 
     renderProgramsLeft = () => {
+        const { PROGRAMSLEFT } = this.props.content
         return PROGRAMSLEFT.map(t => {
             return (
                 <CardDiv
@@ -58,6 +58,7 @@ class Programs extends Component {
     }
 
     renderProgramsRight = () => {
+        const { PROGRAMSRIGHT } = this.props.content
         return PROGRAMSRIGHT.map(t => {
             return (
                 <CardDiv

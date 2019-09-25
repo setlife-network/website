@@ -4,7 +4,6 @@ import {
     Image, Row, Col, Button
 } from 'react-bootstrap';
 
-import { TEASERS, PRINCIPALMESSAGE, ChangeLanguage } from '../content/constants'
 
 import TeaserTile from '../components/TeaserTile';
 import PrincipalMessage from '../components/PrincipalMessage'
@@ -27,6 +26,7 @@ class Hero extends Component {
 
 
     renderPrincipalMessage = () => {
+        const { PRINCIPALMESSAGE } = this.props.content
         return PRINCIPALMESSAGE.map(t => {
             return (
                 <Col key={t.key} md={{ order: 1 }} xs={{ order: 2 }}>
@@ -45,6 +45,7 @@ class Hero extends Component {
     }
 
     renderTeaser = () => {
+        const { TEASERS } = this.props.content
         return TEASERS.map(t => {
             return (
                 <Col md={4} key={t.key}>
@@ -63,11 +64,11 @@ class Hero extends Component {
         return (
 
             <Section>
-                {console.log(PRINCIPALMESSAGE)}
+
                 <Col xs={10} className='mx-auto'>
                     <Section>
                         {this.renderPrincipalMessage()}
-                        <Button variant='primary' onClick={ChangeLanguage}>Primary</Button>
+                        <Button variant='primary' onClick={this.props.changeLanguage}>Primary</Button>
                         <Col md={{ order: 2 }} xs={{ order: 1 }}>
                             <ImageContainer src={HeroGraphic} alt='Hero Graphic' />
                         </Col>

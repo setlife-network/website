@@ -4,8 +4,6 @@ import {
     Image, Row, Col
 } from 'react-bootstrap';
 
-import { CONSULTATIONHEADLINE, CONSULTATIONBUTTON } from '../content/constants'
-
 import ConsultationPhoto from '../assets/images/consultationPhoto.png'
 
 import Headline from '../components/Headline'
@@ -63,6 +61,7 @@ const ColDiv = styled(Col)`
 class Consultation extends Component {
 
     renderHeadline = () => {
+        const { CONSULTATIONHEADLINE } = this.props.content
         return CONSULTATIONHEADLINE.map(t => {
             return (
                 <Row key={t.key}>
@@ -80,6 +79,7 @@ class Consultation extends Component {
     }
 
     renderButton = () => {
+        const { CONSULTATIONBUTTON } = this.props.content
         return CONSULTATIONBUTTON.map(t => {
             return (
                 <ButtonWrapper md={5} xs={12} key={t.key}>
