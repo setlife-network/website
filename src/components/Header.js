@@ -25,9 +25,6 @@ const HeaderImage = styled(Image)`
 const IconImage = styled(Image)`
     height: 30px;
 `
-const Menu = styled(Dropdown)`
-    width: 5px;
-`
 
 class Header extends Component {
 

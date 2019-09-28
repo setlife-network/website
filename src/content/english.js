@@ -13,6 +13,13 @@ const BLOGHEADLINE = [
     }
 ]
 
+const COOKIESCONSENT = [
+    {
+        description: 'This website uses cookies to ensure you get the best experience on our website.',
+        agreement: 'Accept'
+    }
+]
+
 const CONSULTATIONBUTTON = [
     {
         url: 'https://techprep.org/',
@@ -178,7 +185,6 @@ const TEASERS = [
 ]
 
 
-
 const TESTIMONIALS = [
     {
         name: 'Oscar Lafarga',
@@ -228,6 +234,7 @@ const TESTIMONIALS = [
 export default {
     BLOGBUTTON,
     BLOGHEADLINE,
+    COOKIESCONSENT,
     CONSULTATIONBUTTON,
     CONSULTATIONHEADLINE,
     COREVALUES,

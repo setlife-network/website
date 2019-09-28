@@ -13,6 +13,13 @@ const BLOGHEADLINE = [
     }
 ]
 
+const COOKIESCONSENT = [
+    {
+        description: 'Esta pagina usa cookies',
+        agreement: 'Acepto' 
+    }
+]
+
 const CONSULTATIONBUTTON = [
     {
         url: 'https://techprep.org/',
@@ -221,6 +228,7 @@ const TESTIMONIALS = [
 export default {
     BLOGBUTTON,
     BLOGHEADLINE,
+    COOKIESCONSENT,
     CONSULTATIONBUTTON,
     CONSULTATIONHEADLINE,
     COREVALUES,
