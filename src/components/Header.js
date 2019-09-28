@@ -23,11 +23,11 @@ const HeaderImage = styled(Image)`
 `
 
 const IconImage = styled(Image)`
-    height: 25px;
-    margin-bottom:15px;
-    margin-right:10px
+    height: 30px;
 `
-
+const Menu = styled(Dropdown)`
+    width: 5px;
+`
 
 class Header extends Component {
 
@@ -96,7 +96,7 @@ class Header extends Component {
 
                             {this.renderHeaderLinks()}
                             {/* {this.renderHeaderButton()} */}
-                            <DropdownButton title={<IconImage src={flag} />} variant='info'>
+                            <DropdownButton size='sm' title={<IconImage src={flag} />} variant='info'>
                                 <Dropdown.Item onClick={() => this.props.changeLanguage('english')}>
                                     <IconImage src={usFlag} />
                                 </Dropdown.Item>
