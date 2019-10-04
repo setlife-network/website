@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CookieConsent from 'react-cookie-consent';
+import CookieConsent from '../../node_modules/react-cookie-consent';
 
 import Header from '../components/Header'
 import Hero from '../sections/Hero'
