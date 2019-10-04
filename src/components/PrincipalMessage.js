@@ -24,17 +24,17 @@ const PrincipalMessage = ({
     url
 }) => {
     return (
-        <Row>
+        <Row className='PrincipalMessage'>
             <Col xs={2}>
                 <DividerLine />
             </Col>
             <Col xs={12}>
-                <TitleWrapper
+                <Title
                     size={theme.sizes.xlarge}
                     weight='bold'
                 >
                     {headline1}
-                </TitleWrapper>
+                </Title>
                 <Title
                     size={theme.sizes.xlarge}
                     color={theme.colors.primary}

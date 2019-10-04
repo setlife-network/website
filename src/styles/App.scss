@@ -1,29 +1,30 @@
-
 .App {
+
+    // .Title {
+    //     @include font-size(1.5rem);
+    // }
+    // .Text {
+    //     @include font-size(0.8rem);
+    // }
 }
 
 
-.ant-layout-header{
-    background: rgb(0,194,212);
+.PrincipalMessage, .Newsletter {
+
+    .Title {
+        @include font-size(3rem);
+    }
+    .Text {
+        @include font-size(1rem);
+    }
 }
 
-.ant-layout-content{
-    background: rgb(255,255,255);
-}
+.Programs {
+    .Title {
+        @include font-size(1.5rem);
+    }
+    .Text {
+        @include font-size(1rem);
+    }
 
-.ant-btn{
-    background: rgb(0,194,212);
-    border: rgb(0,194,212);
-}
-
-.ant-btn:hover{
-    background: rgb(0,194,212);
-    border: rgb(0,194,212);
-}
-
-
-
-.filledBtn{
-    width: 300px;
-    height: 300px;
 }

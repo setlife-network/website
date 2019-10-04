@@ -45,7 +45,7 @@ class Newsletter extends Component {
     render() {
         return (
 
-            <Section>
+            <Section className='Newsletter'>
 
                 <Col md={12} className='d-none d-md-flex'>
                     <ImageContainer src={NewsletterPhoto} />
