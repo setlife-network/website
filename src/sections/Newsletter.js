@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Image, Row, Col, Form
+    Image, Row, Col, Form, Button
 } from 'react-bootstrap';
 
 import NewsletterPhoto from '../assets/images/newsletterPhoto.png'
@@ -32,6 +32,12 @@ const Division = styled(Row)`
     background:${theme.colors.primary};
     padding-top:30px;
     padding-bottom:30px
+`
+
+const Submit = styled(Button)`
+    background:${theme.colors.primary};
+    color: ${theme.colors.primary}
+
 `
 
 class Newsletter extends Component {
@@ -78,16 +84,13 @@ class Newsletter extends Component {
                                 color={theme.colors.white}
                                 size={theme.sizes.regular}
                             >
-                                We'll never share your email or bother you with spam
+                                Well never share your email or bother you with spam
                             </Text>
                             <Wrapper md={4}>
-                                <Form.Control size='sm' type='text' placeholder='Enter your email' />
+                                <Form.Control id='emailHolder' size='sm' type='text' placeholder='Enter your email' />
                             </Wrapper>
                             <Wrapper md={2}>
-                                <BlankButton
-                                    description='Sign up'
-                                    url='url'
-                                />
+                                <Submit variant='primary' onClick={() => postData()} />
                             </Wrapper>
 
 
@@ -100,6 +103,33 @@ class Newsletter extends Component {
 
         )
     }
+}
+
+function checkStatus(response) {
+    if (response.ok) {
+        return Promise.resolve(response);
+    } else {
+        return Promise.reject(new Error(response.statusText));
+    }
+}
+
+function postData(e) {
+
+    const email = document.getElementById('emailHolder').value;
+
+
+    const config = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+    }
+
+    fetch('https://jsonplaceholder.typicode.com/comments', config)
+    .then(checkStatus)
+    .then(res => res.json())
+    .then(data => console.log(data))
 }
 
 export default Newsletter
