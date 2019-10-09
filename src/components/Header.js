@@ -24,6 +24,7 @@ const HeaderImage = styled(Image)`
 
 const IconImage = styled(Image)`
     height: 30px;
+    margin-right: 5px;
 `
 
 class Header extends Component {
@@ -58,7 +59,8 @@ class Header extends Component {
 
 
     render() {
-        const HEADERLINE = this.props.content.HEADERHEADLINE[0]
+        const { HEADERDROPDOWN } = this.props.content
+        const { HEADERHEADLINE } = this.props.content
         const flag = this.props.language == 'english' ? usFlag : spanishFlag
 
         return (
@@ -82,7 +84,7 @@ class Header extends Component {
                                             <Text
                                                 alignment='center'
                                             >
-                                                {HEADERLINE.slogan}
+                                                {HEADERHEADLINE.slogan}
                                             </Text>
 
                                         </Row>
@@ -98,9 +100,11 @@ class Header extends Component {
                             <DropdownButton size='sm' title={<IconImage src={flag} />} variant='info'>
                                 <Dropdown.Item onClick={() => this.props.changeLanguage('english')}>
                                     <IconImage src={usFlag} />
+                                    {HEADERDROPDOWN.english}
                                 </Dropdown.Item>
                                 <Dropdown.Item onClick={() => this.props.changeLanguage('spanish')}>
                                     <IconImage src={spanishFlag} />
+                                    {HEADERDROPDOWN.spanish}
                                 </Dropdown.Item>
                             </DropdownButton>
                         </Navbar.Collapse>

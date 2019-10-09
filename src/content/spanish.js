@@ -76,11 +76,15 @@ const HEADERBUTTON = [
     }
 ]
 
-const HEADERHEADLINE = [
-    {
-        slogan: 'People over profit'
-    }
-]
+const HEADERHEADLINE = {
+    slogan: 'People over profit'
+}
+
+
+const HEADERDROPDOWN = {
+    english: 'inglés',
+    spanish: 'español'
+}
 
 const HEADERLINKS = [
     {
@@ -252,6 +256,7 @@ export default {
     HEADERBUTTON,
     HEADERHEADLINE,
     HEADERLINKS,
+    HEADERDROPDOWN,
     NEWSLETTER,
     PRINCIPALMESSAGE,
     PROGRAMSHEADLINE,
