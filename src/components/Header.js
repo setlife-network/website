@@ -58,7 +58,9 @@ class Header extends Component {
 
 
     render() {
+        const HEADERLINE = this.props.content.HEADERHEADLINE[0]
         const flag = this.props.language == 'english' ? usFlag : spanishFlag
+
         return (
             <Row>
 
@@ -80,7 +82,7 @@ class Header extends Component {
                                             <Text
                                                 alignment='center'
                                             >
-                                                People over profit
+                                                {HEADERLINE.slogan}
                                             </Text>
 
                                         </Row>

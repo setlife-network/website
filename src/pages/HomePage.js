@@ -36,17 +36,17 @@ class HomePage extends Component {
         } = this.props
         const { COOKIESCONSENT } = this.props.content
 
-        console.log('this.props');
-        console.log(this.props);
-        console.log('COOKIESCONSENT');
-        console.log(COOKIESCONSENT[0]);
         return (
             <div>
                 <CookieConsent
                     location='bottom'
                     buttonText={COOKIESCONSENT[0].agreement}
                     style={{ background: theme.colors.grey, color: 'black' }}
-                    buttonStyle={{ background: theme.colors.primary, color: theme.colors.white, fontSize: '13px' }}
+                    buttonStyle={{
+                        background: theme.colors.primary,
+                        color: theme.colors.white,
+                        fontSize: '13px'
+                    }}
                 >
                     {COOKIESCONSENT[0].description}
                 </CookieConsent>

@@ -16,7 +16,7 @@ const BLOGHEADLINE = [
 const COOKIESCONSENT = [
     {
         description: 'Esta pagina usa cookies',
-        agreement: 'Acepto' 
+        agreement: 'Acepto'
     }
 ]
 
@@ -76,6 +76,12 @@ const HEADERBUTTON = [
     }
 ]
 
+const HEADERHEADLINE = [
+    {
+        slogan: 'People over profit'
+    }
+]
+
 const HEADERLINKS = [
     {
         text: 'Mission',
@@ -92,6 +98,16 @@ const HEADERLINKS = [
         href: '#home',
         key: 'key-Programs'
     },
+]
+
+const NEWSLETTER = [
+    {
+        title: 'Interested in SetLife?',
+        headline: 'Sign up for our mailing list to receive monthly updates about our programs',
+        description: 'Well never share your email or bother you with spam',
+        placeholder: 'Enter your email',
+        buttonText: 'Signup'
+    }
 ]
 
 const PRINCIPALMESSAGE = [
@@ -234,7 +250,9 @@ export default {
     COREVALUES,
     COREVALUESHEADLINE,
     HEADERBUTTON,
+    HEADERHEADLINE,
     HEADERLINKS,
+    NEWSLETTER,
     PRINCIPALMESSAGE,
     PROGRAMSHEADLINE,
     PROGRAMSLEFT,

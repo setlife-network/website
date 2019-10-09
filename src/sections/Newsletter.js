@@ -34,17 +34,12 @@ const Division = styled(Row)`
     padding-bottom:30px
 `
 
-const Submit = styled(Button)`
-    background:${theme.colors.primary};
-    color: ${theme.colors.primary}
-
-`
 
 class Newsletter extends Component {
 
     render() {
+        const NEWSLETTER = this.props.content.NEWSLETTER[0]
         return (
-
             <Section className='Newsletter'>
 
                 <Col md={12} className='d-none d-md-flex'>
@@ -57,7 +52,7 @@ class Newsletter extends Component {
                         weight='bold'
                         size={theme.sizes.large}
                     >
-                        Interested in SetLife?
+                        {NEWSLETTER.title}
                     </Title>
 
                     <Wrapper md={2} xs={6}>
@@ -70,7 +65,7 @@ class Newsletter extends Component {
                             size={theme.sizes.regular}
 
                         >
-                            Sign up for our mailing list to receive monthly updates about our programs
+                            {NEWSLETTER.headline}
                         </Text>
                     </Wrapper>
 
@@ -84,13 +79,15 @@ class Newsletter extends Component {
                                 color={theme.colors.white}
                                 size={theme.sizes.regular}
                             >
-                                Well never share your email or bother you with spam
+                                {NEWSLETTER.description}
                             </Text>
                             <Wrapper md={4}>
-                                <Form.Control id='emailHolder' size='sm' type='text' placeholder='Enter your email' />
+                                <Form.Control id='emailHolder' size='sm' type='text' placeholder={NEWSLETTER.placeholder} />
                             </Wrapper>
                             <Wrapper md={2}>
-                                <Submit variant='primary' onClick={() => postData()} />
+                                <Button variant='info' onClick={() => postData()}>
+                                    {NEWSLETTER.buttonText}
+                                </Button>
                             </Wrapper>
 
 

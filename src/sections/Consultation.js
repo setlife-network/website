@@ -20,18 +20,14 @@ const Section = styled(Row)`
 const Wrapper = styled(Col)`
 
     float: right;
-
-
 `
 
 const ButtonWrapper = styled(Col)`
 
     float: right;
-
 `
 
 const ImageContainer = styled(Image)`
-
 
     left: 50px;
     position: absolute;
@@ -40,7 +36,6 @@ const ImageContainer = styled(Image)`
     width: 100%;
     opacity: 0.8;
     transform: skew(15deg,0deg);
-
 `
 
 const OutContainer = styled(Col)`
