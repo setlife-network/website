@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Image, Row, Col
+    Image, Row, Col, Button
 } from 'react-bootstrap';
 
-import { TEASERS, PRINCIPALMESSAGE } from '../content/constants'
 
 import TeaserTile from '../components/TeaserTile';
 import PrincipalMessage from '../components/PrincipalMessage'
@@ -21,7 +20,9 @@ const ImageContainer = styled(Image)`
 
 class Hero extends Component {
 
+
     renderPrincipalMessage = () => {
+        const { PRINCIPALMESSAGE } = this.props.content
         return PRINCIPALMESSAGE.map(t => {
             return (
                 <Col
@@ -45,6 +46,7 @@ class Hero extends Component {
     }
 
     renderTeaser = () => {
+        const { TEASERS } = this.props.content
         return TEASERS.map(t => {
             return (
                 <Col md={4} key={t.key}>

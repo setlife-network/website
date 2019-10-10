@@ -13,6 +13,13 @@ const BLOGHEADLINE = [
     }
 ]
 
+const COOKIESCONSENT = [
+    {
+        description: 'Esta pagina usa cookies',
+        agreement: 'Acepto'
+    }
+]
+
 const CONSULTATIONBUTTON = [
     {
         url: 'https://techprep.org/',
@@ -69,6 +76,16 @@ const HEADERBUTTON = [
     }
 ]
 
+const HEADERHEADLINE = {
+    slogan: 'People over profit'
+}
+
+
+const HEADERDROPDOWN = {
+    english: 'inglés',
+    spanish: 'español'
+}
+
 const HEADERLINKS = [
     {
         text: 'Mission',
@@ -85,6 +102,16 @@ const HEADERLINKS = [
         href: '#home',
         key: 'key-Programs'
     },
+]
+
+const NEWSLETTER = [
+    {
+        title: 'Interested in SetLife?',
+        headline: 'Sign up for our mailing list to receive monthly updates about our programs',
+        description: 'Well never share your email or bother you with spam',
+        placeholder: 'Enter your email',
+        buttonText: 'Signup'
+    }
 ]
 
 const PRINCIPALMESSAGE = [
@@ -156,28 +183,27 @@ const QUOTE = [
 
 const TEASERS = [
     {
-        headline: 'Tech Fundamentals',
+        headline: 'Fundamentos tecnologicos',
         description: 'We’ll teach you the core concepts you need to understand technology and anticipate the impact of its exponential growth on your daily life',
         linkTitle: 'Core curriculum',
         url: 'https://tech-education.teachable.com/',
         key: 'key-techFundamentals'
     },
     {
-        headline: 'Project-based Learning',
+        headline: 'Aprendizaje Project-based',
         description: 'We’ll help you apply new knowledge directly to existing community projects (or help you start your own!) so that you can train your skills and gain valuable work experience',
         linkTitle: 'Learn more',
         url: 'https://medium.com/the-setlife-network/an-introduction-to-project-based-learning-65b4ab70bec2',
         key: 'key-projectBasedLearning'
     },
     {
-        headline: 'Open-source Development',
+        headline: 'Desarrollo Open-source',
         description: 'With enough experience, you can use your skills to contribute to any open-source project you may be passionate about',
         linkTitle: 'Explore projects',
         url: 'https://github.com/setlife-network',
         key: 'key-OpenSourceDev'
     }
 ]
-
 
 
 const TESTIMONIALS = [
@@ -222,12 +248,16 @@ const TESTIMONIALS = [
 export default {
     BLOGBUTTON,
     BLOGHEADLINE,
+    COOKIESCONSENT,
     CONSULTATIONBUTTON,
     CONSULTATIONHEADLINE,
     COREVALUES,
     COREVALUESHEADLINE,
     HEADERBUTTON,
+    HEADERHEADLINE,
     HEADERLINKS,
+    HEADERDROPDOWN,
+    NEWSLETTER,
     PRINCIPALMESSAGE,
     PROGRAMSHEADLINE,
     PROGRAMSLEFT,

@@ -4,8 +4,6 @@ import {
     Image, Row, Col
 } from 'react-bootstrap';
 
-import { CONSULTATIONHEADLINE, CONSULTATIONBUTTON } from '../content/constants'
-
 import ConsultationPhoto from '../assets/images/consultationPhoto.png'
 
 import Headline from '../components/Headline'
@@ -22,18 +20,14 @@ const Section = styled(Row)`
 const Wrapper = styled(Col)`
 
     float: right;
-
-
 `
 
 const ButtonWrapper = styled(Col)`
 
     float: right;
-
 `
 
 const ImageContainer = styled(Image)`
-
 
     left: 50px;
     position: absolute;
@@ -42,7 +36,6 @@ const ImageContainer = styled(Image)`
     width: 100%;
     opacity: 0.8;
     transform: skew(15deg,0deg);
-
 `
 
 const OutContainer = styled(Col)`
@@ -63,6 +56,7 @@ const ColDiv = styled(Col)`
 class Consultation extends Component {
 
     renderHeadline = () => {
+        const { CONSULTATIONHEADLINE } = this.props.content
         return CONSULTATIONHEADLINE.map(t => {
             return (
                 <Row key={t.key}>
@@ -80,6 +74,7 @@ class Consultation extends Component {
     }
 
     renderButton = () => {
+        const { CONSULTATIONBUTTON } = this.props.content
         return CONSULTATIONBUTTON.map(t => {
             return (
                 <ButtonWrapper md={5} xs={12} key={t.key}>

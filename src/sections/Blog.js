@@ -10,8 +10,6 @@ import Headline from '../components/Headline'
 import theme from '../styles/theme';
 
 
-import { TESTIMONIALS, BLOGHEADLINE, BLOGBUTTON } from '../content/constants'
-
 const Section = styled.div`
     padding-top: 80px;
     padding-bottom:80px;
@@ -31,6 +29,7 @@ const ButtonDiv = styled(Col)`
 class Blog extends Component {
 
     renderHeadline = () => {
+        const { BLOGHEADLINE } = this.props.content
         return BLOGHEADLINE.map(t => {
             return (
                 <Col md={12} key={t.key}>
@@ -46,6 +45,7 @@ class Blog extends Component {
     }
 
     renderTestimonials = () => {
+        const { TESTIMONIALS } = this.props.content
         return TESTIMONIALS.map(t => {
             return (
                 <TestimonyDiv md={4} key={t.key}>
@@ -62,6 +62,7 @@ class Blog extends Component {
     }
 
     renderButton = () => {
+        const { BLOGBUTTON } = this.props.content
         return BLOGBUTTON.map(t => {
             return (
                 <ButtonDiv xs={6} md={2} key={t.key}>

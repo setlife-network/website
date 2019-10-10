@@ -77,6 +77,7 @@ module.exports = {
         'prefer-template': 'off',
         'prefer-const': 'off',
         'quote-props': 'off',
+        'react/destructuring-assignment': ['off'],
         'react/forbid-prop-types': ['off'],
         'react/jsx-filename-extension': ['off'],
         'react/jsx-space-before-closing': ['off'],
