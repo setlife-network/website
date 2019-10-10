@@ -13,6 +13,13 @@ const BLOGHEADLINE = [
     }
 ]
 
+const COOKIESCONSENT = [
+    {
+        description: 'This website uses cookies to ensure you get the best experience on our website.',
+        agreement: 'Accept'
+    }
+]
+
 const CONSULTATIONBUTTON = [
     {
         url: 'https://techprep.org/',
@@ -69,6 +76,17 @@ const HEADERBUTTON = [
     }
 ]
 
+const HEADERHEADLINE = {
+    slogan: 'People over profit'
+}
+
+
+const HEADERDROPDOWN = {
+    english: 'english',
+    spanish: 'spanish'
+}
+
+
 const HEADERLINKS = [
     {
         text: 'Curriculum',
@@ -85,6 +103,16 @@ const HEADERLINKS = [
     //     href: '#home',
     //     key: 'key-Programs'
     // },
+]
+
+const NEWSLETTER = [
+    {
+        title: 'Interested in SetLife?',
+        headline: 'Sign up for our mailing list to receive monthly updates about our programs',
+        description: 'Well never share your email or bother you with spam',
+        placeholder: 'Enter your email',
+        buttonText: 'Signup'
+    }
 ]
 
 const PRINCIPALMESSAGE = [
@@ -178,7 +206,6 @@ const TEASERS = [
 ]
 
 
-
 const TESTIMONIALS = [
     {
         name: 'Oscar Lafarga',
@@ -228,12 +255,16 @@ const TESTIMONIALS = [
 export default {
     BLOGBUTTON,
     BLOGHEADLINE,
+    COOKIESCONSENT,
     CONSULTATIONBUTTON,
     CONSULTATIONHEADLINE,
     COREVALUES,
     COREVALUESHEADLINE,
     HEADERBUTTON,
+    HEADERHEADLINE,
     HEADERLINKS,
+    HEADERDROPDOWN,
+    NEWSLETTER,
     PRINCIPALMESSAGE,
     PROGRAMSHEADLINE,
     PROGRAMSLEFT,

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Image, Row, Col, Form
+    Image, Row, Col, Form, Button
 } from 'react-bootstrap';
 
 import NewsletterPhoto from '../assets/images/newsletterPhoto.png'
@@ -34,11 +34,12 @@ const Division = styled(Row)`
     padding-bottom:30px
 `
 
+
 class Newsletter extends Component {
 
     render() {
+        const NEWSLETTER = this.props.content.NEWSLETTER[0]
         return (
-
             <Section className='Newsletter'>
 
                 <Col md={12} className='d-none d-md-flex'>
@@ -51,7 +52,7 @@ class Newsletter extends Component {
                         weight='bold'
                         size={theme.sizes.large}
                     >
-                        Interested in SetLife?
+                        {NEWSLETTER.title}
                     </Title>
 
                     <Wrapper md={2} xs={6}>
@@ -64,7 +65,7 @@ class Newsletter extends Component {
                             size={theme.sizes.regular}
 
                         >
-                            Sign up for our mailing list to receive monthly updates about our programs
+                            {NEWSLETTER.headline}
                         </Text>
                     </Wrapper>
 
@@ -78,16 +79,15 @@ class Newsletter extends Component {
                                 color={theme.colors.white}
                                 size={theme.sizes.regular}
                             >
-                                We'll never share your email or bother you with spam
+                                {NEWSLETTER.description}
                             </Text>
                             <Wrapper md={4}>
-                                <Form.Control size='sm' type='text' placeholder='Enter your email' />
+                                <Form.Control id='emailHolder' size='sm' type='text' placeholder={NEWSLETTER.placeholder} />
                             </Wrapper>
                             <Wrapper md={2}>
-                                <BlankButton
-                                    description='Sign up'
-                                    url='url'
-                                />
+                                <Button variant='info' onClick={() => postData()}>
+                                    {NEWSLETTER.buttonText}
+                                </Button>
                             </Wrapper>
 
 
@@ -100,6 +100,33 @@ class Newsletter extends Component {
 
         )
     }
+}
+
+function checkStatus(response) {
+    if (response.ok) {
+        return Promise.resolve(response);
+    } else {
+        return Promise.reject(new Error(response.statusText));
+    }
+}
+
+function postData(e) {
+
+    const email = document.getElementById('emailHolder').value;
+
+
+    const config = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
+    }
+
+    fetch('https://jsonplaceholder.typicode.com/comments', config)
+    .then(checkStatus)
+    .then(res => res.json())
+    .then(data => console.log(data))
 }
 
 export default Newsletter

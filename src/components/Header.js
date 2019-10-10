@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Image, Row, Col, Nav
+    Image, Row, Col, Nav, Button, Dropdown, ButtonGroup, DropdownButton
 } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar'
 
-import { HEADERLINKS, HEADERBUTTON } from '../content/constants'
-
 import logo from '../assets/images/logoPositive.png'
+import spanishFlag from '../assets/images/spanishFlag.png'
+import usFlag from '../assets/images/usFlag.png'
 import theme from '../styles/theme';
 import Text from './Text'
 import FilledButton from './FilledButton'
@@ -22,9 +22,15 @@ const HeaderImage = styled(Image)`
     margin-right:10px
 `
 
+const IconImage = styled(Image)`
+    height: 30px;
+    margin-right: 5px;
+`
+
 class Header extends Component {
 
     renderHeaderLinks = () => {
+        const { HEADERLINKS } = this.props.content
         return HEADERLINKS.map(t => {
             return (
                 <Nav.Link href={t.href} key={t.key}>
@@ -38,6 +44,7 @@ class Header extends Component {
     }
 
     renderHeaderButton = () => {
+        const { HEADERBUTTON } = this.props.content
         return HEADERBUTTON.map(t => {
             return (
                 <ButtonContainer key={t.key}>
@@ -50,7 +57,12 @@ class Header extends Component {
         })
     }
 
+
     render() {
+        const { HEADERDROPDOWN } = this.props.content
+        const { HEADERHEADLINE } = this.props.content
+        const flag = this.props.language == 'english' ? usFlag : spanishFlag
+
         return (
             <Row>
 
@@ -72,8 +84,9 @@ class Header extends Component {
                                             <Text
                                                 alignment='center'
                                             >
-                                                People over profit
+                                                {HEADERHEADLINE.slogan}
                                             </Text>
+
                                         </Row>
                                     </Col>
                                 </Row>
@@ -84,6 +97,16 @@ class Header extends Component {
 
                             {this.renderHeaderLinks()}
                             {/* {this.renderHeaderButton()} */}
+                            <DropdownButton size='sm' title={<IconImage src={flag} />} variant='info'>
+                                <Dropdown.Item onClick={() => this.props.changeLanguage('english')}>
+                                    <IconImage src={usFlag} />
+                                    {HEADERDROPDOWN.english}
+                                </Dropdown.Item>
+                                <Dropdown.Item onClick={() => this.props.changeLanguage('spanish')}>
+                                    <IconImage src={spanishFlag} />
+                                    {HEADERDROPDOWN.spanish}
+                                </Dropdown.Item>
+                            </DropdownButton>
                         </Navbar.Collapse>
                     </Navbar>
 
