@@ -12,6 +12,8 @@ import Title from '../components/Title';
 import Text from '../components/Text';
 import DividerLine from '../components/DividerLine';
 
+import { SITE_ROOT } from '../constants'
+
 const Section = styled(Row)`
     padding-top: 80px;
 `
@@ -36,6 +38,34 @@ const Division = styled(Row)`
 
 
 class Newsletter extends Component {
+
+    checkStatus = (response) => {
+        if (response.ok) {
+            return Promise.resolve(response);
+        } else {
+            return Promise.reject(new Error(response.statusText));
+        }
+    }
+
+    postData = (e) => {
+
+        const email = document.getElementById('emailHolder').value;
+
+
+        const config = {
+            url: SITE_ROOT,
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        }
+
+        fetch(config)
+        .then(this.checkStatus)
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }
 
     render() {
         const NEWSLETTER = this.props.content.NEWSLETTER[0]
@@ -85,7 +115,7 @@ class Newsletter extends Component {
                                 <Form.Control id='emailHolder' size='sm' type='text' placeholder={NEWSLETTER.placeholder} />
                             </Wrapper>
                             <Wrapper md={2}>
-                                <Button variant='info' onClick={() => postData()}>
+                                <Button variant='info' onClick={() => this.postData()}>
                                     {NEWSLETTER.buttonText}
                                 </Button>
                             </Wrapper>
@@ -102,31 +132,5 @@ class Newsletter extends Component {
     }
 }
 
-function checkStatus(response) {
-    if (response.ok) {
-        return Promise.resolve(response);
-    } else {
-        return Promise.reject(new Error(response.statusText));
-    }
-}
-
-function postData(e) {
-
-    const email = document.getElementById('emailHolder').value;
-
-
-    const config = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email })
-    }
-
-    fetch('https://jsonplaceholder.typicode.com/comments', config)
-    .then(checkStatus)
-    .then(res => res.json())
-    .then(data => console.log(data))
-}
 
 export default Newsletter
