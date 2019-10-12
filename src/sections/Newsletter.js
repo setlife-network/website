@@ -12,7 +12,7 @@ import Title from '../components/Title';
 import Text from '../components/Text';
 import DividerLine from '../components/DividerLine';
 
-import { SITE_ROOT } from '../constants'
+import { API_ROOT } from '../constants'
 
 const Section = styled(Row)`
     padding-top: 80px;
@@ -53,7 +53,6 @@ class Newsletter extends Component {
 
 
         const config = {
-            url: SITE_ROOT,
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -61,7 +60,7 @@ class Newsletter extends Component {
             body: JSON.stringify({ email })
         }
 
-        fetch(config)
+        fetch(`${API_ROOT}/send`, config)
         .then(this.checkStatus)
         .then(res => res.json())
         .then(data => console.log(data))
