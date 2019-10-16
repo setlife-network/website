@@ -16,6 +16,7 @@ import { API_ROOT } from '../constants'
 
 const Section = styled(Row)`
     padding-top: 80px;
+    position:relative;
 `
 
 const Wrapper = styled(Col)`
@@ -23,21 +24,24 @@ const Wrapper = styled(Col)`
 `
 
 const ImageContainer = styled(Image)`
-    width:50%;
-    height: 450px;
+    position:absolute;
+    width:40%;
     z-index:1;
-    position: absolute;
-    right:10px
-
+    right:3%;
+    bottom:8%;
 `
 const Division = styled(Row)`
     background:${theme.colors.primary};
     padding-top:30px;
-    padding-bottom:30px
+    padding-bottom:30px;
 `
 
 
 class Newsletter extends Component {
+
+    state = {
+        submitted: false
+    }
 
     checkStatus = (response) => {
         if (response.ok) {
@@ -48,7 +52,9 @@ class Newsletter extends Component {
     }
 
     postData = (e) => {
-
+        this.setState({
+            submitted: true
+        })
         const email = document.getElementById('emailHolder').value;
 
 
@@ -63,7 +69,9 @@ class Newsletter extends Component {
         fetch(`${API_ROOT}/send`, config)
         .then(this.checkStatus)
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+        })
     }
 
     render() {
@@ -71,9 +79,8 @@ class Newsletter extends Component {
         return (
             <Section className='Newsletter'>
 
-                <Col md={12} className='d-none d-md-flex'>
-                    <ImageContainer src={NewsletterPhoto} />
-                </Col>
+
+                <ImageContainer className='d-none d-md-flex' src={NewsletterPhoto} />
 
                 <Col xs={11} className='mx-auto '>
 
@@ -101,26 +108,51 @@ class Newsletter extends Component {
                 </Col>
                 <Col xl={12}>
                     <Division>
-                        <Col xs={11} className='mx-auto'>
+                        {this.state.submitted
+                            ? (
+                                <Col xs={11} className='mx-auto'>
+                                    <Text
+                                        weight='bold'
+                                        color={theme.colors.white}
+                                        size={theme.sizes.regular}
+                                    >
+                                    Thanks for suscribing!
+                                    </Text>
+                                    <Text
+                                        weight='bold'
+                                        color={theme.colors.white}
+                                        size={theme.sizes.regular}
+                                    >
+                                        {NEWSLETTER.description}
 
-                            <Text
-                                weight='bold'
-                                color={theme.colors.white}
-                                size={theme.sizes.regular}
-                            >
-                                {NEWSLETTER.description}
-                            </Text>
-                            <Wrapper md={4}>
-                                <Form.Control id='emailHolder' size='sm' type='text' placeholder={NEWSLETTER.placeholder} />
-                            </Wrapper>
-                            <Wrapper md={2}>
-                                <Button variant='info' onClick={() => this.postData()}>
-                                    {NEWSLETTER.buttonText}
-                                </Button>
-                            </Wrapper>
+                                    </Text>
 
 
-                        </Col>
+                                </Col>
+                            )
+                            : (
+                                <Col xs={11} className='mx-auto'>
+
+                                    <Text
+                                        weight='bold'
+                                        color={theme.colors.white}
+                                        size={theme.sizes.regular}
+                                    >
+                                        {NEWSLETTER.description}
+                                    </Text>
+                                    <Wrapper md={4}>
+                                        <Form.Control id='emailHolder' size='sm' type='text' placeholder={NEWSLETTER.placeholder} />
+                                    </Wrapper>
+                                    <Wrapper md={2}>
+                                        <Button variant='info' onClick={() => this.postData()}>
+                                            {NEWSLETTER.buttonText}
+                                        </Button>
+                                    </Wrapper>
+
+                                </Col>
+                            )
+                        }
+
                     </Division>
                 </Col>
 
