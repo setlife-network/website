@@ -12,8 +12,11 @@ import Title from '../components/Title';
 import Text from '../components/Text';
 import DividerLine from '../components/DividerLine';
 
+import { API_ROOT } from '../constants'
+
 const Section = styled(Row)`
     padding-top: 80px;
+    position:relative;
 `
 
 const Wrapper = styled(Col)`
@@ -21,112 +24,166 @@ const Wrapper = styled(Col)`
 `
 
 const ImageContainer = styled(Image)`
-    width:50%;
-    height: 450px;
+    position:absolute;
+    width:40%;
     z-index:1;
-    position: absolute;
-    right:10px
-
+    right:3%;
+    bottom:8%;
 `
 const Division = styled(Row)`
     background:${theme.colors.primary};
     padding-top:30px;
-    padding-bottom:30px
+    padding-bottom:30px;
 `
 
 
 class Newsletter extends Component {
 
+    constructor() {
+        super();
+        this.form = React.createRef();
+        this.validate = this.validate.bind(this);
+    }
+
+    state = {
+        submitted: false,
+    }
+
+    checkStatus = (response) => {
+        if (response.ok) {
+            return Promise.resolve(response);
+        } else {
+            return Promise.reject(new Error(response.statusText));
+        }
+    }
+
+    postData = (e) => {
+
+        const email = document.getElementById('emailHolder').value;
+        const config = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        }
+
+        fetch(`${API_ROOT}/send`, config)
+        .then(this.checkStatus)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+        this.setState({
+            submitted: true
+        })
+    }
+
+    validate() {
+        if (this.form.current.reportValidity() == true) {
+            this.postData()
+        }
+    }
+
+
     render() {
+
         const NEWSLETTER = this.props.content.NEWSLETTER[0]
+
         return (
             <Section className='Newsletter'>
-
-                <Col md={12} className='d-none d-md-flex'>
-                    <ImageContainer src={NewsletterPhoto} />
-                </Col>
-
+                <ImageContainer
+                    className='d-none d-md-flex'
+                    src={NewsletterPhoto}
+                />
                 <Col xs={11} className='mx-auto '>
-
                     <Title
                         weight='bold'
                         size={theme.sizes.large}
                     >
                         {NEWSLETTER.title}
                     </Title>
-
                     <Wrapper md={2} xs={6}>
                         <DividerLine />
                     </Wrapper>
-
                     <Wrapper md={6}>
                         <Text
                             weight='bold'
                             size={theme.sizes.regular}
-
                         >
                             {NEWSLETTER.headline}
                         </Text>
                     </Wrapper>
-
                 </Col>
                 <Col xl={12}>
                     <Division>
-                        <Col xs={11} className='mx-auto'>
+                        {this.state.submitted
+                            ? (
+                                <Col xs={11} className='mx-auto'>
+                                    <Text
+                                        weight='bold'
+                                        color={theme.colors.white}
+                                        size={theme.sizes.regular}
+                                    >
+                                    Thanks for suscribing!
+                                    </Text>
+                                    <Text
+                                        weight='bold'
+                                        color={theme.colors.white}
+                                        size={theme.sizes.regular}
+                                    >
+                                        {NEWSLETTER.description}
 
-                            <Text
-                                weight='bold'
-                                color={theme.colors.white}
-                                size={theme.sizes.regular}
-                            >
-                                {NEWSLETTER.description}
-                            </Text>
-                            <Wrapper md={4}>
-                                <Form.Control id='emailHolder' size='sm' type='text' placeholder={NEWSLETTER.placeholder} />
-                            </Wrapper>
-                            <Wrapper md={2}>
-                                <Button variant='info' onClick={() => postData()}>
-                                    {NEWSLETTER.buttonText}
-                                </Button>
-                            </Wrapper>
+                                    </Text>
 
 
-                        </Col>
+                                </Col>
+                            )
+                            : (
+                                <Col xs={11} className='mx-auto'>
+                                    <Text
+                                        weight='bold'
+                                        color={theme.colors.white}
+                                        size={theme.sizes.regular}
+                                    >
+                                        {NEWSLETTER.description}
+                                    </Text>
+                                    <Form
+                                        ref={this.form}
+                                        onSubmit={e => e.preventDefault()}
+                                    >
+                                        <Wrapper md={4}>
+                                            <Form.Control
+                                                required
+                                                id='emailHolder'
+                                                size='sm'
+                                                type='email'
+                                                placeholder={NEWSLETTER.placeholder}
+                                            />
+                                        </Wrapper>
+                                        <Wrapper md={2}>
+                                            <Button
+                                                variant='info'
+                                                type='submit'
+                                                onClick={this.validate}
+                                            >
+                                                {NEWSLETTER.buttonText}
+                                            </Button>
+                                        </Wrapper>
+                                    </Form>
+                                </Col>
+                            )
+                        }
                     </Division>
                 </Col>
-
-
             </Section>
 
         )
-    }
-}
 
-function checkStatus(response) {
-    if (response.ok) {
-        return Promise.resolve(response);
-    } else {
-        return Promise.reject(new Error(response.statusText));
-    }
-}
-
-function postData(e) {
-
-    const email = document.getElementById('emailHolder').value;
-
-
-    const config = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email })
     }
 
-    fetch('https://jsonplaceholder.typicode.com/comments', config)
-    .then(checkStatus)
-    .then(res => res.json())
-    .then(data => console.log(data))
+
 }
+
 
 export default Newsletter
