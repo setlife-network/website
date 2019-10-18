@@ -40,8 +40,9 @@ const Division = styled(Row)`
 class Newsletter extends Component {
 
     state = {
-        submitted: false
+        submitted: false,
     }
+
 
     checkStatus = (response) => {
         if (response.ok) {
@@ -51,10 +52,9 @@ class Newsletter extends Component {
         }
     }
 
+
     postData = (e) => {
-        this.setState({
-            submitted: true
-        })
+
         const email = document.getElementById('emailHolder').value;
 
 
@@ -72,10 +72,17 @@ class Newsletter extends Component {
         .then(data => {
             console.log(data)
         })
+        this.setState({
+            submitted: true
+        })
     }
 
+
     render() {
+
         const NEWSLETTER = this.props.content.NEWSLETTER[0]
+
+
         return (
             <Section className='Newsletter'>
 
@@ -140,14 +147,24 @@ class Newsletter extends Component {
                                     >
                                         {NEWSLETTER.description}
                                     </Text>
-                                    <Wrapper md={4}>
-                                        <Form.Control id='emailHolder' size='sm' type='text' placeholder={NEWSLETTER.placeholder} />
-                                    </Wrapper>
-                                    <Wrapper md={2}>
-                                        <Button variant='info' onClick={() => this.postData()}>
-                                            {NEWSLETTER.buttonText}
-                                        </Button>
-                                    </Wrapper>
+                                    <Form>
+                                        <Form.Group controlId='formBasicEmail'>
+                                            <Wrapper md={4}>
+                                                <Form.Control
+                                                    required
+                                                    id='emailHolder'
+                                                    size='sm'
+                                                    type='email'
+                                                    placeholder={NEWSLETTER.placeholder}
+                                                />
+                                            </Wrapper>
+                                            <Wrapper md={2}>
+                                                <Button variant='info' type='submit' onClick={() => this.postData()}>
+                                                    {NEWSLETTER.buttonText}
+                                                </Button>
+                                            </Wrapper>
+                                        </Form.Group>
+                                    </Form>
 
                                 </Col>
                             )
