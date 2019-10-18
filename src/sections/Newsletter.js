@@ -148,22 +148,22 @@ class Newsletter extends Component {
                                         {NEWSLETTER.description}
                                     </Text>
                                     <Form>
-                                        <Form.Group controlId='formBasicEmail'>
-                                            <Wrapper md={4}>
-                                                <Form.Control
-                                                    required
-                                                    id='emailHolder'
-                                                    size='sm'
-                                                    type='email'
-                                                    placeholder={NEWSLETTER.placeholder}
-                                                />
-                                            </Wrapper>
-                                            <Wrapper md={2}>
-                                                <Button variant='info' type='submit' onClick={() => this.postData()}>
-                                                    {NEWSLETTER.buttonText}
-                                                </Button>
-                                            </Wrapper>
-                                        </Form.Group>
+
+                                        <Wrapper md={4}>
+                                            <Form.Control
+                                                required
+                                                id='emailHolder'
+                                                size='sm'
+                                                type='email'
+                                                placeholder={NEWSLETTER.placeholder}
+                                            />
+                                        </Wrapper>
+                                        <Wrapper md={2}>
+                                            <Button variant='info' type='submit' onClick={() => this.postData()}>
+                                                {NEWSLETTER.buttonText}
+                                            </Button>
+                                        </Wrapper>
+
                                     </Form>
 
                                 </Col>
