@@ -39,10 +39,15 @@ const Division = styled(Row)`
 
 class Newsletter extends Component {
 
+    constructor() {
+        super();
+        this.form = React.createRef();
+        this.validate = this.validate.bind(this);
+    }
+
     state = {
         submitted: false,
     }
-
 
     checkStatus = (response) => {
         if (response.ok) {
@@ -52,12 +57,9 @@ class Newsletter extends Component {
         }
     }
 
-
     postData = (e) => {
 
         const email = document.getElementById('emailHolder').value;
-
-
         const config = {
             method: 'POST',
             headers: {
@@ -77,41 +79,41 @@ class Newsletter extends Component {
         })
     }
 
+    validate() {
+        if (this.form.current.reportValidity() == true) {
+            this.postData()
+        }
+    }
+
 
     render() {
 
         const NEWSLETTER = this.props.content.NEWSLETTER[0]
 
-
         return (
             <Section className='Newsletter'>
-
-
-                <ImageContainer className='d-none d-md-flex' src={NewsletterPhoto} />
-
+                <ImageContainer
+                    className='d-none d-md-flex'
+                    src={NewsletterPhoto}
+                />
                 <Col xs={11} className='mx-auto '>
-
                     <Title
                         weight='bold'
                         size={theme.sizes.large}
                     >
                         {NEWSLETTER.title}
                     </Title>
-
                     <Wrapper md={2} xs={6}>
                         <DividerLine />
                     </Wrapper>
-
                     <Wrapper md={6}>
                         <Text
                             weight='bold'
                             size={theme.sizes.regular}
-
                         >
                             {NEWSLETTER.headline}
                         </Text>
                     </Wrapper>
-
                 </Col>
                 <Col xl={12}>
                     <Division>
@@ -139,7 +141,6 @@ class Newsletter extends Component {
                             )
                             : (
                                 <Col xs={11} className='mx-auto'>
-
                                     <Text
                                         weight='bold'
                                         color={theme.colors.white}
@@ -147,8 +148,10 @@ class Newsletter extends Component {
                                     >
                                         {NEWSLETTER.description}
                                     </Text>
-                                    <Form>
-
+                                    <Form
+                                        ref={this.form}
+                                        onSubmit={e => e.preventDefault()}
+                                    >
                                         <Wrapper md={4}>
                                             <Form.Control
                                                 required
@@ -159,25 +162,27 @@ class Newsletter extends Component {
                                             />
                                         </Wrapper>
                                         <Wrapper md={2}>
-                                            <Button variant='info' type='submit' onClick={() => this.postData()}>
+                                            <Button
+                                                variant='info'
+                                                type='submit'
+                                                onClick={this.validate}
+                                            >
                                                 {NEWSLETTER.buttonText}
                                             </Button>
                                         </Wrapper>
-
                                     </Form>
-
                                 </Col>
                             )
                         }
-
                     </Division>
                 </Col>
-
-
             </Section>
 
         )
+
     }
+
+
 }
 
 
