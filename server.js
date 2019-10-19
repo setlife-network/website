@@ -4,8 +4,10 @@ var path = require('path');
 var fs = require('fs'); 
 var moment = require('moment');
 const bodyParser = require('body-parser');
+const sslRedirect = require('heroku-ssl-redirect');
 
 var app = express();
+app.use(sslRedirect())
 
 var isProduction = process.env.NODE_ENV === 'production'; 
 var port = isProduction ? process.env.PORT : 4000; 
