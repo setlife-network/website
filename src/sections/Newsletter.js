@@ -41,8 +41,6 @@ class Newsletter extends Component {
 
     constructor() {
         super();
-        this.form = React.createRef();
-        this.validate = this.validate.bind(this);
     }
 
     state = {
@@ -77,12 +75,6 @@ class Newsletter extends Component {
         this.setState({
             submitted: true
         })
-    }
-
-    validate() {
-        if (this.form.current.reportValidity() == true) {
-            this.postData()
-        }
     }
 
 
@@ -149,8 +141,7 @@ class Newsletter extends Component {
                                         {NEWSLETTER.description}
                                     </Text>
                                     <Form
-                                        ref={this.form}
-                                        onSubmit={e => e.preventDefault()}
+                                        onSubmit={this.postData}
                                     >
                                         <Wrapper md={4}>
                                             <Form.Control
@@ -165,7 +156,6 @@ class Newsletter extends Component {
                                             <Button
                                                 variant='info'
                                                 type='submit'
-                                                onClick={this.validate}
                                             >
                                                 {NEWSLETTER.buttonText}
                                             </Button>

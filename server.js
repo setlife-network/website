@@ -32,6 +32,9 @@ var whitelist = [
     'http://localhost:8080',
     'http://localhost:3000',
     'http://localhost:4000',
+    'https://setlife.network',
+    'https://info.setlife.network',
+    'https://www.setlife.network',
     'https://setlife-website.herokuapp.com/'
 ];
 var corsOptions = {
