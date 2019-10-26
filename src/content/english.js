@@ -95,7 +95,7 @@ const HEADERLINKS = [
     },
     {
         text: 'Mission',
-        href: 'https://docs.setlife.network',
+        href: 'https://info.setlife.network',
         key: 'key-Mission'
     },
     // {
