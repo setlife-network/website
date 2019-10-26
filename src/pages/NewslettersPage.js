@@ -17,7 +17,10 @@ class NewslettersPage extends Component {
         console.log('properties');
         console.log(this.props.content.COOKIESCONSENT[0].description);
         console.log(this.props.match.params.month);
-        if (this.props.match.params.month != null) { this.setState({ markdownContent: true }) }
+        if (this.props.match.params.month != null) {
+            const markdownContent = fs.readFileSync(`../content/newletter/${this.props.match.params.month}`)
+            this.setState({ markdownContent: markdownContent })
+        }
 
 
     }
