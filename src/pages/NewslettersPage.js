@@ -17,12 +17,11 @@ class NewslettersPage extends Component {
         console.log('properties');
         console.log(this.props.content.COOKIESCONSENT[0].description);
         console.log(this.props.match.params.month);
-        if (this.props.match.params.month != null) { this.setState({ markdownContent: this.props.match.params.month }) }
-        console.log('this.state');
-        console.log(this.state);
+        if (this.props.match.params.month != null) { this.setState({ markdownContent: true }) }
 
 
     }
+
 
     render() {
 
@@ -32,17 +31,26 @@ class NewslettersPage extends Component {
             changeLanguage
         } = this.props
 
-        const markdown = `
-This block of Markdown contains <a href="https://en.wikipedia.org/wiki/HTML">HTML</a>, and will require the <code>html-parser</code> AST plugin to be loaded, in addition to setting the <code class="prop">escapeHtml</code> property to false.
-`
+
+        const markdown = this.props.content.COOKIESCONSENT[0].description
 
 
         return (
             <div>
-                <Header content={content} changeLanguage={changeLanguage} language={this.props.language} />
+                <Header content={content} />
+
+                {console.log('this.state')}
+                {console.log(this.state)}
+
+                {this.state.markdownContent
+                    ? (
+                        <ReactMarkdown escapeHtml={false} source={markdown} />
 
 
-                <ReactMarkdown escapeHtml={false} source={markdown} />
+                    ) : (
+                        console.log('url no valid')
+                    )
+                }
 
 
                 <Footer content={content} />
