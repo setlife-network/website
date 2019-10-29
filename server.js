@@ -1,7 +1,7 @@
-require('dotenv').config() 
+require('dotenv').config()
 var express = require('express');
-var path = require('path'); 
-var fs = require('fs'); 
+var path = require('path');
+var fs = require('fs');
 var moment = require('moment');
 const bodyParser = require('body-parser');
 const sslRedirect = require('heroku-ssl-redirect');
@@ -9,11 +9,11 @@ const sslRedirect = require('heroku-ssl-redirect');
 var app = express();
 app.use(sslRedirect())
 
-var isProduction = process.env.NODE_ENV === 'production'; 
-var port = isProduction ? process.env.PORT : 4000; 
+var isProduction = process.env.NODE_ENV === 'production';
+var port = isProduction ? process.env.PORT : 4000;
 
 
-app.use(express.static(__dirname + '/build')); 
+app.use(express.static(__dirname + '/build'));
 app.use(bodyParser.json());
 
 app.get('*', function (req, res, next) {
@@ -50,9 +50,25 @@ var corsOptions = {
 };
 app.use(cors(corsOptions));
 
-const apiModules = require('./api/modules/'); 
+const apiModules = require('./api/modules/');
 
 app.post('/api/send/', apiModules.emailSubscriptions.subscribeNewUser);
+
+
+app.get('/api/fetchNewsletter/:month', (request, response) => {
+
+    const file = fs.readFileSync('./docs/newsletters/')
+    response.send(file)
+
+});
+
+app.get('/api/fetchAllNewsletters', (request, response) => {
+
+    const file = fs.readdirSync('./docs/newsletters/')
+    response.send(file)
+
+
+});
 
 app.listen(port, function () {
     console.log('SetLife-ReactWithApi: Server running on port ' + port);
