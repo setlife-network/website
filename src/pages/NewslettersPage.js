@@ -30,12 +30,13 @@ class NewslettersPage extends Component {
                 }
             })
             .then(response => response.text())
-            .catch(error => console.log('Looks like there was a problem!', error))
+            .catch(error => {
+                console.log('Looks like there was a problem!', error)
+                this.props.history.push('/')
+            })
             .then(response => {
-
                 const markdownContent = response
                 this.setState({ markdownContent: markdownContent })
-
             })
         }
     }
@@ -57,7 +58,7 @@ class NewslettersPage extends Component {
                 {console.log(this.state)}
 
                 {this.state.markdownContent
-                    ? (
+                    && (
                         <Row>
                             <Col />
                             <Col xs={10}>
@@ -65,13 +66,8 @@ class NewslettersPage extends Component {
                             </Col>
                             <Col />
                         </Row>
-
-
-                    ) : (
-                        <p>urlnovalid</p>
                     )
                 }
-
 
                 <Footer content={content} />
             </div>
