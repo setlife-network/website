@@ -22,23 +22,23 @@ class NewslettersPage extends Component {
         if (this.props.match.params.month != null) {
 
             fetch(`${API_ROOT}/fetchNewsletter/${this.props.match.params.month}`)
-            .then(response => response.text())
             .then(response => {
-                console.log(response);
+                if (response.ok) {
+                    return Promise.resolve(response);
+                } else {
+                    return Promise.reject(new Error(response.statusText));
+                }
+            })
+            .then(response => response.text())
+            .catch(error => console.log('Looks like there was a problem!', error))
+            .then(response => {
+
                 const markdownContent = response
                 this.setState({ markdownContent: markdownContent })
 
-                console.log('this.state');
-                console.log(this.state);
-
-
             })
-
         }
-
-
     }
-
 
     render() {
 

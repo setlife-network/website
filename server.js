@@ -58,7 +58,7 @@ app.post('/api/send/', apiModules.emailSubscriptions.subscribeNewUser);
 app.get('/api/fetchNewsletter/:month', (request, response) => {
 
 
-    const file = fs.readFileSync(`./docs/newsletters/${request.params.month}.md`, 'utf-8')
+    const file = fs.readFileSync(`./docs/newsletters/${request.params.month}.md`)
     response.send(file)
     console.log(file);
 
@@ -68,7 +68,6 @@ app.get('/api/fetchAllNewsletters', (request, response) => {
 
     const file = fs.readdirSync('./docs/newsletters/')
     response.send(file)
-
 
 });
 
