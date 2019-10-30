@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
+import { Row, Col } from 'react-bootstrap'
 import Header from '../components/Header'
 import Footer from '../sections/Footer'
+
+import { API_ROOT } from '../constants'
+
 
 const ReactMarkdown = require('react-markdown')
 const fs = require('fs')
@@ -14,12 +18,22 @@ class NewslettersPage extends Component {
 
 
     componentDidMount() {
-        console.log('properties');
-        console.log(this.props.content.COOKIESCONSENT[0].description);
-        console.log(this.props.match.params.month);
+
         if (this.props.match.params.month != null) {
-            const markdownContent = fs.readFileSync(`../content/newletter/${this.props.match.params.month}`)
-            this.setState({ markdownContent: markdownContent })
+
+            fetch(`${API_ROOT}/fetchNewsletter/${this.props.match.params.month}`)
+            .then(response => response.text())
+            .then(response => {
+                console.log(response);
+                const markdownContent = response
+                this.setState({ markdownContent: markdownContent })
+
+                console.log('this.state');
+                console.log(this.state);
+
+
+            })
+
         }
 
 
@@ -35,9 +49,6 @@ class NewslettersPage extends Component {
         } = this.props
 
 
-        const markdown = this.props.content.COOKIESCONSENT[0].description
-
-
         return (
             <div>
                 <Header content={content} />
@@ -47,11 +58,17 @@ class NewslettersPage extends Component {
 
                 {this.state.markdownContent
                     ? (
-                        <ReactMarkdown escapeHtml={false} source={markdown} />
+                        <Row>
+                            <Col />
+                            <Col xs={10}>
+                                <ReactMarkdown escapeHtml={false} source={this.state.markdownContent} />
+                            </Col>
+                            <Col />
+                        </Row>
 
 
                     ) : (
-                        console.log('url no valid')
+                        <p>urlnovalid</p>
                     )
                 }
 
