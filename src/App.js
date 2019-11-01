@@ -2,8 +2,8 @@ import React from 'react';
 import { withRouter, Route } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
+import NewsletterDetailPage from './pages/NewsletterDetailPage';
 import NewslettersPage from './pages/NewslettersPage';
-import AllNewslettersPage from './pages/AllNewslettersPage';
 
 import english from './content/english'
 import spanish from './content/spanish'
@@ -43,7 +43,7 @@ class App extends React.Component {
                     exact
                     path='/newsletters/:month'
                     render={(props) => (
-                        <NewslettersPage
+                        <NewsletterDetailPage
                             {...props}
                             content={content}
                             changeLanguage={this.changeLanguage}
@@ -55,7 +55,7 @@ class App extends React.Component {
                     exact
                     path='/newsletters'
                     render={(props) => (
-                        <AllNewslettersPage
+                        <NewslettersPage
                             {...props}
                             content={content}
                             changeLanguage={this.changeLanguage}
