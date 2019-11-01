@@ -54,9 +54,6 @@ class NewslettersPage extends Component {
             <div>
                 <Header content={content} />
 
-                {console.log('this.state')}
-                {console.log(this.state)}
-
                 {this.state.markdownContent
                     && (
                         <Row>

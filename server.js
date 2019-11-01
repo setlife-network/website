@@ -60,8 +60,7 @@ app.get('/api/fetchNewsletter/:month', (request, response) => {
 
     const file = fs.readFileSync(`./docs/newsletters/${request.params.month}.md`)
     response.send(file)
-    console.log(file);
-
+    
 });
 
 app.get('/api/fetchAllNewsletters', (request, response) => {
