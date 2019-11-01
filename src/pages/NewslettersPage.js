@@ -18,7 +18,7 @@ const Section = styled(Row)`
 class NewslettersPage extends Component {
 
     state = {
-        markdownContent: null,
+        newsletters: null,
     }
 
 
@@ -38,14 +38,14 @@ class NewslettersPage extends Component {
             this.props.history.push('/')
         })
         .then(response => {
-            const markdownContent = response
-            this.setState({ markdownContent: markdownContent })
+            const newsletters = response
+            this.setState({ newsletters: newsletters })
         })
 
     }
 
     renderNewsletters = () => {
-        return this.state.markdownContent.map(t => {
+        return this.state.newsletters.map(t => {
             var url = `/newsletters/${t}`
             url = url.slice(0, -3)
             return (
@@ -69,25 +69,25 @@ class NewslettersPage extends Component {
             <div>
                 <Header content={content} />
 
-                <Section>
-                    {this.state.markdownContent
-                        ? (
-                            <Row>
-                                <Col />
-                                <Col xs={10}>
-                                    <p>
 
-                                        {this.renderNewsletters()}
+                {this.state.newsletters
+                        && (
+                            <Section>
+                                <Row>
+                                    <Col />
+                                    <Col xs={10}>
+                                        <p>
 
-                                    </p>
-                                </Col>
-                                <Col />
-                            </Row>
-                        ) : (
-                            <p>url no valid</p>
+                                            {this.renderNewsletters()}
+
+                                        </p>
+                                    </Col>
+                                    <Col />
+                                </Row>
+                            </Section>
                         )
-                    }
-                </Section>
+                }
+
 
                 <Footer content={content} />
             </div>
