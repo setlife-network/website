@@ -34,13 +34,13 @@ class NewsletterDetailPage extends Component {
                 }
             })
             .then(response => response.text())
-            .catch(error => {
-                console.log('Looks like there was a problem!', error)
-                this.props.history.push('/')
-            })
             .then(response => {
                 const markdownContent = response
                 this.setState({ markdownContent: markdownContent })
+            })
+            .catch(error => {
+                console.log('Looks like there was a problem!', error)
+                this.props.history.push('/')
             })
         }
     }

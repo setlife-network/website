@@ -33,13 +33,13 @@ class NewslettersPage extends Component {
             }
         })
         .then(response => response.json())
-        .catch(error => {
-            console.log('Looks like there was a problem!', error)
-            this.props.history.push('/')
-        })
         .then(response => {
             const newsletters = response
             this.setState({ newsletters: newsletters })
+        })
+        .catch(error => {
+            console.log('Looks like there was a problem!', error)
+            this.props.history.push('/')
         })
 
     }
