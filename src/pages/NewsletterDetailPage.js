@@ -63,7 +63,10 @@ class NewsletterDetailPage extends Component {
                         <Section>
                             <Col />
                             <Col xs={10}>
-                                <ReactMarkdown escapeHtml={false} source={this.state.markdownContent} />
+                                <ReactMarkdown
+                                    escapeHtml={false}
+                                    source={this.state.markdownContent}
+                                />
                             </Col>
                             <Col />
                         </Section>
