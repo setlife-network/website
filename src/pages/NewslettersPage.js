@@ -6,21 +6,15 @@ import Footer from '../sections/Footer'
 
 import { API_ROOT } from '../constants'
 
-
-const ReactMarkdown = require('react-markdown')
-const fs = require('fs')
-
 const Section = styled(Row)`
     margin:50px;
 `
 
-
 class NewslettersPage extends Component {
 
     state = {
-        newsletters: null,
+        newsletters: [],
     }
-
 
     componentDidMount() {
 

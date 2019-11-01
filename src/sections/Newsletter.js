@@ -105,7 +105,7 @@ class Newsletter extends Component {
                         >
                             {NEWSLETTER.headline}
                         </Text>
-                        <Nav.Link href='/Newsletters' className='p-0'>
+                        <Nav.Link href='/newsletters' className='p-0'>
                             <Text
                                 size={theme.sizes.regular}
                             >
