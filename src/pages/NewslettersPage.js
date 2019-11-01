@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
+import styled from 'styled-components'
 import Header from '../components/Header'
 import Footer from '../sections/Footer'
 
@@ -9,6 +10,9 @@ import { API_ROOT } from '../constants'
 const ReactMarkdown = require('react-markdown')
 const fs = require('fs')
 
+const Section = styled(Row)`
+    margin:50px;
+`
 
 class NewslettersPage extends Component {
 
@@ -56,13 +60,13 @@ class NewslettersPage extends Component {
 
                 {this.state.markdownContent
                     && (
-                        <Row>
+                        <Section>
                             <Col />
                             <Col xs={10}>
                                 <ReactMarkdown escapeHtml={false} source={this.state.markdownContent} />
                             </Col>
                             <Col />
-                        </Row>
+                        </Section>
                     )
                 }
 

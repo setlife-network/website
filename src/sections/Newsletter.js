@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
-    Image, Row, Col, Form, Button
+    Image, Row, Col, Form, Button, Nav
 } from 'react-bootstrap';
 
 import NewsletterPhoto from '../assets/images/newsletterPhoto.png'
@@ -105,6 +105,14 @@ class Newsletter extends Component {
                         >
                             {NEWSLETTER.headline}
                         </Text>
+                        <Nav.Link href='/Newsletters' style={{ padding: 0 }}>
+                            <Text
+
+                                size={theme.sizes.regular}
+                            >
+                                {NEWSLETTER.pastNewsletters}
+                            </Text>
+                        </Nav.Link>
                     </Wrapper>
                 </Col>
                 <Col xl={12}>
