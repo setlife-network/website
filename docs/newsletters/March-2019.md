@@ -1,0 +1,54 @@
+# The SetLife Network
+# March 2019 Newsletter
+-------
+
+### Curriculum Development & Launch
+
+The biggest update for March lines up strongly with the broader decision to focus on the Technology Eduation elements of what we're doing. Putting together that pitch deck and collecting feedback went a long way in terms of organizing the company's goals in a presentable way. While there are lots of things mentioned in there that I'm excited about in the long-term, I want to make sure I'm alternating between planning in the macro and focusing in the micro.
+
+In practice, this means putting most everything else aside in the immediate-term and dedicating resources to establish the core educational content outlined in our curriculum and launching a live, interactive experience for people to consume the material. I honestly expected this to take a lot longer to build out software-wise but I happened to come across a platform called Teachable that provides pretty much everything we need to get a minimum viable product out to the public.
+
+If you check out [the current version of the UX here](https://tech-education.teachable.com/), you'll see the Fundamentals of Software course in both English and Spanish available for free (I also added a couple more visual aides) and then an "Advanced Topics" course that's basically meant to be a bit of an experiment to see if we can montize this from the get-go. The idea is that people could go through the free content and if they are interested enough in diving deeper into a particular topic, they can purchase 1-on-1 "focused learning" sessions with me and I'll customize some advanced material to their needs and see how viable that is to generate revenue.
+
+The next steps on this front leave me with two tasks I'm taking care of in parallel:
+
+1. Continue to develop the other 3 sets of course material, set hard deadlines, and get them into a v1.0 state before the end of April.
+2. Engage in a service agreement with a professional marketing/design/branding agency or consultant who we can work with to prepare a launch campaign to drive traffic to the Teachable page and basically run our first public pilot before the end of May 2019
+
+I'm really excited to finally be getting to this point with the curriculum! ...and circling back to focusing on the micro, my goal for Q2 2019 is to have a strong foundation for our Technology Education efforts because I think it will strengthen the impact of our Project-Based Learning programs in the future. Jumping the gun and trying to organize another program this year would probably spread me too thin and with this strategy it gives us more credibility when searching for candidates as well. We'd already have several hours worth of free content to provide foundational knowledge that contributors can then use during PBL programs to start building a skillset.
+
+### Community Building
+
+So another recent development that I've been starting to prioritize is getting more people involved with the company. It's comparable to a recruiting effort in traditional companies, but less so in the sense that we are looking to hire for specific positions. We're not necessarily a growth startup that needs to move fast and hire the best of the best, and we want to welcome anyone and everyone who's interested in our mission so they can explore more about what we do. 
+
+This is something all of us can be involved with because it's a matter of identifying with SetLife as an organization and being an advocate in general day-to-day conversation. I think the content in the pitch deck helped us all get a better sense of that and I want to encourage everyone to start adopting this mindset.
+
+I've had a couple of calls already to push this forward, but the basic process to follow for now is setting up introductions with people who seem interested and adding them to the Slack channel. If new members are interested in the activity in each channel, they can explore more on their own time and we'll make an active effort to include them in our conversations. From there, if it seems like there are indicators for mutually beneficial opportunities to work together, this could also help our recruiting and hiring efforts to get talented people into official positions so we can scale up our operations.
+
+### Spanish Association Filing
+
+Thanks to Viki's hard work as Director of International Operations, we've submitted the documentation needed for to form an association while at the same time welcoming Dave Corkle as Secretary of SetLife in Spain! While we didn't work with a professional on this first submission, the filing fee wasn't especially prohibitive to rule out just putting in our first best attempt and see if we're either accepted or at least receive some guidance from the state if we missed something or need to provide additional documentation.
+
+On the same note, I found out the IRS application for the US filing could take upto 6 months to receive a response and I'm going to look into whether there's a similar estimate for the Spanish filing.
+
+### Open-Source Development
+
+The last few minor updates I'll end with have to do with our open-source projects as well as a broader refinement of the idea of "software tooling" that we've talked about before. To make sure we keep our priorities in focus, and building tools that make software development easier requires pretty advanced engineering and project planning, I want to rebrand this part of our mission to a general support for open-source development.
+
+Projects like SetBlocks, SetBounty, SetLife Tools, etc are great to keep around because they support PBL programs in giving contributors something to work on while they're learning new skills. However for more advanced work for more experienced engineers, there are also some really great open-source projects out there that we can build on. 
+
+For example, there's a company called Blockstack that is building a platform for developing decentralized applications on top of the Bitcoin blockchain so that we can decrease the reliance on large, centralized services that are trusted to secure sensitive user data. This truly puts them on the cutting-edge of technology and I was able to contribute and successfully get a pull request merged to their Javascript library.
+
+In summary, we want SetLife to send a message of general support for open-source development and I'll leave a brief list of other contributions I made:
+
+- Implemented GitHub authentication into SetBlocks & explored a Blockstack auth integration
+- Added unit tests to SetBlocks & cleaned up some code
+- Built out a command-line-based minutes generator with cryptographic verification to sign official company documents (still need to publish this)
+
+-------
+
+Thanks for reading and I'm excited to keep pushing things forward!
+
+-------
+Oscar Lafarga
+President & CTO
