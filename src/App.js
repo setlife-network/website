@@ -2,6 +2,8 @@ import React from 'react';
 import { withRouter, Route } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
+import NewsletterDetailPage from './pages/NewsletterDetailPage';
+import NewslettersPage from './pages/NewslettersPage';
 
 import english from './content/english'
 import spanish from './content/spanish'
@@ -35,9 +37,31 @@ class App extends React.Component {
                             changeLanguage={this.changeLanguage}
                             language={this.state.language}
                         />
-
                     )}
-
+                />
+                <Route
+                    exact
+                    path='/newsletters/:month'
+                    render={(props) => (
+                        <NewsletterDetailPage
+                            {...props}
+                            content={content}
+                            changeLanguage={this.changeLanguage}
+                            language={this.state.language}
+                        />
+                    )}
+                />
+                <Route
+                    exact
+                    path='/newsletters'
+                    render={(props) => (
+                        <NewslettersPage
+                            {...props}
+                            content={content}
+                            changeLanguage={this.changeLanguage}
+                            language={this.state.language}
+                        />
+                    )}
                 />
 
 
