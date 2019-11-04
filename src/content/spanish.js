@@ -55,7 +55,7 @@ const COREVALUES = [
         key: 'key-value3'
     },
     {
-        headline: 'Sostenbilidad',
+        headline: 'Sostenibilidad',
         description: 'El rápido crecimiento de la tecnología podría resultar peligroso a nivel socioeconómico y se debería controlar mediante unos métodos de trabajo seguros y sostenibles tanto a nivel comerical como de ingeniería',
         key: 'key-value4'
     },
