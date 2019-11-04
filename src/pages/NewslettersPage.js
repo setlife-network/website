@@ -61,8 +61,11 @@ class NewslettersPage extends Component {
 
         return (
             <div>
-                <Header content={content} />
-
+                <Header
+                    content={content}
+                    changeLanguage={changeLanguage}
+                    language={this.props.language}
+                />
 
                 {this.state.newsletters
                         && (
