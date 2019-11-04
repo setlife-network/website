@@ -50,8 +50,8 @@ const COREVALUES = [
         key: 'key-value2'
     },
     {
-        headline: 'Open-source software "libre"',
-        description: 'To promote true "freedom", users must be able to run software that can be studied, changed, adapted, and distributed in any variation',
+        headline: 'Open-source software “libre”',
+        description: 'To promote true “freedom”, users must be able to run software that can be studied, changed, adapted, and distributed in any variation',
         key: 'key-value3'
     },
     {
