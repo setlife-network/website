@@ -89,6 +89,11 @@ const HEADERDROPDOWN = {
 
 const HEADERLINKS = [
     {
+        text: 'Inicio',
+        href: '/',
+        key: 'key-Home'
+    },
+    {
         text: 'Plan de estudio',
         href: 'https://tech-education.teachable.com',
         key: 'key-Curriculum'
