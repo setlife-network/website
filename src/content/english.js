@@ -112,7 +112,7 @@ const NEWSLETTER = [
         description: 'Well never share your email or bother you with spam',
         pastNewsletters: 'View all past newsletters',
         placeholder: 'Enter your email',
-        buttonText: 'Signup'
+        buttonText: 'Sign up'
     }
 ]
 
