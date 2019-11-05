@@ -115,7 +115,7 @@ const NEWSLETTER = [
     {
         title: 'Interested in SetLife?',
         headline: 'Sign up for our mailing list to receive monthly updates about our programs',
-        description: 'Well never share your email or bother you with spam',
+        description: 'We’ll never share your email or bother you with spam',
         pastNewsletters: 'View all past newsletters',
         placeholder: 'Enter your email',
         buttonText: 'Signup'
