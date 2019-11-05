@@ -50,7 +50,11 @@ class HomePage extends Component {
                 >
                     {COOKIESCONSENT[0].description}
                 </CookieConsent>
-                <Header content={content} changeLanguage={changeLanguage} language={this.props.language} />
+                <Header
+                    content={content}
+                    changeLanguage={changeLanguage}
+                    language={this.props.language}
+                />
                 <Hero content={content} />
                 <Programs content={content} />
                 <CoreValues content={content} />

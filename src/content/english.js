@@ -89,6 +89,11 @@ const HEADERDROPDOWN = {
 
 const HEADERLINKS = [
     {
+        text: 'Home',
+        href: '/',
+        key: 'key-Home'
+    },
+    {
         text: 'Curriculum',
         href: 'https://tech-education.teachable.com',
         key: 'key-Curriculum'
@@ -98,6 +103,7 @@ const HEADERLINKS = [
         href: 'https://info.setlife.network',
         key: 'key-Mission'
     },
+
     // {
     //     text: 'Programs',
     //     href: '#home',
