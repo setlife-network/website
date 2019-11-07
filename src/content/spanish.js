@@ -220,6 +220,12 @@ const TESTIMONIALS = [
         portrait: 'https://user-images.githubusercontent.com/4914611/63651576-6e1cb200-c756-11e9-88f2-87cb80faa5a1.png'
     },
     {
+        name: 'Dave Corkle',
+        quote: '',
+        date: 'Director',
+        portrait: 'https://user-images.githubusercontent.com/4914611/63651576-6e1cb200-c756-11e9-88f2-87cb80faa5a1.png'
+    },
+    {
         name: 'Viki Lafarga',
         quote: 'La prueba que hicimos SetLife con el aprendizaje basado en proyectos para mí fue una oportunidad única porque a la vez que aprendía estaba ganando experiencia laboral en muchos campos a la vez, como la gobernanza empresarial, la programación y el diseño, la productividad y la gestión de equipos entre otros. Me interesa especialmente cómo todos los aspectos de una organización interactúan entre sí y en trabajar en todas esas interfaces, entonces me sentía muy agradecida de trabajar en un ambiente en el que todos nosotros como equipo nos reuníamos todas las semanas y aprendíamos lo que estaban haciendo lo demás. Y no solo lo que hacían sino los obstáculos que encontraban en el camino, cosa que creo que nos fortalece como equipo. Realmente no es algo que muchas personas puedan experimentar en una sociedad donde el trabajo se divide tan marcadamente en departamentos especializados.',
         date: 'Dir. de operaciones internacionales',

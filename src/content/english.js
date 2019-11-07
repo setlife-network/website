@@ -221,6 +221,12 @@ const TESTIMONIALS = [
         portrait: 'https://user-images.githubusercontent.com/4914611/63651576-6e1cb200-c756-11e9-88f2-87cb80faa5a1.png'
     },
     {
+        name: 'Dave Corkle',
+        quote: '',
+        date: 'Director',
+        portrait: 'https://user-images.githubusercontent.com/4914611/63651576-6e1cb200-c756-11e9-88f2-87cb80faa5a1.png'
+    },
+    {
         name: 'Viki Lafarga',
         quote: 'The SetLife Network’s project-based learning trial was a unique opportunity for me in that I was both learning about and gaining work experience in several areas at once: corporate governance, programming and design, productivity, team management, and more. I am particularly interested in how the different areas that make up an organization interact together and in working at those intersections, so I was grateful for a work environment where I had to sync up with my team every week and learn about what else was going on . And not just what my coworkers were doing but also what obstacles they were coming up against, which I think makes for more solid teamwork. That’s really not something most people get to experience in a society where work is mostly specialized into separate departments.',
         date: 'Dir. of International Operations',
