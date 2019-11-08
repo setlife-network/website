@@ -217,50 +217,50 @@ const TESTIMONIALS = [
         name: 'Oscar Lafarga',
         quote: 'SetLife representa para mí un compromiso a largo plazo hacia un futuro mas sostenible en cuanto a la tecnología y el impacto que tiene en la sociedad. Hoy en día, cuando la información y la comunicación se mueven a la velocidad de la luz, limitar el aprendizaje a el aula nos impedirá a la hora de enfrentar los problemas globales que están surgiendo. Mi objectivo es incentivar la enseñanza y situarla entre las profesiones mas valoradas y bien remuneradas y así desmantelar las estructuras que han permitido que se acumulara el poder en las manos de pocos y que perpetúan la desigualdad de riqueza a nivel global',
         date: 'Presidente y CTO',
-        portrait: 'https://user-images.githubusercontent.com/4914611/63651576-6e1cb200-c756-11e9-88f2-87cb80faa5a1.png'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68433886-0808ce00-018e-11ea-9818-64cd4372bdc6.png'
     },
     {
         name: 'Dave Corkle',
         quote: '',
         date: 'Director',
-        portrait: 'https://user-images.githubusercontent.com/4914611/63651576-6e1cb200-c756-11e9-88f2-87cb80faa5a1.png'
+        portrait: ''
     },
     {
         name: 'Viki Lafarga',
         quote: 'La prueba que hicimos SetLife con el aprendizaje basado en proyectos para mí fue una oportunidad única porque a la vez que aprendía estaba ganando experiencia laboral en muchos campos a la vez, como la gobernanza empresarial, la programación y el diseño, la productividad y la gestión de equipos entre otros. Me interesa especialmente cómo todos los aspectos de una organización interactúan entre sí y en trabajar en todas esas interfaces, entonces me sentía muy agradecida de trabajar en un ambiente en el que todos nosotros como equipo nos reuníamos todas las semanas y aprendíamos lo que estaban haciendo lo demás. Y no solo lo que hacían sino los obstáculos que encontraban en el camino, cosa que creo que nos fortalece como equipo. Realmente no es algo que muchas personas puedan experimentar en una sociedad donde el trabajo se divide tan marcadamente en departamentos especializados.',
         date: 'Dir. de operaciones internacionales',
-        portrait: 'https://media.licdn.com/dms/image/C4D03AQHFpkfc8bQt5g/profile-displayphoto-shrink_800_800/0?e=1572480000&v=beta&t=-J7whAKcGixu0JyYzmVFXJgxPyD667cw5qNq580GmMA'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434040-5fa73980-018e-11ea-9ab5-079506b65ad2.jpg'
     },
     {
         name: 'Quinn Pruitt',
         quote: 'El aprendizaje basado en proyectos es en definitivo la forma mas efectiva para aprender a programar. En 7 semanas he aprendido mas sobre el desarrollo backend y la gestión de producto que en un semestre universitario. Los proyectos me retaron pero terminarlos era muy gratificante. Tenía un nivel de autonomía y responsabilidad personal que me daba una sensación importante de autoría sobre mi trabajo y que me ayudo a crecer y a conseguir mis objetivos. Recomendaría este programa a quien busque elevar sus habilidades profesionales en un ambiente de aprendizaje divertido y interesante.',
         date: 'Asesor técnico',
-        portrait: 'https://media.licdn.com/dms/image/C5603AQEtPbVdzw90IQ/profile-displayphoto-shrink_800_800/0?e=1572480000&v=beta&t=FQ4lOzdfOXfou0PvkotYPpP59hdqDXFEJsntss3b7q4'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68435657-39839880-0192-11ea-95ab-43c9f1bd8c91.jpg'
     },
     {
         name: 'David Lafarga',
         quote: '',
         date: 'Fundador y colaborador',
-        portrait: 'https://user-images.githubusercontent.com/4914611/65235439-e61c9480-dad6-11e9-9b61-8f705cdd7050.png',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434298-ff64c780-018e-11ea-98ad-56d68c3275b4.png',
         // portrait: 'https://user-images.githubusercontent.com/4914611/65234991-01d36b00-dad6-11e9-949e-a1e0709919fa.png'
     },
     {
         name: 'Sofia Rodriguez',
-        quote: '',
+        quote: 'Como colaborador, he aprendido a trabajar en equipos, usar nuevas tecnologías y organizarme para hacer que mi tiempo sea más productivo, todo mientras trabajo en proyectos reales y significativos. Ser parte del Project Based Learning me ha hecho darme cuenta de que no es necesario ser un experto en tecnología para crear productos excelentes, y lo que realmente se necesita es dedicación y el deseo de aprender algo nuevo. También me di cuenta de que hay una tonelada de recursos en Internet para aprender y pulir conocimiento.',
         date: 'Desarrolladora de software',
-        portrait: 'https://user-images.githubusercontent.com/4914611/64039373-c0950e80-cb5a-11e9-96db-3c4e553f8107.png'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68435380-8ca91b80-0191-11ea-9501-2668bb0dcd36.png'
     },
     {
         name: 'Rebeca Rubio',
         quote: '',
         date: 'Desarrolladora de software',
-        portrait: 'https://media.licdn.com/dms/image/C4D03AQFoT9fQvjPGpQ/profile-displayphoto-shrink_200_200/0?e=1572480000&v=beta&t=p-NNuPmF7ryNzLONuZ9YE28YzXTouXJa4A0mP68AVJ8'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434144-a6952f00-018e-11ea-9fcd-b00218b98c64.png'
     },
     {
         name: 'Marin Basic',
         quote: '',
         date: 'Diseñador de marca visual',
-        portrait: 'https://media.licdn.com/dms/image/C4E03AQGI2DiXXt3ldw/profile-displayphoto-shrink_200_200/0?e=1572480000&v=beta&t=sK8ZEkVTAxUH5_6oGiDX5d2VGWmjAdHIQqWN5kCveEc'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434644-dbee4c80-018f-11ea-9630-9f2ff85d9325.jpeg'
     },
 ]
 
