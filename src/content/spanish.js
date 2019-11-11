@@ -220,12 +220,6 @@ const TESTIMONIALS = [
         portrait: 'https://user-images.githubusercontent.com/49292858/68433886-0808ce00-018e-11ea-9818-64cd4372bdc6.png'
     },
     {
-        name: 'Dave Corkle',
-        quote: '',
-        date: 'Director',
-        portrait: ''
-    },
-    {
         name: 'Viki Lafarga',
         quote: 'La prueba que hicimos SetLife con el aprendizaje basado en proyectos para mí fue una oportunidad única porque a la vez que aprendía estaba ganando experiencia laboral en muchos campos a la vez, como la gobernanza empresarial, la programación y el diseño, la productividad y la gestión de equipos entre otros. Me interesa especialmente cómo todos los aspectos de una organización interactúan entre sí y en trabajar en todas esas interfaces, entonces me sentía muy agradecida de trabajar en un ambiente en el que todos nosotros como equipo nos reuníamos todas las semanas y aprendíamos lo que estaban haciendo lo demás. Y no solo lo que hacían sino los obstáculos que encontraban en el camino, cosa que creo que nos fortalece como equipo. Realmente no es algo que muchas personas puedan experimentar en una sociedad donde el trabajo se divide tan marcadamente en departamentos especializados.',
         date: 'Dir. de operaciones internacionales',
@@ -238,17 +232,23 @@ const TESTIMONIALS = [
         portrait: 'https://user-images.githubusercontent.com/49292858/68435657-39839880-0192-11ea-95ab-43c9f1bd8c91.jpg'
     },
     {
+        name: 'Sofia Rodriguez',
+        quote: 'Como colaborador, he aprendido a trabajar en equipos, usar nuevas tecnologías y organizarme para hacer que mi tiempo sea más productivo, todo mientras trabajo en proyectos reales y significativos. Ser parte del Project Based Learning me ha hecho darme cuenta de que no es necesario ser un experto en tecnología para crear productos excelentes, y lo que realmente se necesita es dedicación y el deseo de aprender algo nuevo. También me di cuenta de que hay una tonelada de recursos en Internet para aprender y pulir conocimiento.',
+        date: 'Desarrolladora de software',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68435380-8ca91b80-0191-11ea-9501-2668bb0dcd36.png'
+    },
+    {
+        name: 'Dave Corkle',
+        quote: '',
+        date: 'Director',
+        portrait: ''
+    },
+    {
         name: 'David Lafarga',
         quote: '',
         date: 'Fundador y colaborador',
         portrait: 'https://user-images.githubusercontent.com/49292858/68434298-ff64c780-018e-11ea-98ad-56d68c3275b4.png',
         // portrait: 'https://user-images.githubusercontent.com/4914611/65234991-01d36b00-dad6-11e9-949e-a1e0709919fa.png'
-    },
-    {
-        name: 'Sofia Rodriguez',
-        quote: 'Como colaborador, he aprendido a trabajar en equipos, usar nuevas tecnologías y organizarme para hacer que mi tiempo sea más productivo, todo mientras trabajo en proyectos reales y significativos. Ser parte del Project Based Learning me ha hecho darme cuenta de que no es necesario ser un experto en tecnología para crear productos excelentes, y lo que realmente se necesita es dedicación y el deseo de aprender algo nuevo. También me di cuenta de que hay una tonelada de recursos en Internet para aprender y pulir conocimiento.',
-        date: 'Desarrolladora de software',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68435380-8ca91b80-0191-11ea-9501-2668bb0dcd36.png'
     },
     {
         name: 'Rebeca Rubio',

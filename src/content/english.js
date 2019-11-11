@@ -221,12 +221,6 @@ const TESTIMONIALS = [
         portrait: 'https://user-images.githubusercontent.com/49292858/68433886-0808ce00-018e-11ea-9818-64cd4372bdc6.png'
     },
     {
-        name: 'Dave Corkle',
-        quote: '',
-        date: 'Director',
-        portrait: ''
-    },
-    {
         name: 'Viki Lafarga',
         quote: 'The SetLife Network’s project-based learning trial was a unique opportunity for me in that I was both learning about and gaining work experience in several areas at once: corporate governance, programming and design, productivity, team management, and more. I am particularly interested in how the different areas that make up an organization interact together and in working at those intersections, so I was grateful for a work environment where I had to sync up with my team every week and learn about what else was going on . And not just what my coworkers were doing but also what obstacles they were coming up against, which I think makes for more solid teamwork. That’s really not something most people get to experience in a society where work is mostly specialized into separate departments.',
         date: 'Dir. of International Operations',
@@ -236,7 +230,19 @@ const TESTIMONIALS = [
         name: 'Quinn Pruitt',
         quote: 'Project based learning is by far the most effective learning environment for software development. In seven weeks, I learned more about backend development and product management than I would have learned in an entire semester in college. The projects were quite challenging, yet incredibly rewarding. The high level of autonomy and personal responsibility provided a strong sense of ownership for my work, which I found crucial to my growth and success. I would recommend this program to anyone looking to level up their professional skills in a fun an engaging learning environment.',
         date: 'Technical Advisor',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68435657-39839880-0192-11ea-95ab-43c9f1bd8c91.jpg'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68627489-41a24780-04b4-11ea-87d4-e3a73ff96d5c.jpeg'
+    },
+    {
+        name: 'Sofia Rodriguez',
+        quote: 'As a contributor I have learned to collaborate in teams, use new technologies and organize myself to make my time more productive, all while working on real and meaningful projects. Being part of the project-based learning program has made me realize you don’t need to be an expert in technology to build great products, and what you really need is dedication and a desire of learning something new. Also I realized that are a ton of resources on the internet to learn and polish your knowledge.',
+        date: 'Software Developer',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68435380-8ca91b80-0191-11ea-9501-2668bb0dcd36.png'
+    },
+    {
+        name: 'Dave Corkle',
+        quote: '',
+        date: 'Director',
+        portrait: ''
     },
     {
         name: 'David Lafarga',
@@ -244,12 +250,6 @@ const TESTIMONIALS = [
         date: 'Founding Contributor',
         portrait: 'https://user-images.githubusercontent.com/49292858/68434298-ff64c780-018e-11ea-98ad-56d68c3275b4.png',
         // portrait: 'https://user-images.githubusercontent.com/4914611/65234991-01d36b00-dad6-11e9-949e-a1e0709919fa.png'
-    },
-    {
-        name: 'Sofia Rodriguez',
-        quote: 'As a contributor I have learned to collaborate in teams, use new technologies and organize myself to make my time more productive, all while working on real and meaningful projects. Being part of the project-based learning program has made me realize you don’t need to be an expert in technology to build great products, and what you really need is dedication and a desire of learning something new. Also I realized that are a ton of resources on the internet to learn and polish your knowledge.',
-        date: 'Software Developer',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68435380-8ca91b80-0191-11ea-9501-2668bb0dcd36.png'
     },
     {
         name: 'Rebeca Rubio',
