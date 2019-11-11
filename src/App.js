@@ -75,20 +75,18 @@ class App extends React.Component {
                         window.location.replace('https://tech-education.teachable.com/')
                     )}
                 />
-                {/*
                 <Route
                     path='/Project-Based-Learning-1-Barcelona'
                     render={() => (
-                        window.location.replace('https://info.setlife.network/Project-Based-Learning-1-Barcelona`')
+                        window.location.replace('https://info.setlife.network/Project-Based-Learning-1-Barcelona')
                     )}
                 />
                 <Route
                     path='/SetBounty-v1-Spec'
                     render={() => (
-                        window.location.replace('https://info.setlife.network/SetBounty-v1-Spec`')
+                        window.location.replace('https://info.setlife.network/SetBounty-v1-Spec')
                     )}
                 />
-                */}
             </div>
         )
     }
