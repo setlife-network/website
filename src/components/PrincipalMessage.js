@@ -50,12 +50,12 @@ const PrincipalMessage = ({
                     {description}
                 </Text>
             </Wrapper>
-            <Wrapper xs={8} md={4}>
-                <FilledButton
-                    description={buttonText}
-                    url={url}
-                />
-            </Wrapper>
+            
+            <FilledButton
+                description={buttonText}
+                url={url}
+            />
+
         </Row>
     )
 }

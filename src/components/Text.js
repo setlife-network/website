@@ -13,7 +13,7 @@ export const Text = styled.p`
     color: ${props => props.color};
     font-weight: ${props => props.weight};
     text-transform: ${props => props.uppercase ? 'uppercase' : 'normal'}
-    padding: 5px;
+
 `
 
 Text.defaultProps = {
