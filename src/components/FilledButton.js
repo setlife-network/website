@@ -11,7 +11,7 @@ const ButtonContainer = styled(Button)`
 
     background-color: ${theme.colors.primary};
     border-radius: 27px;
-    height:35px;
+    height:40px;
     border-color:${theme.colors.primary};
     padding-right:30px;
     padding-left:30px;

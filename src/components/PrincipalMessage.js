@@ -50,11 +50,15 @@ const PrincipalMessage = ({
                     {description}
                 </Text>
             </Wrapper>
-            
-            <FilledButton
-                description={buttonText}
-                url={url}
-            />
+
+            <Wrapper>
+
+                <FilledButton
+                    description={buttonText}
+                    url={url}
+
+                />
+            </Wrapper>
 
         </Row>
     )

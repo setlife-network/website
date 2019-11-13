@@ -43,11 +43,12 @@ const TeaserTile = ({
                 <Title
                     bold
                     size={theme.sizes.medium}
+                    font-size='28'
                 >
                     {headline}
                 </Title>
             </TitleWrapper>
-            <TextWrapper md={12}>
+            <TextWrapper md={11}>
                 <Text
                     size={theme.sizes.small}
                 >
