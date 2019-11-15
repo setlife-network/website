@@ -21,6 +21,7 @@ const Section = styled(Row)`
 
 const Wrapper = styled(Col)`
     padding-bottom:30px
+    padding-left:0
 `
 
 const ImageContainer = styled(Image)`
