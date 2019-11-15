@@ -218,44 +218,50 @@ const TESTIMONIALS = [
         name: 'Oscar Lafarga',
         quote: 'SetLife has become my long-term commitment to a sustainable future when it comes to technology and its impact on society. In a world where information & communication moves at the speed of light, constraining our education to the classroom leaves us woefully under-equipped to deal with the major global problems we face. My goal is to incentivize teaching as one of the highest-paid and most valued professions, toppling the knowledge-hoarding power structures that sustain a global inequality of wealth',
         date: 'President & CTO',
-        portrait: 'https://user-images.githubusercontent.com/4914611/63651576-6e1cb200-c756-11e9-88f2-87cb80faa5a1.png'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68433886-0808ce00-018e-11ea-9818-64cd4372bdc6.png'
     },
     {
         name: 'Viki Lafarga',
         quote: 'The SetLife Network’s project-based learning trial was a unique opportunity for me in that I was both learning about and gaining work experience in several areas at once: corporate governance, programming and design, productivity, team management, and more. I am particularly interested in how the different areas that make up an organization interact together and in working at those intersections, so I was grateful for a work environment where I had to sync up with my team every week and learn about what else was going on . And not just what my coworkers were doing but also what obstacles they were coming up against, which I think makes for more solid teamwork. That’s really not something most people get to experience in a society where work is mostly specialized into separate departments.',
         date: 'Dir. of International Operations',
-        portrait: 'https://media.licdn.com/dms/image/C4D03AQHFpkfc8bQt5g/profile-displayphoto-shrink_800_800/0?e=1572480000&v=beta&t=-J7whAKcGixu0JyYzmVFXJgxPyD667cw5qNq580GmMA'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434040-5fa73980-018e-11ea-9ab5-079506b65ad2.jpg'
     },
     {
         name: 'Quinn Pruitt',
         quote: 'Project based learning is by far the most effective learning environment for software development. In seven weeks, I learned more about backend development and product management than I would have learned in an entire semester in college. The projects were quite challenging, yet incredibly rewarding. The high level of autonomy and personal responsibility provided a strong sense of ownership for my work, which I found crucial to my growth and success. I would recommend this program to anyone looking to level up their professional skills in a fun an engaging learning environment.',
         date: 'Technical Advisor',
-        portrait: 'https://media.licdn.com/dms/image/C5603AQEtPbVdzw90IQ/profile-displayphoto-shrink_800_800/0?e=1572480000&v=beta&t=FQ4lOzdfOXfou0PvkotYPpP59hdqDXFEJsntss3b7q4'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68627489-41a24780-04b4-11ea-87d4-e3a73ff96d5c.jpeg'
+    },
+    {
+        name: 'Sofia Rodriguez',
+        quote: 'As a contributor I have learned to collaborate in teams, use new technologies and organize myself to make my time more productive, all while working on real and meaningful projects. Being part of the project-based learning program has made me realize you don’t need to be an expert in technology to build great products, and what you really need is dedication and a desire of learning something new. Also I realized that are a ton of resources on the internet to learn and polish your knowledge.',
+        date: 'Software Developer',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68435380-8ca91b80-0191-11ea-9501-2668bb0dcd36.png'
+    },
+    {
+        name: 'Dave Corkle',
+        quote: '',
+        date: 'Director',
+        portrait: ''
     },
     {
         name: 'David Lafarga',
         quote: '',
         date: 'Founding Contributor',
-        portrait: 'https://user-images.githubusercontent.com/4914611/65235439-e61c9480-dad6-11e9-9b61-8f705cdd7050.png',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434298-ff64c780-018e-11ea-98ad-56d68c3275b4.png',
         // portrait: 'https://user-images.githubusercontent.com/4914611/65234991-01d36b00-dad6-11e9-949e-a1e0709919fa.png'
-    },
-    {
-        name: 'Sofia Rodriguez',
-        quote: '',
-        date: 'Software Developer',
-        portrait: 'https://user-images.githubusercontent.com/4914611/64039373-c0950e80-cb5a-11e9-96db-3c4e553f8107.png'
     },
     {
         name: 'Rebeca Rubio',
         quote: '',
         date: 'Software Developer',
-        portrait: 'https://media.licdn.com/dms/image/C4D03AQFoT9fQvjPGpQ/profile-displayphoto-shrink_200_200/0?e=1572480000&v=beta&t=p-NNuPmF7ryNzLONuZ9YE28YzXTouXJa4A0mP68AVJ8'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434144-a6952f00-018e-11ea-9fcd-b00218b98c64.png'
     },
     {
         name: 'Marin Basic',
         quote: '',
         date: 'Visual Brand Developer',
-        portrait: 'https://media.licdn.com/dms/image/C4E03AQGI2DiXXt3ldw/profile-displayphoto-shrink_200_200/0?e=1572480000&v=beta&t=sK8ZEkVTAxUH5_6oGiDX5d2VGWmjAdHIQqWN5kCveEc'
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434644-dbee4c80-018f-11ea-9630-9f2ff85d9325.jpeg'
     },
 ]
 
