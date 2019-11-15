@@ -39,7 +39,6 @@ const Headline = ({
                     <DividerLine />
                 </Col>
             )}
-
             <Holder md={12}>
                 <Title
                     color={color}

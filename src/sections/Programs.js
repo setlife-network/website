@@ -25,7 +25,7 @@ class Programs extends Component {
         const { PROGRAMSHEADLINE } = this.props.content
         return PROGRAMSHEADLINE.map(t => {
             return (
-                <Col md={12} key={t.key}>
+                <Col xs={12} key={t.key}>
                     <Headline
                         headline={t.headline}
                         color={theme.colors.black}
@@ -83,7 +83,7 @@ class Programs extends Component {
 
             <Section
                 back={theme.colors.grey}
-                className='Programs'
+                
             >
                 <Col xs={10} md={8} className='mx-auto'>
                     <Row>
