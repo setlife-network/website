@@ -38,7 +38,7 @@ const Quote = ({
                     </Col>
                     <Col md={6}>
                         <Row>
-                            <Container md={12}>
+                            <Col md={12}>
                                 <Title
                                     left
                                     color={theme.colors.primary}
@@ -47,10 +47,10 @@ const Quote = ({
                                 >
                                     {headline}
                                 </Title>
-                            </Container>
-                            <Col md={2} xs={6}>
-                                <DividerLine />
                             </Col>
+                            <Container md={2} xs={6}>
+                                <DividerLine />
+                            </Container>
                             <Container md={12}>
                                 <Text>
                                     {author}
