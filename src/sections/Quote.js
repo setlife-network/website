@@ -20,6 +20,9 @@ const Section = styled(Row)`
     padding-bottom:80px;
 
 `
+const Container = styled(Col)`
+    margin-top:20px
+`
 
 const Quote = ({
     headline,
@@ -35,26 +38,27 @@ const Quote = ({
                     </Col>
                     <Col md={6}>
                         <Row>
-                            <Col md={12}>
+                            <Container md={12}>
                                 <Title
                                     left
                                     color={theme.colors.primary}
                                     size={theme.sizes.quote}
+                                    margin
                                 >
                                     {headline}
                                 </Title>
-                            </Col>
+                            </Container>
                             <Col md={2} xs={6}>
                                 <DividerLine />
                             </Col>
-                            <Col md={12}>
+                            <Container md={12}>
                                 <Text>
                                     {author}
                                 </Text>
                                 <Text>
                                     {company}
                                 </Text>
-                            </Col>
+                            </Container>
                         </Row>
                     </Col>
                 </Row>
