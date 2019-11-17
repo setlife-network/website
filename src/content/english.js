@@ -50,8 +50,8 @@ const COREVALUES = [
         key: 'key-value2'
     },
     {
-        headline: 'Open-source software "libre"',
-        description: 'To promote true "freedom", users must be able to run software that can be studied, changed, adapted, and distributed in any variation',
+        headline: 'Open-source software “libre”',
+        description: 'To promote true “freedom”, users must be able to run software that can be studied, changed, adapted, and distributed in any variation',
         key: 'key-value3'
     },
     {
@@ -118,7 +118,7 @@ const NEWSLETTER = [
         description: 'We’ll never share your email or bother you with spam',
         pastNewsletters: 'View all past newsletters',
         placeholder: 'Enter your email',
-        buttonText: 'Signup'
+        buttonText: 'Sign up'
     }
 ]
 
