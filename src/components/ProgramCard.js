@@ -28,17 +28,14 @@ const ImageContainer = styled('div')`
 const TitleWrapper = styled(Col)`
     height:120px;
     margin-top:5px
-
 `
 
 const ConstantWrapper = styled(Col)`
     min-height:160px
-
 `
 
 const DividerWrapper = styled(Col)`
     margin-left: -15px
-
 `
 
 

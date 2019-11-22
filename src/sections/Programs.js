@@ -13,9 +13,9 @@ const Section = styled(Row)`
     padding-bottom:80px;
     background: ${props => props.back}
 `
-const CardDiv = styled(Col)`
-    margin-top: ${props => props.top};
-    margin-bottom: ${props => props.bottom};
+
+const TileCol = styled(Col)`
+    margin-top: 50px;
 
 `
 
@@ -41,10 +41,7 @@ class Programs extends Component {
         const { PROGRAMSLEFT } = this.props.content
         return PROGRAMSLEFT.map(t => {
             return (
-                <CardDiv
-                    top='60px'
-                    key={t.key}
-                >
+                <Col>
                     <ProgramCard
                         headline={t.headline}
                         description={t.description}
@@ -53,7 +50,7 @@ class Programs extends Component {
                         color={theme.colors.primary}
                         image={t.image}
                     />
-                </CardDiv>
+                </Col>
             )
         })
     }
@@ -62,10 +59,7 @@ class Programs extends Component {
         const { PROGRAMSRIGHT } = this.props.content
         return PROGRAMSRIGHT.map(t => {
             return (
-                <CardDiv
-                    bottom='60px'
-                    key={t.key}
-                >
+                <Col>
                     <ProgramCard
                         headline={t.headline}
                         description={t.description}
@@ -74,7 +68,7 @@ class Programs extends Component {
                         color={theme.colors.primary}
                         image={t.image}
                     />
-                </CardDiv>
+                </Col>
             )
         })
     }
@@ -90,11 +84,11 @@ class Programs extends Component {
                 <Col xs={10} md={8} className='mx-auto'>
                     <Row>
                         {this.renderHeadline()}
-                        <Col md={6}>
+                        <TileCol md={6}>
 
                             {this.renderProgramsLeft()}
 
-                        </Col>
+                        </TileCol>
                         <Col md={6}>
 
                             {this.renderProgramsRight()}
