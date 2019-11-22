@@ -36,6 +36,7 @@ const ValueTile = ({
                     <TitleWrapper md={12}>
                         <Title
                             size={theme.sizes.medium}
+                            weight='bold'
                         >
                             {headline}
                         </Title>

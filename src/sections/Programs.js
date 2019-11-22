@@ -50,6 +50,7 @@ class Programs extends Component {
                         description={t.description}
                         buttonText={t.buttonText}
                         link={t.link}
+                        color={theme.colors.primary}
                         image={t.image}
                     />
                 </CardDiv>
@@ -70,6 +71,7 @@ class Programs extends Component {
                         description={t.description}
                         buttonText={t.buttonText}
                         link={t.link}
+                        color={theme.colors.primary}
                         image={t.image}
                     />
                 </CardDiv>
@@ -83,7 +85,7 @@ class Programs extends Component {
 
             <Section
                 back={theme.colors.grey}
-                
+
             >
                 <Col xs={10} md={8} className='mx-auto'>
                     <Row>

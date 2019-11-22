@@ -50,6 +50,7 @@ const ProgramCard = ({
     link,
     image
 }) => {
+
     return (
 
 
@@ -61,7 +62,7 @@ const ProgramCard = ({
             </DividerWrapper>
             <TitleWrapper md={12}>
                 <Title
-                    bold
+                    weight='bold'
                     size={theme.sizes.medium}
                 >
                     {headline}
@@ -83,6 +84,7 @@ const ProgramCard = ({
                     description={buttonText}
                     url={link}
                     color={color}
+
                 >
                     {buttonText}
                 </LinkButton>

@@ -5,7 +5,8 @@ import {
 import theme from '../styles/theme';
 import Text from './Text';
 
-import arrow from '../assets/images/arrowRight.png'
+import arrowBlack from '../assets/images/arrowRight.png'
+import arrowBlue from '../assets/images/arrowRightBlue.png'
 
 
 const LinkButton = ({
@@ -14,6 +15,7 @@ const LinkButton = ({
     description,
     weight
 }) => {
+    console.log(color);
     return (
         <Row>
             <Col>
@@ -43,7 +45,13 @@ const LinkButton = ({
                     target='_blank'
                     rel='noopener noreferrer'
                 >
-                    <img src={arrow} alt='arrow' />
+                    {
+                        color === theme.colors.primary ? (
+                            <img src={arrowBlue} alt='arrow' />
+                        ) : (
+                            <img src={arrowBlack} alt='arrow' />
+                        )
+                    }
                 </a>
             </Col>
         </Row>

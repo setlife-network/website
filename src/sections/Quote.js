@@ -16,8 +16,8 @@ const ImageContainer = styled(Image)`
 `
 
 const Section = styled(Row)`
-    padding-top: 80px;
-    padding-bottom:80px;
+    padding-top: 40px;
+    padding-bottom:40px;
 
 `
 const Container = styled(Col)`
