@@ -89,7 +89,7 @@ class Newsletter extends Component {
                     className='d-none d-md-flex'
                     src={NewsletterPhoto}
                 />
-                <Col xs={11} className='mx-auto '>
+                <Col xs={10} className='mx-auto '>
                     <Title
                         weight='bold'
                         size={theme.sizes.large}
@@ -140,7 +140,7 @@ class Newsletter extends Component {
                                 </Col>
                             )
                             : (
-                                <Col xs={11} className='mx-auto'>
+                                <Col xs={10} className='mx-auto'>
                                     <Text
                                         weight='bold'
                                         color={theme.colors.white}

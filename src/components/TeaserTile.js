@@ -20,6 +20,12 @@ const TitleWrapper = styled(Col)`
     margin-top: 10px;
 `
 
+const Section = styled(Row)`
+
+    padding-top: 80px;
+
+`
+
 
 const TeaserTile = ({
     headline,
@@ -30,11 +36,10 @@ const TeaserTile = ({
 
     return (
 
-        <Row>
-            <Col md={2}>
+        <Row className='py-5'>
+            <Col xs={2}>
                 <DividerLine
                     color={theme.colors.primary}
-
                 />
             </Col>
             <Col md={12}>

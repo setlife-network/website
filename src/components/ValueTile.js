@@ -14,10 +14,6 @@ const ContentWrapper = styled(Col)`
     height:150px;
 `
 
-const TitleWrapper = styled(Col)`
-    height:100px;
-`
-
 const Wrapper = styled(Row)`
 
 `
@@ -27,21 +23,20 @@ const ValueTile = ({
     description
 }) => {
     return (
-        <Wrapper>
-            <Col md={2}>
+        <Row className='py-5'>
+            <Col xs={2}>
                 <img src={BlueArrow} alt='Blue Arrow' />
             </Col>
-            <Col md={10}>
+            <Col xs={10}>
                 <Row>
-                    <TitleWrapper md={12}>
+                    <Col md={12}>
                         <Title
                             size={theme.sizes.medium}
                             weight='bold'
                         >
                             {headline}
                         </Title>
-                    </TitleWrapper>
-
+                    </Col>
                     <ContentWrapper md={12}>
                         <Text>
                             {description}
@@ -50,7 +45,7 @@ const ValueTile = ({
 
                 </Row>
             </Col>
-        </Wrapper>
+        </Row>
     )
 }
 
