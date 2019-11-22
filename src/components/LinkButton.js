@@ -2,12 +2,20 @@ import React from 'react';
 import {
     Row, Col
 } from 'react-bootstrap';
+import styled from 'styled-components'
 import theme from '../styles/theme';
 import Text from './Text';
-
 import arrowBlack from '../assets/images/arrowRight.png'
 import arrowBlue from '../assets/images/arrowRightBlue.png'
 
+const Container = styled(Row)`
+    display: flex;
+    align-items: baseline;
+`
+
+const Image = styled.img`
+    margin-left:30px
+`
 
 const LinkButton = ({
     color,
@@ -15,16 +23,17 @@ const LinkButton = ({
     description,
     weight
 }) => {
-    console.log(color);
+
     return (
-        <Row>
-            <Col>
-                <a
-                    href={url}
-                    style={{ textDecoration: 'none' }}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
+
+        <Col>
+            <a
+                href={url}
+                style={{ textDecoration: 'none' }}
+                target='_blank'
+                rel='noopener noreferrer'
+            >
+                <Container>
                     <Text
                         weight={weight}
                         uppercase
@@ -34,27 +43,18 @@ const LinkButton = ({
                         {description}
                     </Text>
 
-                </a>
-            </Col>
-            <Col
-                md={3}
-            >
-                <a
-                    href={url}
-                    style={{ textDecoration: 'none' }}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
                     {
                         color === theme.colors.primary ? (
-                            <img src={arrowBlue} alt='arrow' />
+                            <Image src={arrowBlue} alt='arrow' />
                         ) : (
-                            <img src={arrowBlack} alt='arrow' />
+                            <Image src={arrowBlack} alt='arrow' />
                         )
                     }
-                </a>
-            </Col>
-        </Row>
+                </Container>
+            </a>
+        </Col>
+
+
     )
 }
 

@@ -12,7 +12,7 @@ import Title from './Title';
 import Text from './Text';
 
 const TextWrapper = styled(Col)`
-    height:140px
+    height:150px
 `
 
 const TitleWrapper = styled(Col)`
@@ -21,9 +21,7 @@ const TitleWrapper = styled(Col)`
 `
 
 const Section = styled(Row)`
-
     padding-top: 80px;
-
 `
 
 
@@ -61,11 +59,13 @@ const TeaserTile = ({
                 </Text>
             </TextWrapper>
             <Col>
+
                 <LinkButton
                     description={buttonText}
                     url={link}
                     color={theme.colors.black}
                 />
+
             </Col>
         </Row>
 
