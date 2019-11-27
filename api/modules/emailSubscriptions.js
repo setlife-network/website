@@ -22,7 +22,7 @@ const emailSubscriptions = module.exports = (() => {
                             from: 'contact@setlife.education',
                             subject: 'Setlife Newsletter',
                             text: 'Contact form submitted successfully',
-        
+
                         },
                         {
                             to: 'social@setlife.network',
@@ -31,15 +31,20 @@ const emailSubscriptions = module.exports = (() => {
                             text: 'New users email: ' + record.fields.Email,
                         },
                     ]
-                
+
                 })
-            )                
+            )
         })
         .then(sendgridResponse => {
             res.json({ message: 'Success' })
         })
     }
-    //method to insert Date in airtable 
+
+    const unsuscribeUser = module.exports = (() => {
+
+    })
+
+    //method to insert Date in airtable
     function currentDate() {
         var d = new Date();
         var date = [
@@ -52,6 +57,7 @@ const emailSubscriptions = module.exports = (() => {
 
     return {
         subscribeNewUser,
+        unsuscribeUser
 
 
     };

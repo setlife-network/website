@@ -54,13 +54,14 @@ const apiModules = require('./api/modules/');
 
 app.post('/api/send/', apiModules.emailSubscriptions.subscribeNewUser);
 
+app.post('/api/send/', apiModules.emailSubscriptions.unsuscribeUser);
+
 
 app.get('/api/fetchNewsletter/:month', (request, response) => {
 
-
     const file = fs.readFileSync(`./docs/newsletters/${request.params.month}.md`)
     response.send(file)
-    
+
 });
 
 app.get('/api/fetchAllNewsletters', (request, response) => {
