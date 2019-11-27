@@ -1,16 +1,15 @@
-const Airtable= require('airtable');
+const Airtable = require('airtable');
 const {
     AIRTABLE
 } = require('../../config/credentials')
 
-const base = new Airtable({apiKey: AIRTABLE.API_KEY
-}).base(AIRTABLE.BASE_ID);
+const base = new Airtable({ apiKey: AIRTABLE.API_KEY }).base(AIRTABLE.BASE_ID);
 
 const airtable = module.exports = (function () {
 
     const createRecord = (params) => {
         return new Promise((resolve, reject) => {
-            
+
             base(params.tableName)
             .create({
                 ...params.fieldData
@@ -22,12 +21,12 @@ const airtable = module.exports = (function () {
                     resolve(record)
                 }
             })
-            
+
         });
     };
     return {
         createRecord,
-        
+
     };
 
 })();
