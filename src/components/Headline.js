@@ -44,16 +44,16 @@ const Headline = ({
                     color={color}
                     weight={weight}
                     alignment={alignment}
-                    size={theme.sizes.large}
+                    size={theme.sizes.h2}
                 >
                     {headline}
                 </Title>
             </Holder>
             <Holder md={12}>
-                <Text 
+                <Text
                     color={color}
                     alignment={alignment}
-                    size={theme.sizes.regular}
+                    size={theme.sizes.subtitle}
                 >
                     {description}
                 </Text>

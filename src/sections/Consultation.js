@@ -69,19 +69,17 @@ class Consultation extends Component {
                                 headline={t.headline}
                                 color={theme.colors.white}
                                 description={t.description}
-                                alignment='left'
+                                alignment='center'
                             />
                         ) : (
                             <Headline
                                 headline={t.headline}
                                 color={theme.colors.white}
                                 description={t.description}
-                                alignment='center'
+                                alignment='right'
                             />
                         )
                         }
-
-
                     </Wrapper>
                 </Row>
             )

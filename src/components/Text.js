@@ -22,7 +22,7 @@ Text.defaultProps = {
     uppercase: false,
     color: theme.colors.black,
     alignment: 'left',
-    fontSize: theme.sizes.small,
+    fontSize: theme.sizes.body,
     className: 'Text',
 
 }

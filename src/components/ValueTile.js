@@ -31,7 +31,7 @@ const ValueTile = ({
                 <Row>
                     <Col md={12}>
                         <Title
-                            size={theme.sizes.medium}
+                            size={theme.sizes.h3}
                             weight='bold'
                         >
                             {headline}
