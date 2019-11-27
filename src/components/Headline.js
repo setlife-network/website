@@ -50,7 +50,7 @@ const Headline = ({
                 </Title>
             </Holder>
             <Holder md={12}>
-                <Text
+                <Text 
                     color={color}
                     alignment={alignment}
                     size={theme.sizes.regular}
