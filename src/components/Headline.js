@@ -16,6 +16,7 @@ const Wrapper = styled(Row)`
 const Holder = styled(Col)`
     text-align: center;
     margin: auto;
+    margin:10px
 
 `
 

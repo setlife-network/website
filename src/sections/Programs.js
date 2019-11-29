@@ -31,6 +31,7 @@ class Programs extends Component {
                         color={theme.colors.black}
                         description={t.description}
                         alignment='center'
+                        weight='bold'
                     />
                 </Col>
             )
