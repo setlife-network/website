@@ -12,12 +12,16 @@ import Title from './Title';
 import Text from './Text';
 
 const TextWrapper = styled(Col)`
-    height:140px
+    height:150px
 `
 
 const TitleWrapper = styled(Col)`
     height:100px
     margin-top: 10px;
+`
+
+const Section = styled(Row)`
+    padding-top: 80px;
 `
 
 
@@ -30,11 +34,10 @@ const TeaserTile = ({
 
     return (
 
-        <Row>
-            <Col md={2}>
+        <Row className='py-5'>
+            <Col xs={2}>
                 <DividerLine
                     color={theme.colors.primary}
-
                 />
             </Col>
             <Col md={12}>
@@ -42,24 +45,26 @@ const TeaserTile = ({
             <TitleWrapper md={9}>
                 <Title
                     bold
-                    size={theme.sizes.medium}
+                    size={theme.sizes.h3}
                 >
                     {headline}
                 </Title>
             </TitleWrapper>
-            <TextWrapper md={12}>
+            <TextWrapper md={11}>
                 <Text
-                    size={theme.sizes.small}
+                    size={theme.sizes.body}
                 >
                     {intro}
                 </Text>
             </TextWrapper>
             <Col>
+
                 <LinkButton
                     description={buttonText}
                     url={link}
                     color={theme.colors.black}
                 />
+
             </Col>
         </Row>
 

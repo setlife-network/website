@@ -21,6 +21,7 @@ const Section = styled(Row)`
 
 const Wrapper = styled(Col)`
     padding-bottom:30px
+    padding-left:0
 `
 
 const ImageContainer = styled(Image)`
@@ -88,10 +89,10 @@ class Newsletter extends Component {
                     className='d-none d-md-flex'
                     src={NewsletterPhoto}
                 />
-                <Col xs={11} className='mx-auto '>
+                <Col xs={10} className='mx-auto '>
                     <Title
                         weight='bold'
-                        size={theme.sizes.large}
+                        size={theme.sizes.h2}
                     >
                         {NEWSLETTER.title}
                     </Title>
@@ -101,13 +102,13 @@ class Newsletter extends Component {
                     <Wrapper md={6}>
                         <Text
                             weight='bold'
-                            size={theme.sizes.regular}
+                            size={theme.sizes.body}
                         >
                             {NEWSLETTER.headline}
                         </Text>
                         <Nav.Link href='/newsletters' className='p-0'>
                             <Text
-                                size={theme.sizes.regular}
+                                size={theme.sizes.body}
                             >
                                 {NEWSLETTER.pastNewsletters}
                             </Text>
@@ -122,14 +123,14 @@ class Newsletter extends Component {
                                     <Text
                                         weight='bold'
                                         color={theme.colors.white}
-                                        size={theme.sizes.regular}
+                                        size={theme.sizes.body}
                                     >
                                     Thanks for suscribing!
                                     </Text>
                                     <Text
                                         weight='bold'
                                         color={theme.colors.white}
-                                        size={theme.sizes.regular}
+                                        size={theme.sizes.body}
                                     >
                                         {NEWSLETTER.description}
 
@@ -139,11 +140,11 @@ class Newsletter extends Component {
                                 </Col>
                             )
                             : (
-                                <Col xs={11} className='mx-auto'>
+                                <Col xs={10} className='mx-auto'>
                                     <Text
                                         weight='bold'
                                         color={theme.colors.white}
-                                        size={theme.sizes.regular}
+                                        size={theme.sizes.body}
                                     >
                                         {NEWSLETTER.description}
                                     </Text>

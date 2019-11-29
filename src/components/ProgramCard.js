@@ -26,19 +26,16 @@ const ImageContainer = styled('div')`
 `
 
 const TitleWrapper = styled(Col)`
-    height:120px;
+    height:140px;
     margin-top:5px
-
 `
 
 const ConstantWrapper = styled(Col)`
     min-height:160px
-
 `
 
 const DividerWrapper = styled(Col)`
     margin-left: -15px
-
 `
 
 
@@ -50,6 +47,7 @@ const ProgramCard = ({
     link,
     image
 }) => {
+
     return (
 
 
@@ -61,8 +59,8 @@ const ProgramCard = ({
             </DividerWrapper>
             <TitleWrapper md={12}>
                 <Title
-                    bold
-                    size={theme.sizes.medium}
+                    weight='bold'
+                    size={theme.sizes.h3}
                 >
                     {headline}
                 </Title>
@@ -75,7 +73,7 @@ const ProgramCard = ({
             </Col>
             <ConstantWrapper xs={12} xl={7} className='pt-3 pt-xl-0'>
                 <Text
-                    size={theme.sizes.small}
+                    size={theme.sizes.body}
                 >
                     {description}
                 </Text>
@@ -83,6 +81,7 @@ const ProgramCard = ({
                     description={buttonText}
                     url={link}
                     color={color}
+
                 >
                     {buttonText}
                 </LinkButton>

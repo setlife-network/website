@@ -12,8 +12,8 @@ export const Text = styled.p`
     text-align: ${props => props.alignment};
     color: ${props => props.color};
     font-weight: ${props => props.weight};
-    text-transform: ${props => props.uppercase ? 'uppercase' : 'normal'}
-    padding: 5px;
+    text-transform: ${props => props.uppercase ? 'uppercase' : 'normal'};
+
 `
 
 Text.defaultProps = {
@@ -22,8 +22,8 @@ Text.defaultProps = {
     uppercase: false,
     color: theme.colors.black,
     alignment: 'left',
-    fontSize: theme.sizes.small,
-    className: 'Text'
+    fontSize: theme.sizes.body,
+    className: 'Text',
 
 }
 

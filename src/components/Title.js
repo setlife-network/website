@@ -15,7 +15,8 @@ Title.defaultProps = {
     weight: 'normal',
     textAlign: 'center',
     fontWeight: 'normal',
-    className: 'Title'
+    className: 'Title',
+
 }
 
 export default Title

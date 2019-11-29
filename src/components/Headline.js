@@ -16,6 +16,7 @@ const Wrapper = styled(Row)`
 const Holder = styled(Col)`
     text-align: center;
     margin: auto;
+    margin:10px
 
 `
 
@@ -39,13 +40,12 @@ const Headline = ({
                     <DividerLine />
                 </Col>
             )}
-
             <Holder md={12}>
                 <Title
                     color={color}
                     weight={weight}
                     alignment={alignment}
-                    size={theme.sizes.large}
+                    size={theme.sizes.h2}
                 >
                     {headline}
                 </Title>
@@ -54,7 +54,7 @@ const Headline = ({
                 <Text
                     color={color}
                     alignment={alignment}
-                    size={theme.sizes.regular}
+                    size={theme.sizes.subtitle}
                 >
                     {description}
                 </Text>
