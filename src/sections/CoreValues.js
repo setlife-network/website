@@ -25,6 +25,7 @@ class CoreValues extends Component {
                     <Headline
                         headline={t.headline}
                         color={theme.colors.black}
+                        weight='bold'
                     />
                 </Col>
             )

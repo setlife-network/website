@@ -16,9 +16,12 @@ const ImageContainer = styled(Image)`
 `
 
 const Section = styled(Row)`
-    padding-top: 80px;
-    padding-bottom:80px;
+    padding-top: 40px;
+    padding-bottom:40px;
 
+`
+const Container = styled(Col)`
+    margin-top:20px
 `
 
 const Quote = ({
@@ -40,21 +43,22 @@ const Quote = ({
                                     left
                                     color={theme.colors.primary}
                                     size={theme.sizes.quote}
+                                    margin
                                 >
                                     {headline}
                                 </Title>
                             </Col>
-                            <Col md={2} xs={6}>
+                            <Container md={2} xs={6}>
                                 <DividerLine />
-                            </Col>
-                            <Col md={12}>
+                            </Container>
+                            <Container md={12}>
                                 <Text>
                                     {author}
                                 </Text>
                                 <Text>
                                     {company}
                                 </Text>
-                            </Col>
+                            </Container>
                         </Row>
                     </Col>
                 </Row>

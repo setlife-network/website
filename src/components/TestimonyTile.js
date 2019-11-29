@@ -64,7 +64,7 @@ const TestimonyTile = ({
                         <Title
                             bold
                             color={theme.colors.primary}
-                            size={theme.sizes.medium}
+                            size={theme.sizes.h3}
                         >
                             {headline}
                         </Title>

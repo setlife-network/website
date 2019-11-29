@@ -55,18 +55,31 @@ const ColDiv = styled(Col)`
 
 class Consultation extends Component {
 
+
     renderHeadline = () => {
         const { CONSULTATIONHEADLINE } = this.props.content
         return CONSULTATIONHEADLINE.map(t => {
             return (
                 <Row key={t.key}>
                     <Wrapper md={12}>
-                        <Headline
-                            headline={t.headline}
-                            color={theme.colors.white}
-                            description={t.description}
-                            alignment='right'
-                        />
+
+                        {(window.innerWidth <= 400) ? (
+
+                            <Headline
+                                headline={t.headline}
+                                color={theme.colors.white}
+                                description={t.description}
+                                alignment='center'
+                            />
+                        ) : (
+                            <Headline
+                                headline={t.headline}
+                                color={theme.colors.white}
+                                description={t.description}
+                                alignment='right'
+                            />
+                        )
+                        }
                     </Wrapper>
                 </Row>
             )

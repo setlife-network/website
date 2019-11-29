@@ -24,19 +24,19 @@ const PrincipalMessage = ({
     url
 }) => {
     return (
-        <Row className='PrincipalMessage'>
+        <Row>
             <Col xs={2}>
                 <DividerLine />
             </Col>
             <Col xs={12}>
                 <Title
-                    size={theme.sizes.xlarge}
+                    size={theme.sizes.h1}
                     weight='bold'
                 >
                     {headline1}
                 </Title>
                 <Title
-                    size={theme.sizes.xlarge}
+                    size={theme.sizes.h1}
                     color={theme.colors.primary}
                     weight='bold'
                 >
@@ -45,17 +45,21 @@ const PrincipalMessage = ({
             </Col>
             <Wrapper xs={12} md={10}>
                 <Text
-                    size={theme.sizes.regular}
+                    size={theme.sizes.subtitle}
                 >
                     {description}
                 </Text>
             </Wrapper>
-            <Wrapper xs={8} md={4}>
+
+            <Wrapper>
+
                 <FilledButton
                     description={buttonText}
                     url={url}
+
                 />
             </Wrapper>
+
         </Row>
     )
 }

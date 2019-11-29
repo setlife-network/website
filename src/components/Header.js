@@ -16,6 +16,11 @@ const ButtonContainer = styled(Row)`
     margin:10px
 `
 
+const Container = styled(Row)`
+    display: flex;
+    align-items: center;
+`
+
 const HeaderImage = styled(Image)`
     height: 40px;
     margin-bottom:15px;
@@ -34,7 +39,10 @@ class Header extends Component {
         return HEADERLINKS.map(t => {
             return (
                 <Nav.Link href={t.href} key={t.key}>
-                    <Text size={theme.sizes.button}>
+                    <Text
+                        size={theme.sizes.link}
+                        weight='bold'
+                    >
                         {t.text}
                     </Text>
                 </Nav.Link>
@@ -72,24 +80,16 @@ class Header extends Component {
                             <Col xs={2}>
                                 <Navbar.Toggle />
                             </Col>
-                            <Col xs={10} md={12}>
-                                <Row>
-                                    <Col xs={7} md={6} className='mx-auto'>
-                                        <Row>
-                                            <HeaderImage src={logo} />
-                                        </Row>
-                                    </Col>
-                                    <Col xs={7} md={6} className='mx-auto'>
-                                        <Row>
-                                            <Text
-                                                alignment='center'
-                                            >
-                                                {HEADERHEADLINE.slogan}
-                                            </Text>
+                            <Col xs={{ span: 6, offset: 2 }} md={12}>
+                                <Container>
+                                    <HeaderImage src={logo} />
+                                    <Text
+                                        alignment='center'
+                                    >
+                                        {HEADERHEADLINE.slogan}
+                                    </Text>
+                                </Container>
 
-                                        </Row>
-                                    </Col>
-                                </Row>
                             </Col>
                         </Row>
 
@@ -97,6 +97,7 @@ class Header extends Component {
 
                             {this.renderHeaderLinks()}
                             {/* {this.renderHeaderButton()} */}
+
                             <DropdownButton size='sm' title={<IconImage src={flag} />} variant='info'>
                                 <Dropdown.Item onClick={() => this.props.changeLanguage('english')}>
                                     <IconImage src={usFlag} />
@@ -107,7 +108,9 @@ class Header extends Component {
                                     {HEADERDROPDOWN.spanish}
                                 </Dropdown.Item>
                             </DropdownButton>
+
                         </Navbar.Collapse>
+
                     </Navbar>
 
                 </Col>

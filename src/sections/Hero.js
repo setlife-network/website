@@ -10,7 +10,8 @@ import PrincipalMessage from '../components/PrincipalMessage'
 import HeroGraphic from '../assets/images/heroGraphic.png'
 
 const Section = styled(Row)`
-    background: ${props => props.grey ? '#EEEEEE' : 'white'}
+    background: ${props => props.grey ? '#EEEEEE' : 'white'},
+
 `
 
 const ImageContainer = styled(Image)`
