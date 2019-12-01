@@ -54,7 +54,7 @@ const apiModules = require('./api/modules/');
 
 app.post('/api/send/', apiModules.emailSubscriptions.subscribeNewUser);
 
-app.post('/api/send/', apiModules.emailSubscriptions.unsuscribeUser);
+app.post('/api/unsuscribe/', apiModules.emailSubscriptions.unsuscribeUser);
 
 
 app.get('/api/fetchNewsletter/:month', (request, response) => {
