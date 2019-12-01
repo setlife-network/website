@@ -34,7 +34,8 @@ const ConstantWrapper = styled(Col)`
 `
 
 const DividerWrapper = styled(Col)`
-    margin-right: 70%
+    margin-right:70%;
+    margin-left:-15px;
 `
 
 

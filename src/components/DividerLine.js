@@ -8,7 +8,7 @@ import theme from '../styles/theme';
 const DividerLine = styled(Row)`
     height: 1px;
     background: ${props => props.color};
-    margin-right: 0px
+    margin-left: 0px
 
 `
 
