@@ -13,7 +13,7 @@ import BlankButton from '../components/BlankButton'
 const Section = styled(Row)`
 
     background: ${theme.colors.primary};
-    height:380px
+
 
 `
 
@@ -32,7 +32,7 @@ const ImageContainer = styled(Image)`
     left: 50px;
     position: absolute;
     top: 0;
-    height: 380px;
+    height: 100%;
     width: 100%;
     opacity: 0.8;
     transform: skew(15deg,0deg);
@@ -42,7 +42,7 @@ const OutContainer = styled(Col)`
 
     position: absolute;
     margin-left: -10%;
-    min-height: 380px;
+    min-height: 100%;
     overflow: hidden;
     transform: skew(-15deg,0deg);
     background: ${theme.colors.primary}
