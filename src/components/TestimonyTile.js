@@ -7,7 +7,6 @@ import {
 
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
-import Title from './Title';
 import Text from './Text';
 
 
@@ -61,13 +60,13 @@ const TestimonyTile = ({
                 headline
                 && (
                     <Col md={12}>
-                        <Title
+                        <Text
                             bold
                             color={theme.colors.primary}
                             size={theme.sizes.h3}
                         >
                             {headline}
-                        </Title>
+                        </Text>
                     </Col>
                 )
             }

@@ -8,7 +8,6 @@ import NewsletterPhoto from '../assets/images/newsletterPhoto.png'
 
 import BlankButton from '../components/BlankButton'
 import theme from '../styles/theme';
-import Title from '../components/Title';
 import Text from '../components/Text';
 import DividerLine from '../components/DividerLine';
 
@@ -90,12 +89,12 @@ class Newsletter extends Component {
                     src={NewsletterPhoto}
                 />
                 <Col xs={10} className='mx-auto '>
-                    <Title
+                    <Text
                         weight='bold'
                         size={theme.sizes.h2}
                     >
                         {NEWSLETTER.title}
-                    </Title>
+                    </Text>
                     <Wrapper md={2} xs={6}>
                         <DividerLine />
                     </Wrapper>

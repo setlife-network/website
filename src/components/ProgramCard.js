@@ -5,7 +5,6 @@ import {
 } from 'react-bootstrap';
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
-import Title from './Title';
 import Text from './Text';
 import DividerLine from './DividerLine'
 
@@ -58,12 +57,12 @@ const ProgramCard = ({
                 />
             </DividerWrapper>
             <TitleWrapper md={12}>
-                <Title
+                <Text
                     weight='bold'
                     size={theme.sizes.h3}
                 >
                     {headline}
-                </Title>
+                </Text>
             </TitleWrapper>
             <Col xs={12} xl={4}>
                 <ImageContainer

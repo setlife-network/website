@@ -10,7 +10,7 @@
 }
 
 
-.PrincipalMessage, .Newsletter {
+.PrincipalMessage{
 
     .Title {
         @include font-size(3rem);
