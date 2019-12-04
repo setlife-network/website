@@ -24,6 +24,7 @@ Text.defaultProps = {
     alignment: 'left',
     fontSize: theme.sizes.body,
     className: 'Text',
+    
 
 }
 

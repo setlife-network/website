@@ -13,7 +13,7 @@ const Wrapper = styled(Col)`
 `
 
 const TitleWrapper = styled(Text)`
-    margin-bottom:-20px;
+    margin-bottom:-30px;
 `
 const PrincipalMessage = ({
     headline1,
