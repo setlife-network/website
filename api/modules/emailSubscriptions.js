@@ -40,9 +40,42 @@ const emailSubscriptions = module.exports = (() => {
         })
     }
 
-    const unsuscribeUser = module.exports = (() => {
+    const unsuscribeUser = (req, res) => {
 
-    })
+        airtable.updateRecord({
+            tableName: 'Subscriptions',
+            id: req.id,
+            fieldData: {
+                'Unsuscribed': true,
+            }
+        })
+        .then(record => {
+            return (
+                sendgrid.sendMessage({
+                    recipient: record.fields.Email,
+                    msg: [
+                        {
+                            to: record.fields.Email,
+                            from: 'contact@setlife.education',
+                            subject: 'Setlife Newsletter',
+                            text: 'The unsubscription will take effect within 3 days',
+
+                        },
+                        {
+                            to: 'social@setlife.network',
+                            from: 'contact@setlife.education',
+                            subject: 'New Subscription',
+                            text: record.fields.Email + 'wants to unsuscribe',
+                        },
+                    ]
+
+                })
+            )
+        })
+        .then(sendgridResponse => {
+            res.json({ message: 'Success' })
+        })
+    }
 
     //method to insert Date in airtable
     function currentDate() {
