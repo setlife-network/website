@@ -40,7 +40,7 @@ const emailSubscriptions = module.exports = (() => {
         })
     }
 
-    const unsuscribeUser = (req, res) => {
+    const unsubscribeUser = (req, res) => {
 
         airtable.updateRecord({
             tableName: 'Subscriptions',
@@ -58,14 +58,14 @@ const emailSubscriptions = module.exports = (() => {
                             to: record.fields.Email,
                             from: 'contact@setlife.education',
                             subject: 'Setlife Newsletter',
-                            text: 'The unsubscription will take effect within 3 days',
+                            text: 'We have received your request to unsubscribe from SetLife emails and this has been automatically processed in our system. After this email we wont bother you again! If for some reason you continue to receive emails, we apologize in advance and ask that you please send a message to contact@setlife.network so we can resolve this manually. Thanks and have a great day!',
 
                         },
                         {
                             to: 'social@setlife.network',
                             from: 'contact@setlife.education',
                             subject: 'New Subscription',
-                            text: record.fields.Email + 'wants to unsuscribe',
+                            text: record.fields.Email + 'has sent a request to unsubscribe. The records on Airtable should be updated accordingly',
                         },
                     ]
 
@@ -90,7 +90,7 @@ const emailSubscriptions = module.exports = (() => {
 
     return {
         subscribeNewUser,
-        unsuscribeUser
+        unsubscribeUser
 
 
     };
