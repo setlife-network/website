@@ -49,6 +49,7 @@ class HomePage extends Component {
                     }}
                 >
                     {COOKIESCONSENT[0].description}
+                    <a href='https://docs.google.com/document/d/1eJWm3ThBoMgt2KKd7p0pYokDLwFwGYegk-S1fbLRH-A/edit?usp=sharing' target='_blank' rel='noreferrer noopener'>{COOKIESCONSENT[0].link}</a>
                 </CookieConsent>
                 <Header
                     content={content}
