@@ -13,7 +13,7 @@ export const Text = styled.p`
     color: ${props => props.color};
     font-weight: ${props => props.weight};
     text-transform: ${props => props.uppercase ? 'uppercase' : 'normal'};
-
+    margin-bottom: ${props => props.marginBottom};
 `
 
 Text.defaultProps = {
@@ -22,10 +22,7 @@ Text.defaultProps = {
     uppercase: false,
     color: theme.colors.black,
     alignment: 'left',
-
     className: 'Text',
-
-
 }
 
 export default Text
