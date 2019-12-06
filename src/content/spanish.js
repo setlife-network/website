@@ -16,7 +16,7 @@ const BLOGHEADLINE = [
 const COOKIESCONSENT = [
     {
         description: 'Ésta página web utiliza cookies para que tu experiencia sea la mejor posible.',
-        agreement: 'Sí, accepto.'
+        agreement: 'Sí, acepto'
     }
 ]
 
@@ -31,8 +31,8 @@ const CONSULTATIONBUTTON = [
 
 const CONSULTATIONHEADLINE = [
     {
-        headline: 'Trabajar en tecn',
-        description: 'TechPrep by Facebook es uno de los numerosos recursos a tu disposición para descrubrir cómo la tecnología puede mejorar tu trayecto professional',
+        headline: 'El sector tecnológico',
+        description: 'TechPrep, creado por Facebook, es uno de los numerosos recursos a tu disposición para descrubrir cómo la tecnología puede mejorar tu trayecto professional',
         key: 'key-consultationHeadline'
     }
 
@@ -50,13 +50,13 @@ const COREVALUES = [
         key: 'key-value2'
     },
     {
-        headline: 'Código abierto y "libre"',
-        description: 'Para que se fomente una "libertad" verdadera, los usuarios tienen que poder ejecutar programas que se pueden estudiar, cambiar, adaptar y distribuir de cualquier manera',
+        headline: 'Código abierto y “libre”',
+        description: 'Para promover una “libertad” verdadera, los usuarios tienen que poder ejecutar programas que se puedan estudiar, cambiar, adaptar y distribuir de cualquier manera',
         key: 'key-value3'
     },
     {
-        headline: 'Sostenbilidad',
-        description: 'Dejar que la tecnología avance con demasiada rapidez podría perjudicarnos a nivel social y económico. Se tiene que usar métodos de trabajo seguros y sostenibles tanto a nivel comerical como de ingeniería',
+        headline: 'Sostenibilidad',
+        description: 'El rápido crecimiento de la tecnología podría resultar peligroso a nivel socioeconómico y se debería controlar mediante unos métodos de trabajo seguros y sostenibles tanto a nivel comerical como de ingeniería',
         key: 'key-value4'
     },
 ]
@@ -112,10 +112,10 @@ const HEADERLINKS = [
 
 const NEWSLETTER = [
     {
-        title: 'Te interesa lo que hacemos en SetLife?',
+        title: '¿Te interesa lo que hacemos en SetLife?',
         headline: 'Suscríbete a nuestra lista de correo y cada mes recibirás novedades sobre nuestros programas',
         description: 'No compartiremos nunca tu dirección de correo electrónico ni te mandaremos spam',
-        pastNewsletters: 'Ver newsletters antiguos',
+        pastNewsletters: 'Ver los newsletters anteriores',
         placeholder: 'Escribe aquí tu dirección de correo',
         buttonText: 'Suscribir'
     }
@@ -123,10 +123,10 @@ const NEWSLETTER = [
 
 const PRINCIPALMESSAGE = [
     {
-        headline1: 'Haz que el software sea',
-        headline2: 'tu superpoder',
-        description: 'Aprende habilidades tecnológicas tanto para elevar tu carrera profesional como para estar al tanto de los avances en la tecnología',
-        buttonText: 'Empieza a aprender',
+        headline1: '¿Y si el software fuera',
+        headline2: 'tu superpoder?',
+        description: 'Aprende habilidades tecnológicas tanto para elevar tu carrera profesional como para estar al tanto de las novedades del mundo de la tecnología',
+        buttonText: 'Empieza ya',
         url: 'https://tech-education.teachable.com',
         key: 'key-principalMessage'
     }
@@ -150,7 +150,7 @@ const PROGRAMSLEFT = [
         key: 'key-program1'
     },
     {
-        headline: 'Cursos educación online',
+        headline: 'Cursos online',
         description: 'Échale un vistazo a los materiales de nuestro plan principal de estudio para ver qué tencologías te quedan por descrubrir',
         buttonText: 'Plan principal de estudios',
         link: 'https://tech-education.teachable.com/',
@@ -163,14 +163,14 @@ const PROGRAMSRIGHT = [
     {
         headline: 'Formación técnica para empleados',
         description: 'Invierte en tus empleados proveéndoles de las últimas herramientas y verás cómo crece tu compañía',
-        buttonText: 'Consulta gratis',
+        buttonText: 'Consultas gratuitas',
         link: 'https://app.acuityscheduling.com/schedule.php?owner=17420730&appointmentType=11115327',
         image: 'https://user-images.githubusercontent.com/4914611/63650621-c5b62000-c74c-11e9-8741-52a442eeecc0.png',
         key: 'key-program3'
     },
     {
-        headline: 'Programa de mentores',
-        description: 'Únete a nuestra misión y nos ayudarás enseñar cómo enseñar y aprender cómo aprender',
+        headline: 'Mentoría',
+        description: 'Únete a nuestra misión y nos ayudarás a enseñar cómo enseñar y aprender cómo aprender',
         buttonText: 'Únete al canal de Slack',
         link: 'https://join.slack.com/t/setlife/shared_invite/enQtNzI2MTA2ODQwMTMxLTU4ZDg5YzI5YzI0MGI5ODQwYTM4MGM3NDBkMmJhNWY1NzZlNjJjZGVlOTgxYTIyOGRhNWVjYzM4MDUyNzM5NDM',
         image: 'https://user-images.githubusercontent.com/4914611/63650573-31e45400-c74c-11e9-96ea-9a34d4292c1a.png',
@@ -196,7 +196,7 @@ const TEASERS = [
         key: 'key-techFundamentals'
     },
     {
-        headline: 'Aprender a través de proyectos',
+        headline: 'Aprendizaje basado en proyectos',
         description: 'Te ayudaremos usar tu conocimientos recién adquiridos para involucrarte en proyectos en común (¡o a inciar tu propio proyecto!) para que puedas afinar tus habilidades y ganar experiencia laboral muy valiosa',
         linkTitle: 'Mas información',
         url: 'https://medium.com/the-setlife-network/an-introduction-to-project-based-learning-65b4ab70bec2',
