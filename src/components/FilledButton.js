@@ -31,7 +31,7 @@ const FilledButton = ({
             >
                 <Text
                     color={theme.colors.white}
-                    size={theme.sizes.button}
+                    className='button'
                     alignment='center'
                 >
                     {description}

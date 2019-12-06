@@ -8,7 +8,7 @@ properties:
 */
 
 export const Text = styled.p`
-    font-size: ${props => props.size};
+
     text-align: ${props => props.alignment};
     color: ${props => props.color};
     font-weight: ${props => props.weight};
@@ -22,9 +22,9 @@ Text.defaultProps = {
     uppercase: false,
     color: theme.colors.black,
     alignment: 'left',
-    fontSize: theme.sizes.body,
+
     className: 'Text',
-    
+
 
 }
 

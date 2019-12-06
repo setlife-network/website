@@ -44,7 +44,7 @@ const Headline = ({
                     color={color}
                     weight={weight}
                     alignment={alignment}
-                    size={theme.sizes.h2}
+                    className='h2'
                 >
                     {headline}
                 </Text>
@@ -53,7 +53,7 @@ const Headline = ({
                 <Text
                     color={color}
                     alignment={alignment}
-                    size={theme.sizes.subtitle}
+                    className='subtitle'
                 >
                     {description}
                 </Text>

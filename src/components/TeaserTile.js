@@ -41,14 +41,14 @@ const TeaserTile = ({
             <TitleWrapper md={9}>
                 <Text
                     bold
-                    size={theme.sizes.h3}
+                    className='h3'
                 >
                     {headline}
                 </Text>
             </TitleWrapper>
             <Col md={11}>
                 <Text
-                    size={theme.sizes.body}
+                    className='body'
                 >
                     {intro}
                 </Text>

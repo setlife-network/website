@@ -25,7 +25,7 @@ const PullOutTile = ({
             </Col>
             <Col md={11}>
                 <Text
-                    size={theme.sizes.medium}
+                    className='medium'
                     bold
                     color={color}
                 >

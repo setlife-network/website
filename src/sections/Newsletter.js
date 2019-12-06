@@ -91,7 +91,7 @@ class Newsletter extends Component {
                 <Col xs={10} className='mx-auto '>
                     <Text
                         weight='bold'
-                        size={theme.sizes.h2}
+                        className='h2'
                     >
                         {NEWSLETTER.title}
                     </Text>
@@ -101,13 +101,13 @@ class Newsletter extends Component {
                     <Wrapper md={6}>
                         <Text
                             weight='bold'
-                            size={theme.sizes.body}
+                            className='body'
                         >
                             {NEWSLETTER.headline}
                         </Text>
                         <Nav.Link href='/newsletters' className='p-0'>
                             <Text
-                                size={theme.sizes.body}
+                                className='body'
                             >
                                 {NEWSLETTER.pastNewsletters}
                             </Text>
@@ -122,14 +122,14 @@ class Newsletter extends Component {
                                     <Text
                                         weight='bold'
                                         color={theme.colors.white}
-                                        size={theme.sizes.body}
+                                        className='body'
                                     >
                                     Thanks for suscribing!
                                     </Text>
                                     <Text
                                         weight='bold'
                                         color={theme.colors.white}
-                                        size={theme.sizes.body}
+                                        className='body'
                                     >
                                         {NEWSLETTER.description}
 
@@ -143,7 +143,7 @@ class Newsletter extends Component {
                                     <Text
                                         weight='bold'
                                         color={theme.colors.white}
-                                        size={theme.sizes.body}
+                                        className='body'
                                     >
                                         {NEWSLETTER.description}
                                     </Text>

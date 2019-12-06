@@ -29,13 +29,13 @@ const PrincipalMessage = ({
             </Col>
             <Col xs={12}>
                 <Text
-                    size={theme.sizes.h1}
+                    className='h1'
                     weight='bold'
                 >
                     {headline1}
                 </Text>
                 <Text
-                    size={theme.sizes.h1}
+                    className='h1'
                     color={theme.colors.primary}
                     weight='bold'
                 >
@@ -44,7 +44,7 @@ const PrincipalMessage = ({
             </Col>
             <Wrapper xs={12} md={10}>
                 <Text
-                    size={theme.sizes.subtitle}
+                    className='subtitle'
                 >
                     {description}
                 </Text>

@@ -10,17 +10,66 @@
 }
 
 
-.PrincipalMessage{
+@media only screen and (min-width:768px){
 
-    .Text {
-        @include font-size(1rem);
+    .h1{
+        font-size: 3.5rem;
     }
+    .h2{
+        font-size: 2.8rem;
+    }
+    .h3{
+        font-size: 2.3rem;
+    }
+    .h4{
+        font-size: 2rem;
+    }
+    .body{
+        font-size: 1rem;
+    }
+    .subtitle{
+        font-size: 1.9rem;
+    }
+    .button{
+        font-size: 1rem;
+    }
+    .link{
+        font-size: 0.9rem;
+    }
+    .quote{
+        font-size: 44px;
+    }
+
 }
 
-.Programs {
+@media only screen and (max-width:768px){
 
-    .Text {
-        @include font-size(1rem);
+    .h1{
+        font-size: 3rem;
+    }
+    .h2{
+        font-size: 2.3rem;
+    }
+    .h3{
+        font-size: 1.8rem;
+    }
+    .h4{
+        font-size: 1.3rem;
+    }
+    .body{
+        font-size: 1rem;
+    }
+    .subtitle{
+        font-size: 1rem;
+    }
+    .button{
+        font-size: 0.9rem;
+    }
+    .link{
+        font-size: 0.8rem;
+    }
+    .quote{
+        font-size: 44px;
     }
 
 }

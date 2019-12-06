@@ -41,7 +41,7 @@ const Quote = ({
                                 <Text
                                     left
                                     color={theme.colors.primary}
-                                    size={theme.sizes.quote}
+                                    className='quote'
                                     margin
                                 >
                                     {headline}

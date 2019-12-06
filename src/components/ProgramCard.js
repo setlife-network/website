@@ -60,7 +60,7 @@ const ProgramCard = ({
             <TitleWrapper md={12}>
                 <Text
                     weight='bold'
-                    size={theme.sizes.h3}
+                    className='h3'
                 >
                     {headline}
                 </Text>
@@ -73,7 +73,7 @@ const ProgramCard = ({
             </Col>
             <ConstantWrapper xs={12} xl={7} className='pt-3 pt-xl-0'>
                 <Text
-                    size={theme.sizes.body}
+                    className='body'
                 >
                     {description}
                 </Text>

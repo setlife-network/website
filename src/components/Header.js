@@ -40,7 +40,7 @@ class Header extends Component {
             return (
                 <Nav.Link href={t.href} key={t.key}>
                     <Text
-                        size={theme.sizes.link}
+                        className='link'
                         weight='bold'
                     >
                         {t.text}
