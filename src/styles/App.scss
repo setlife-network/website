@@ -12,18 +12,13 @@
 
 .PrincipalMessage{
 
-    .Title {
-        @include font-size(3rem);
-    }
     .Text {
         @include font-size(1rem);
     }
 }
 
 .Programs {
-    .Title {
-        @include font-size(1.5rem);
-    }
+
     .Text {
         @include font-size(1rem);
     }

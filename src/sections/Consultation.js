@@ -63,23 +63,25 @@ class Consultation extends Component {
                 <Row key={t.key}>
                     <Wrapper md={12}>
 
-                        {(window.innerWidth <= 400) ? (
 
-                            <Headline
-                                headline={t.headline}
-                                color={theme.colors.white}
-                                description={t.description}
-                                alignment='center'
-                            />
-                        ) : (
+                        <div className='d-none d-md-block'>
                             <Headline
                                 headline={t.headline}
                                 color={theme.colors.white}
                                 description={t.description}
                                 alignment='right'
                             />
-                        )
-                        }
+                        </div>
+
+                        <div className='d-md-none d-block'>
+                            <Headline
+                                headline={t.headline}
+                                color={theme.colors.white}
+                                description={t.description}
+                                alignment='center'
+                            />
+                        </div>
+
                     </Wrapper>
                 </Row>
             )
