@@ -1,5 +1,8 @@
+import UNSUSCRIBETEXT from '../constants'
+
 var airtable = require('../handlers/airtable');
 var sendgrid = require('../handlers/sendgrid');
+
 
 const emailSubscriptions = module.exports = (() => {
 
@@ -57,9 +60,7 @@ const emailSubscriptions = module.exports = (() => {
                         {
                             to: record.fields.Email,
                             from: 'contact@setlife.education',
-                            subject: 'Setlife Newsletter',
-                            text: 'We have received your request to unsubscribe from SetLife emails and this has been automatically processed in our system. After this email we wont bother you again! If for some reason you continue to receive emails, we apologize in advance and ask that you please send a message to contact@setlife.network so we can resolve this manually. Thanks and have a great day!',
-
+                            subject: UNSUSCRIBETEXT,
                         },
                         {
                             to: 'social@setlife.network',
