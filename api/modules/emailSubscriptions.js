@@ -60,7 +60,8 @@ const emailSubscriptions = module.exports = (() => {
                         {
                             to: record.fields.Email,
                             from: 'contact@setlife.education',
-                            subject: UNSUSCRIBETEXT,
+                            subject: 'Setlife Newsletter',
+                            text: UNSUSCRIBETEXT,
                         },
                         {
                             to: 'social@setlife.network',
