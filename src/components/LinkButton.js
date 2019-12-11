@@ -38,7 +38,7 @@ const LinkButton = ({
                         weight={weight}
                         uppercase
                         color={color}
-                        size={theme.sizes.link}
+                        className='link'
                     >
                         {description}
                     </Text>

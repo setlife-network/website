@@ -8,15 +8,11 @@ import {
 import LinkButton from './LinkButton'
 import DividerLine from './DividerLine'
 import theme from '../styles/theme';
-import Title from './Title';
 import Text from './Text';
 
-const TextWrapper = styled(Col)`
-    height:150px
-`
 
 const TitleWrapper = styled(Col)`
-    height:100px
+
     margin-top: 10px;
 `
 
@@ -43,20 +39,20 @@ const TeaserTile = ({
             <Col md={12}>
             </Col>
             <TitleWrapper md={9}>
-                <Title
+                <Text
                     bold
-                    size={theme.sizes.h3}
+                    className='h3'
                 >
                     {headline}
-                </Title>
+                </Text>
             </TitleWrapper>
-            <TextWrapper md={11}>
+            <Col md={11}>
                 <Text
-                    size={theme.sizes.body}
+                    className='body'
                 >
                     {intro}
                 </Text>
-            </TextWrapper>
+            </Col>
             <Col>
 
                 <LinkButton

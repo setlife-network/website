@@ -16,6 +16,7 @@ const BLOGHEADLINE = [
 const COOKIESCONSENT = [
     {
         description: 'Ésta página web utiliza cookies para que tu experiencia sea la mejor posible.',
+        link: 'Leer más',
         agreement: 'Sí, acepto'
     }
 ]

@@ -5,7 +5,6 @@ import {
 } from 'react-bootstrap';
 
 import theme from '../styles/theme';
-import Title from './Title'
 import DividerLine from './DividerLine'
 import Text from './Text'
 
@@ -16,7 +15,7 @@ const Wrapper = styled(Row)`
 const Holder = styled(Col)`
     text-align: center;
     margin: auto;
-    margin:10px
+
 
 `
 
@@ -41,20 +40,20 @@ const Headline = ({
                 </Col>
             )}
             <Holder md={12}>
-                <Title
+                <Text
                     color={color}
                     weight={weight}
                     alignment={alignment}
-                    size={theme.sizes.h2}
+                    className='h2'
                 >
                     {headline}
-                </Title>
+                </Text>
             </Holder>
             <Holder md={12}>
                 <Text
                     color={color}
                     alignment={alignment}
-                    size={theme.sizes.subtitle}
+                    className='subtitle'
                 >
                     {description}
                 </Text>

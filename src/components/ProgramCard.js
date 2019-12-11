@@ -5,7 +5,6 @@ import {
 } from 'react-bootstrap';
 import LinkButton from './LinkButton'
 import theme from '../styles/theme';
-import Title from './Title';
 import Text from './Text';
 import DividerLine from './DividerLine'
 
@@ -35,7 +34,8 @@ const ConstantWrapper = styled(Col)`
 `
 
 const DividerWrapper = styled(Col)`
-    margin-left: -15px
+    margin-right:70%;
+    margin-left:-15px;
 `
 
 
@@ -58,12 +58,12 @@ const ProgramCard = ({
                 />
             </DividerWrapper>
             <TitleWrapper md={12}>
-                <Title
+                <Text
                     weight='bold'
-                    size={theme.sizes.h3}
+                    className='h3'
                 >
                     {headline}
-                </Title>
+                </Text>
             </TitleWrapper>
             <Col xs={12} xl={4}>
                 <ImageContainer
@@ -73,7 +73,7 @@ const ProgramCard = ({
             </Col>
             <ConstantWrapper xs={12} xl={7} className='pt-3 pt-xl-0'>
                 <Text
-                    size={theme.sizes.body}
+                    className='body'
                 >
                     {description}
                 </Text>

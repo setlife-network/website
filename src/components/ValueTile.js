@@ -6,7 +6,6 @@ import {
 
 import theme from '../styles/theme';
 import BlueArrow from '../assets/images/blueArrow.png'
-import Title from './Title';
 import Text from './Text';
 
 
@@ -30,12 +29,12 @@ const ValueTile = ({
             <Col xs={10}>
                 <Row>
                     <Col md={12}>
-                        <Title
-                            size={theme.sizes.h3}
+                        <Text
+                            className='h3'
                             weight='bold'
                         >
                             {headline}
-                        </Title>
+                        </Text>
                     </Col>
                     <ContentWrapper md={12}>
                         <Text>
