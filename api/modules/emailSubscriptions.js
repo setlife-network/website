@@ -5,6 +5,8 @@ var sendgrid = require('../handlers/sendgrid');
 
 const emailSubscriptions = module.exports = (() => {
 
+    const email = fs.readFileSync('../subscriptionEmail.html')
+
     const subscribeNewUser = (req, res) => {
         airtable.createRecord({
             tableName: 'Subscriptions',
@@ -23,7 +25,7 @@ const emailSubscriptions = module.exports = (() => {
                             to: record.fields.Email,
                             from: 'contact@setlife.education',
                             subject: 'Setlife Newsletter',
-                            text: 'Contact form submitted successfully',
+                            html: email,
 
                         },
                         {
