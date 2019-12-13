@@ -1,13 +1,16 @@
-import UNSUSCRIBETEXT from '../constants'
+var fs = require('fs');
+var { UNSUSCRIBETEXT } = require('../constants');
 
 var airtable = require('../handlers/airtable');
 var sendgrid = require('../handlers/sendgrid');
 
 const emailSubscriptions = module.exports = (() => {
 
-    const email = fs.readFileSync('../subscriptionEmail.html')
+    const emailTemplate = fs.readFileSync(__dirname + '/../subscriptionEmail.html')
 
     const subscribeNewUser = (req, res) => {
+        console.log(req.body);
+        console.log(emailTemplate);
         airtable.createRecord({
             tableName: 'Subscriptions',
             fieldData: {
@@ -25,7 +28,7 @@ const emailSubscriptions = module.exports = (() => {
                             to: record.fields.Email,
                             from: 'contact@setlife.education',
                             subject: 'Setlife Newsletter',
-                            html: email,
+                            html: emailTemplate,
 
                         },
                         {
