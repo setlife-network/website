@@ -215,7 +215,7 @@ const TEASERS = [
 const TESTIMONIALS = [
     {
         name: 'Oscar Lafarga',
-        quote: 'SetLife representa para mí un compromiso a largo plazo hacia un futuro mas sostenible en cuanto a la tecnología y el impacto que tiene en la sociedad. Hoy en día, cuando la información y la comunicación se mueven a la velocidad de la luz, limitar el aprendizaje a el aula nos impedirá a la hora de enfrentar los problemas globales que están surgiendo. Mi objectivo es incentivar la enseñanza y situarla entre las profesiones mas valoradas y bien remuneradas y así desmantelar las estructuras que han permitido que se acumulara el poder en las manos de pocos y que perpetúan la desigualdad de riqueza a nivel global',
+        quote: 'SetLife representa para mí un compromiso a largo plazo hacia un futuro mas sostenible en cuanto a la tecnología y el impacto que tiene en la sociedad. Hoy en día, cuando la información y la comunicación se mueven a la velocidad de la luz, limitar el aprendizaje a el aula nos impedirá a la hora de enfrentar los problemas globales que están surgiendo. Mi objectivo es incentivar la enseñanza y situarla entre las profesiones mas valoradas y bien remuneradas y así desmantelar las estructuras que han permitido que se acumulara el poder en las manos de pocos y que perpetúan la desigualdad de riqueza a nivel global.',
         date: 'Presidente y CTO',
         portrait: 'https://user-images.githubusercontent.com/49292858/68433886-0808ce00-018e-11ea-9818-64cd4372bdc6.png'
     },
@@ -241,7 +241,7 @@ const TESTIMONIALS = [
         name: 'Dave Corkle',
         quote: '',
         date: 'Director',
-        portrait: ''
+        portrait: 'https://user-images.githubusercontent.com/49292858/70638445-453e0100-1c0f-11ea-91c1-24f5612ce1df.jpg'
     },
     {
         name: 'David Lafarga',
@@ -252,7 +252,8 @@ const TESTIMONIALS = [
     },
     {
         name: 'Rebeca Rubio',
-        quote: '',
+        quote: 'El programa de mentoría de SetLife me ha permitido consolidar mis conocimientos de programación colaborando de forma directa en su desarrollo. El uso de nuevas herramientas y de software actual me han hecho evolucionar rápidamente y adquirir mejores prácticas de implementación de código y de comunicación a la hora de colaborar con otras personas dentro de un mismo proyecto.
+Como desarrolladora de software he cumplido uno de mis objetivos: poner en práctica aquellos conocimientos que quedan sin profundizar en el aula gracias a la metodología del aprendizaje basado en proyectos. Actualmente mis habilidades tecnológicas siguen evolucionando de una forma más efectiva y en un ambiente de trabajo que estimula la autonomía y el crecimiento profesional.',
         date: 'Desarrolladora de software',
         portrait: 'https://user-images.githubusercontent.com/49292858/68434144-a6952f00-018e-11ea-9fcd-b00218b98c64.png'
     },

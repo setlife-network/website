@@ -240,7 +240,7 @@ const TESTIMONIALS = [
     },
     {
         name: 'Dave Corkle',
-        quote: '',
+        quote: 'https://user-images.githubusercontent.com/49292858/70638445-453e0100-1c0f-11ea-91c1-24f5612ce1df.jpg',
         date: 'Director',
         portrait: ''
     },
