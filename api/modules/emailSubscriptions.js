@@ -1,9 +1,16 @@
+var fs = require('fs');
+var { UNSUSCRIBETEXT } = require('../constants');
+
 var airtable = require('../handlers/airtable');
 var sendgrid = require('../handlers/sendgrid');
 
 const emailSubscriptions = module.exports = (() => {
 
+    const emailTemplate = fs.readFileSync(__dirname + '/../subscriptionEmail.html')
+
     const subscribeNewUser = (req, res) => {
+        console.log(req.body);
+        console.log(emailTemplate);
         airtable.createRecord({
             tableName: 'Subscriptions',
             fieldData: {
@@ -21,7 +28,7 @@ const emailSubscriptions = module.exports = (() => {
                             to: record.fields.Email,
                             from: 'contact@setlife.education',
                             subject: 'Setlife Newsletter',
-                            text: 'Contact form submitted successfully',
+                            html: emailTemplate,
 
                         },
                         {
@@ -58,7 +65,7 @@ const emailSubscriptions = module.exports = (() => {
                             to: record.fields.Email,
                             from: 'contact@setlife.education',
                             subject: 'Setlife Newsletter',
-                            text: 'We have received your request to unsubscribe from SetLife emails and this has been automatically processed in our system. After this email we wont bother you again! If for some reason you continue to receive emails, we apologize in advance and ask that you please send a message to contact@setlife.network so we can resolve this manually. Thanks and have a great day!',
+                            text: UNSUSCRIBETEXT,
 
                         },
                         {
