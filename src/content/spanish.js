@@ -253,8 +253,7 @@ const TESTIMONIALS = [
     },
     {
         name: 'Rebeca Rubio',
-        quote: 'El programa de mentoría de SetLife me ha permitido consolidar mis conocimientos de programación colaborando de forma directa en su desarrollo. El uso de nuevas herramientas y de software actual me han hecho evolucionar rápidamente y adquirir mejores prácticas de implementación de código y de comunicación a la hora de colaborar con otras personas dentro de un mismo proyecto.
-Como desarrolladora de software he cumplido uno de mis objetivos: poner en práctica aquellos conocimientos que quedan sin profundizar en el aula gracias a la metodología del aprendizaje basado en proyectos. Actualmente mis habilidades tecnológicas siguen evolucionando de una forma más efectiva y en un ambiente de trabajo que estimula la autonomía y el crecimiento profesional.',
+        quote: 'El programa de mentoría de SetLife me ha permitido consolidar mis conocimientos de programación colaborando de forma directa en su desarrollo. El uso de nuevas herramientas y de software actual me han hecho evolucionar rápidamente y adquirir mejores prácticas de implementación de código y de comunicación a la hora de colaborar con otras personas dentro de un mismo proyecto. Como desarrolladora de software he cumplido uno de mis objetivos: poner en práctica aquellos conocimientos que quedan sin profundizar en el aula gracias a la metodología del aprendizaje basado en proyectos. Actualmente mis habilidades tecnológicas siguen evolucionando de una forma más efectiva y en un ambiente de trabajo que estimula la autonomía y el crecimiento profesional.',
         date: 'Desarrolladora de software',
         portrait: 'https://user-images.githubusercontent.com/49292858/68434144-a6952f00-018e-11ea-9fcd-b00218b98c64.png'
     },
