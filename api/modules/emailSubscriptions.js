@@ -6,7 +6,18 @@ var sendgrid = require('../handlers/sendgrid');
 
 const emailSubscriptions = module.exports = (() => {
 
-    const emailTemplate = fs.readFileSync(__dirname + '/../subscriptionEmail.html')
+    const emailTemplate = fs.readFileSync(__dirname + '/../subscriptionEmail.html', 'utf8', (error, jsonString) => {
+        if (error) {
+            console.log('Error reading file', err)
+            return
+        }
+        try {
+            const customer = JSON.parse(jsonString)
+        } catch (err) {
+            console.log('Error parsing JSON string:', err)
+        }
+    })
+
 
     const subscribeNewUser = (req, res) => {
         console.log(req.body);

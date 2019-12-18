@@ -56,7 +56,6 @@ app.post('/api/send/', apiModules.emailSubscriptions.subscribeNewUser);
 
 app.get('/api/unsubscribe/', apiModules.emailSubscriptions.unsubscribeUser);
 
-
 app.get('/api/fetchNewsletter/:month', (request, response) => {
 
     const file = fs.readFileSync(`./docs/newsletters/${request.params.month}.md`)
