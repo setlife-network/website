@@ -6,13 +6,13 @@ var sendgrid = require('../handlers/sendgrid');
 
 const emailSubscriptions = module.exports = (() => {
 
-    const emailTemplate = fs.readFileSync(__dirname + '/../subscriptionEmail.html', 'utf8', (error, jsonString) => {
+    var emailTemplate = fs.readFileSync(__dirname + '/../subscriptionEmail.html', 'utf8', (error, jsonString) => {
         if (error) {
             console.log('Error reading file', err)
             return
         }
         try {
-            const customer = JSON.parse(jsonString)
+            JSON.parse(jsonString)
         } catch (err) {
             console.log('Error parsing JSON string:', err)
         }
@@ -20,8 +20,7 @@ const emailSubscriptions = module.exports = (() => {
 
 
     const subscribeNewUser = (req, res) => {
-        console.log(req.body);
-        console.log(emailTemplate);
+
         airtable.createRecord({
             tableName: 'Subscriptions',
             fieldData: {
@@ -31,6 +30,9 @@ const emailSubscriptions = module.exports = (() => {
             }
         })
         .then(record => {
+
+            emailTemplate = emailTemplate.replace(':unsuscribe_user_id', record.id);
+
             return (
                 sendgrid.sendMessage({
                     recipient: record.fields.Email,
@@ -60,14 +62,22 @@ const emailSubscriptions = module.exports = (() => {
 
     const unsubscribeUser = (req, res) => {
 
+        console.log('unsuscribing user');
+        console.log(req.params.id);
+        console.log('unsuscribing user');
+
         airtable.updateRecord({
+
             tableName: 'Subscriptions',
-            id: req.id,
+            id: req.params.id,
             fieldData: {
-                'Unsuscribed': true,
+                'Unsubscribed': true,
             }
         })
         .then(record => {
+            console.log('unsuscribing user');
+            console.log(req.params.id);
+            console.log('unsuscribing user');
             return (
                 sendgrid.sendMessage({
                     recipient: record.fields.Email,
@@ -108,7 +118,7 @@ const emailSubscriptions = module.exports = (() => {
 
     return {
         subscribeNewUser,
-        unsubscribeUser
+        unsubscribeUser,
 
 
     };

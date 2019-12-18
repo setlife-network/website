@@ -39,8 +39,8 @@ const airtable = module.exports = (function () {
                     resolve(record)
                 }
             })
-        })
-    }
+        });
+    };
 
     return {
         createRecord,
