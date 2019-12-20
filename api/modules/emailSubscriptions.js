@@ -62,10 +62,6 @@ const emailSubscriptions = module.exports = (() => {
 
     const unsubscribeUser = (req, res) => {
 
-        console.log('unsuscribing user');
-        console.log(req.params.id);
-        console.log('unsuscribing user');
-
         airtable.updateRecord({
 
             tableName: 'Subscriptions',
@@ -75,9 +71,6 @@ const emailSubscriptions = module.exports = (() => {
             }
         })
         .then(record => {
-            console.log('unsuscribing user');
-            console.log(req.params.id);
-            console.log('unsuscribing user');
             return (
                 sendgrid.sendMessage({
                     recipient: record.fields.Email,

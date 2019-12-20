@@ -26,18 +26,23 @@ const airtable = module.exports = (function () {
     };
 
     const updateRecord = (params) => {
+        console.log('error1');
         return new Promise((resolve, reject) => {
+
             base(params.tableName)
             .update({
-                ...params.id,
-                ...params.fieldData
-            }, function(err, record) {
+                'id': params.id,
+                'fields': params.fieldData
+            },
+            function(err, records) {
                 if (err) {
                     console.error(err);
                     reject(err);
-                } else {
-                    resolve(record)
                 }
+                console.log('done');
+                records.forEach(function(record) {
+                    console.log(record.get('Date Subscribed'));
+                });
             })
         });
     };
