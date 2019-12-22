@@ -42,14 +42,18 @@ class NewslettersPage extends Component {
 
     renderNewsletters = () => {
         return this.state.newsletters.map(t => {
+
             var url = `/newsletters/${t}`
             url = url.slice(0, -3)
+            console.log(url);
+            url = moment(url).format('MMMM YYYY');
+            console.log(url);
 
-            console.log(moment(url, 'mm/dd/yyyy'));
+
             return (
                 <li>
                     <a href={url}>
-                        {t}
+                        {url}
                     </a>
                 </li>
             )
