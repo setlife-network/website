@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
+import moment from 'moment'
+
 import Header from '../components/Header'
 import Footer from '../sections/Footer'
 
@@ -42,6 +44,8 @@ class NewslettersPage extends Component {
         return this.state.newsletters.map(t => {
             var url = `/newsletters/${t}`
             url = url.slice(0, -3)
+
+            console.log(moment(url, 'mm/dd/yyyy'));
             return (
                 <li>
                     <a href={url}>
