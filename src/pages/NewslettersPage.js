@@ -12,6 +12,25 @@ const Section = styled(Row)`
     margin:50px;
 `
 
+const monthCompare = (a, b) => {
+    const months = {
+        'January-2019.md': 11,
+        'February-2019.md': 10,
+        'March-2019.md': 9,
+        'April-2019.md': 8,
+        'May-2019.md': 7,
+        'June-2019.md': 6,
+        'July-2019.md': 5,
+        'August-2019.md': 4,
+        'September-2019.md': 3,
+        'October-2019.md': 2,
+        'November-2019.md': 1,
+        'December-2019.md': 0
+    }
+
+    return months[a] - months[b]
+}
+
 class NewslettersPage extends Component {
 
     state = {
@@ -41,14 +60,13 @@ class NewslettersPage extends Component {
     }
 
     renderNewsletters = () => {
+
+        this.state.newsletters.sort(monthCompare)
         return this.state.newsletters.map(t => {
 
             var url = `/newsletters/${t}`
             url = url.slice(0, -3)
-            console.log(url);
             url = moment(url).format('MMMM YYYY');
-            console.log(url);
-
 
             return (
                 <li>
