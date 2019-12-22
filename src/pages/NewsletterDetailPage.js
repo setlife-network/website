@@ -66,7 +66,7 @@ class NewsletterDetailPage extends Component {
                     && (
                         <Section>
                             <Col />
-                            <Col xs={10}>
+                            <Col xs={11}>
                                 <ReactMarkdown
                                     escapeHtml={false}
                                     source={this.state.markdownContent}
