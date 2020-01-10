@@ -11,7 +11,7 @@ const ReactMarkdown = require('react-markdown')
 const fs = require('fs')
 
 const Section = styled(Row)`
-    margin:50px;
+    margin-top:50px
 `
 
 class NewsletterDetailPage extends Component {
@@ -66,7 +66,7 @@ class NewsletterDetailPage extends Component {
                     && (
                         <Section>
                             <Col />
-                            <Col xs={10}>
+                            <Col xs={10} md={9}>
                                 <ReactMarkdown
                                     escapeHtml={false}
                                     source={this.state.markdownContent}
