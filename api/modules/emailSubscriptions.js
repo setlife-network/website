@@ -6,11 +6,21 @@ var sendgrid = require('../handlers/sendgrid');
 
 const emailSubscriptions = module.exports = (() => {
 
-    const emailTemplate = fs.readFileSync(__dirname + '/../subscriptionEmail.html')
+    var emailTemplate = fs.readFileSync(__dirname + '/../subscriptionEmail.html', 'utf8', (error, jsonString) => {
+        if (error) {
+            console.log('Error reading file', err)
+            return
+        }
+        try {
+            JSON.parse(jsonString)
+        } catch (err) {
+            console.log('Error parsing JSON string:', err)
+        }
+    })
+
 
     const subscribeNewUser = (req, res) => {
-        console.log(req.body);
-        console.log(emailTemplate);
+
         airtable.createRecord({
             tableName: 'Subscriptions',
             fieldData: {
@@ -20,9 +30,11 @@ const emailSubscriptions = module.exports = (() => {
             }
         })
         .then(record => {
+
+            emailTemplate = emailTemplate.replace(':unsuscribe_user_id', record.id);
             return (
                 sendgrid.sendMessage({
-                    recipient: record.fields.Email,
+                    recipient: record[0].fields.Email,
                     msg: [
                         {
                             to: record.fields.Email,
@@ -50,29 +62,30 @@ const emailSubscriptions = module.exports = (() => {
     const unsubscribeUser = (req, res) => {
 
         airtable.updateRecord({
+
             tableName: 'Subscriptions',
-            id: req.id,
+            id: req.params.id,
             fieldData: {
-                'Unsuscribed': true,
+                'Unsubscribed': true,
             }
         })
         .then(record => {
             return (
                 sendgrid.sendMessage({
-                    recipient: record.fields.Email,
+                    recipient: record[0].fields.Email,
                     msg: [
                         {
-                            to: record.fields.Email,
+                            to: record[0].fields.Email,
                             from: 'contact@setlife.education',
                             subject: 'Setlife Newsletter',
-                            text: UNSUSCRIBETEXT,
+                            text: UNSUSCRIBETEXT.body,
 
                         },
                         {
                             to: 'social@setlife.network',
                             from: 'contact@setlife.education',
                             subject: 'New Subscription',
-                            text: record.fields.Email + 'has sent a request to unsubscribe. The records on Airtable should be updated accordingly',
+                            text: record[0].fields.Email + 'has sent a request to unsubscribe. The records on Airtable should be updated accordingly',
                         },
                     ]
 
@@ -97,7 +110,7 @@ const emailSubscriptions = module.exports = (() => {
 
     return {
         subscribeNewUser,
-        unsubscribeUser
+        unsubscribeUser,
 
 
     };

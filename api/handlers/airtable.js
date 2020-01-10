@@ -28,19 +28,22 @@ const airtable = module.exports = (function () {
     const updateRecord = (params) => {
         return new Promise((resolve, reject) => {
             base(params.tableName)
-            .update({
-                ...params.id,
-                ...params.fieldData
-            }, function(err, record) {
-                if (err) {
-                    console.error(err);
-                    reject(err);
-                } else {
-                    resolve(record)
+            .update(
+                [{
+                    'id': params.id,
+                    'fields': params.fieldData
+                }],
+                function(err, record) {
+                    if (err) {
+                        console.error(err);
+                        reject(err);
+                    } else {
+                        resolve(record)
+                    }
                 }
-            })
-        })
-    }
+            )
+        });
+    };
 
     return {
         createRecord,
