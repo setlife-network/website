@@ -5,7 +5,6 @@ import {
 } from 'react-bootstrap';
 import theme from '../styles/theme';
 import DividerLine from './DividerLine'
-import Title from './Title'
 import Text from './Text';
 import FilledButton from './FilledButton'
 
@@ -13,8 +12,8 @@ const Wrapper = styled(Col)`
     margin-top:30px;
 `
 
-const TitleWrapper = styled(Title)`
-    margin-bottom:-20px;
+const TitleWrapper = styled(Text)`
+    margin-bottom:-30px;
 `
 const PrincipalMessage = ({
     headline1,
@@ -29,23 +28,23 @@ const PrincipalMessage = ({
                 <DividerLine />
             </Col>
             <Col xs={12}>
-                <Title
-                    size={theme.sizes.h1}
+                <Text
+                    className='h1'
                     weight='bold'
                 >
                     {headline1}
-                </Title>
-                <Title
-                    size={theme.sizes.h1}
+                </Text>
+                <Text
+                    className='h1'
                     color={theme.colors.primary}
                     weight='bold'
                 >
                     {headline2}
-                </Title>
+                </Text>
             </Col>
             <Wrapper xs={12} md={10}>
                 <Text
-                    size={theme.sizes.subtitle}
+                    className='subtitle'
                 >
                     {description}
                 </Text>

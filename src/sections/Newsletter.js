@@ -8,7 +8,6 @@ import NewsletterPhoto from '../assets/images/newsletterPhoto.png'
 
 import BlankButton from '../components/BlankButton'
 import theme from '../styles/theme';
-import Title from '../components/Title';
 import Text from '../components/Text';
 import DividerLine from '../components/DividerLine';
 
@@ -90,25 +89,25 @@ class Newsletter extends Component {
                     src={NewsletterPhoto}
                 />
                 <Col xs={10} className='mx-auto '>
-                    <Title
+                    <Text
                         weight='bold'
-                        size={theme.sizes.h2}
+                        className='h2'
                     >
                         {NEWSLETTER.title}
-                    </Title>
+                    </Text>
                     <Wrapper md={2} xs={6}>
                         <DividerLine />
                     </Wrapper>
                     <Wrapper md={6}>
                         <Text
                             weight='bold'
-                            size={theme.sizes.body}
+                            className='body'
                         >
                             {NEWSLETTER.headline}
                         </Text>
                         <Nav.Link href='/newsletters' className='p-0'>
                             <Text
-                                size={theme.sizes.body}
+                                className='body'
                             >
                                 {NEWSLETTER.pastNewsletters}
                             </Text>
@@ -123,14 +122,14 @@ class Newsletter extends Component {
                                     <Text
                                         weight='bold'
                                         color={theme.colors.white}
-                                        size={theme.sizes.body}
+                                        className='body'
                                     >
                                     Thanks for suscribing!
                                     </Text>
                                     <Text
                                         weight='bold'
                                         color={theme.colors.white}
-                                        size={theme.sizes.body}
+                                        className='body'
                                     >
                                         {NEWSLETTER.description}
 
@@ -144,7 +143,7 @@ class Newsletter extends Component {
                                     <Text
                                         weight='bold'
                                         color={theme.colors.white}
-                                        size={theme.sizes.body}
+                                        className='body'
                                     >
                                         {NEWSLETTER.description}
                                     </Text>

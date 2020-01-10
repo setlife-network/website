@@ -5,7 +5,6 @@ import {
 
 import DividerLine from './DividerLine'
 import theme from '../styles/theme';
-import Title from './Title';
 import Text from './Text';
 
 
@@ -25,13 +24,13 @@ const PullOutTile = ({
                 />
             </Col>
             <Col md={11}>
-                <Title
-                    size={theme.sizes.medium}
+                <Text
+                    className='medium'
                     bold
                     color={color}
                 >
                     {headline}
-                </Title>
+                </Text>
             </Col>
             <Col md={12}>
                 <Text

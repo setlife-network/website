@@ -5,7 +5,6 @@ import {
 } from 'react-bootstrap';
 import theme from '../styles/theme';
 import DividerLine from '../components/DividerLine';
-import Title from '../components/Title';
 import Text from '../components/Text';
 import QuoteIcon from '../assets/images/quote.png'
 
@@ -39,14 +38,14 @@ const Quote = ({
                     <Col md={6}>
                         <Row>
                             <Col md={12}>
-                                <Title
+                                <Text
                                     left
                                     color={theme.colors.primary}
-                                    size={theme.sizes.quote}
+                                    className='quote'
                                     margin
                                 >
                                     {headline}
-                                </Title>
+                                </Text>
                             </Col>
                             <Container md={2} xs={6}>
                                 <DividerLine />

@@ -40,8 +40,9 @@ class Header extends Component {
             return (
                 <Nav.Link href={t.href} key={t.key}>
                     <Text
-                        size={theme.sizes.link}
+                        className='link'
                         weight='bold'
+                        marginBottom='0'
                     >
                         {t.text}
                     </Text>
@@ -93,7 +94,7 @@ class Header extends Component {
                             </Col>
                         </Row>
 
-                        <Navbar.Collapse className='justify-content-end'>
+                        <Navbar.Collapse className='justify-content-end' style={{ }}>
 
                             {this.renderHeaderLinks()}
                             {/* {this.renderHeaderButton()} */}
