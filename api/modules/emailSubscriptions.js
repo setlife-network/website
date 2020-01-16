@@ -34,7 +34,7 @@ const emailSubscriptions = module.exports = (() => {
             emailTemplate = emailTemplate.replace(':unsuscribe_user_id', record.id);
             return (
                 sendgrid.sendMessage({
-                    recipient: record[0].fields.Email,
+                    recipient: record.fields.Email,
                     msg: [
                         {
                             to: record.fields.Email,
@@ -69,13 +69,13 @@ const emailSubscriptions = module.exports = (() => {
                 'Unsubscribed': true,
             }
         })
-        .then(record => {
+        .then(records => {
             return (
                 sendgrid.sendMessage({
-                    recipient: record[0].fields.Email,
+                    recipient: records[0].fields.Email,
                     msg: [
                         {
-                            to: record[0].fields.Email,
+                            to: records[0].fields.Email,
                             from: 'contact@setlife.education',
                             subject: 'Setlife Newsletter',
                             text: UNSUSCRIBETEXT.body,
@@ -85,7 +85,7 @@ const emailSubscriptions = module.exports = (() => {
                             to: 'social@setlife.network',
                             from: 'contact@setlife.education',
                             subject: 'New Subscription',
-                            text: record[0].fields.Email + 'has sent a request to unsubscribe. The records on Airtable should be updated accordingly',
+                            text: records[0].fields.Email + 'has sent a request to unsubscribe. The records on Airtable should be updated accordingly',
                         },
                     ]
 
