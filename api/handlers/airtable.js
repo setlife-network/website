@@ -33,12 +33,12 @@ const airtable = module.exports = (function () {
                     'id': params.id,
                     'fields': params.fieldData
                 }],
-                function(err, record) {
+                function(err, records) {
                     if (err) {
                         console.error(err);
                         reject(err);
                     } else {
-                        resolve(record)
+                        resolve(records)
                     }
                 }
             )
