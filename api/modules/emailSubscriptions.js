@@ -1,5 +1,6 @@
 var fs = require('fs');
 var { UNSUSCRIBETEXT } = require('../constants');
+var { API_ROOT } = require('../../src/constants.js')
 
 var airtable = require('../handlers/airtable');
 var sendgrid = require('../handlers/sendgrid');
@@ -32,6 +33,7 @@ const emailSubscriptions = module.exports = (() => {
         .then(record => {
 
             emailTemplate = emailTemplate.replace(':unsuscribe_user_id', record.id);
+            emailTemplate = emailTemplate.replace(':api_root', API_ROOT);
             return (
                 sendgrid.sendMessage({
                     recipient: record.fields.Email,
