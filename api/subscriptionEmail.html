@@ -1,5 +1,6 @@
 
 <!DOCTYPE html><html data-editor-version="2" class="sg-campaigns" xmlns="http://www.w3.org/1999/xhtml"><head>
+    <link rel = "API_ROOT" href = "../src/constants.js">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
       <!--[if !mso]><!-->
@@ -152,6 +153,16 @@
         <br>
             © Setlife 2019
         </p>
-        <a href="http://localhost:4000/api/unsubscribe/:unsuscribe_user_id">Unsuscribe from this list</a>
+        <a onclick="variableApiRoot();">
+            Unsuscribe from this list
+        </a>
     </body>
+    <script>
+        function variableApiRoot(){
+                var parameter1 = ${API_ROOT};
+                window.location.href=parameter1+"/unsubscribe/:unsuscribe_user_id"
+
+            }
+
+    </script>
 </html>
