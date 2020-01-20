@@ -1,6 +1,6 @@
 var fs = require('fs');
 var { UNSUSCRIBETEXT } = require('../constants');
-var { API_ROOT } = require('../../src/constants.js')
+var { API_ROOT } = require('../constants');
 
 var airtable = require('../handlers/airtable');
 var sendgrid = require('../handlers/sendgrid');
