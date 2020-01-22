@@ -122,6 +122,13 @@ const NEWSLETTER = [
     }
 ]
 
+const PASTCONTRIBUTORS = [
+    {
+        headline: 'Contribuciones pasadas',
+        key: 'key-pastContributorsHeadline'
+    }
+]
+
 const PRINCIPALMESSAGE = [
     {
         headline1: '¿Y si el software fuera',
@@ -278,6 +285,7 @@ export default {
     HEADERLINKS,
     HEADERDROPDOWN,
     NEWSLETTER,
+    PASTCONTRIBUTORS,
     PRINCIPALMESSAGE,
     PROGRAMSHEADLINE,
     PROGRAMSLEFT,
