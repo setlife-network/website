@@ -39,6 +39,7 @@ const Division = styled(Row)`
 
 class Newsletter extends Component {
 
+
     constructor() {
         super();
     }
@@ -54,6 +55,7 @@ class Newsletter extends Component {
             return Promise.reject(new Error(response.statusText));
         }
     }
+
 
     postData = (e) => {
 
@@ -77,12 +79,18 @@ class Newsletter extends Component {
         })
     }
 
+    preventDefault = (e) => {
+        e.preventDefault();    
+    }
+
 
     render() {
+
 
         const NEWSLETTER = this.props.content.NEWSLETTER[0]
 
         return (
+
             <Section className='Newsletter'>
                 <ImageContainer
                     className='d-none d-md-flex'
@@ -148,7 +156,9 @@ class Newsletter extends Component {
                                         {NEWSLETTER.description}
                                     </Text>
                                     <Form
-                                        onSubmit={this.postData}
+                                        type='form'
+                                        onSubmit={this.preventDefault && this.postData}
+
                                     >
                                         <Wrapper md={4}>
                                             <Form.Control
@@ -157,6 +167,7 @@ class Newsletter extends Component {
                                                 size='sm'
                                                 type='email'
                                                 placeholder={NEWSLETTER.placeholder}
+
                                             />
                                         </Wrapper>
                                         <Wrapper md={2}>
