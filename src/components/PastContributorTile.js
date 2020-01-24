@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import {
-    Row, Col
+    Row, Col, Overlay, OverlayTrigger, Tooltip
 } from 'react-bootstrap';
 
 
@@ -10,20 +10,16 @@ import theme from '../styles/theme';
 import Text from './Text';
 
 
-const ContentDiv = styled(Col)`
-    min-height:100px;
-
-`
-
 const ImageContainer = styled(Col)`
-    height: 50px;
-    width: 100%;
+
+    background:red;
 
     background-position: center center;
     background-size: cover;
 
     background-repeat: no-repeat;
     clip-path: circle(50% at 50% 50%);
+    padding:50px;
 `
 
 const PastContributorTile = ({
@@ -35,21 +31,20 @@ const PastContributorTile = ({
     link
 }) => {
     return (
-        <Row>
-            {
-                portrait
-                && (
-                    <Col md={12}>
 
-                        <ImageContainer
-                            style={{ backgroundImage: `url(${portrait})` }}
-                        />
-                    </Col>
-                )
-            }
+        <div style={{ margin: 10, }}>
+            <OverlayTrigger
+                placement='right'
+                delay={{ show: 100, hide: 400 }}
+                overlay={<Tooltip>{headline}</Tooltip>}
+            >
 
+                <ImageContainer
+                    style={{ backgroundImage: `url(${portrait})` }}
+                />
+            </OverlayTrigger>
 
-        </Row>
+        </div>
 
     )
 

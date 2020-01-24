@@ -38,7 +38,7 @@ class PastContributors extends Component {
         const { TESTIMONIALS } = this.props.content
         return TESTIMONIALS.map(t => {
             return (
-                
+
                 <PastContributorTile
                     date={t.date}
                     headline={t.name}
@@ -46,7 +46,7 @@ class PastContributors extends Component {
                     portrait={t.portrait}
 
                 />
-
+            
             )
         })
     }
