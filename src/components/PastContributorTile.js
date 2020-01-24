@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import {
-    Row, Col, Overlay, OverlayTrigger, Tooltip
+    Row, Col, Overlay, OverlayTrigger, Tooltip, Popover
 } from 'react-bootstrap';
 
 
@@ -22,6 +22,21 @@ const ImageContainer = styled(Col)`
     padding:50px;
 `
 
+function renderTooltip(props) {
+    return (
+        <Popover id='popover-basic'>
+            <Popover.Title as='h3'>{props.headline}</Popover.Title>
+            <Popover.Content>
+                <Text
+                    color={theme.colors.primary}
+                >
+                    {props.date}
+                </Text>
+            </Popover.Content>
+        </Popover>
+    )
+}
+
 const PastContributorTile = ({
     portrait,
     date,
@@ -30,13 +45,15 @@ const PastContributorTile = ({
     buttonText,
     link
 }) => {
+
+
     return (
 
         <div style={{ margin: 10, }}>
             <OverlayTrigger
-                placement='right'
+                placement='bottom'
                 delay={{ show: 100, hide: 400 }}
-                overlay={<Tooltip>{headline}</Tooltip>}
+                overlay={renderTooltip({ headline, date })}
             >
 
                 <ImageContainer
