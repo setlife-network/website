@@ -56,9 +56,8 @@ class Newsletter extends Component {
         }
     }
 
-
     postData = (e) => {
-
+        e.preventDefault();
         const email = document.getElementById('emailHolder').value;
         const config = {
             method: 'POST',
@@ -77,10 +76,6 @@ class Newsletter extends Component {
         this.setState({
             submitted: true
         })
-    }
-
-    preventDefault = (e) => {
-        e.preventDefault();    
     }
 
 
@@ -157,7 +152,7 @@ class Newsletter extends Component {
                                     </Text>
                                     <Form
                                         type='form'
-                                        onSubmit={this.preventDefault && this.postData}
+                                        onSubmit={this.postData}
 
                                     >
                                         <Wrapper md={4}>
