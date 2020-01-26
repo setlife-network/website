@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components'
 import {
     Row, Col, Overlay, OverlayTrigger, Tooltip, Popover
@@ -12,59 +12,63 @@ import Text from './Text';
 
 const ImageContainer = styled(Col)`
 
-    background:red;
 
+    position:relative;
     background-position: center center;
     background-size: cover;
-
-    background-repeat: no-repeat;
     clip-path: circle(50% at 50% 50%);
     padding:50px;
+
+    &:hover:after {
+        content:'';
+        position:absolute;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        background:rgba(0,0,0,0.6);
+        opacity:1;
+        transition: all 0.8s;
+    }
+
 `
 
-function renderTooltip(props) {
-    return (
-        <Popover id='popover-basic'>
-            <Popover.Title as='h3'>{props.headline}</Popover.Title>
-            <Popover.Content>
-                <Text
-                    color={theme.colors.primary}
+
+class PastContributorTile extends Component {
+
+    renderTooltip = () => {
+        return (
+            <Popover id='popover-basic'>
+                <Popover.Title as='h3'>{this.props.headline}</Popover.Title>
+                <Popover.Content>
+                    <Text
+                        color={theme.colors.primary}
+                    >
+                        {this.props.date}
+                    </Text>
+                </Popover.Content>
+            </Popover>
+        )
+    }
+
+
+    render() {
+        return (
+            <div style={{ margin: 10, }}>
+                <OverlayTrigger
+                    placement='bottom'
+                    delay={{ show: 100, hide: 400 }}
+                    overlay={this.renderTooltip()}
                 >
-                    {props.date}
-                </Text>
-            </Popover.Content>
-        </Popover>
-    )
-}
 
-const PastContributorTile = ({
-    portrait,
-    date,
-    headline,
-    description,
-    buttonText,
-    link
-}) => {
+                    <ImageContainer
+                        style={{ backgroundImage: `url(${this.props.portrait})` }}
+                    />
+                </OverlayTrigger>
 
-
-    return (
-
-        <div style={{ margin: 10, }}>
-            <OverlayTrigger
-                placement='bottom'
-                delay={{ show: 100, hide: 400 }}
-                overlay={renderTooltip({ headline, date })}
-            >
-
-                <ImageContainer
-                    style={{ backgroundImage: `url(${portrait})` }}
-                />
-            </OverlayTrigger>
-
-        </div>
-
-    )
-
+            </div>
+        )
+    }
 }
 
 export default PastContributorTile
