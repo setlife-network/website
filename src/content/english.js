@@ -123,11 +123,33 @@ const NEWSLETTER = [
     }
 ]
 
-const PASTCONTRIBUTORS = [
+const PASTCONTRIBUTORSHEADLINE = [
     {
         headline: 'Past Contributors',
         key: 'key-pastContributorsHeadline'
     }
+]
+
+const PASTCONTRIBUTORSTESTIMONIALS = [
+    {
+        name: 'David Lafarga',
+        quote: '',
+        date: 'Founding Contributor',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434298-ff64c780-018e-11ea-98ad-56d68c3275b4.png',
+        // portrait: 'https://user-images.githubusercontent.com/4914611/65234991-01d36b00-dad6-11e9-949e-a1e0709919fa.png'
+    },
+    {
+        name: 'Rebeca Rubio',
+        quote: 'El programa de mentoría de SetLife me ha permitido consolidar mis conocimientos de programación colaborando de forma directa en su desarrollo. El uso de nuevas herramientas y de software actual me han hecho evolucionar rápidamente y adquirir mejores prácticas de implementación de código y de comunicación a la hora de colaborar con otras personas dentro de un mismo proyecto. Como desarrolladora de software he cumplido uno de mis objetivos: poner en práctica aquellos conocimientos que quedan sin profundizar en el aula gracias a la metodología del aprendizaje basado en proyectos. Actualmente mis habilidades tecnológicas siguen evolucionando de una forma más efectiva y en un ambiente de trabajo que estimula la autonomía y el crecimiento profesional.',
+        date: 'Software Developer',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434144-a6952f00-018e-11ea-9fcd-b00218b98c64.png'
+    },
+    {
+        name: 'Marin Basic',
+        quote: '',
+        date: 'Visual Brand Developer',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434644-dbee4c80-018f-11ea-9630-9f2ff85d9325.jpeg'
+    },
 ]
 
 const PRINCIPALMESSAGE = [
@@ -252,25 +274,7 @@ const TESTIMONIALS = [
         date: 'Director',
         portrait: 'https://user-images.githubusercontent.com/49292858/70638445-453e0100-1c0f-11ea-91c1-24f5612ce1df.jpg',
     },
-    {
-        name: 'David Lafarga',
-        quote: '',
-        date: 'Founding Contributor',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68434298-ff64c780-018e-11ea-98ad-56d68c3275b4.png',
-        // portrait: 'https://user-images.githubusercontent.com/4914611/65234991-01d36b00-dad6-11e9-949e-a1e0709919fa.png'
-    },
-    {
-        name: 'Rebeca Rubio',
-        quote: 'El programa de mentoría de SetLife me ha permitido consolidar mis conocimientos de programación colaborando de forma directa en su desarrollo. El uso de nuevas herramientas y de software actual me han hecho evolucionar rápidamente y adquirir mejores prácticas de implementación de código y de comunicación a la hora de colaborar con otras personas dentro de un mismo proyecto. Como desarrolladora de software he cumplido uno de mis objetivos: poner en práctica aquellos conocimientos que quedan sin profundizar en el aula gracias a la metodología del aprendizaje basado en proyectos. Actualmente mis habilidades tecnológicas siguen evolucionando de una forma más efectiva y en un ambiente de trabajo que estimula la autonomía y el crecimiento profesional.',
-        date: 'Software Developer',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68434144-a6952f00-018e-11ea-9fcd-b00218b98c64.png'
-    },
-    {
-        name: 'Marin Basic',
-        quote: '',
-        date: 'Visual Brand Developer',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68434644-dbee4c80-018f-11ea-9630-9f2ff85d9325.jpeg'
-    },
+
 ]
 
 export default {
@@ -286,7 +290,8 @@ export default {
     HEADERLINKS,
     HEADERDROPDOWN,
     NEWSLETTER,
-    PASTCONTRIBUTORS,
+    PASTCONTRIBUTORSHEADLINE,
+    PASTCONTRIBUTORSTESTIMONIALS,
     PRINCIPALMESSAGE,
     PROGRAMSHEADLINE,
     PROGRAMSLEFT,

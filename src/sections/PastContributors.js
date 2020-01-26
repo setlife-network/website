@@ -18,8 +18,8 @@ const Section = styled.div`
 class PastContributors extends Component {
 
     renderHeadline = () => {
-        const { PASTCONTRIBUTORS } = this.props.content
-        return PASTCONTRIBUTORS.map(t => {
+        const { PASTCONTRIBUTORSHEADLINE } = this.props.content
+        return PASTCONTRIBUTORSHEADLINE.map(t => {
             return (
                 <Col md={12} key={t.key}>
                     <Headline
@@ -35,8 +35,8 @@ class PastContributors extends Component {
     }
 
     renderTestimonials = () => {
-        const { TESTIMONIALS } = this.props.content
-        return TESTIMONIALS.map(t => {
+        const { PASTCONTRIBUTORSTESTIMONIALS } = this.props.content
+        return PASTCONTRIBUTORSTESTIMONIALS.map(t => {
             return (
 
                 <PastContributorTile
@@ -46,7 +46,7 @@ class PastContributors extends Component {
                     portrait={t.portrait}
 
                 />
-            
+
             )
         })
     }
