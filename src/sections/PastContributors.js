@@ -12,7 +12,7 @@ import theme from '../styles/theme';
 const Section = styled.div`
 
     padding-bottom:80px;
-    background: ${props => props.grey ? '#EEEEEE' : 'white'}
+    background: ${props => props.grey ? theme.colors.grey : theme.colors.white}
 `
 
 class PastContributors extends Component {
@@ -61,7 +61,6 @@ class PastContributors extends Component {
                         <Row>
                             {this.renderHeadline()}
                             {this.renderTestimonials()}
-                            {/* {this.renderButton()} */}
                         </Row>
                     </Col>
 

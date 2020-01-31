@@ -32,7 +32,9 @@ const ImageContainer = styled(Col)`
     }
 
 `
-
+const Section = styled.div`
+    margin:10px;
+`
 
 class PastContributorTile extends Component {
 
@@ -54,10 +56,10 @@ class PastContributorTile extends Component {
 
     render() {
         return (
-            <div style={{ margin: 10, }}>
+            <Section>
                 <OverlayTrigger
                     placement='bottom'
-                    delay={{ show: 100, hide: 400 }}
+                    delay={{ show: 50 }}
                     overlay={this.renderTooltip()}
                 >
 
@@ -65,8 +67,7 @@ class PastContributorTile extends Component {
                         style={{ backgroundImage: `url(${this.props.portrait})` }}
                     />
                 </OverlayTrigger>
-
-            </div>
+            </Section>
         )
     }
 }
