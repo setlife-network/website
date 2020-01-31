@@ -8,7 +8,7 @@ properties:
 */
 
 export const Text = styled.p`
-
+    font-size: ${props => props.fontSize};
     text-align: ${props => props.alignment};
     color: ${props => props.color};
     font-weight: ${props => props.weight};

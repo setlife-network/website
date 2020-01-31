@@ -7,6 +7,7 @@ import Programs from '../sections/Programs'
 import CoreValues from '../sections/CoreValues'
 import Consultation from '../sections/Consultation'
 import Blog from '../sections/Blog'
+import PastContributors from '../sections/PastContributors'
 import Quote from '../sections/Quote'
 import Newsletter from '../sections/Newsletter'
 import Footer from '../sections/Footer'
@@ -61,6 +62,7 @@ class HomePage extends Component {
                 <CoreValues content={content} />
                 <Consultation content={content} />
                 <Blog content={content} />
+                <PastContributors content={content} />
                 {this.renderQuote()}
                 <Newsletter content={content} />
                 <Footer content={content} />

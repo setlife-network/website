@@ -123,6 +123,34 @@ const NEWSLETTER = [
     }
 ]
 
+const PASTCONTRIBUTORSHEADLINE = [
+    {
+        headline: 'Past Contributors',
+        key: 'key-pastContributorsHeadline'
+    }
+]
+
+const PASTCONTRIBUTORSTESTIMONIALS = [
+    {
+        name: 'Quinn Pruitt',
+        quote: 'Project based learning is by far the most effective learning environment for software development. In seven weeks, I learned more about backend development and product management than I would have learned in an entire semester in college. The projects were quite challenging, yet incredibly rewarding. The high level of autonomy and personal responsibility provided a strong sense of ownership for my work, which I found crucial to my growth and success. I would recommend this program to anyone looking to level up their professional skills in a fun an engaging learning environment.',
+        date: 'Technical Advisor',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68627489-41a24780-04b4-11ea-87d4-e3a73ff96d5c.jpeg'
+    },
+    {
+        name: 'David Lafarga',
+        quote: '',
+        date: 'Founding Contributor',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434298-ff64c780-018e-11ea-98ad-56d68c3275b4.png',
+    },
+    {
+        name: 'Marin Basic',
+        quote: '',
+        date: 'Visual Brand Developer',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434644-dbee4c80-018f-11ea-9630-9f2ff85d9325.jpeg'
+    },
+]
+
 const PRINCIPALMESSAGE = [
     {
         headline1: 'Make software',
@@ -228,29 +256,10 @@ const TESTIMONIALS = [
         portrait: 'https://user-images.githubusercontent.com/49292858/68434040-5fa73980-018e-11ea-9ab5-079506b65ad2.jpg'
     },
     {
-        name: 'Quinn Pruitt',
-        quote: 'Project based learning is by far the most effective learning environment for software development. In seven weeks, I learned more about backend development and product management than I would have learned in an entire semester in college. The projects were quite challenging, yet incredibly rewarding. The high level of autonomy and personal responsibility provided a strong sense of ownership for my work, which I found crucial to my growth and success. I would recommend this program to anyone looking to level up their professional skills in a fun an engaging learning environment.',
-        date: 'Technical Advisor',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68627489-41a24780-04b4-11ea-87d4-e3a73ff96d5c.jpeg'
-    },
-    {
         name: 'Sofia Rodriguez',
         quote: 'As a contributor I have learned to collaborate in teams, use new technologies and organize myself to make my time more productive, all while working on real and meaningful projects. Being part of the project-based learning program has made me realize you don’t need to be an expert in technology to build great products, and what you really need is dedication and a desire of learning something new. Also I realized that are a ton of resources on the internet to learn and polish your knowledge.',
         date: 'Software Developer',
         portrait: 'https://user-images.githubusercontent.com/49292858/68435380-8ca91b80-0191-11ea-9501-2668bb0dcd36.png'
-    },
-    {
-        name: 'Dave Corkle',
-        quote: '',
-        date: 'Director',
-        portrait: 'https://user-images.githubusercontent.com/49292858/70638445-453e0100-1c0f-11ea-91c1-24f5612ce1df.jpg',
-    },
-    {
-        name: 'David Lafarga',
-        quote: '',
-        date: 'Founding Contributor',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68434298-ff64c780-018e-11ea-98ad-56d68c3275b4.png',
-        // portrait: 'https://user-images.githubusercontent.com/4914611/65234991-01d36b00-dad6-11e9-949e-a1e0709919fa.png'
     },
     {
         name: 'Rebeca Rubio',
@@ -259,11 +268,12 @@ const TESTIMONIALS = [
         portrait: 'https://user-images.githubusercontent.com/49292858/68434144-a6952f00-018e-11ea-9fcd-b00218b98c64.png'
     },
     {
-        name: 'Marin Basic',
+        name: 'Dave Corkle',
         quote: '',
-        date: 'Visual Brand Developer',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68434644-dbee4c80-018f-11ea-9630-9f2ff85d9325.jpeg'
+        date: 'Director',
+        portrait: 'https://user-images.githubusercontent.com/49292858/70638445-453e0100-1c0f-11ea-91c1-24f5612ce1df.jpg',
     },
+
 ]
 
 export default {
@@ -279,6 +289,8 @@ export default {
     HEADERLINKS,
     HEADERDROPDOWN,
     NEWSLETTER,
+    PASTCONTRIBUTORSHEADLINE,
+    PASTCONTRIBUTORSTESTIMONIALS,
     PRINCIPALMESSAGE,
     PROGRAMSHEADLINE,
     PROGRAMSLEFT,
