@@ -131,17 +131,16 @@ const PASTCONTRIBUTORSHEADLINE = [
 
 const PASTCONTRIBUTORSTESTIMONIALS = [
     {
+        name: 'Quinn Pruitt',
+        quote: 'El aprendizaje basado en proyectos es en definitivo la forma mas efectiva para aprender a programar. En 7 semanas he aprendido mas sobre el desarrollo backend y la gestión de producto que en un semestre universitario. Los proyectos me retaron pero terminarlos era muy gratificante. Tenía un nivel de autonomía y responsabilidad personal que me daba una sensación importante de autoría sobre mi trabajo y que me ayudo a crecer y a conseguir mis objetivos. Recomendaría este programa a quien busque elevar sus habilidades profesionales en un ambiente de aprendizaje divertido y interesante.',
+        date: 'Asesor técnico',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68435657-39839880-0192-11ea-95ab-43c9f1bd8c91.jpg'
+    },
+    {
         name: 'David Lafarga',
         quote: '',
         date: 'Fundador y colaborador',
         portrait: 'https://user-images.githubusercontent.com/49292858/68434298-ff64c780-018e-11ea-98ad-56d68c3275b4.png',
-        // portrait: 'https://user-images.githubusercontent.com/4914611/65234991-01d36b00-dad6-11e9-949e-a1e0709919fa.png'
-    },
-    {
-        name: 'Rebeca Rubio',
-        quote: 'El programa de mentoría de SetLife me ha permitido consolidar mis conocimientos de programación colaborando de forma directa en su desarrollo. El uso de nuevas herramientas y de software actual me han hecho evolucionar rápidamente y adquirir mejores prácticas de implementación de código y de comunicación a la hora de colaborar con otras personas dentro de un mismo proyecto. Como desarrolladora de software he cumplido uno de mis objetivos: poner en práctica aquellos conocimientos que quedan sin profundizar en el aula gracias a la metodología del aprendizaje basado en proyectos. Actualmente mis habilidades tecnológicas siguen evolucionando de una forma más efectiva y en un ambiente de trabajo que estimula la autonomía y el crecimiento profesional.',
-        date: 'Desarrolladora de software',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68434144-a6952f00-018e-11ea-9fcd-b00218b98c64.png'
     },
     {
         name: 'Marin Basic',
@@ -256,16 +255,16 @@ const TESTIMONIALS = [
         portrait: 'https://user-images.githubusercontent.com/49292858/68434040-5fa73980-018e-11ea-9ab5-079506b65ad2.jpg'
     },
     {
-        name: 'Quinn Pruitt',
-        quote: 'El aprendizaje basado en proyectos es en definitivo la forma mas efectiva para aprender a programar. En 7 semanas he aprendido mas sobre el desarrollo backend y la gestión de producto que en un semestre universitario. Los proyectos me retaron pero terminarlos era muy gratificante. Tenía un nivel de autonomía y responsabilidad personal que me daba una sensación importante de autoría sobre mi trabajo y que me ayudo a crecer y a conseguir mis objetivos. Recomendaría este programa a quien busque elevar sus habilidades profesionales en un ambiente de aprendizaje divertido y interesante.',
-        date: 'Asesor técnico',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68435657-39839880-0192-11ea-95ab-43c9f1bd8c91.jpg'
-    },
-    {
         name: 'Sofia Rodriguez',
         quote: 'Como colaborador, he aprendido a trabajar en equipos, usar nuevas tecnologías y organizarme para hacer que mi tiempo sea más productivo, todo mientras trabajo en proyectos reales y significativos. Ser parte del Project Based Learning me ha hecho darme cuenta de que no es necesario ser un experto en tecnología para crear productos excelentes, y lo que realmente se necesita es dedicación y el deseo de aprender algo nuevo. También me di cuenta de que hay una tonelada de recursos en Internet para aprender y pulir conocimiento.',
         date: 'Desarrolladora de software',
         portrait: 'https://user-images.githubusercontent.com/49292858/68435380-8ca91b80-0191-11ea-9501-2668bb0dcd36.png'
+    },
+    {
+        name: 'Rebeca Rubio',
+        quote: 'El programa de mentoría de SetLife me ha permitido consolidar mis conocimientos de programación colaborando de forma directa en su desarrollo. El uso de nuevas herramientas y de software actual me han hecho evolucionar rápidamente y adquirir mejores prácticas de implementación de código y de comunicación a la hora de colaborar con otras personas dentro de un mismo proyecto. Como desarrolladora de software he cumplido uno de mis objetivos: poner en práctica aquellos conocimientos que quedan sin profundizar en el aula gracias a la metodología del aprendizaje basado en proyectos. Actualmente mis habilidades tecnológicas siguen evolucionando de una forma más efectiva y en un ambiente de trabajo que estimula la autonomía y el crecimiento profesional.',
+        date: 'Desarrolladora de software',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434144-a6952f00-018e-11ea-9fcd-b00218b98c64.png'
     },
     {
         name: 'Dave Corkle',
