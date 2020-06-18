@@ -9,14 +9,10 @@ var content = locale === 'en-US' ? english : spanish
 
 function ChangeLanguage() {
     if ( content === english) {
-        console.log('spanish');
         content = spanish
-        console.log(content.PRINCIPALMESSAGE);
         return content
     } else {
-        console.log('english');
         content = english
-        console.log(content.PRINCIPALMESSAGE);
         return content
     }
 }

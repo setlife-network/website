@@ -12,8 +12,8 @@ import theme from '../styles/theme';
 
 const Section = styled.div`
     padding-top: 80px;
-    padding-bottom:80px;
-    background: ${props => props.grey ? '#EEEEEE' : 'white'}
+    padding-bottom:30px;
+    background: ${props => props.grey ? theme.colors.grey : theme.colors.white}
 `
 
 const TestimonyDiv = styled(Col)`

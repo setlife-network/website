@@ -25,7 +25,8 @@ const Headline = ({
     description,
     color,
     weight,
-    alignment
+    alignment,
+    fontSize,
 }) => {
     return (
         <Wrapper>
@@ -44,6 +45,7 @@ const Headline = ({
                     color={color}
                     weight={weight}
                     alignment={alignment}
+                    fontSize={fontSize}
                     className='h2'
                 >
                     {headline}
