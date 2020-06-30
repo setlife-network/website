@@ -66,12 +66,11 @@ class NewslettersPage extends Component {
 
             var url = `/newsletters/${t}`
             url = url.slice(0, -3)
-            url = moment(url).format('MMMM YYYY');
 
             return (
                 <li>
                     <a href={url}>
-                        {url}
+                        {moment(url.slice(13), 'MMM - Y').format('MMMM YYYY')}
                     </a>
                 </li>
             )

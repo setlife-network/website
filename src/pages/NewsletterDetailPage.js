@@ -12,6 +12,7 @@ const fs = require('fs')
 
 const Section = styled(Row)`
     margin-top:50px
+    margin-bottom:50px
 `
 
 class NewsletterDetailPage extends Component {
