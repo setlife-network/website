@@ -25,7 +25,7 @@ const Section = styled(Row)`
 
 
 const Header = () => (
-    <Section>
+    <Section className='fixed-bottom'>
 
         <Col md={11} className='mx-auto'>
 

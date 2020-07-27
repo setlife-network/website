@@ -1,10 +1,10 @@
-Current Sketch File: https://drive.google.com/open?id=1te2BRyotmrfZk538s-tMRWjmUR_Ue7RK
+Current Sketch File: N/A
 
 # Development
 
 1. Clone the repo
 ```
-git clone https://github.com/setlife-network/website
+git clone https://github.com/JPI-Tech/trshmag.git
 ```
 
 2. Install packages

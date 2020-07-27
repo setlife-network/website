@@ -95,7 +95,7 @@ class Header extends Component {
                         </Row>
 
                         <Navbar.Collapse className='justify-content-end' style={{ }}>
-
+                            
                             {this.renderHeaderLinks()}
                             {/* {this.renderHeaderButton()} */}
 

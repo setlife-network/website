@@ -5,11 +5,13 @@ import moment from 'moment'
 
 import Header from '../components/Header'
 import Footer from '../sections/Footer'
+import Calendar from '../components/Calendar.js';
+
 
 import { API_ROOT } from '../constants'
 
 const Section = styled(Row)`
-    margin:50px;
+    margin:10px;
 `
 
 const monthCompare = (a, b) => {
@@ -68,11 +70,11 @@ class NewslettersPage extends Component {
             url = url.slice(0, -3)
 
             return (
-                <li>
+                <div>
                     <a href={url}>
                         {moment(url.slice(13), 'MMM - Y').format('MMMM YYYY')}
                     </a>
-                </li>
+                </div>
             )
         });
     }
@@ -94,18 +96,17 @@ class NewslettersPage extends Component {
 
                 {this.state.newsletters
                         && (
-                            <Section>
-                                <Row>
-                                    <Col />
-                                    <Col xs={10}>
-                                        <p>
+                            <Section className='text-center'>
+                                
+                                    <Col className='mt-5'>
+                                        {/* <p> */}
 
-                                            {this.renderNewsletters()}
+                                            {/* {this.renderNewsletters()} */}
+                                            <Calendar />
 
-                                        </p>
+                                        {/* </p> */}
                                     </Col>
-                                    <Col />
-                                </Row>
+                                    
                             </Section>
                         )
                 }
