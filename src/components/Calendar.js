@@ -1,76 +1,47 @@
 import React, { Component } from 'react'
-
 import { Container, Image, Row, Col } from 'react-bootstrap';
 import moment from 'moment'
 
 import { API_ROOT } from '../constants'
 
+const NewsletterTile = (props) => {
+    const { fileName, index } = props
 
-// Moment var currentYear  = check.format('YYYY');
-const monthCompare = (a, b) => {
-    const months = {
-        'January-2019.md': 11,
-        'February-2019.md': 10,
-        'March-2019.md': 9,
-        'April-2019.md': 8,
-        'May-2019.md': 7,
-        'June-2019.md': 6,
-        'July-2019.md': 5,
-        'August-2019.md': 4,
-        'September-2019.md': 3,
-        'October-2019.md': 2,
-        'November-2019.md': 1,
-        'December-2019.md': 0
-    }
+    const title = fileName.slice(0, -3) // Remove .md extension
 
-    return months[a] - months[b]
+    var url = `/newsletters/${title}`
+    url = url.slice(0, -3)
+
+    console.log(fileName)
+    console.log(title)
+    console.log(url)
+
+    return (
+        <Row className='p-3 border border-primary'>
+
+            <div className='p-3 col-12'>
+                {title}
+            </div>
+
+            <div className='p-3 col-12'>
+                {`Newsletter #${index}`}
+            </div>
+
+        </Row>
+    )
 }
 
 class Calendar extends Component {
 
-    state = {
-        newsletters: [],
-    }
-    componentDidMount() {
-
-        fetch(`${API_ROOT}/fetchAllNewsletters`)
-            .then(response => {
-                if (response.ok) {
-                    return Promise.resolve(response);
-                } else {
-                    return Promise.reject(new Error(response.statusText));
-                }
-            })
-            .then(response => response.json())
-            .then(response => {
-                const newsletters = response
-                this.setState({ newsletters: newsletters })
-            })
-            .catch(error => {
-                console.log('Looks like there was a problem!', error)
-                this.props.history.push('/')
-            })
-
-    }
-
-
     renderNewsletters = () => {
-        // anti pattern
-        // this setState();
-        const sortedNewsletters = this.state.newsletters.sort(monthCompare)
-        return this.state.newsletters.map(t => {
 
-            var url = `/newsletters/${t}`
-            url = url.slice(0, -3)
-            console.log(url)
+        return this.props.sortedNewsletters.map((t, i) => {
+
             return (
-                // <Col>
-                    <Row >
-                        <Col className='p-3 border border-primary' xs={12} sm={4} >{t}</Col>
-                        <Col className='p-3 border border-primary' xs={12} sm={4}>Feb</Col>
-                        <Col className='p-3 border border-primary' xs={12} sm={4}>March</Col>
-                    </Row>
-                // </Col>
+                <NewsletterTile
+                    fileName={t}
+                    index={i}
+                />
             )
         });
     }
@@ -82,9 +53,18 @@ class Calendar extends Component {
         } = this.props
 
         return (
-            <Container className='' xs={12} sm={4}>
-                {this.renderNewsletters()}
+            <Container className='row mx-auto'>
+                <div className='col-12 col-sm-4'>
+                    {this.renderNewsletters()}
+                </div>
+                <div className='col-12 col-sm-4'>
+                    {this.renderNewsletters()}
+                </div>
+                <div className='col-12 col-sm-4'>
+                    {this.renderNewsletters()}
+                </div>
             </Container>
+            
         );
     }
 }

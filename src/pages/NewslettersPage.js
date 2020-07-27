@@ -62,10 +62,12 @@ class NewslettersPage extends Component {
     }
 
     renderNewsletters = () => {
+        let sortedNewsletters = [...this.state.newsletters]
+        sortedNewsletters.sort(monthCompare)
 
-        this.state.newsletters.sort(monthCompare)
-        return this.state.newsletters.map(t => {
+        return <Calendar sortedNewsletters={sortedNewsletters} />
 
+        return sortedNewsletters.map(t => {
             var url = `/newsletters/${t}`
             url = url.slice(0, -3)
 
@@ -98,14 +100,13 @@ class NewslettersPage extends Component {
                         && (
                             <Section className='text-center'>
                                 
-                                    <Col className='mt-5'>
-                                        {/* <p> */}
+                                <Col className='mt-5'>
+                                    {/* <p> */}
 
-                                            {/* {this.renderNewsletters()} */}
-                                            <Calendar />
+                                    {this.renderNewsletters()}
 
-                                        {/* </p> */}
-                                    </Col>
+                                    {/* </p> */}
+                                </Col>
                                     
                             </Section>
                         )
