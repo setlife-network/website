@@ -28,3 +28,5 @@ git push -u origin your-branch
 // or just "git push" if your branch already exists on GitHub
 ```
 - Create a pull request from `your-branch` to `develop` and be sure to include either a video recording with proof that the issue is resolved or clear instructions on how to test successfully and wait for a code review. If any changes are required after review, pushing to the same branch again will automatically update the pull request
+
+-[CONTRIBUTING.md in Spanish](https://github.com/setlife-network/website/blob/develop/docs/es/CONTRIBUTING-es.md)
