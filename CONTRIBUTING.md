@@ -27,4 +27,4 @@ git merge - // this is a shortcut for merging the last branch you were on into t
 git push -u origin your-branch 
 // or just "git push" if your branch already exists on GitHub
 ```
-- Create a pull request from `your-branch` to `develop` and be sure to include either a video recording with proof that the issue is resolved or clear instructions on how to test successfully and wait for a code review. If any changes are required after review, pushing to the same branch again will automatically update the pull request
+- Create a pull request from `your-branch` to `develop` and be sure to include either a video recording/screenshot with proof that the issue is resolved (preferred) OR clear instructions on how to test successfully and wait for a code review. If any changes are required after review, pushing to the same branch again will automatically update the pull request
