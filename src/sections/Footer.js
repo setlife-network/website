@@ -26,8 +26,8 @@ const Header = () => (
 			      <Navbar>
 				        <HeaderImage src={logo} />
 				            <Text color={theme.colors.white}>
-                        © Setlife 2020
-                    </Text>
+                                © Setlife 2020
+                            </Text>
 			      </Navbar>
 		    </Col>
 	  </Section>
