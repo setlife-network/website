@@ -21,16 +21,16 @@ const Section = styled(Row)`
 `
 
 const Header = () => (
-	<Section>
-		<Col md={11} className='mx-auto'>
-			<Navbar>
-				<HeaderImage src={logo} />
-				<Text color={theme.colors.white}>
-                    © Setlife 2020
+    <Section>
+        <Col md={11} className='mx-auto'>
+            <Navbar>
+                <HeaderImage src={logo} />
+                <Text color={theme.colors.white}>
+                    {`© Setlife 2020`}
                 </Text>
-			</Navbar>
-		</Col>
-	</Section>
+            </Navbar>
+	</Col>
+    </Section>
 )
 
-export default Header;
+export default Header
