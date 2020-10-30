@@ -1,0 +1,23 @@
+# The SetLife Network
+# July 2020 Newsletter
+-------
+
+## New project: transparent efficiency metrics
+
+Oscar had been mulling over a problem for months now: how to visualize and verbalize how much money SetLife gets for how much work and in turn how much SetLife allocates to who for doing that work, and just as importantly, how to convey that information to clients.
+
+Oscar and Viki started meeting one hour a week to get an ideation workshop going. We started by doing a bit of research on ideation, design sprints, and similar concepts, and trying different techniques out to pinpoint the nature of the current process, what about it was problematic, what alternative processes and end goals might look like. Other SetLife members soon joined in, and we cobbled a few big-picture goals from this handful of July sessions:
+
+- have a good grasp (data) of how much money and time flow in and out
+- organize that data into transparent efficiency metrics, which allow us to visualize the relationships between the data sets, in the interest of both ourselves and our clients
+- use those metrics to manage client expectations for a software development project
+
+What emerged as a solution was an app that took all of this data already being collected through various platforms (time tracking in Toggl, payments in Invoicely, issues in Github) and could use that data to spell out different relationships, like one programmer’s hourly rate, or how much a project would cost for a given set of features, freelancers, and timeframes.
+
+## Asociación SetLife
+
+Separately, we've shifted some focus back over to getting that Spanish entity up and running. Our paperwork odyssey from last year did prove successful: the Asociación SetLife did in fact make it into the Registro Nacional de Asociaciones. But a dip in funding and the subsequent global pandemic put a damper on our project (like so many others). Viki recently picked the scent back up and is gathering the next steps towards operating here and seeing what opportunities Europe represents.
+
+## Miscellanea
+
+Another thought that emerged was that collaboration and teaching should be incentivized such that it is more worthwhile for a freelancer to collaborate and share their skills and knowledge, rather than claiming work for themselves. This is a super interesting but pesky and opaque (philosophical) question that we will continue to investigate...
