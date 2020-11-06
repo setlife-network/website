@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import moment from 'moment'
+import { forEach } from 'lodash'
 
 import Header from '../components/Header'
 import Footer from '../sections/Footer'
@@ -13,22 +14,11 @@ const Section = styled(Row)`
 `
 
 const monthCompare = (a, b) => {
-    const months = {
-        'January-2019.md': 11,
-        'February-2019.md': 10,
-        'March-2019.md': 9,
-        'April-2019.md': 8,
-        'May-2019.md': 7,
-        'June-2019.md': 6,
-        'July-2019.md': 5,
-        'August-2019.md': 4,
-        'September-2019.md': 3,
-        'October-2019.md': 2,
-        'November-2019.md': 1,
-        'December-2019.md': 0
+    if (moment(a).isAfter(moment(b))) {
+        return 1
+    }else{
+        return -1
     }
-
-    return months[a] - months[b]
 }
 
 class NewslettersPage extends Component {
@@ -62,6 +52,7 @@ class NewslettersPage extends Component {
     renderNewsletters = () => {
 
         this.state.newsletters.sort(monthCompare)
+
         return this.state.newsletters.map(t => {
 
             var url = `/newsletters/${t}`
@@ -70,7 +61,7 @@ class NewslettersPage extends Component {
             return (
                 <li>
                     <a href={url}>
-                        {moment(url.slice(13), 'MMM - Y').format('MMMM YYYY')}
+                        {moment(t.slice(0,-3)).format('MMMM YYYY')}
                     </a>
                 </li>
             )
@@ -91,7 +82,6 @@ class NewslettersPage extends Component {
                     changeLanguage={changeLanguage}
                     language={this.props.language}
                 />
-
                 {this.state.newsletters
                         && (
                             <Section>
@@ -99,9 +89,7 @@ class NewslettersPage extends Component {
                                     <Col />
                                     <Col xs={10}>
                                         <p>
-
                                             {this.renderNewsletters()}
-
                                         </p>
                                     </Col>
                                     <Col />
@@ -109,12 +97,8 @@ class NewslettersPage extends Component {
                             </Section>
                         )
                 }
-
-
                 <Footer content={content} />
             </div>
-
-
         );
     }
 }
