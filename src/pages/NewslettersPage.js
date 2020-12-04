@@ -6,11 +6,15 @@ import { forEach } from 'lodash'
 
 import Header from '../components/Header'
 import Footer from '../sections/Footer'
+import Text from '../components/Text'
+import NewsletterTile from '../components/NewsletterTile'
+
+import theme from '../styles/theme';
 
 import { API_ROOT } from '../constants'
 
 const Section = styled(Row)`
-    margin:50px;
+
 `
 
 const monthCompare = (a, b) => {
@@ -51,19 +55,18 @@ class NewslettersPage extends Component {
 
     renderNewsletters = () => {
 
+        const { history } = this.props
+
         this.state.newsletters.sort(monthCompare)
 
         return this.state.newsletters.map(t => {
 
             var url = `/newsletters/${t}`
-            url = url.slice(0, -3)
 
             return (
-                <li>
-                    <a href={url}>
-                        {moment(t.slice(0,-3)).format('MMMM YYYY')}
-                    </a>
-                </li>
+                <Col xs={12} lg={4} className='px-4 py-2'>
+                    <NewsletterTile date={t.slice(0,-3)} history={history}/>
+                </Col>
             )
         });
     }
@@ -82,21 +85,23 @@ class NewslettersPage extends Component {
                     changeLanguage={changeLanguage}
                     language={this.props.language}
                 />
-                {this.state.newsletters
-                        && (
-                            <Section>
+                <Row className='px-5 my-5'>
+                    <Col />
+                    <Col xs={10}>
+                    <Text weight='bold' fontSize={theme.sizes.subtitle} color={theme.colors.primary}>
+                        Monthly Newsletters
+                    </Text>
+
+                        {this.state.newsletters
+                            && (
                                 <Row>
-                                    <Col />
-                                    <Col xs={10}>
-                                        <p>
-                                            {this.renderNewsletters()}
-                                        </p>
-                                    </Col>
-                                    <Col />
+                                    {this.renderNewsletters()}
                                 </Row>
-                            </Section>
-                        )
-                }
+                            )
+                        }
+                    </Col>
+                    <Col />
+                </Row>
                 <Footer content={content} />
             </div>
         );
