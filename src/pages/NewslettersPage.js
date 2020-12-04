@@ -60,9 +60,6 @@ class NewslettersPage extends Component {
         this.state.newsletters.sort(monthCompare)
 
         return this.state.newsletters.map(t => {
-
-            var url = `/newsletters/${t}`
-
             return (
                 <Col xs={12} lg={4} className='px-4 py-2'>
                     <NewsletterTile date={t.slice(0,-3)} history={history}/>

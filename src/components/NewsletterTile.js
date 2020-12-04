@@ -29,8 +29,8 @@ const NewsletterTile = ({
         <NewsletterTileDiv className='shadow rounded NesletterTile' onClick={()=>(history.push(url))}>
             <BlueDiv xs={12} className='mb-5'/>
             <Col className='px-3  pb-1'>
-            <Text weight='bold' fontSize={theme.sizes.subtitle}>
-                {moment(date).format('MMMM YYYY')}
+                <Text weight='bold' fontSize={theme.sizes.subtitle}>
+                    {moment(date).format('MMMM YYYY')}
                 </Text>
             </Col>
         </NewsletterTileDiv>
