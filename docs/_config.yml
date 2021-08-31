@@ -1,1 +1,8 @@
 theme: jekyll-theme-slate
+title: The SetLife Network
+description: People over profit
+url: https://setlife.network
+author: The SetLife Network
+plugins:
+  - jekyll-seo-tag
+google_analytics: UA-136322439-2
