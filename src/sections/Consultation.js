@@ -29,11 +29,10 @@ const ButtonWrapper = styled(Col)`
 
 const ImageContainer = styled(Image)`
 
-    left: 50px;
     position: absolute;
     top: 0;
-    height: 100%;
-    width: 100%;
+    height: 150%;
+    width: 1100px;
     opacity: 0.8;
     transform: skew(15deg,0deg);
 `
@@ -44,8 +43,9 @@ const OutContainer = styled(Col)`
     margin-left: -10%;
     min-height: 100%;
     overflow: hidden;
-    transform: skew(-15deg,0deg);
+    transform: skew(-10deg,0deg);
     background: ${theme.colors.primary}
+
 `
 
 const ColDiv = styled(Col)`
@@ -111,7 +111,8 @@ class Consultation extends Component {
                     <Row>
                         <Col md={6} className='d-none d-md-flex'>
                             <OutContainer md={12}>
-                                <ImageContainer src={ConsultationPhoto} alt='Photo' />
+                                                            
+                                    <ImageContainer src={ConsultationPhoto} alt='Photo' />
                             </OutContainer>
                         </Col>
                         <ColDiv md={6}>

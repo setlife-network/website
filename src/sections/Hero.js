@@ -76,7 +76,9 @@ class Hero extends Component {
                             md={{ order: 2 }}
                             xs={{ order: 1 }}
                         >
-                            <ImageContainer src={HeroGraphic} alt='Hero Graphic' />
+                            <div>
+                                <ImageContainer mx-auto src={HeroGraphic} alt='Hero Graphic' />
+                            </div>
                         </Col>
                     </Section>
 
