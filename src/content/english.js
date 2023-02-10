@@ -149,6 +149,18 @@ const PASTCONTRIBUTORSTESTIMONIALS = [
         date: 'Visual Brand Developer',
         portrait: 'https://user-images.githubusercontent.com/49292858/68434644-dbee4c80-018f-11ea-9630-9f2ff85d9325.jpeg'
     },
+    {
+        name: 'Rebeca Rubio',
+        quote: 'El programa de mentoría de SetLife me ha permitido consolidar mis conocimientos de programación colaborando de forma directa en su desarrollo. El uso de nuevas herramientas y de software actual me han hecho evolucionar rápidamente y adquirir mejores prácticas de implementación de código y de comunicación a la hora de colaborar con otras personas dentro de un mismo proyecto. Como desarrolladora de software he cumplido uno de mis objetivos: poner en práctica aquellos conocimientos que quedan sin profundizar en el aula gracias a la metodología del aprendizaje basado en proyectos. Actualmente mis habilidades tecnológicas siguen evolucionando de una forma más efectiva y en un ambiente de trabajo que estimula la autonomía y el crecimiento profesional.',
+        date: 'Software Developer',
+        portrait: 'https://user-images.githubusercontent.com/49292858/68434144-a6952f00-018e-11ea-9fcd-b00218b98c64.png'
+    },
+    {
+        name: 'Dave Corkle',
+        quote: '',
+        date: 'Director',
+        portrait: 'https://user-images.githubusercontent.com/49292858/70638445-453e0100-1c0f-11ea-91c1-24f5612ce1df.jpg',
+    },
 ]
 
 const PRINCIPALMESSAGE = [
@@ -262,17 +274,17 @@ const TESTIMONIALS = [
         portrait: 'https://user-images.githubusercontent.com/49292858/68435380-8ca91b80-0191-11ea-9501-2668bb0dcd36.png'
     },
     {
-        name: 'Rebeca Rubio',
-        quote: 'El programa de mentoría de SetLife me ha permitido consolidar mis conocimientos de programación colaborando de forma directa en su desarrollo. El uso de nuevas herramientas y de software actual me han hecho evolucionar rápidamente y adquirir mejores prácticas de implementación de código y de comunicación a la hora de colaborar con otras personas dentro de un mismo proyecto. Como desarrolladora de software he cumplido uno de mis objetivos: poner en práctica aquellos conocimientos que quedan sin profundizar en el aula gracias a la metodología del aprendizaje basado en proyectos. Actualmente mis habilidades tecnológicas siguen evolucionando de una forma más efectiva y en un ambiente de trabajo que estimula la autonomía y el crecimiento profesional.',
+        name: 'Ovidio Rodriguez',
+        quote: 'As a Software Engineer at SetLife I have improved my programing skills while learning how to collaborate with a team and use new technologies. The intern program really helps people that have the desire to learn and improve, even without knowing about front-end or back-end development. If you commit to talking with a team, reading open-source code, and doing some research on the internet you will be able to understand everything in no time.',
         date: 'Software Developer',
-        portrait: 'https://user-images.githubusercontent.com/49292858/68434144-a6952f00-018e-11ea-9fcd-b00218b98c64.png'
+        portrait: 'https://user-images.githubusercontent.com/49292858/142635573-ae7c8300-a32e-407e-bd50-9bc62d49982f.jpeg'
     },
     {
-        name: 'Dave Corkle',
+        name: 'Miguel Coccaro',
         quote: '',
-        date: 'Director',
-        portrait: 'https://user-images.githubusercontent.com/49292858/70638445-453e0100-1c0f-11ea-91c1-24f5612ce1df.jpg',
-    },
+        date: 'Software Developer',
+        portrait: 'https://ca.slack-edge.com/TD3P7GK9P-U01QN6U62FQ-fcf7c48c524f-512'
+    }
 
 ]
 
